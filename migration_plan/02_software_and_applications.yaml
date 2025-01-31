@@ -1,0 +1,124 @@
+version: '1.0'
+base_url: https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/
+
+software_and_applications:
+  development_tools:
+  - source:
+      title: "ITLC ChemDraw Licenses"
+      url: "54825184/ITLC+ChemDraw+Licenses"
+      path: "Software & Applications/Development Tools"
+  - source:
+      title: "ITLC GitHub Enterprise account"
+      url: "54821198/ITLC+GitHub+Enterprise+account"
+      path: "Software & Applications/Development Tools"
+  - source:
+      title: "ITLC Visual Studio"
+      url: "54825250/ITLC+Visual+Studio"
+      path: "Software & Applications/Development Tools"
+  - source:
+      title: "ITLC Terraform"
+      url: "54821715/ITLC+Terraform"
+      path: "Software & Applications/Development Tools"
+
+  productivity_apps:
+    box:
+    - source:
+        title: "ITLC Box Documentation for End-Users"
+        url: "54822960/ITLC+Box+Documentation+for+End-Users"
+        path: "Software & Applications/Productivity Apps/Box/Documentation"
+    - source:
+        title: "ITLC Changing your Box password"
+        url: "54822334/ITLC+Changing+your+Box+password"
+        path: "Software & Applications/Productivity Apps/Box/Password Management"
+    - source:
+        title: "ITLC Creating shared links in Box"
+        url: "54825511/ITLC+Creating+shared+links+in+Box"
+        path: "Software & Applications/Productivity Apps/Box/Sharing & Collaboration"
+    - source:
+        title: "ITLC Use Box online for collaborative editing"
+        url: "54823212/ITLC+Use+Box+online+for+collaborative+editing"
+        path: "Software & Applications/Productivity Apps/Box/Sharing & Collaboration"
+    - source:
+        title: "ITLC Working with Box Metadata templates and File Requests"
+        url: "54821822/ITLC+Working+with+Box+Metadata+templates+and+File+Requests"
+        path: "Software & Applications/Productivity Apps/Box/Documentation"
+
+    docusign:
+    - source:
+        title: "ITLC DocuSign Documentation for End-Users"
+        url: "54823436/ITLC+DocuSign+Documentation+for+End-Users"
+        path: "Software & Applications/Productivity Apps/DocuSign/Documentation"
+    - source:
+        title: "ITLC DocuSign QES instructions"
+        url: "54824845/ITLC+DocuSign+QES+instructions"
+        path: "Software & Applications/Productivity Apps/DocuSign/QES Instructions"
+    - source:
+        title: "ITLC Determine kind of DocuSign account for user"
+        url: "54824168/ITLC+Determine+kind+of+DocuSign+account+for+user"
+        path: "Software & Applications/Productivity Apps/DocuSign/Account Management"
+    - source:
+        title: "ITLC Signing into DocuSign"
+        url: "54822217/ITLC+Signing+into+DocuSign"
+        path: "Software & Applications/Productivity Apps/DocuSign/Account Management"
+
+    google_workspace:
+    - source:
+        title: "ITLC Google Workspace Onboarding Training Guide"
+        url: "54825308/ITLC+Google+Workspace+Onboarding+Training+Guide"
+        path: "Software & Applications/Productivity Apps/Google Workspace/Training Guide"
+    - source:
+        title: "ITLC Google Workspace vs Microsoft365"
+        url: "54823612/ITLC+Google+Workspace+vs+Microsoft365"
+        path: "Software & Applications/Productivity Apps/Google Workspace/vs Microsoft365"
+
+    microsoft_office:
+    - source:
+        title: "ITLC Microsoft Office 365 (O365) End-user installation instructions"
+        url: "54821661/ITLC+Microsoft+Office+365+O365+End-user+installation+instructions"
+        path: "Software & Applications/Productivity Apps/Microsoft Office 365/Installation"
+    - source:
+        title: "ITLC Microsoft Office 365 (O365) FAQ's"
+        url: "54825549/ITLC+Microsoft+Office+365+O365+FAQ+s"
+        path: "Software & Applications/Productivity Apps/Microsoft Office 365/FAQs"
+
+  communication_tools:
+  - source:
+      title: "ITLC Microsoft Teams"
+      url: "54825496/ITLC+Microsoft+Teams"
+      path: "Software & Applications/Communication Tools"
+
+    zoom:
+    - source:
+        title: "ITLC Install the Zoom desktop client"
+        url: "54824016/ITLC+Install+the+Zoom+desktop+client"
+        path: "Software & Applications/Communication Tools/Zoom/Installation"
+    - source:
+        title: "ITLC Unable to establish secure connection to Zoom"
+        url: "54821083/ITLC+Unable+to+establish+secure+connection+to+Zoom"
+        path: "Software & Applications/Communication Tools/Zoom/Troubleshooting"
+    - source:
+        title: "ITLC Using Whiteboard in Zoom"
+        url: "54821680/ITLC+Using+Whiteboard+in+Zoom"
+        path: "Software & Applications/Communication Tools/Zoom/Whiteboard Usage"
+    - source:
+        title: "ITLC Troubleshooting Zoom Rooms"
+        url: "54825523/ITLC+Troubleshooting+Zoom+Rooms"
+        path: "Software & Applications/Communication Tools/Zoom/Room Management"
+    - source:
+        title: "ITLC Track Zoom Global Settings - Change Log"
+        url: "54825378/ITLC+Track+Zoom+Global+Settings+-+Change+Log"
+        path: "Software & Applications/Communication Tools/Zoom/Room Management"
+
+  browsers:
+  - source:
+      title: "ITLC Google Chrome - Windows"
+      url: "54821833/ITLC+Google+Chrome+-+Windows"
+      path: "Software & Applications/Browsers"
+  - source:
+      title: "ITLC Mozilla Firefox - Windows"
+      url: "54823602/ITLC+Mozilla+Firefox+-+Windows"
+      path: "Software & Applications/Browsers"
+  - source:
+      title: "ITLC Chrome multiple profile Issue"
+      url: "54821589/ITLC+Chrome+multiple+profile+Issue"
+      path: "Software & Applications/Browsers/Profile Management"

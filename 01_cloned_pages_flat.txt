@@ -1,0 +1,476 @@
+# [**ITLC 7-Zip \- Windows**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821754/ITLC+7-Zip+-+Windows)
+
+Compression utility
+
+# [**ITLC Adding and Removing Printers**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821066/ITLC+Adding+and+Removing+Printers)
+
+# [**ITLC Android Management for Boox Tablet Setup**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822388/ITLC+Android+Management+for+Boox+Tablet+Setup)
+
+# [**ITLC Appgate Documentation**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824293/ITLC+Appgate+Documentation)
+
+# [**ITLC AppGate \- How to Upgrade via Self Service**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825177/ITLC+AppGate+-+How+to+Upgrade+via+Self+Service)
+
+# [**ITLC Appgate Installation**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825637/ITLC+Appgate+Installation)
+
+Appgate is our new replacement VPN solution. These instructions will get you started installing the agent and getting it configured.
+
+# [**ITLC Appgate Inventory**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823520/ITLC+Appgate+Inventory)
+
+# [**ITLC Appgate Tag-Based Entitlements**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822552/ITLC+Appgate+Tag-Based+Entitlements)
+
+# [**ITLC Apple \- 13" Macbook Air (M2)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821875/ITLC+Apple+-+13+Macbook+Air+M2)
+
+# [**ITLC Apple \- 14" Macbook Pro (M2)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822337/ITLC+Apple+-+14+Macbook+Pro+M2)
+
+# [**ITLC Apple \- 16" Macbook Pro (M2)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821056/ITLC+Apple+-+16+Macbook+Pro+M2)
+
+# [**ITLC Apple ID Information for Mac/iOS Users**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825589/ITLC+Apple+ID+Information+for+Mac+iOS+Users)
+
+# [**ITLC Apple iPads**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821891/ITLC+Apple+iPads)
+
+# [**ITLC Approved Note Taking Apps**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825722/ITLC+Approved+Note+Taking+Apps)
+
+# [**ITLC Archive Server**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825019/ITLC+Archive+Server)
+
+# [**ITLC Authenticate Okta with Built-in Fingerprint Readers on Laptops**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821393/ITLC+Authenticate+Okta+with+Built-in+Fingerprint+Readers+on+Laptops)
+
+In addition to the Okta Verify mobile app, you can use the built-in fingerprint reader on your devices or hardware security keys as a second factor.
+
+# [**ITLC Automox Agent \- Windows**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825770/ITLC+Automox+Agent+-+Windows)
+
+Windows updates and patch management
+
+# [**ITLC Automox: What to Expect**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821007/ITLC+Automox+What+to+Expect)
+
+In an effort to maintain end-user laptops and desktops updated IT has implemented and installed the Automox agent on all machines. Automox should aid Windows, Mac and Linux machine updates by downloading them in the background and applying them on a schedule. 
+
+# [**ITLC A/V Classroom controls**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823271/ITLC+A+V+Classroom+controls)
+
+# [**ITLC Avoiding and replacing terms of oppression**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825054/ITLC+Avoiding+and+replacing+terms+of+oppression)
+
+IT will work to avoid using terms, especially in naming, that evoke negative associations with oppression or convey bias.  The primary examples here are "master/slave" and "whitelist/blacklist".
+
+# [**ITLC AWS Accounts (Requesting a new one)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822447/ITLC+AWS+Accounts+Requesting+a+new+one)
+
+# [**ITLC AWS CLI access (okta-awscli)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825038/ITLC+AWS+CLI+access+okta-awscli)
+
+# [**ITLC Box Documentation for End-Users**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822960/ITLC+Box+Documentation+for+End-Users)
+
+* [ITLC Changing your Box password](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822334/ITLC+Changing+your+Box+password)  
+* [ITLC Creating shared links in Box](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825511/ITLC+Creating+shared+links+in+Box)  
+* [ITLC Generate GxP Training Report from Box](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825685/ITLC+Generate+GxP+Training+Report+from+Box)  
+* [ITLC Requesting DDAG External Sharing in Box](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825065/ITLC+Requesting+DDAG+External+Sharing+in+Box) — Procedure for sharing DDAG project materials with people internal and external to Schrödinger.  
+* [ITLC Use Box online for collaborative editing](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823212/ITLC+Use+Box+online+for+collaborative+editing) — Box enables and supports collaborative editing and versioning of documents both through Microsoft Office Online and Google Apps.  
+* [ITLC Working with Box Metadata templates and File Requests](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821822/ITLC+Working+with+Box+Metadata+templates+and+File+Requests) — Describe when someone would need this information. For example "when connecting to wi-fi for the first time".
+
+# [**ITLC Cambridge Structural Database System (CSD) End-User Documentation**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825077/ITLC+Cambridge+Structural+Database+System+CSD+End-User+Documentation)
+
+# [**ITLC Certara Phoenix Software Troubleshooting**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823858/ITLC+Certara+Phoenix+Software+Troubleshooting)
+
+# [**ITLC ChemDraw Licenses**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825184/ITLC+ChemDraw+Licenses)
+
+# [**ITLC Chrome multiple profile Issue**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821589/ITLC+Chrome+multiple+profile+Issue)
+
+If you are facing issues where chrome is creating multiple chrome profile every time you launch chrome app
+
+# [**ITLC Connecting via NX/NoMachine**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823499/ITLC+Connecting+via+NX+NoMachine)
+
+# [**ITLC Coupa \- How to Navigate**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823959/ITLC+Coupa+-+How+to+Navigate)
+
+# [**ITLC Crucible Support**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824298/ITLC+Crucible+Support)
+
+# [**ITLC Dell \- 14" Latitude 7440**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822569/ITLC+Dell+-+14+Latitude+7440)
+
+# [**ITLC Dell \- 15" Precision 5570**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823580/ITLC+Dell+-+15+Precision+5570)
+
+# [**ITLC Dell Ultrasharp Monitor**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825618/ITLC+Dell+Ultrasharp+Monitor)
+
+# [**ITLC DocuSign Documentation for End-Users**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823436/ITLC+DocuSign+Documentation+for+End-Users)
+
+* [ITLC Determine kind of DocuSign account for user](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824168/ITLC+Determine+kind+of+DocuSign+account+for+user) — DocuSign accounts are needed for a variety of circumstances and in other cases may not be necessary at all?  
+* [ITLC DocuSign QES instructions](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824845/ITLC+DocuSign+QES+instructions)  
+* [ITLC Signing into DocuSign](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822217/ITLC+Signing+into+DocuSign) — Describe when someone would need this information. For example "when connecting to wi-fi for the first time".
+
+# [**ITLC Double/Triple Monitor Arm Standard**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822086/ITLC+Double+Triple+Monitor+Arm+Standard)
+
+# [**ITLC Druva inSync Cloud Overview**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825113/ITLC+Druva+inSync+Cloud+Overview)
+
+* [ITLC Druva inSync Activation Instructions for Mac](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821977/ITLC+Druva+inSync+Activation+Instructions+for+Mac)
+
+# [**ITLC Druva inSync \- Windows**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822527/ITLC+Druva+inSync+-+Windows)
+
+Backup client
+
+# [**ITLC Email Fax Gateway User Instructions**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823339/ITLC+Email+Fax+Gateway+User+Instructions)
+
+# [**ITLC Equipment ordering policy during COVID-19 office closures**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821144/ITLC+Equipment+ordering+policy+during+COVID-19+office+closures)
+
+# [**ITLC Ergonomic Peripheral Options**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825596/ITLC+Ergonomic+Peripheral+Options)
+
+# [**ITLC Forticlient for AWS Mumbai**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821414/ITLC+Forticlient+for+AWS+Mumbai)
+
+# [**ITLC Framingham ELN Zebra Notebook Setup**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821992/ITLC+Framingham+ELN+Zebra+Notebook+Setup)
+
+# [**ITLC Framingham Office (FMA)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824081/ITLC+Framingham+Office+FMA)
+
+# [**ITLC Freshservice Information**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824236/ITLC+Freshservice+Information)
+
+* [ITLC Freshservice Impact and Urgency Explained](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825746/ITLC+Freshservice+Impact+and+Urgency+Explained)  
+* [ITLC How do I use Freshservice?](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825699/ITLC+How+do+I+use+Freshservice) — Freshservice is a ticket managing system for support requests. You can submit a new ticket by going to your Okta tile for "IT Help."   
+* [ITLC How to Create and Manage Your Tickets in Freshservice](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822009/ITLC+How+to+Create+and+Manage+Your+Tickets+in+Freshservice)  
+* [ITLC I am not able to view a Freshservice ticket](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822540/ITLC+I+am+not+able+to+view+a+Freshservice+ticket)
+
+# [**ITLC GCP Sandboxes**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823907/ITLC+GCP+Sandboxes)
+
+# [**ITLC GCP Shared VPC**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822280/ITLC+GCP+Shared+VPC)
+
+# [**ITLC Generating Schrodinger Email Signature**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822609/ITLC+Generating+Schrodinger+Email+Signature)
+
+# [**ITLC Germany Conference Room \- \["MHG \- Friedrich"\] & \["MHG \- Heinrich"\]**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54820985/ITLC+Germany+Conference+Room+-+MHG+-+Friedrich+MHG+-+Heinrich)
+
+# [**ITLC Germany Conference Rooms \- \[“MUC \- Ludwig”\]**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825825/ITLC+Germany+Conference+Rooms+-+MUC+-+Ludwig)
+
+# [**ITLC Getting Started**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823755/ITLC+Getting+Started)
+
+Default getting started, in case you lose it
+
+* [ITLC Confluence plugins](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822054/ITLC+Confluence+plugins) — Confluence employs third-party apps and plugins to provide advanced features. Schrödinger has bought and deployed some of these to add functionality.  
+  * [ITLC Connector for Google Drive and Confluence](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825624/ITLC+Connector+for+Google+Drive+and+Confluence)  
+  * [ITLC Lucidchart Plugin](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821253/ITLC+Lucidchart+Plugin) — Integration plugin to make, edit, and embed diagrams in Confluence.  
+  * [ITLC MathJax](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824730/ITLC+MathJax) — This plugin provides macros to insert equations using MathJax.  
+  * [ITLC Table Filter and Charts for Confluence](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825420/ITLC+Table+Filter+and+Charts+for+Confluence) — Dynamically filter one or multiple tables with the variety of filters, create pivot tables from source data or generate reporting charts with the dynamic update upon change or data filtration
+
+# [**ITLC GitHub Enterprise account**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821198/ITLC+GitHub+Enterprise+account)
+
+# [**ITLC Google Chrome \- Windows**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821833/ITLC+Google+Chrome+-+Windows)
+
+Web browser from Google 
+
+# [**ITLC Google Workspace Onboarding Training Guide**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825308/ITLC+Google+Workspace+Onboarding+Training+Guide)
+
+* [ITLC Google Workspace vs Microsoft365](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823612/ITLC+Google+Workspace+vs+Microsoft365)
+
+# [**ITLC GxP Compliance Managed Documents**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823224/ITLC+GxP+Compliance+Managed+Documents)
+
+As we develop our internal GxP program it is useful and necessary to have a way to summarize and track the status of various documents associated with that effort.
+
+* [ITLC BOX-CS-001](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823099/ITLC+BOX-CS-001) — Contains the configuration specification for the Box system  
+* [ITLC BOX-IQ-001](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825033/ITLC+BOX-IQ-001) — Installation Qualification (IQ) for Box GxP validation  
+* [ITLC BOX-PQ-001](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822353/ITLC+BOX-PQ-001) — Tests that the User Requirement Specification (URS) is fulfilled.  
+* [ITLC BOX-TM-001](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822649/ITLC+BOX-TM-001) — Provides a Traceability Matrix (TM) to relate user requirements in the User Requirement Specification (URS) to the Performance Qualification (PQ)  
+* [ITLC BOX-URS-001](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821560/ITLC+BOX-URS-001) — This User Requirements Specification (URS) defines business and regulatory needs for the Box GxP platform for its intended use by Schrödinger.  
+* [ITLC BOX-VFR-001](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824892/ITLC+BOX-VFR-001) — Validation Final Report for Box  
+* [ITLC BOX-VP-001](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822037/ITLC+BOX-VP-001) — This Validation Plan (VP) outlines the validation activities associated with the GxP intended use of the Box platform implemented for use at Schrodinger.  
+* [ITLC Change control tracking](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825567/ITLC+Change+control+tracking) — ITLC SOP-IT-002 spells out the process and requirements for conducting changes on GxP managed systems. This page accumulates and tracks the various change requests across managed systems.  
+  * [ITLC IT-CCF-001](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822733/ITLC+IT-CCF-001) — Re-enable rclone custom application in production Box  
+  * [ITLC IT-CCF-002](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821574/ITLC+IT-CCF-002) — Adjust password policies in production Box  
+  * [ITLC IT-CCF-003](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821221/ITLC+IT-CCF-003) — Change owner name and email for production Box  
+  * [ITLC IT-CCF-004](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821106/ITLC+IT-CCF-004) — Enable Adaptive Shield custom app in production Box  
+  * [ITLC IT-CCF-005](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824229/ITLC+IT-CCF-005) — Update the Box Config Spec based on ITLC IT-CCF-001, ITLC IT-CCF-002, ITLC IT-CCF-003, ITLC IT-CCF-004  
+  * [ITLC IT-CCF-006](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821478/ITLC+IT-CCF-006) — Authorize the Box custom Server Authentication App ddag-datateam-api  
+  * [ITLC IT-CCF-007](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821422/ITLC+IT-CCF-007) — Make changes to support Box Relay CLM  
+  * [ITLC IT-CCF-008](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825532/ITLC+IT-CCF-008) — In DocuSign, change the domain configuration to "Require all users to authenticate with Identity Provider" (Okta). This change enforces SSO logins and prevents password-based access for everyone but defined exceptions. The exception applies to DocuSign admins as it is best practice to exempt at least two DS admins from the SSO-only requirement.  
+  * [ITLC IT-CCF-009](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823650/ITLC+IT-CCF-009) — Create validation documentation for Box Relay Template "Clinical File Transfer"  
+  * [ITLC IT-CCF-010](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823511/ITLC+IT-CCF-010)  
+  * [ITLC IT-CCF-011](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824664/ITLC+IT-CCF-011)  
+  * [ITLC IT-CCF-012](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825229/ITLC+IT-CCF-012)  
+  * [ITLC IT-CCF-013](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824864/ITLC+IT-CCF-013)  
+  * [ITLC IT-CCF-014](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825212/ITLC+IT-CCF-014)  
+  * [ITLC IT-CCF-015](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825834/ITLC+IT-CCF-015) — Box Shared Links and Company definition  
+* [ITLC FRM-IT-001](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821649/ITLC+FRM-IT-001) — IT Change Control Form  
+* [ITLC FRM-IT-002](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822483/ITLC+FRM-IT-002) — DocuSign User Access Request Form  
+* [ITLC SDGR-IQ-01](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822537/ITLC+SDGR-IQ-01) — This Installation Qualification (IQ) establishes documented evidence that the DocuSign Enterprise Pro Part 11system (hereafter referred to as ‘DocuSignPart 11’) has been configured and that values assigned to parameters and features are based on the approved configuration and manufacturer's recommendations. The IQ verifies, controls, and maintains software configuration parameters for the Schrodinger, Inc.GxP use of DocuSignPart 11\.  
+* [ITLC SDGR-PQ-01](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823386/ITLC+SDGR-PQ-01) — This Performance Qualification (PQ) tests DocuSign Part 11against specifications defined in the Validation Plan for DocuSign Part 11, ITLC SDGR-VP-01  
+* [ITLC SDGR-VFR-01](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822259/ITLC+SDGR-VFR-01) — Validation Final Report for DocuSign Part 11  
+* [ITLC SDGR-VP-01](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824882/ITLC+SDGR-VP-01) — This Validation Plan (VP) outlines the validation activities associated with the DocuSign Enterprise Pro Part 11system (hereafter referred to as DocuSign or DocuSign Part 11\) implemented at Schrodinger, Inc.  
+* [ITLC SOP-IT-001](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825174/ITLC+SOP-IT-001) — Procedure to describe the computer system validation program at Schrödingerand define the requirements for validating GxP computerized systems  
+* [ITLC SOP-IT-002](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821380/ITLC+SOP-IT-002) — Describe the process for managing changes to regulated systems managed by Schrödinger.  
+* [ITLC SOP-IT-004](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823305/ITLC+SOP-IT-004) — Document to describe the process for the use of electronic records and electronic signature at Schrödinger
+
+# [**ITLC Hardware Policies**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821949/ITLC+Hardware+Policies)
+
+Schrodinger has policies covering US and GmbH employees that allows employees to take ownership of retired computer systems for exclusive personal use
+
+* [ITLC Policy for Retired Laptops/Desktops \[Schrödinger GmbH employees only\]](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821552/ITLC+Policy+for+Retired+Laptops+Desktops+Schr+dinger+GmbH+employees+only)  
+  * [ITLC Schrodinger\_GmbH: Laptop Pool](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822577/ITLC+Schrodinger_GmbH+Laptop+Pool)  
+* [ITLC Policy for Retired Laptops/Desktops \[US employees only\] \[Laptop Buy Back\]](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822555/ITLC+Policy+for+Retired+Laptops+Desktops+US+employees+only+Laptop+Buy+Back)
+
+# [**ITLC HPC User Guide**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825579/ITLC+HPC+User+Guide)
+
+A quick guide to help you get to know our High Performance Computing clusters: bolt, and pdxgpu. 
+
+* [ITLC Schedulers](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821296/ITLC+Schedulers)  
+  * [ITLC Grid Engine useful commands](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825820/ITLC+Grid+Engine+useful+commands)  
+  * [ITLC Slurm useful commands](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823752/ITLC+Slurm+useful+commands)
+
+# [**ITLC Hyderabad Office (HYD)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823673/ITLC+Hyderabad+Office+HYD)
+
+# [**ITLC Install license for ChemAxon**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821326/ITLC+Install+license+for+ChemAxon)
+
+To apply a license entitlement for ChemAxon you need to install a key
+
+# [**ITLC Install the Zoom desktop client**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824016/ITLC+Install+the+Zoom+desktop+client)
+
+Describe when someone would need this information. For example "when connecting to wi-fi for the first time".
+
+# [**ITLC iPad Setup Guide**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825301/ITLC+iPad+Setup+Guide)
+
+# [**ITLC IT Public Docs Banners**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825242/ITLC+IT+Public+Docs+Banners)
+
+* [ITLC Banner passwordless ssh deprecated](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825298/ITLC+Banner+passwordless+ssh+deprecated)  
+* [ITLC Branding banner](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825357/ITLC+Branding+banner)  
+* [ITLC Broken banner](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822761/ITLC+Broken+banner) — This procedure has been marked as BROKEN. Please examine the article carefully for inline comments as to what may be broken and follow any recommended workarounds.  
+* [ITLC Managed Document banner](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824911/ITLC+Managed+Document+banner)  
+* [ITLC Oppressive language banner](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823075/ITLC+Oppressive+language+banner)  
+* [ITLC Ops-ready banner](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825375/ITLC+Ops-ready+banner)  
+* [ITLC Stub procedure banner](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821611/ITLC+Stub+procedure+banner)  
+* [ITLC Sysmgr help banner](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822177/ITLC+Sysmgr+help+banner)
+
+# [**ITLC IT Support Resources**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823412/ITLC+IT+Support+Resources)
+
+How to request help from IT
+
+# [**ITLC Jamf at Schrödinger**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825475/ITLC+Jamf+at+Schr+dinger)
+
+Managing Many Macbooks
+
+* [ITLC Downloading and Installing the JAMF Enrollment Profile](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822805/ITLC+Downloading+and+Installing+the+JAMF+Enrollment+Profile)  
+* [ITLC Enrolling your Apple Device to Jamf “Schrödinger”](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823203/ITLC+Enrolling+your+Apple+Device+to+Jamf+Schro+dinger)  
+* [ITLC Jamf Connect Overview](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823136/ITLC+Jamf+Connect+Overview) — Jamf Connect works with Jamf to build a bridge between your MacBook account and your Okta account. In using Jamf Connect, you will be able to remember one less password, as now your MacBook password becomes the same as your Okta password.  
+  * [ITLC Changing Your Okta Password For Your MacBook Using Jamf Connect](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822671/ITLC+Changing+Your+Okta+Password+For+Your+MacBook+Using+Jamf+Connect) — Jamf Connect is an app that allows administrators to manage authentication by connecting a user's local macOS account to their organization's cloud identity (network account).  
+  * [ITLC Jamf Connect Log In Issues](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822365/ITLC+Jamf+Connect+Log+In+Issues)  
+  * [ITLC 💻 Jamf Connect \- How to Install/Update via Self Service](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821621/ITLC+Jamf+Connect+-+How+to+Install+Update+via+Self+Service)  
+* [ITLC Re-enrolling a machine with a failed Jamf install](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825144/ITLC+Re-enrolling+a+machine+with+a+failed+Jamf+install) — If someone's Macbook has a Device Enrollment notification pop-up repeatedly, or if a Jamf installation has gone wrong, use these steps to re-enroll a computer without wiping.
+
+# [**ITLC Jira information**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821633/ITLC+Jira+information)
+
+* [ITLC JIRAADMIN How to adjust the QA Closer rules](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825151/ITLC+JIRAADMIN+How+to+adjust+the+QA+Closer+rules) — How to adjust the rules which set the QA Closer field in Jira  
+* [ITLC Jira Command Line Interface](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822147/ITLC+Jira+Command+Line+Interface)  
+* [ITLC Tips for advanced searching in Jira](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822127/ITLC+Tips+for+advanced+searching+in+Jira) — Describe when someone would need this information. For example "when connecting to wi-fi for the first time".
+
+# [**ITLC LibreOffice \- Windows**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824808/ITLC+LibreOffice+-+Windows)
+
+Office suite
+
+# [**ITLC Looking Glass Contact and Inventory**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822428/ITLC+Looking+Glass+Contact+and+Inventory)
+
+# [**ITLC macOS User Hints and Tips**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821498/ITLC+macOS+User+Hints+and+Tips)
+
+* [ITLC Access issues for smb shares](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822417/ITLC+Access+issues+for+smb+shares) — Some users experience issues connecting to smb (network) shares from their local machine  
+* [ITLC After restoring files from Time Machine, they have @ Unix file permissions, and I can't edit them](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825363/ITLC+After+restoring+files+from+Time+Machine+they+have+Unix+file+permissions+and+I+can+t+edit+them)  
+* [ITLC Unable to SSH into older devices after updating to macOS Ventura (macOS 13\)](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822212/ITLC+Unable+to+SSH+into+older+devices+after+updating+to+macOS+Ventura+macOS+13)
+
+# [**ITLC MHG Network Attached Storage Service (End-User Documentation)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825086/ITLC+MHG+Network+Attached+Storage+Service+End-User+Documentation)
+
+# [**ITLC Microsoft Office 365 (O365) End-user installation instructions**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821661/ITLC+Microsoft+Office+365+O365+End-user+installation+instructions)
+
+Describe when someone would need this information. For example "when connecting to wi-fi for the first time".
+
+* [ITLC Microsoft Office 365 (O365) FAQ's](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825549/ITLC+Microsoft+Office+365+O365+FAQ+s)
+
+# [**ITLC Microsoft Teams**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825496/ITLC+Microsoft+Teams)
+
+# [**ITLC Mounting Regional SMB Exports**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823294/ITLC+Mounting+Regional+SMB+Exports)
+
+Details how users may mount regional SMB exports
+
+# [**ITLC Mozilla Firefox \- Windows**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823602/ITLC+Mozilla+Firefox+-+Windows)
+
+# [**ITLC Newark Datacenter (EWR)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824317/ITLC+Newark+Datacenter+EWR)
+
+# [**ITLC (New) Ubuntu Desktop Workstation Requirements**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825109/ITLC+New+Ubuntu+Desktop+Workstation+Requirements)
+
+* [ITLC 2024 Dell Ubuntu Workstation Configuration \- High Tier (US Only Currently)](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825704/ITLC+2024+Dell+Ubuntu+Workstation+Configuration+-+High+Tier+US+Only+Currently)  
+* [ITLC Dell Ubuntu Workstation Configuration \- Standard Tier (US Only Currently)](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825737/ITLC+Dell+Ubuntu+Workstation+Configuration+-+Standard+Tier+US+Only+Currently)
+
+# [**ITLC New York Office (NYC)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824547/ITLC+New+York+Office+NYC)
+
+# [**ITLC NYC Office IT Vending Machine/Lockers**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822302/ITLC+NYC+Office+IT+Vending+Machine+Lockers)
+
+# [**ITLC Office External IPs**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822530/ITLC+Office+External+IPs)
+
+This page is the best manually maintained list of exit IP addresses for Schrodinger offices worldwide.  It is derived from the network engineering document Public IPs.
+
+# [**ITLC OKTA: How to Replace Your Multi-Factor Authentication Device.**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822943/ITLC+OKTA+How+to+Replace+Your+Multi-Factor+Authentication+Device.)
+
+# [**ITLC Portland Office (PDX)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821078/ITLC+Portland+Office+PDX)
+
+# [**ITLC Public Website PII Information**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822268/ITLC+Public+Website+PII+Information)
+
+# [**ITLC Reading Office (LON)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824675/ITLC+Reading+Office+LON)
+
+# [**ITLC Remote Access**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823590/ITLC+Remote+Access)
+
+* [ITLC Windows Remote Desktop over SSH](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825237/ITLC+Windows+Remote+Desktop+over+SSH)
+
+# [**ITLC Saved Search Advanced Formula Examples**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825665/ITLC+Saved+Search+Advanced+Formula+Examples)
+
+# [**ITLC Schrodinger IT User Orientation**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823758/ITLC+Schrodinger+IT+User+Orientation)
+
+# [**ITLC Schrodinger Office Locations**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823645/ITLC+Schrodinger+Office+Locations)
+
+# [**ITLC Schrodinger Public FTP User Guide**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822630/ITLC+Schrodinger+Public+FTP+User+Guide)
+
+# [**ITLC Seoul Office (KOR)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824998/ITLC+Seoul+Office+KOR)
+
+# [**ITLC Service Interruption Reports (SIR)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822425/ITLC+Service+Interruption+Reports+SIR)
+
+We produce reports that analyze failures and evaluate ways to reduce or eliminate them.
+
+* [ITLC 2021-05-21 SIR for Global Wireless Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823607/ITLC+2021-05-21+SIR+for+Global+Wireless+Outage) — SIR for global wireless outage on May 21, 2021   
+* [ITLC 2021-08-31 SIR for pdx-idf14-r01 outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824527/ITLC+2021-08-31+SIR+for+pdx-idf14-r01+outage) — SIR for pdx-idf14-r01 outage on Aug 30, 2021   
+* [ITLC 2021-11-03 SIR for ELN Server down](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825845/ITLC+2021-11-03+SIR+for+ELN+Server+down) — SIR for ELN server on Nov 03, 2021   
+* [ITLC 2021-11-18 SIR for Multiple VMs offline](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822982/ITLC+2021-11-18+SIR+for+Multiple+VMs+offline) — SIR for Multiple VMs offline on Nov 18, 2021  
+* [ITLC 2021-11-19 SIR for nyc-archive-l01](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824061/ITLC+2021-11-19+SIR+for+nyc-archive-l01) — SIR for nyc-archive-l01 on 2021-11-08  
+* [ITLC 2021-11-22 SIR for Desis users Deactivated in Okta](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825209/ITLC+2021-11-22+SIR+for+Desis+users+Deactivated+in+Okta) — SIR for Okta,  on 2021-11-22  
+* [ITLC 2021-11-30 SIR for pdx-mail to gcp-jira outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823428/ITLC+2021-11-30+SIR+for+pdx-mail+to+gcp-jira+outage) — SIR for pdx-mail to gcp-ira on 2021-11-19  
+* [ITLC 2021-12-15 SIR for 14th Floor Network Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825463/ITLC+2021-12-15+SIR+for+14th+Floor+Network+Outage) — SIR for network services on Dec 15, 2021   
+* [ITLC 2022-01-10 SIR for Confluence](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823441/ITLC+2022-01-10+SIR+for+Confluence) — SIR for Confluence on Jan 07, 2022   
+* [ITLC 2022-04-07 SIR for desktop kickstart issue](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822103/ITLC+2022-04-07+SIR+for+desktop+kickstart+issue) — SIR for Linux desktop kickstart installation  on 2022-0407  
+* [ITLC 2022-04-27 SIR for OpenGrok Webserver down](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823052/ITLC+2022-04-27+SIR+for+OpenGrok+Webserver+down) — SIR for Opengrok webserver outage.  
+* [ITLC 2022-05-06 SIR for Confluence Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822329/ITLC+2022-05-06+SIR+for+Confluence+Outage) — SIR for Confluence Outage on 05/06/2  
+* [ITLC 2022-05-10 SIR for Cloudtops Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821529/ITLC+2022-05-10+SIR+for+Cloudtops+Outage) — SIR for Cloudtops outage via the teradici client. on 2021-11-22  
+* [ITLC 2022-05-15 SIR for ELN Okta login broken](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824627/ITLC+2022-05-15+SIR+for+ELN+Okta+login+broken) — SIR for ELN on May 15, 2022   
+* [ITLC 2022-05-19 SIR for OpenGrok](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824825/ITLC+2022-05-19+SIR+for+OpenGrok) — SIR for OpenGrok on 2022-05-19  
+* [ITLC 2022-05-24 SIR for NYC ISP Lumen](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821772/ITLC+2022-05-24+SIR+for+NYC+ISP+Lumen) — SIR for NYC's ISP outage for Lumen on 2022-05-24  
+* [ITLC 2022-06-16 SIR for pdx-git](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821742/ITLC+2022-06-16+SIR+for+pdx-git) — SIR for pdx-git on Jun 16, 2022   
+* [ITLC 2022-07-20 SIR for Jira production server rebooted with improper disk mounts](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821720/ITLC+2022-07-20+SIR+for+Jira+production+server+rebooted+with+improper+disk+mounts) — SIR for Jira production server on Jul 20, 2022   
+* [ITLC 2022-08-19 SIR for boltsub2 being unresponsive](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823124/ITLC+2022-08-19+SIR+for+boltsub2+being+unresponsive) —    SIR for boltsub2 on August 20th, 2022  
+* [ITLC 2022-08-23 SIR for HYT Tata ISP Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825154/ITLC+2022-08-23+SIR+for+HYT+Tata+ISP+Outage) — SIR for Hyderabad site outage  on 23/Aug/2022  
+* [ITLC 2022-08-31 SIR for pdx-sw-b06L](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823085/ITLC+2022-08-31+SIR+for+pdx-sw-b06L) — SIR for pdx-sw-b06L on Aug 31, 2022   
+* [ITLC 2022-09-08 SIR for SDS Wifi](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824377/ITLC+2022-09-08+SIR+for+SDS+Wifi) — SIR for SDS Wifi on 2022-09-08  
+* [ITLC 2022-09-13 SIR for NYC Lumen outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824331/ITLC+2022-09-13+SIR+for+NYC+Lumen+outage) — SIR for on 2022-09-13  
+* [ITLC 2022-09-19 SIR for NYC License Server](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825104/ITLC+2022-09-19+SIR+for+NYC+License+Server) — SIR for NYC License Server Outage (nyc-lic-lv01) on 2022-09-19. Schrodinger software license server is a computer software system which provides access tokens, or keys, to client computers in order to enable licensed software to run.   
+* [ITLC 2022-11-23 SIR for OpenGrok service](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824747/ITLC+2022-11-23+SIR+for+OpenGrok+service) — SIR for OpenGrok on Nov 23, 2022   
+* [ITLC 2022-11-30 SIR for Comcast Down for PDX](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821929/ITLC+2022-11-30+SIR+for+Comcast+Down+for+PDX) — SIR for Comcast ISP on Nov 30, 2022   
+* [ITLC 2022-12-01 SIR for NYC Core networking](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825137/ITLC+2022-12-01+SIR+for+NYC+Core+networking) — SIR for NYC on 2022-12-02  
+* [ITLC 2022-12-19 SIR for Cloudtops Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821654/ITLC+2022-12-19+SIR+for+Cloudtops+Outage) — SIR for Cloudtops via the Teradici client on 2022-12-19  
+* [ITLC 2022-12-19 SIR for MHG Power Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821425/ITLC+2022-12-19+SIR+for+MHG+Power+Outage) — SIR for MHG Power Outage on  Dec 19, 2022   
+* [ITLC 2022-12-20 SIR for Jira mail service](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821226/ITLC+2022-12-20+SIR+for+Jira+mail+service) — SIR for Jira mail service on 12/20/2022  
+* [ITLC 2022-12-23 SIR for pdx-idf13](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824782/ITLC+2022-12-23+SIR+for+pdx-idf13) — SIR for pdx-idf-13-switch-stack on Friday, Dec 23, 2022  
+* [ITLC 2022-12-29 SIR for BLR network outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822089/ITLC+2022-12-29+SIR+for+BLR+network+outage) — SIR for on   
+* [ITLC 2023-01-10 SIR for mail to Jira](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825840/ITLC+2023-01-10+SIR+for+mail+to+Jira) — SIR for mail to/from Jira on Sep 13, 2022   
+* [ITLC 2023-01-11 SIR for ELN](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823587/ITLC+2023-01-11+SIR+for+ELN) — SIR for ELN on Jan 11, 2023   
+* [ITLC 2023-01-18 SIR for NYC Lumen Internet](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825352/ITLC+2023-01-18+SIR+for+NYC+Lumen+Internet) — SIR for NYC ISP outage on 2023 01-18  
+* [ITLC 2023-03-02 SIR for nyc-archive-nfs-lv01](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821935/ITLC+2023-03-02+SIR+for+nyc-archive-nfs-lv01) — SIR for nyc-archive-nfs-lv01 on 2023-03-02  
+* [ITLC 2023-03-12 SIR for boltsub3](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825234/ITLC+2023-03-12+SIR+for+boltsub3) — SIR for boltsub3 on Mar 12, 2023   
+* [ITLC 2023-03-26 SIR for "Storage config in NYC preventing authentication"](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824667/ITLC+2023-03-26+SIR+for+Storage+config+in+NYC+preventing+authentication) — SIR for "Storage config in NYC preventing authentication" on Mar 26, 2023   
+* [ITLC 2023-04-27 SIR for SGE on bolt](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822736/ITLC+2023-04-27+SIR+for+SGE+on+bolt) — SIR for SGE on bolt on Apr 26, 2023   
+* [ITLC 2023-05-05 SIR for Confluence](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824709/ITLC+2023-05-05+SIR+for+Confluence) — SIR for Confluence on 2023-05-05  
+* [ITLC 2023-06-16 SIR for Bolt cluster](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821363/ITLC+2023-06-16+SIR+for+Bolt+cluster) — SIR for Bolt cluster on Jun 14, 2023   
+* [ITLC 2023-06-16 SIR for Confluence](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822193/ITLC+2023-06-16+SIR+for+Confluence) — SIR for Confluence on Jun 13, 2023   
+* [ITLC 2023-06-23 SIR for SAN Network](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822723/ITLC+2023-06-23+SIR+for+SAN+Network) — SIR for SAN Network on 2023-06-23  
+* [ITLC 2023-07-18 SIR for Fortimail](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824897/ITLC+2023-07-18+SIR+for+Fortimail) — SIR for \<affected system or service\> on \<date the outage occurred\>  
+* [ITLC 2023-07-25 SIR for service boltsub1](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825458/ITLC+2023-07-25+SIR+for+service+boltsub1) — SIR for boltsub1 on 7/25/2023  
+* [ITLC 2023-07-27 SIR for NYC DHCP](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823938/ITLC+2023-07-27+SIR+for+NYC+DHCP) — SIR for nyc-dhcp-wv02 DHCP-Server on Jul 26, 2023   
+* [ITLC 2023-07-31 SIR for Cambridge Network Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825612/ITLC+2023-07-31+SIR+for+Cambridge+Network+Outage) — SIR for Cambridge office network outage on  Jul 31, 2023   
+* [ITLC 2023-08-01 SIR for Lost Connection to xtaldata](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821920/ITLC+2023-08-01+SIR+for+Lost+Connection+to+xtaldata) — SIR for xtaldata (192.168.200.212) on Aug 01, 2023   
+* [ITLC 2023-08-18 SIR for NYC Network Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823193/ITLC+2023-08-18+SIR+for+NYC+Network+Outage)  
+* [ITLC 2023-09-05 SIR for NYC Routing](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821909/ITLC+2023-09-05+SIR+for+NYC+Routing) — SIR for NYC Routing, multiple dates in september.  
+* [ITLC 2023-09-06 SIR for DOWN on ewr-pdu-0208a.schrodinger.com](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821700/ITLC+2023-09-06+SIR+for+DOWN+on+ewr-pdu-0208a.schrodinger.com) — SIR for \<affected system or service\> on \<date the outage occurred\>  
+* [ITLC 2023-10-05 SIR for BLR outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822861/ITLC+2023-10-05+SIR+for+BLR+outage) — SIR for BLR Site on 06/sep/2023  
+* [ITLC 2023-10-13 SIR for Framingham Network Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821246/ITLC+2023-10-13+SIR+for+Framingham+Network+Outage)  
+* [ITLC 2023-10-13 SIR for tyo-vsr-e01 outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825332/ITLC+2023-10-13+SIR+for+tyo-vsr-e01+outage) — SIR for tyo-vsr-e01 on Oct 13, 2023   
+* [ITLC 2023-10-25 SIR for Framingham Network Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823119/ITLC+2023-10-25+SIR+for+Framingham+Network+Outage) — SIR for FMA office network outage on  Oct 25, 2023  
+* [ITLC 2023-10-31 SIR for EWR PDU and Qumulo Outage on 10/20/23](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822627/ITLC+2023-10-31+SIR+for+EWR+PDU+and+Qumulo+Outage+on+10+20+23) — SIR for EWR PDUs in rack 203.M22.01.03 on Oct 20, 2023   
+* [ITLC 2023-11-21 SIR for SAN Primary ISP Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823104/ITLC+2023-11-21+SIR+for+SAN+Primary+ISP+Outage) — SIR for SAN Primary ISP on 11/21/23   
+* [ITLC 2023-11-30 SIR for disabled snapshots on pdx-stor-q01](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824220/ITLC+2023-11-30+SIR+for+disabled+snapshots+on+pdx-stor-q01) — SIR for pdx-stor-q01's disabled snapshots, which were first noticed on Nov 13, 2023   
+* [ITLC 2023-12-13 SIR for bolt head node](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823496/ITLC+2023-12-13+SIR+for+bolt+head+node) — SIR for bolt head node on Dec 08, 2023   
+* [ITLC 2023-23-12 SIR for \-Multiple TYO Devices Offline](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821872/ITLC+2023-23-12+SIR+for+-Multiple+TYO+Devices+Offline) — SIR for \<affected system or service\> on \<date the outage occurred\>  
+* [ITLC 2024-01-28 SIR for SAN Office ISP Outage](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824594/ITLC+2024-01-28+SIR+for+SAN+Office+ISP+Outage) — SIR for SAN Primary ISP on 01/28/24  
+* [ITLC 2024-01-30 PDXGPU service](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54820962/ITLC+2024-01-30+PDXGPU+service) — SIR for PDXGPU cluster on Jan 16, 2024   
+* [ITLC 2024-02-23 SIR for Boston Office Wifi Outage.](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824777/ITLC+2024-02-23+SIR+for+Boston+Office+Wifi+Outage.) — SIR for Boston office Wifi Outage on 02/08/24  
+* [ITLC 2024-03-04 SIR for NYC Outage 02/13/2024 \- During ISP maintenance](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825586/ITLC+2024-03-04+SIR+for+NYC+Outage+02+13+2024+-+During+ISP+maintenance) — SIR for NYC outage and downstream effects on 02/13/2024  
+* [ITLC 2024-03-05 SIR for NFS /home directories not accessable after Qumulo update](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825132/ITLC+2024-03-05+SIR+for+NFS+home+directories+not+accessable+after+Qumulo+update) — SIR for Linux /home/\<username\> directories not mounting after Qumulo update on 03/05/2024  
+* [ITLC 2024-03-13 SIR for bolt stuck\_jobs.cron](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821323/ITLC+2024-03-13+SIR+for+bolt+stuck_jobs.cron) — SIR for bolt computes on Mar 12, 2024   
+* [ITLC NYC outage-02/13/2024-During the ISP maintenance](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824053/ITLC+NYC+outage-02+13+2024-During+the+ISP+maintenance)  
+* [ITLC SIR Outstanding Actions & Reports](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825196/ITLC+SIR+Outstanding+Actions+Reports)  
+  * [ITLC SIR Outstanding Actions](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824887/ITLC+SIR+Outstanding+Actions)  
+  * [ITLC SIR Outstanding Reports](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824070/ITLC+SIR+Outstanding+Reports)  
+* [ITLC SIR Review Board Meeting Notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823994/ITLC+SIR+Review+Board+Meeting+Notes) — Notes from our Service Interruption Review Board (SIRB) operation meetings  
+  * [ITLC 2022-07-14 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825730/ITLC+2022-07-14+SIR+Review+Board+notes) — ITLC 2022-05-24 SIR for NYC ISP Lumen  
+  * [ITLC 2022-07-28 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825517/ITLC+2022-07-28+SIR+Review+Board+notes) — ITLC 2022-05-06 SIR for Confluence Outage  
+  * [ITLC 2022-08-11 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824601/ITLC+2022-08-11+SIR+Review+Board+notes) — 2022-06-24 SIR for GitHub Apps  
+  * [ITLC 2022-09-08 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823280/ITLC+2022-09-08+SIR+Review+Board+notes) — ITLC 2022-08-31 SIR for pdx-sw-b06L  
+  * [ITLC 2022-09-22 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825708/ITLC+2022-09-22+SIR+Review+Board+notes) — ITLC 2022-08-19 SIR for boltsub2 being unresponsive  
+  * [ITLC 2022-11-03 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823242/ITLC+2022-11-03+SIR+Review+Board+notes) — ITLC 2022-08-23 SIR for HYT Tata ISP Outage  
+  * [ITLC 2022-11-17 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823415/ITLC+2022-11-17+SIR+Review+Board+notes) — ITLC 2022-08-23 SIR for HYT Tata ISP Outage  
+  * [ITLC 2022-12-01 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825340/ITLC+2022-12-01+SIR+Review+Board+notes) — ITLC 2022-11-23 SIR for OpenGrok service  
+  * [ITLC 2023-01-12 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825349/ITLC+2023-01-12+SIR+Review+Board+notes) — ITLC 2022-12-01 SIR for NYC Core networking  
+  * [ITLC 2023-01-26 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823725/ITLC+2023-01-26+SIR+Review+Board+notes) — ITLC 2022-12-29 SIR for BLR network outage  
+  * [ITLC 2023-02-23 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821569/ITLC+2023-02-23+SIR+Review+Board+notes) — ITLC 2023-03-12 SIR for boltsub3  
+  * [ITLC 2023-04-06 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824931/ITLC+2023-04-06+SIR+Review+Board+notes) — ITLC 2022-12-19 SIR for MHG Power Outage  
+  * [ITLC 2023-04-20 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821299/ITLC+2023-04-20+SIR+Review+Board+notes)  
+  * [ITLC 2023-05-04 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821906/ITLC+2023-05-04+SIR+Review+Board+notes) — 2023-03-26 SIR for "Storage config in NYC preventing authentication"  
+  * [ITLC 2023-05-18 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821069/ITLC+2023-05-18+SIR+Review+Board+notes) — ITLC 2023-05-05 SIR for Confluence  
+  * [ITLC 2023-08-10 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824800/ITLC+2023-08-10+SIR+Review+Board+notes) — ITLC 2023-07-27 SIR for NYC DHCP  
+  * [ITLC 2023-09-07 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824900/ITLC+2023-09-07+SIR+Review+Board+notes) — ITLC 2023-09-06 SIR for DOWN on ewr-pdu-0208a.schrodinger.com  
+  * [ITLC 2023-10-19 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822866/ITLC+2023-10-19+SIR+Review+Board+notes) — ITLC 2023-10-13 SIR for tyo-vsr-e01 outage  
+  * [ITLC 2023-11-02 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822308/ITLC+2023-11-02+SIR+Review+Board+notes) — ITLC 2023-09-05 SIR for NYC Routing  
+  * [ITLC 2023-11-16 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825719/ITLC+2023-11-16+SIR+Review+Board+notes) — ITLC 2023-07-25 SIR for service boltsub1  
+  * [ITLC 2023-12-14 SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821539/ITLC+2023-12-14+SIR+Review+Board+notes) — ITLC 2023-11-30 SIR for disabled snapshots on pdx-stor-q01  
+  * [ITLC 2023-MM-DD SIR Review Board notes](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823261/ITLC+2023-MM-DD+SIR+Review+Board+notes) — ITLC 2023-10-31 SIR for EWR PDU and Qumulo Outage on 10/20/23
+
+# [**ITLC Setting up Passwordless SSH from Linux and Mac Hosts**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821526/ITLC+Setting+up+Passwordless+SSH+from+Linux+and+Mac+Hosts)
+
+# [**ITLC Setting Up Passwordless SSH from Windows Hosts**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821059/ITLC+Setting+Up+Passwordless+SSH+from+Windows+Hosts)
+
+# [**ITLC Shanghai Office (???)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823865/ITLC+Shanghai+Office)
+
+# [**ITLC Software Governance**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825837/ITLC+Software+Governance)
+
+# [**ITLC Sony WH1000XM5**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821020/ITLC+Sony+WH1000XM5)
+
+# [**ITLC Standard Equipment**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823552/ITLC+Standard+Equipment)
+
+The tables listed here summarize the specifications of systems being procured and managed by IT. Click the left column entries to see further details and notes about those machines.
+
+# [**ITLC Storage Manager Responsibilities**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822248/ITLC+Storage+Manager+Responsibilities)
+
+# [**ITLC Switching CIFS Mounts After 2020 Storage Migration**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821390/ITLC+Switching+CIFS+Mounts+After+2020+Storage+Migration)
+
+If you have previously manually connected to/configured a network drive on our VNX storage (pdx-stor-vnx or nyc-stor-vnx) on your own machine, you will need to make changes to the connection settings because we've migrated to new Qumulo storage.
+
+# [**ITLC Tableau Desktop Installation**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823928/ITLC+Tableau+Desktop+Installation)
+
+# [**ITLC Terraform**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821715/ITLC+Terraform)
+
+# [**ITLC Tokyo Office (TYO)**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823689/ITLC+Tokyo+Office+TYO)
+
+# [**ITLC Track Zoom Global Settings \- Change Log**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825378/ITLC+Track+Zoom+Global+Settings+-+Change+Log)
+
+This page lists Zoom setting changes that affect most users and why they change.
+
+# [**ITLC Travel to High Risk Countries**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822073/ITLC+Travel+to+High+Risk+Countries)
+
+Guidelines for traveling abroad to certain locations.
+
+# [**ITLC Troubleshooting Zoom Rooms**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825523/ITLC+Troubleshooting+Zoom+Rooms)
+
+# [**ITLC Ubuntu Workstation Q\&A's**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823670/ITLC+Ubuntu+Workstation+Q+A+s)
+
+# [**ITLC Unable to establish secure connection to Zoom**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821083/ITLC+Unable+to+establish+secure+connection+to+Zoom)
+
+# [**ITLC Upgrading your macOS Version**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822824/ITLC+Upgrading+your+macOS+Version)
+
+# [**ITLC USB-C Multiport Adapter**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821028/ITLC+USB-C+Multiport+Adapter)
+
+# [**ITLC Using /nfs/utils**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54824380/ITLC+Using+nfs+utils)
+
+When you need access to a specific version of a Linux program vs. the one installed on your system
+
+# [**ITLC Using Whiteboard in Zoom**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821680/ITLC+Using+Whiteboard+in+Zoom)
+
+# [**ITLC Visual Studio**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825250/ITLC+Visual+Studio)
+
+We license Visual Studio Professional for a subset of our developers, with usage being tracked via AD group membership and renewed based on usage.
+
+# [**ITLC Workspace ONE (WS1) Windows device management**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821503/ITLC+Workspace+ONE+WS1+Windows+device+management)
+
+We have an MDM (mobile device management) platform for managing Windows based endpoints like desktops and laptops. This page lists the applications we're deploying and managing and other settings that may be relevant to end-users
+
+* [ITLC WS1 pop-up appears on login](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54823795/ITLC+WS1+pop-up+appears+on+login)
+
+# [**ITLC Zoom**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822350/ITLC+Zoom)
+
+This is a public-facing Zoom documentation for End-Users.  

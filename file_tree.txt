@@ -1,0 +1,126 @@
+🗂️ IT Knowledge Base/
+├── 💻 Hardware & Equipment/
+│   ├── 🖥️ Computers/
+│   │   ├── 🍎 Apple Devices/
+│   │   │   ├── 13" Macbook Air (M2)
+│   │   │   ├── 14" Macbook Pro (M2)
+│   │   │   ├── 16" Macbook Pro (M2)
+│   │   │   └── iPads
+│   │   ├── 🖱️ Dell Devices/
+│   │   │   ├── 14" Latitude 7440
+│   │   │   └── 15" Precision 5570
+│   │   └── 🐧 Ubuntu Workstations/
+│   │       ├── Requirements
+│   │       ├── Q&As
+│   │       └── Configurations
+│   ├── 🎮 Peripherals/
+│   │   ├── Dell Ultrasharp Monitor
+│   │   ├── Double/Triple Monitor Arm Standard
+│   │   ├── Ergonomic Peripheral Options
+│   │   ├── Sony WH1000XM5
+│   │   └── USB-C Multiport Adapter
+│   └── 📜 Hardware Policies/
+│       ├── Equipment Ordering Policy
+│       ├── Standard Equipment
+│       └── Retired Hardware Policies
+│
+├── 🔧 Software & Applications/
+│   ├── 👨‍💻 Development Tools/
+│   │   ├── ChemDraw Licenses
+│   │   ├── GitHub Enterprise
+│   │   ├── Visual Studio
+│   │   └── Terraform
+│   ├── 🛠️ Productivity Apps/
+│   │   ├── 📦 Box/
+│   │   │   ├── Documentation
+│   │   │   ├── Password Management
+│   │   │   └── Sharing & Collaboration
+│   │   ├── ✍️ DocuSign/
+│   │   │   ├── Documentation
+│   │   │   ├── QES Instructions
+│   │   │   └── Account Management
+│   │   ├── 🌐 Google Workspace/
+│   │   │   ├── Training Guide
+│   │   │   └── vs Microsoft365
+│   │   └── 📊 Microsoft Office 365/
+│   │       ├── Installation
+│   │       └── FAQs
+│   ├── 💬 Communication Tools/
+│   │   ├── Microsoft Teams
+│   │   └── 🎥 Zoom/
+│   │       ├── Installation
+│   │       ├── Troubleshooting
+│   │       ├── Whiteboard Usage
+│   │       └── Room Management
+│   └── 🌍 Browsers/
+│       ├── Google Chrome
+│       ├── Mozilla Firefox
+│       └── Profile Management
+│
+├── 🌐 Network & Remote Access/
+│   ├── 🔐 VPN Solutions/
+│   │   ├── Appgate Documentation
+│   │   ├── Installation Guides
+│   │   └── Tag-Based Entitlements
+│   ├── 🖥️ Remote Desktop/
+│   │   ├── NX/NoMachine Connection
+│   │   └── Windows Remote Desktop
+│   └── 💾 Network Resources/
+│       ├── Regional SMB Exports
+│       ├── Network Storage
+│       └── Archive Server
+│
+├── 🔒 Security & Authentication/
+│   ├── 🔑 Identity Management/
+│   │   ├── Okta Documentation
+│   │   ├── MFA Setup
+│   │   └── Password Management
+│   ├── 📱 Device Management/
+│   │   ├── Jamf (Mac)
+│   │   └── Workspace ONE (Windows)
+│   └── 🛡️ Access Control/
+│       ├── SSH Configuration
+│       └── Security Policies
+│
+├── 🏢 Office Locations/
+│   ├── 🌎 Americas/
+│   │   ├── New York (NYC)
+│   │   ├── Portland (PDX)
+│   │   ├── San Diego (SAN)
+│   │   └── Framingham (FMA)
+│   ├── 🌍 Europe/
+│   │   ├── Germany (MHG)
+│   │   └── Reading (LON)
+│   └── 🌏 Asia-Pacific/
+│       ├── Hyderabad (HYD)
+│       ├── Seoul (KOR)
+│       ├── Shanghai
+│       └── Tokyo (TYO)
+│
+├── ⚙️ Systems & Services/
+│   ├── 🚀 HPC Resources/
+│   │   ├── User Guide
+│   │   └── Schedulers
+│   ├── 💾 Backup Solutions/
+│   │   └── Druva inSync
+│   └── 📊 Monitoring/
+│       └── Service Interruption Reports
+│
+├── 📋 Policies & Procedures/
+│   ├── ✅ GxP Compliance/
+│   │   ├── Managed Documents
+│   │   └── Change Control
+│   ├── 📜 Software Governance/
+│   │   └── Policies
+│   └── ✈️ Travel Policies/
+│       └── High Risk Countries
+│
+└── 📚 Documentation & Support/
+    ├── 🎓 Getting Started/
+    │   ├── New User Guide
+    │   └── IT Orientation
+    ├── 🆘 Support Resources/
+    │   ├── Freshservice Guide
+    │   └── IT Support Contact
+    └── 📖 Knowledge Base/
+        └── Documentation Standards
