@@ -192,7 +192,7 @@ As we develop our internal GxP program it is useful and necessary to have a way 
 Schrodinger has policies covering US and GmbH employees that allows employees to take ownership of retired computer systems for exclusive personal use
 
 * [ITLC Policy for Retired Laptops/Desktops \[Schrödinger GmbH employees only\]](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54821552/ITLC+Policy+for+Retired+Laptops+Desktops+Schr+dinger+GmbH+employees+only)  
-  * [ITLC Schrodinger\_GmbH: Laptop Pool](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822577/ITLC+Schrodinger_GmbH+Laptop+Pool)  
+* [ITLC Schrodinger\_GmbH: Laptop Pool](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822577/ITLC+Schrodinger_GmbH+Laptop+Pool)  
 * [ITLC Policy for Retired Laptops/Desktops \[US employees only\] \[Laptop Buy Back\]](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54822555/ITLC+Policy+for+Retired+Laptops+Desktops+US+employees+only+Laptop+Buy+Back)
 
 # [**ITLC HPC User Guide**](https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825579/ITLC+HPC+User+Guide)
