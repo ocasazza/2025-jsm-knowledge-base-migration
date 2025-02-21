@@ -1,0 +1,8 @@
+{
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.fontFamily": "JetBrains Mono",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.defaultProfile.osx": "bash",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "workbench.colorTheme": "Default High Contrast"
+}
