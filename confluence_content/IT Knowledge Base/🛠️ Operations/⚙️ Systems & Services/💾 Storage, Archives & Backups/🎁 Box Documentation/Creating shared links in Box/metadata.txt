@@ -1,4 +1,0 @@
-id: 54825511
-title: Creating shared links in Box
-version: 2
-space_key: ITLC

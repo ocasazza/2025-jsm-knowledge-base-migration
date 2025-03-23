@@ -2,3 +2,5 @@ id: 200409100
 title: ☢️🚧🪟Intune Windows Laptop Management
 version: 9
 space_key: ITLC
+parent_id: 190447649
+parent_title: 🔋 Dell Devices

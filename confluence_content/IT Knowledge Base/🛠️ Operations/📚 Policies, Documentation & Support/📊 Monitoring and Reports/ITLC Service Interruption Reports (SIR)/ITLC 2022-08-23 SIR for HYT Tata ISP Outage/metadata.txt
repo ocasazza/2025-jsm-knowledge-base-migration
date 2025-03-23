@@ -1,4 +1,0 @@
-id: 54825154
-title: ITLC 2022-08-23 SIR for HYT Tata ISP Outage
-version: 1
-space_key: ITLC

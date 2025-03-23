@@ -2,3 +2,5 @@ id: 54823136
 title: Jamf Connect Overview
 version: 4
 space_key: ITLC
+parent_id: 54825475
+parent_title: 🖥️ Jamf MacOS Laptop Management

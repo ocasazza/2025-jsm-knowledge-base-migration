@@ -1,4 +1,0 @@
-id: 196280421
-title: Track Zoom Global Settings - Change Log
-version: 1
-space_key: ITLC

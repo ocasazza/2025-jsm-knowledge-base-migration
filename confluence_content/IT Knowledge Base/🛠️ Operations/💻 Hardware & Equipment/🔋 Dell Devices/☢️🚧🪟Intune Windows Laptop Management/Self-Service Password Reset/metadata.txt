@@ -2,3 +2,5 @@ id: 213549097
 title: Self-Service Password Reset
 version: 2
 space_key: ITLC
+parent_id: 200409100
+parent_title: ☢️🚧🪟Intune Windows Laptop Management

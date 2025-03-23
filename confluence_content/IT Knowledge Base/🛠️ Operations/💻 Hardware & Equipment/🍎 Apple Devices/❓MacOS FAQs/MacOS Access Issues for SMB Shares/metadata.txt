@@ -2,3 +2,5 @@ id: 54822417
 title: MacOS Access Issues for SMB Shares
 version: 4
 space_key: ITLC
+parent_id: 54821498
+parent_title: ❓MacOS FAQs

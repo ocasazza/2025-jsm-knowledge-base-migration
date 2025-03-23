@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Graph Visualization with Neovis.js</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        #viz {
+            width: 100%;
+            height: 700px;
+            border: 1px solid #ddd;
+            background-color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        select {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+    </style>
+    <!-- Load Neovis.js from CDN -->
+    <script src="https://unpkg.com/neovis.js@2.0.2"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Knowledge Graph Visualization with Neovis.js</h1>
+        
+        <div class="controls">
+            <div>
+                <label for="layout">Layout:</label>
+                <select id="layout" onchange="changeLayout()">
+                    <option value="force">Force Directed</option>
+                    <option value="hierarchical">Hierarchical</option>
+                </select>
+            </div>
+            <div>
+                <label for="colorBy">Color by:</label>
+                <select id="colorBy" onchange="changeColorBy()">
+                    <option value="entityType">Entity Type</option>
+                    <option value="community">Community</option>
+                </select>
+            </div>
+            <div>
+                <button onclick="runQuery()">Run Query</button>
+                <button onclick="clearGraph()">Clear Graph</button>
+            </div>
+        </div>
+        
+        <div id="viz"></div>
+    </div>
+
+    <script>
+        // Define color mapping for entity types
+        const entityTypeColors = {
+            "ContentSection": "#ff7675",
+            "Office": "#74b9ff",
+            "HardwareCategory": "#55efc4",
+            "SoftwareComponent": "#a29bfe",
+            "AuthenticationComponent": "#ffeaa7",
+            "CommunicationChannel": "#fab1a0",
+            "ComputeResource": "#81ecec",
+            "MetaEntity": "#fd79a8",
+            "default": "#636e72"
+        };
+
+        // Status message display
+        function showStatus(message, isError = false) {
+            const viz = document.getElementById("viz");
+            viz.innerHTML = `<div style="padding: 20px; color: ${isError ? 'red' : 'white'}; text-align: center; margin-top: 200px; font-size: 18px;">${message}</div>`;
+        }
+
+        // Initialize visualization
+        let viz;
+
+        function initViz() {
+            showStatus("Initializing visualization...");
+            
+            const config = {
+                container_id: "viz",
+                server_url: "bolt://localhost:7687",
+                server_user: "neo4j",
+                server_password: "password",
+                labels: {
+                    "Entity": {
+                        caption: "name",
+                        size: "pagerank",
+                        community: "entityType",
+                        title_properties: ["name", "entityType"],
+                        // Function to determine node color based on entity type
+                        color: function(node) {
+                            const colorBy = document.getElementById("colorBy").value;
+                            if (colorBy === "entityType") {
+                                const entityType = node.properties.entityType;
+                                return entityTypeColors[entityType] || entityTypeColors.default;
+                            } else {
+                                // Use community detection results if available
+                                return null; // Default coloring
+                            }
+                        }
+                    }
+                },
+                relationships: {
+                    "contains": {
+                        thickness: 2,
+                        caption: false
+                    },
+                    "documents": {
+                        thickness: 1,
+                        caption: true
+                    },
+                    "manages": {
+                        thickness: 1,
+                        caption: true
+                    },
+                    "supports": {
+                        thickness: 1,
+                        caption: true
+                    },
+                    "references": {
+                        thickness: 1,
+                        caption: true
+                    },
+                    "integratesWith": {
+                        thickness: 1,
+                        caption: true
+                    }
+                },
+                initial_cypher: "MATCH (n:Entity)-[r]->(m:Entity) RETURN n, r, m LIMIT 50"
+            };
+
+            viz = new NeoVis.default(config);
+            viz.render();
+        }
+
+        function runQuery() {
+            const query = "MATCH (n:Entity)-[r]->(m:Entity) RETURN n, r, m LIMIT 50";
+            viz.renderWithCypher(query);
+        }
+
+        function clearGraph() {
+            viz.clearNetwork();
+        }
+
+        function changeLayout() {
+            const layout = document.getElementById("layout").value;
+            if (layout === "hierarchical") {
+                viz.updateWithOptions({
+                    physics: {
+                        enabled: true,
+                        hierarchicalRepulsion: {
+                            nodeDistance: 120
+                        }
+                    },
+                    layout: {
+                        hierarchical: {
+                            enabled: true,
+                            sortMethod: "directed",
+                            direction: "UD",
+                            levelSeparation: 150
+                        }
+                    }
+                });
+            } else {
+                viz.updateWithOptions({
+                    physics: {
+                        enabled: true,
+                        barnesHut: {
+                            gravitationalConstant: -2000,
+                            centralGravity: 0.3,
+                            springLength: 95,
+                            springConstant: 0.04
+                        }
+                    },
+                    layout: {
+                        hierarchical: {
+                            enabled: false
+                        }
+                    }
+                });
+            }
+        }
+
+        function changeColorBy() {
+            // Re-render to apply new coloring
+            runQuery();
+        }
+
+        // Initialize visualization when page loads
+        document.addEventListener("DOMContentLoaded", function() {
+            // First check if Neo4j is available
+            showStatus("Checking Neo4j connection...");
+            
+            try {
+                // Neovis.js doesn't expose a direct way to check connection before initialization
+                // So we'll initialize and handle errors
+                initViz();
+                
+                // Add error handling for visualization
+                viz.registerOnEvent("error", function(error) {
+                    console.error("Visualization error:", error);
+                    showStatus(`Error: ${error.message || "Failed to connect to Neo4j"}. Make sure Neo4j is running at localhost:7687 with username 'neo4j' and password 'password'.`, true);
+                });
+            } catch (error) {
+                console.error("Initialization error:", error);
+                showStatus(`Initialization error: ${error.message}. Make sure Neo4j is running and accessible.`, true);
+            }
+        });
+    </script>
+</body>
+</html>

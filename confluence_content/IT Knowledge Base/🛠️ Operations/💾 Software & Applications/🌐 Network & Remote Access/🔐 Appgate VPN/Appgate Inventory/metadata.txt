@@ -1,4 +1,0 @@
-id: 54823520
-title: Appgate Inventory
-version: 2
-space_key: ITLC

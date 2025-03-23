@@ -1,4 +1,0 @@
-id: 54825038
-title: AWS CLI Access (okta-awscli)
-version: 4
-space_key: ITLC

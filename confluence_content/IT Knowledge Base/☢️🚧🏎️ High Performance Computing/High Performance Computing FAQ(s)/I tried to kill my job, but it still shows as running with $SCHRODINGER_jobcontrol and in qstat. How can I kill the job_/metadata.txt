@@ -2,3 +2,5 @@ id: 210960748
 title: I tried to kill my job, but it still shows as running with $SCHRODINGER/jobcontrol and in qstat. How can I kill the job?
 version: 2
 space_key: ITLC
+parent_id: 210894876
+parent_title: High Performance Computing FAQ(s)

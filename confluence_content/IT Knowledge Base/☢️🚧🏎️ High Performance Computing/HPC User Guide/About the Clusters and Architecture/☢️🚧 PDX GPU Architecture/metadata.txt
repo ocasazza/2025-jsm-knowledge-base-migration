@@ -2,3 +2,5 @@ id: 212631674
 title: ☢️🚧 PDX GPU Architecture
 version: 2
 space_key: ITLC
+parent_id: 211222641
+parent_title: About the Clusters and Architecture

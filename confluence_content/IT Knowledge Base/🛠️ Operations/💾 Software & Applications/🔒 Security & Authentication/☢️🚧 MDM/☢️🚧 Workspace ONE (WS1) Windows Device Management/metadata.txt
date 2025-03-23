@@ -1,4 +1,0 @@
-id: 54821503
-title: ☢️🚧 Workspace ONE (WS1) Windows Device Management
-version: 2
-space_key: ITLC

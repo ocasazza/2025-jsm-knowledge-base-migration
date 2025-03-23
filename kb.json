@@ -1,0 +1,2315 @@
+{
+  "entities": [
+    {
+      "name": "IT Knowledge Base",
+      "entityType": "KnowledgeBase",
+      "observations": [
+        "Main knowledge base for Schrödinger's IT resources and documentation",
+        "Serves as a centralized knowledge directory for applications, operating systems, and IT problem-solving",
+        "Has a search function and popular labels for navigation",
+        "Space key is ITLC"
+      ]
+    },
+    {
+      "name": "High Performance Computing",
+      "entityType": "Section",
+      "observations": [
+        "Major section of the IT Knowledge Base focused on HPC resources",
+        "Contains information about Schrödinger's HPC clusters: bolt and pdxgpu",
+        "Includes user guides, FAQs, and documentation on schedulers",
+        "Previously categorized as 'Section', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "HPC User Guide",
+      "entityType": "Guide",
+      "observations": [
+        "Comprehensive guide for using Schrödinger's HPC clusters",
+        "Includes sections on quick tips, cluster architecture, getting started, job server, software builds, project priorities, queues, and storage",
+        "Recommends users subscribe to the cluster Google group for announcements and alerts",
+        "Document link: https://schrodinger-sandbox.atlassian.net/wiki/spaces/ITLC/pages/54825579",
+        "A quick guide to help users get to know Schrödinger's High Performance Computing clusters: bolt and pdxgpu",
+        "Contains a table of contents with links to sections on Quick Tips, Cluster Architecture, Getting Started, Job Server, Builds & Releases, Project Priorities, Queues, and Storage",
+        "Located in the confluence_content/IT Knowledge Base/☢️🚧🏎️ High Performance Computing/HPC User Guide directory"
+      ]
+    },
+    {
+      "name": "Information Security",
+      "entityType": "Section",
+      "observations": [
+        "Section focused on information security topics",
+        "Marked with warning symbols (☢️🚧) suggesting importance or work in progress",
+        "Previously categorized as 'Section', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "Operations",
+      "entityType": "Section",
+      "observations": [
+        "Major section of the IT Knowledge Base covering operational aspects of IT",
+        "Contains multiple subsections for different operational areas",
+        "Includes search functionality for finding content within the section",
+        "Previously categorized as 'Section', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "Systems & Services",
+      "entityType": "Subsection",
+      "observations": [
+        "Subsection of Operations covering IT systems and services",
+        "Contains information about cloud infrastructure, storage, and other IT services",
+        "Includes documentation on Jira and other systems",
+        "Previously categorized as 'Subsection', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "Office Locations & Services",
+      "entityType": "Subsection",
+      "observations": [
+        "Subsection of Operations covering office locations and services",
+        "Organized by geographic regions: Americas, Europe, and Asia-Pacific",
+        "Includes information about office resources, building access, and location-specific services",
+        "Previously categorized as 'Subsection', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "Hardware & Equipment",
+      "entityType": "Subsection",
+      "observations": [
+        "Subsection of Operations covering hardware and equipment",
+        "Includes information about Apple devices, Ubuntu workstations, Dell devices, and peripherals",
+        "Contains hardware policies and documentation",
+        "Previously categorized as 'Subsection', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "Software & Applications",
+      "entityType": "Subsection",
+      "observations": [
+        "Subsection of Operations covering software and applications",
+        "Includes information about browsers, network tools, development tools, security applications, and productivity apps",
+        "Contains an approved software list",
+        "Previously categorized as 'Subsection', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "Policies, Documentation & Support",
+      "entityType": "Subsection",
+      "observations": [
+        "Subsection of Operations covering policies, documentation, and support",
+        "Includes information for new employees, AV support, monitoring, and documentation standards",
+        "Contains guidance on submitting and viewing tickets with JSM",
+        "Previously categorized as 'Subsection', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "Templates",
+      "entityType": "Section",
+      "observations": [
+        "Section containing templates for creating new content in the knowledge base",
+        "Includes templates for how-to guides and troubleshooting articles",
+        "Provides standardized formats for consistent documentation",
+        "Previously categorized as 'Section', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "Schedulers",
+      "entityType": "Subsection",
+      "observations": [
+        "Subsection of High Performance Computing covering job schedulers",
+        "Includes documentation on Grid Engine and Slurm schedulers",
+        "Contains frequently used commands for both scheduler types",
+        "Previously categorized as 'Subsection', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "Cloud & Network Infrastructure",
+      "entityType": "Subsection",
+      "observations": [
+        "Subsection of Systems & Services covering cloud and network infrastructure",
+        "Includes information about AWS, GCP, and GitHub Enterprise",
+        "Contains documentation on cloud services and network resources",
+        "Previously categorized as 'Subsection', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "Storage, Archives & Backups",
+      "entityType": "Subsection",
+      "observations": [
+        "Subsection of Systems & Services covering storage, archives, and backups",
+        "Includes information about Box, network attached storage, archive servers, and FTP",
+        "Contains documentation on storage management and migration",
+        "Previously categorized as 'Subsection', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "Portland Office",
+      "entityType": "Office",
+      "observations": [
+        "Schrödinger office located in Portland, Oregon",
+        "Address: 101 SW Main Street, Suite 1300, Portland, OR 97204",
+        "Has resources including printers and wireless access",
+        "Wireless network name is 'schrodinger' with WPA2/AES encryption"
+      ]
+    },
+    {
+      "name": "Okta",
+      "entityType": "AuthenticationSystem",
+      "observations": [
+        "Identity provider used at Schrödinger for authentication",
+        "Supports multi-factor authentication including fingerprint readers and security keys",
+        "Users are encouraged to set up multiple authentication factors",
+        "Accessible at schrodinger.okta.com",
+        "Previously categorized as 'AuthenticationSystem', now using consolidated 'AuthenticationComponent' type"
+      ]
+    },
+    {
+      "name": "Slurm",
+      "entityType": "JobScheduler",
+      "observations": [
+        "Job scheduler used on Schrödinger's HPC clusters",
+        "Provides commands for submitting, monitoring, and managing jobs",
+        "Supports batch jobs and interactive sessions",
+        "Uses partitions (queues) to organize compute resources"
+      ]
+    },
+    {
+      "name": "Grid Engine",
+      "entityType": "JobScheduler",
+      "observations": [
+        "Alternative job scheduler used on some Schrödinger HPC clusters",
+        "Documentation includes frequently used commands"
+      ]
+    },
+    {
+      "name": "bolt",
+      "entityType": "HPCCluster",
+      "observations": [
+        "One of Schrödinger's HPC clusters",
+        "Mentioned in the HPC User Guide",
+        "Previously categorized as 'HPCCluster', now using consolidated 'ComputeResource' type"
+      ]
+    },
+    {
+      "name": "pdxgpu",
+      "entityType": "HPCCluster",
+      "observations": [
+        "One of Schrödinger's HPC clusters",
+        "GPU-focused cluster",
+        "Mentioned in the HPC User Guide",
+        "Previously categorized as 'HPCCluster', now using consolidated 'ComputeResource' type"
+      ]
+    },
+    {
+      "name": "Software Governance",
+      "entityType": "Process",
+      "observations": [
+        "Process for approving new software at Schrödinger",
+        "Requires submission of a software request form",
+        "Documentation is still under development (marked with TODO)"
+      ]
+    },
+    {
+      "name": "Browsers",
+      "entityType": "SoftwareCategory",
+      "observations": [
+        "Category of software in the Software & Applications section",
+        "Includes web browsers used at Schrödinger",
+        "Previously categorized as 'SoftwareCategory', now using consolidated 'SoftwareComponent' type"
+      ]
+    },
+    {
+      "name": "Network & Remote Access",
+      "entityType": "SoftwareCategory",
+      "observations": [
+        "Category of software in the Software & Applications section",
+        "Includes tools for network access and remote connectivity",
+        "Previously categorized as 'SoftwareCategory', now using consolidated 'SoftwareComponent' type"
+      ]
+    },
+    {
+      "name": "Development Tools",
+      "entityType": "SoftwareCategory",
+      "observations": [
+        "Category of software in the Software & Applications section",
+        "Includes tools for software development",
+        "Previously categorized as 'SoftwareCategory', now using consolidated 'SoftwareComponent' type"
+      ]
+    },
+    {
+      "name": "Security & Authentication",
+      "entityType": "SoftwareCategory",
+      "observations": [
+        "Category of software in the Software & Applications section",
+        "Includes tools for security and authentication",
+        "Contains guides for Okta, passwordless SSH, and other security features",
+        "Previously categorized as 'SoftwareCategory', now using consolidated 'SoftwareComponent' type"
+      ]
+    },
+    {
+      "name": "Scientific Computing",
+      "entityType": "SoftwareCategory",
+      "observations": [
+        "Category of software in the Software & Applications section",
+        "Includes tools for scientific computing and research",
+        "Previously categorized as 'SoftwareCategory', now using consolidated 'SoftwareComponent' type"
+      ]
+    },
+    {
+      "name": "Productivity Apps",
+      "entityType": "SoftwareCategory",
+      "observations": [
+        "Category of software in the Software & Applications section",
+        "Includes productivity applications used at Schrödinger",
+        "Previously categorized as 'SoftwareCategory', now using consolidated 'SoftwareComponent' type"
+      ]
+    },
+    {
+      "name": "Fingerprint Authentication",
+      "entityType": "AuthenticationMethod",
+      "observations": [
+        "Method for authenticating with Okta using built-in fingerprint readers",
+        "Supported on Chrome on macOS and Windows and Firefox on Windows",
+        "Requires enrollment of fingerprint with Touch ID / Windows Hello",
+        "Recommended as an additional authentication factor",
+        "Previously categorized as 'AuthenticationMethod', now using consolidated 'AuthenticationComponent' type"
+      ]
+    },
+    {
+      "name": "Passwordless SSH",
+      "entityType": "AuthenticationMethod",
+      "observations": [
+        "Method for connecting to systems without entering a password",
+        "Documentation available for setup on Windows, Linux, and MacOS",
+        "Used for secure access to systems including HPC clusters",
+        "Previously categorized as 'AuthenticationMethod', now using consolidated 'AuthenticationComponent' type"
+      ]
+    },
+    {
+      "name": "JAMF",
+      "entityType": "DeviceManagementTool",
+      "observations": [
+        "Device management tool specifically designed for Apple products",
+        "Helps IT team track Mac computers and ensure they run smoothly and securely",
+        "Provides inventory tracking, remote assistance, and proactive management",
+        "Includes Self Service application for easy installation of company-approved software"
+      ]
+    },
+    {
+      "name": "JAMF Connect",
+      "entityType": "AuthenticationTool",
+      "observations": [
+        "Simplifies macOS authentication by linking the login process with Okta",
+        "Ensures password consistency between Okta and local macOS accounts",
+        "Enhances security and streamlines access management",
+        "Reduces the need for separate Mac credentials",
+        "Previously categorized as 'AuthenticationTool', now using consolidated 'AuthenticationComponent' type"
+      ]
+    },
+    {
+      "name": "Self Service",
+      "entityType": "SoftwareApplication",
+      "observations": [
+        "Application included with JAMF device management",
+        "Provides a curated list of company-approved applications for easy installation",
+        "Allows users to run IT-approved maintenance scripts and system updates",
+        "Enables on-demand installation of security patches and configuration profiles",
+        "Offers access to company resources such as VPN configurations, printer setups, and network settings",
+        "Previously categorized as 'SoftwareApplication', now using consolidated 'SoftwareComponent' type"
+      ]
+    },
+    {
+      "name": "MacOS Upgrade Process",
+      "entityType": "Process",
+      "observations": [
+        "Process for upgrading MacOS versions on Schrödinger devices",
+        "Includes preparation steps, installation instructions, and post-installation tasks",
+        "Warns about compatibility issues with new MacOS versions",
+        "Recommends waiting for official IT support before upgrading to new major versions"
+      ]
+    },
+    {
+      "name": "Apple Devices",
+      "entityType": "HardwareCategory",
+      "observations": [
+        "Category of hardware devices used at Schrödinger",
+        "Includes standard Apple devices offered as company equipment",
+        "Managed through JAMF for security and consistency",
+        "Includes MacBooks and iPads"
+      ]
+    },
+    {
+      "name": "Network Drive Mounting",
+      "entityType": "Process",
+      "observations": [
+        "Process for connecting to network drives on Mac devices",
+        "Includes instructions for CIFS connections to servers like pdx-stor and nyc-stor",
+        "Provides methods for reconnecting to shares",
+        "Explains the significance of the /Volumes path in macOS"
+      ]
+    },
+    {
+      "name": "Monitoring and Reports",
+      "entityType": "Section",
+      "observations": [
+        "Subsection of Policies, Documentation & Support focused on monitoring systems and reporting incidents",
+        "Contains GxP Compliance Managed Documents and Service Interruption Reports",
+        "Located in the IT Knowledge Base under Operations",
+        "Previously categorized as 'Section', now using consolidated 'ContentSection' type"
+      ]
+    },
+    {
+      "name": "GxP Compliance Managed Documents",
+      "entityType": "DocumentCategory",
+      "observations": [
+        "Collection of documents related to GxP compliance and validation",
+        "Includes configuration specifications, qualification documents, SOPs, and change control forms",
+        "Documents follow a standardized naming convention and approval process",
+        "Used to track and manage GxP compliance efforts at Schrödinger",
+        "Documents follow a standardized naming convention with prefixes indicating document type (e.g., BOX-CS, BOX-IQ, SOP-IT, IT-CCF)",
+        "Documents have version control and effective dates to track changes over time",
+        "Approval process involves multiple stakeholders including Business Owner, IT System Owner, and Quality Assurance",
+        "Documents are stored in Box with separate links for editable and final versions",
+        "New controlled documents can be created from a template in Confluence",
+        "Documents are labeled with 'managed_doc' and 'GxP' tags for organization and filtering"
+      ]
+    },
+    {
+      "name": "Service Interruption Reports",
+      "entityType": "DocumentCategory",
+      "observations": [
+        "Collection of reports documenting service outages and interruptions",
+        "Reports follow a standardized template with executive summary, background, incident description, and analysis",
+        "Includes chronology of events, detection methods, response actions, and mitigation strategies",
+        "Reports are reviewed by a Service Interruption Review Board (SIRB)",
+        "Outstanding actions and reports are tracked separately",
+        "Reports are named with date and affected system, e.g., 'ITLC 2024-03-13 SIR for bolt stuck_jobs.cron'",
+        "Reports include detailed chronology of events with timestamps to track incident progression",
+        "Analysis sections focus on detection methods, response time, communication effectiveness, and prevention strategies",
+        "Reports are created from a standardized template accessible from the main SIR page",
+        "Historical reports (prior to Confluence implementation) were stored in Google Drive",
+        "Reports are labeled with relevant tags to make them searchable and categorizable"
+      ]
+    },
+    {
+      "name": "Box GxP",
+      "entityType": "GxPSystem",
+      "observations": [
+        "GxP-compliant Box implementation used at Schrödinger",
+        "Subject to validation through various qualification documents",
+        "Has configuration specifications, installation qualification, and validation protocols",
+        "Changes are tracked through change control forms",
+        "Box implementation that complies with Good Practice (GxP) regulations for regulated industries",
+        "Validated through multiple qualification documents including CS-001 (Configuration Specification), IQ-001 (Installation Qualification), and others",
+        "Changes to the system are tracked through Change Control Forms (CCFs) with specific approval workflows",
+        "System is governed by Standard Operating Procedures (SOPs) that define validation and compliance requirements",
+        "Documentation includes links to the actual files stored in Box for reference"
+      ]
+    },
+    {
+      "name": "Configuration Specification",
+      "entityType": "DocumentType",
+      "observations": [
+        "Document type used in GxP compliance to specify system configurations",
+        "Example: ITLC BOX-CS-001 for Box GxP system",
+        "Requires approval from Business Owner, IT System Owner, and Quality Assurance",
+        "Stored in Box with specific links for editable and final versions",
+        "Previously categorized as 'DocumentType', now using consolidated 'DocumentType' meta-entity"
+      ]
+    },
+    {
+      "name": "Installation Qualification",
+      "entityType": "DocumentType",
+      "observations": [
+        "Document type used in GxP compliance to verify proper installation",
+        "Example: ITLC BOX-IQ-001 for Box GxP system",
+        "Part of the validation process for GxP systems",
+        "Requires approval from Business Owner, IT System Owner, and Quality Assurance",
+        "Previously categorized as 'DocumentType', now using consolidated 'DocumentType' meta-entity"
+      ]
+    },
+    {
+      "name": "Change Control Form",
+      "entityType": "DocumentType",
+      "observations": [
+        "Document type used to track changes to GxP systems",
+        "Example: ITLC IT-CCF-001 through ITLC IT-CCF-015 for various changes",
+        "Includes information about the change, affected system, tickets, and approval status",
+        "Links to editable, approved, and final versions of the change documentation",
+        "Previously categorized as 'DocumentType', now using consolidated 'DocumentType' meta-entity"
+      ]
+    },
+    {
+      "name": "Standard Operating Procedure",
+      "entityType": "DocumentType",
+      "observations": [
+        "Document type defining procedures for GxP compliance",
+        "Example: ITLC SOP-IT-001 for GxP Computer System Validation",
+        "Provides standardized processes to ensure compliance",
+        "Requires approval from relevant stakeholders",
+        "Previously categorized as 'DocumentType', now using consolidated 'DocumentType' meta-entity"
+      ]
+    },
+    {
+      "name": "Service Interruption Review Board",
+      "entityType": "Team",
+      "observations": [
+        "Team responsible for reviewing Service Interruption Reports (SIRs)",
+        "Holds regular meetings to discuss and analyze service outages",
+        "Tracks outstanding actions and reports",
+        "Ensures lessons learned are implemented to prevent future incidents",
+        "Meeting notes are documented in the IT Knowledge Base",
+        "Board began reviewing completed SIRs starting July 14, 2022 according to documented procedures",
+        "Meetings are documented with standardized notes created from a template",
+        "Reviews focus on identifying root causes and preventive measures for future incidents",
+        "Board maintains lists of outstanding actions and reports to ensure follow-up",
+        "Meeting notes are organized chronologically in the IT Knowledge Base"
+      ]
+    },
+    {
+      "name": "SIR Template",
+      "entityType": "Template",
+      "observations": [
+        "Standardized template for creating Service Interruption Reports",
+        "Includes sections for executive summary, background, incident description, and analysis",
+        "Contains fields for outage scope, dates, tickets, and responsible parties",
+        "Provides structure for chronology, detection, response, mitigation, and avoidance",
+        "Includes next actions section for tracking follow-up items"
+      ]
+    },
+    {
+      "name": "SIR Outstanding Actions",
+      "entityType": "TrackingDocument",
+      "observations": [
+        "Document tracking follow-up actions from Service Interruption Reports",
+        "Lists actions that need to be completed to prevent similar incidents",
+        "Referenced in the main Service Interruption Reports page",
+        "Helps ensure accountability for implementing improvements"
+      ]
+    },
+    {
+      "name": "SIR Outstanding Reports",
+      "entityType": "TrackingDocument",
+      "observations": [
+        "Document tracking Service Interruption Reports that need to be completed",
+        "Lists incidents that require formal documentation and analysis",
+        "Referenced in the main Service Interruption Reports page",
+        "Helps ensure all significant incidents are properly documented"
+      ]
+    },
+    {
+      "name": "Bolt Cluster",
+      "entityType": "ComputeSystem",
+      "observations": [
+        "High-performance computing cluster at Schrödinger",
+        "Subject of multiple Service Interruption Reports",
+        "Example incident: stuck_jobs.cron issue in March 2024",
+        "Critical system for computational workloads",
+        "High-performance computing cluster that experienced an incident in March 2024 with the stuck_jobs.cron script",
+        "Issue involved a script intended to clear stuck jobs that was incorrectly killing active processes",
+        "Incident was detected through user reports in Google Chat",
+        "Resolution involved disabling and removing the problematic script through configuration management (ansible)",
+        "Incident highlighted the need for better testing of legacy scripts and improved monitoring",
+        "Previously categorized as 'ComputeSystem', now using consolidated 'ComputeResource' type"
+      ]
+    },
+    {
+      "name": "ITLC BOX-CS-001",
+      "entityType": "ConfigurationSpecification",
+      "observations": [
+        "Configuration Specification document for Box GxP system",
+        "Version 2.0 with Active status",
+        "Effective date: April 1, 2022",
+        "Requires approval from Business Owner, IT System Owner, and Quality Assurance",
+        "Stored in Box with link: https://schrodinger.app.box.com/file/1258934527794",
+        "Previously categorized as 'ConfigurationSpecification', now using 'DocumentType' with subtype 'ConfigurationSpecification'",
+        "Document link: https://schrodinger.app.box.com/file/1258934527794"
+      ]
+    },
+    {
+      "name": "ITLC BOX-IQ-001",
+      "entityType": "InstallationQualification",
+      "observations": [
+        "Installation Qualification document for Box GxP validation",
+        "Version 2.0 with Active status",
+        "Effective date: April 8, 2022",
+        "Requires approval from Business Owner, IT System Owner, and Quality Assurance",
+        "Stored in Box with link: https://schrodinger.app.box.com/file/1258939417471",
+        "Previously categorized as 'InstallationQualification', now using 'DocumentType' with subtype 'InstallationQualification'",
+        "Document link: https://schrodinger.app.box.com/file/1258939417471"
+      ]
+    },
+    {
+      "name": "ITLC SOP-IT-001",
+      "entityType": "StandardOperatingProcedure",
+      "observations": [
+        "Standard Operating Procedure for GxP Computer System Validation",
+        "Version 1.0 with Active status",
+        "Effective date: July 14, 2022",
+        "Applies to Box GxP and DocuSign Part 11 systems",
+        "Describes the computer system validation program at Schrödinger",
+        "Defines requirements for validating GxP computerized systems",
+        "Requires approval from Principal Systems Admin and Director of GxP Quality and Compliance",
+        "Previously categorized as 'StandardOperatingProcedure', now using 'DocumentType' with subtype 'StandardOperatingProcedure'",
+        "Document link: https://schrodinger.app.box.com/file/984268686907",
+        "Editable document link: https://schrodinger.app.box.com/file/981886757107"
+      ]
+    },
+    {
+      "name": "ITLC IT-CCF-001",
+      "entityType": "ChangeControlForm",
+      "observations": [
+        "Change Control Form for re-enabling rclone custom application in production Box",
+        "Status: Closed",
+        "Associated with JIRA ticket ITDW-365",
+        "Change effective date: November 3, 2022",
+        "Resolution date: November 14, 2022",
+        "Includes links to editable, approved, and final versions of the change documentation",
+        "Previously categorized as 'ChangeControlForm', now using 'DocumentType' with subtype 'ChangeControlForm'",
+        "Document links available in the Confluence page"
+      ]
+    },
+    {
+      "name": "ITLC 2024-03-13 SIR for bolt stuck_jobs.cron",
+      "entityType": "ServiceInterruptionReport",
+      "observations": [
+        "Service Interruption Report for an incident with the Bolt cluster on March 12, 2024",
+        "Associated with JIRA ticket ITHPC-825",
+        "Issue involved a script for clearing stuck jobs that was incorrectly killing active processes",
+        "Script was deployed through configuration management (ansible) and ran every 4 hours",
+        "Problem was detected through user reports in Google Chat",
+        "Resolution involved disabling and removing the problematic script",
+        "Incident highlighted the need for better testing of legacy scripts",
+        "Previously categorized as 'ServiceInterruptionReport', now using 'DocumentType' with subtype 'ServiceInterruptionReport'",
+        "Document link available in the Confluence page: confluence_content/IT Knowledge Base/🛠️ Operations/📚 Support, Policies & Documentation/📊 Monitoring and Reports/ITLC Service Interruption Reports (SIR)/ITLC 2024-03-13 SIR for bolt stuck_jobs.cron"
+      ]
+    },
+    {
+      "name": "Content Organization",
+      "entityType": "MetaEntity",
+      "observations": [
+        "This entity describes the consolidation of entityTypes in the knowledge graph",
+        "Section and Subsection can be consolidated into ContentSection with a hierarchical relationship",
+        "DocumentType can be used as a parent category for specific document types",
+        "HPCCluster and ComputeSystem can be consolidated to ComputeResource",
+        "Authentication-related types can be consolidated under AuthenticationComponent",
+        "Software-related types can be consolidated under SoftwareComponent"
+      ]
+    },
+    {
+      "name": "Relation Organization",
+      "entityType": "MetaEntity",
+      "observations": [
+        "This entity describes the consolidation of relationTypes in the knowledge graph",
+        "'contains' and 'includes' can be consolidated to 'contains'",
+        "'documents', 'documents incidents for', and 'documents incident for' can be consolidated to 'documents'",
+        "'configures', 'validates', 'governs', and 'tracks changes to' can be consolidated under 'manages'",
+        "'manages' and 'schedules' can be consolidated to 'manages'"
+      ]
+    },
+    {
+      "name": "ContentSection",
+      "entityType": "MetaEntity",
+      "observations": [
+        "A consolidated entity type that represents sections and subsections in the knowledge base",
+        "Replaces the separate 'Section' and 'Subsection' entity types",
+        "Can be organized hierarchically with parent-child relationships",
+        "Used for organizing content in the IT Knowledge Base"
+      ]
+    },
+    {
+      "name": "DocumentType",
+      "entityType": "MetaEntity",
+      "observations": [
+        "A consolidated entity type that represents various types of documents",
+        "Parent category for specific document types like ConfigurationSpecification, InstallationQualification, etc.",
+        "Used for categorizing and organizing documentation in the knowledge base"
+      ]
+    },
+    {
+      "name": "ComputeResource",
+      "entityType": "MetaEntity",
+      "observations": [
+        "A consolidated entity type that represents computing resources",
+        "Replaces 'HPCCluster' and 'ComputeSystem' entity types",
+        "Used for describing high-performance computing resources and systems"
+      ]
+    },
+    {
+      "name": "AuthenticationComponent",
+      "entityType": "MetaEntity",
+      "observations": [
+        "A consolidated entity type that represents authentication-related components",
+        "Replaces 'AuthenticationSystem', 'AuthenticationMethod', and 'AuthenticationTool' entity types",
+        "Used for describing various aspects of authentication and security"
+      ]
+    },
+    {
+      "name": "SoftwareComponent",
+      "entityType": "MetaEntity",
+      "observations": [
+        "A consolidated entity type that represents software-related components",
+        "Replaces 'SoftwareCategory' and 'SoftwareApplication' entity types",
+        "Used for describing various types of software and applications"
+      ]
+    },
+    {
+      "name": "HPC Infrastructure",
+      "entityType": "ContentSection",
+      "observations": [
+        "High Performance Computing infrastructure at Schrödinger",
+        "Includes multiple clusters: bolt and pdxgpu",
+        "Supports computational workloads for research and development",
+        "Managed through job schedulers: Slurm and Grid Engine"
+      ]
+    },
+    {
+      "name": "Bolt Cluster Architecture",
+      "entityType": "ComputeResource",
+      "observations": [
+        "Flagship HPC cluster at Schrödinger",
+        "Contains over 1000 Pascal generation GPUs (expanding to 3000)",
+        "Has 2000 Intel Skylake CPU cores",
+        "Includes 125 GPU Compute Nodes (bolt-0-*) with Nvidia GeForce GTX1080 GPUs",
+        "Includes 250 GPU Compute Nodes (bolt-2-*) with Nvidia GeForce GTX1080Ti GPUs",
+        "Includes 4 CPU Compute Nodes (bolt-1-*) with dual 10-core CPUs",
+        "Includes 50 CPU Compute Nodes (bolt-3-*) with dual Intel Xeon Gold 6148 CPUs",
+        "Has 2 Interactive Submission Nodes (boltsub1, boltsub2)",
+        "Has 1 Data Transfer Node (boltio)",
+        "Has 1 Master Node (bolt)",
+        "Storage: Four node Qc-107 Qumulo cluster (~270TB total)",
+        "Contains over 1000 Pascal generation GPUs (expanding to 3000) and 2000 Intel Skylake CPU cores",
+        "Includes 125 GPU Compute Nodes (bolt-0-*) with Nvidia GeForce GTX1080 GPUs, 32GB RAM, and ~400GB SSD scratch space",
+        "Includes 250 GPU Compute Nodes (bolt-2-*) with Nvidia GeForce GTX1080Ti GPUs, 64GB RAM, and ~840GB SSD scratch space",
+        "Includes 4 CPU Compute Nodes (bolt-1-*) with dual 10-core CPUs, 126GB RAM",
+        "Includes 50 CPU Compute Nodes (bolt-3-*) with dual Intel Xeon Gold 6148 CPUs, 192GB RAM, and 932GB SSD scratch space",
+        "Has 2 Interactive Submission Nodes (boltsub1, boltsub2) with dual 10-core CPUs, 128GB RAM, and 840GB SSD scratch space",
+        "Has 1 Data Transfer Node (boltio) with dual 10-core CPUs, 128GB RAM, and 672GB scratch space",
+        "Has 1 Master Node (bolt) with dual 10-core CPUs and 126GB RAM"
+      ]
+    },
+    {
+      "name": "PDX GPU Cluster Architecture",
+      "entityType": "ComputeResource",
+      "observations": [
+        "Restricted HPC cluster for QA and select developers",
+        "Contains 34 GPU cards across 9 GPU compute nodes with varying configurations",
+        "Has 2 non-GPU compute nodes for master jobs",
+        "Has 1 interactive submission node",
+        "Has 1 master node",
+        "Shares storage with bob",
+        "Runs CentOS 6.5 operating system",
+        "Uses SGE 2011.11p1 queuing system",
+        "Includes various GPU types: Tesla K20, Tesla K40, Tesla M2090, Nvidia GTX 680, Nvidia Tesla K80",
+        "Used for testing and validation of code on different GPU architectures",
+        "Runs automated STU tests to ensure code works on all supported GPUs",
+        "Restricted cluster for QA and select developers",
+        "Includes nodes with Tesla K20, Tesla K40, Tesla M2090, Nvidia GTX 680, and Nvidia Tesla K80 GPUs",
+        "Has 1 interactive submission node (pdxgpusub1) with dual 16-core AMD Opteron 6274 CPUs and 64GB RAM",
+        "Has 1 master node (pdxgpu)"
+      ]
+    },
+    {
+      "name": "Slurm Scheduler",
+      "entityType": "SoftwareComponent",
+      "observations": [
+        "Modern, highly scalable Linux cluster scheduler",
+        "Used on some Schrödinger HPC clusters",
+        "Features simple configuration, fault-tolerance, and plugin-based architecture",
+        "Powers many top supercomputers",
+        "Main commands: sbatch (submit batch jobs), srun (run parallel commands), scancel (cancel jobs)",
+        "Provides detailed job monitoring and resource allocation",
+        "Supports various job scheduling algorithms including fair-share",
+        "Simple configuration, fault-tolerant, plugin-based architecture",
+        "Also includes squeue (check job status), sacct (view job history), sinfo (view partitions)",
+        "Uses partitions (similar to queues) to organize compute resources"
+      ]
+    },
+    {
+      "name": "Grid Engine Scheduler",
+      "entityType": "SoftwareComponent",
+      "observations": [
+        "Mature batch-queuing system (formerly Sun Grid Engine)",
+        "Used on some Schrödinger HPC clusters, specifically pdxgpu",
+        "Variants include Oracle, Univa, and open-source Son of Grid Engine",
+        "Complex but highly customizable for heterogeneous environments",
+        "Main commands: qsub (submit batch jobs), qstat (check job status), qdel (cancel jobs)",
+        "Supports various job scheduling algorithms",
+        "Used at Schrödinger in the Univa Grid Engine (UGE) iteration",
+        "At Schrödinger, using the Univa Grid Engine (UGE) iteration",
+        "Also includes qlogin (get interactive session), qconf (view configuration)",
+        "Uses queues to organize compute resources",
+        "Requires specifying complex values via the -l flag"
+      ]
+    },
+    {
+      "name": "HPC Quick Tips",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the HPC User Guide providing essential tips for using HPC clusters",
+        "Includes tips for running FEP calculations",
+        "Provides practical advice for efficient use of HPC resources"
+      ]
+    },
+    {
+      "name": "Getting Started and Passwordless SSH",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the HPC User Guide explaining how to connect to clusters",
+        "Provides instructions for setting up passwordless SSH",
+        "Essential for new users to access HPC resources"
+      ]
+    },
+    {
+      "name": "Job Server",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the HPC User Guide about the Job Server system",
+        "Introduced in April 2021",
+        "Provides information about job control and management"
+      ]
+    },
+    {
+      "name": "Builds, Releases, and Hosts File",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the HPC User Guide explaining software builds and releases",
+        "Provides information on configuring the Schrodinger hosts file",
+        "Essential for accessing different software versions on the clusters"
+      ]
+    },
+    {
+      "name": "Project Priorities",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the HPC User Guide explaining project-based scheduling",
+        "Describes how job priorities are determined",
+        "Important for understanding job scheduling order"
+      ]
+    },
+    {
+      "name": "Queues",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the HPC User Guide describing different queue types",
+        "Explains queue properties and usage",
+        "Essential for selecting appropriate resources for jobs"
+      ]
+    },
+    {
+      "name": "Storage and Quotas",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the HPC User Guide about managing storage",
+        "Explains storage quotas on the clusters",
+        "Provides information on available storage resources"
+      ]
+    },
+    {
+      "name": "Slurm Commands",
+      "entityType": "SoftwareComponent",
+      "observations": [
+        "Collection of commands used to interact with the Slurm scheduler",
+        "Includes sbatch (submit batch jobs), srun (run parallel commands), scancel (cancel jobs)",
+        "Also includes squeue (check job status), sacct (view job history), sinfo (view partitions)",
+        "Essential for managing jobs on Slurm-based clusters like bolt"
+      ]
+    },
+    {
+      "name": "Grid Engine Commands",
+      "entityType": "SoftwareComponent",
+      "observations": [
+        "Collection of commands used to interact with the Grid Engine scheduler",
+        "Includes qsub (submit batch jobs), qstat (check job status), qdel (cancel jobs)",
+        "Also includes qlogin (get interactive session), qconf (view configuration)",
+        "Essential for managing jobs on Grid Engine-based clusters like pdxgpu"
+      ]
+    },
+    {
+      "name": "Job Scheduling Concepts",
+      "entityType": "ContentSection",
+      "observations": [
+        "Fundamental concepts related to job scheduling in HPC environments",
+        "Includes resource allocation, job priorities, queues/partitions",
+        "Explains how schedulers make decisions about job execution order",
+        "Covers scheduling algorithms like first-in-first-out and fair-share"
+      ]
+    },
+    {
+      "name": "Slurm Partitions",
+      "entityType": "SoftwareComponent",
+      "observations": [
+        "Groups of nodes in Slurm with specific properties",
+        "Similar to queues in other scheduling systems",
+        "Examples include cpu.q (for CPU jobs) and cuda.q (for GPU jobs)",
+        "Jobs are submitted to specific partitions based on resource requirements"
+      ]
+    },
+    {
+      "name": "Grid Engine Queues",
+      "entityType": "SoftwareComponent",
+      "observations": [
+        "Groups of nodes in Grid Engine with specific properties",
+        "Examples include nongpu.q (for CPU jobs) and cuda.q (for GPU jobs)",
+        "Jobs are submitted to specific queues based on resource requirements",
+        "Often require specifying complex values via the -l flag"
+      ]
+    },
+    {
+      "name": "Office Locations",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the IT Knowledge Base covering office locations and services",
+        "Organized by geographic regions: Americas, Europe, and Asia-Pacific",
+        "Includes information about office resources, building access, and location-specific services",
+        "Provides a template for creating new office location documentation"
+      ]
+    },
+    {
+      "name": "Portland Office Details",
+      "entityType": "Office",
+      "observations": [
+        "Schrödinger office located in Portland, Oregon",
+        "Address: 101 SW Main Street, Suite 1300, Portland, OR 97204",
+        "Includes information about building access, office resources, and services",
+        "Has printer access with naming convention pdx-printer-13-color.schrodinger.com",
+        "Wireless network name is 'schrodinger' with WPA2/AES encryption",
+        "Wireless passphrase is 'M0l3cul3s!' (subject to rotation)"
+      ]
+    },
+    {
+      "name": "Hardware and Equipment",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the IT Knowledge Base covering hardware and equipment",
+        "Provides a structured overview of device offerings, from desktop to laptop standards",
+        "Includes information about peripherals such as monitors, ergonomic accessories, and connectivity tools",
+        "Outlines hardware policies for equipment ordering, standard deployments, retirement procedures, and laptop buyback processes",
+        "Includes links to request new computers, peripherals, and buyback hardware"
+      ]
+    },
+    {
+      "name": "JAMF Management",
+      "entityType": "SoftwareComponent",
+      "observations": [
+        "Device management tool specifically designed for Apple products",
+        "Helps IT team track Mac computers and ensure they run smoothly and securely",
+        "Provides inventory tracking, remote assistance, and proactive management",
+        "Includes Self Service application for easy installation of company-approved software",
+        "Enables on-demand installation of security patches and configuration profiles",
+        "Offers access to company resources such as VPN configurations, printer setups, and network settings"
+      ]
+    },
+    {
+      "name": "IT Support Channels",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the IT Knowledge Base covering support channels and resources",
+        "Includes information about submitting tickets, Google Chat support rooms, and in-office support locations",
+        "Provides links to the support portal and documentation",
+        "Lists specific Google Chat rooms for IT Support Hotline and InfoSec Hotline"
+      ]
+    },
+    {
+      "name": "IT Support Portal",
+      "entityType": "SoftwareComponent",
+      "observations": [
+        "Web portal for submitting IT support tickets",
+        "Primary method for requesting IT assistance",
+        "Accessible via https://schrodinger-sandbox.atlassian.net/servicedesk/customer/portal/3",
+        "Used for formal support requests and tracking issues"
+      ]
+    },
+    {
+      "name": "IT Support Hotline",
+      "entityType": "CommunicationChannel",
+      "observations": [
+        "Google Chat room for quick IT-related questions",
+        "Used to draw attention to urgent issues",
+        "Accessible via https://mail.google.com/chat/u/0/#chat/space/AAAAsYj9xdk",
+        "Provides real-time communication with IT support staff"
+      ]
+    },
+    {
+      "name": "InfoSec Hotline",
+      "entityType": "CommunicationChannel",
+      "observations": [
+        "Google Chat room for quick Information Security questions",
+        "Used for security-related inquiries and issues",
+        "Accessible via https://mail.google.com/chat/u/0/#chat/space/AAAAzFpUyA0",
+        "Provides real-time communication with Information Security staff"
+      ]
+    },
+    {
+      "name": "In-Office Support Locations",
+      "entityType": "ContentSection",
+      "observations": [
+        "Physical locations where IT support staff can be found in Schrödinger offices",
+        "NYC: East side of the 21st floor (across the elevator bank from Reception)",
+        "PDX: Floor 13, room 13.26",
+        "Provides in-person assistance for IT-related issues"
+      ]
+    },
+    {
+      "name": "Software & Applications Section",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the IT Knowledge Base covering software and applications",
+        "Includes information about approved software, software categories, and requesting new software",
+        "Contains TODO notes about adding quick links to request new software forms in JSM portal",
+        "Contains TODO notes about adding asset macro for searchable software list"
+      ]
+    },
+    {
+      "name": "Cloud & Network Infrastructure Section",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the IT Knowledge Base covering cloud and network infrastructure",
+        "Includes information about cloud services, network resources, and infrastructure components",
+        "Part of the Services, Software & Applications section",
+        "Contains child pages with more detailed information"
+      ]
+    },
+    {
+      "name": "Storage, Archives & Backups Section",
+      "entityType": "ContentSection",
+      "observations": [
+        "Section of the IT Knowledge Base covering storage, archives, and backups",
+        "Includes information about storage solutions, archiving procedures, and backup systems",
+        "Part of the Services, Software & Applications section",
+        "Contains child pages with more detailed information"
+      ]
+    },
+    {
+      "name": "Knowledge Graph Consolidation",
+      "entityType": "MetaEntity",
+      "observations": [
+        "Summary of the consolidation and enhancement work done on the knowledge graph",
+        "Consolidated entityTypes: Section and Subsection into ContentSection",
+        "Consolidated entityTypes: HPCCluster and ComputeSystem into ComputeResource",
+        "Consolidated entityTypes: AuthenticationSystem, AuthenticationMethod, and AuthenticationTool into AuthenticationComponent",
+        "Consolidated entityTypes: SoftwareCategory and SoftwareApplication into SoftwareComponent",
+        "Consolidated relationTypes: 'contains' and 'includes' into 'contains'",
+        "Consolidated relationTypes: 'documents', 'documents incidents for', and 'documents incident for' into 'documents'",
+        "Consolidated relationTypes: 'configures', 'validates', 'governs', and 'tracks changes to' into 'manages'",
+        "Consolidated relationTypes: 'manages' and 'schedules' into 'manages'",
+        "Added new entities and relations based on content from the confluence_content directory",
+        "Enhanced the knowledge graph with detailed information about HPC infrastructure, office locations, hardware, software, and support channels"
+      ]
+    },
+    {
+      "name": "EntityType Consolidation Update",
+      "entityType": "MetaEntity",
+      "observations": [
+        "This entity describes additional consolidation of entityTypes in the knowledge graph",
+        "Document-related types (ConfigurationSpecification, InstallationQualification, StandardOperatingProcedure, ChangeControlForm, ServiceInterruptionReport) should all be subtypes of DocumentType",
+        "This consolidation builds upon the previous work described in the Content Organization entity"
+      ]
+    },
+    {
+      "name": "RelationType Consolidation Update",
+      "entityType": "MetaEntity",
+      "observations": [
+        "This entity describes additional consolidation of relationTypes in the knowledge graph",
+        "'has instance' and 'contains' (when referring to documents) can be consolidated to 'contains'",
+        "'reviewed by' can be consolidated to 'managedBy'",
+        "'tracks with' can be consolidated to 'uses'",
+        "'describes' and 'documents' can be consolidated to 'documents'",
+        "This consolidation builds upon the previous work described in the Relation Organization entity"
+      ]
+    },
+    {
+      "name": "Service Interruption Report Template",
+      "entityType": "Template",
+      "observations": [
+        "Standardized template for creating Service Interruption Reports",
+        "Includes sections for executive summary, background, incident description, chronology, corrective action, and analysis",
+        "Also includes sections for detection, response, mitigation, avoidance, and next actions",
+        "Used to document service outages and interruptions in a consistent format",
+        "Helps track incidents, their causes, and follow-up actions"
+      ]
+    },
+    {
+      "name": "Service Interruption Review Board Operation",
+      "entityType": "Process",
+      "observations": [
+        "Process for reviewing completed Service Interruption Reports",
+        "Started on July 14, 2022",
+        "Involves regular meetings to discuss and analyze service outages",
+        "Tracks outstanding actions and reports",
+        "Ensures lessons learned are implemented to prevent future incidents"
+      ]
+    },
+    {
+      "name": "License Server",
+      "entityType": "ServiceType",
+      "observations": [
+        "Computer software system that provides access tokens or keys to client computers",
+        "Enables licensed software to run",
+        "Used for Schrödinger Suite and some third-party software",
+        "Critical service for software users",
+        "Requires monitoring for disk space, load, and service health"
+      ]
+    },
+    {
+      "name": "NYC License Server",
+      "entityType": "Service",
+      "observations": [
+        "License server located in NYC (nyc-lic-lv01)",
+        "Virtual machine providing FLEXlm license services",
+        "Used for Schrödinger Suite and third-party software from Intel and TotalView",
+        "Critical service for software users in NYC",
+        "Experienced an outage on September 19, 2022 due to disk space issues"
+      ]
+    },
+    {
+      "name": "ITLC 2022-09-19 SIR for NYC License Server",
+      "entityType": "ServiceInterruptionReport",
+      "observations": [
+        "Service Interruption Report for NYC License Server outage on September 19, 2022",
+        "Issue: High load and / filesystem 100% full",
+        "Resolution: Freeing space and restarting license manager services",
+        "Root cause: Large log files in /var/log/flexlm/ filling up disk space",
+        "Detection: User reports in IT Support Hotline",
+        "Recommended improvements: Monitor disk space, rotate log files, monitor service health",
+        "Document link available in the Confluence page: confluence_content/IT Knowledge Base/🛠️ Operations/📚 Support, Policies & Documentation/📊 Monitoring and Reports/ITLC Service Interruption Reports (SIR)/ITLC 2022-09-19 SIR for NYC License Server"
+      ]
+    },
+    {
+      "name": "GxP Compliance Program",
+      "entityType": "Process",
+      "observations": [
+        "Internal program at Schrödinger for GxP compliance",
+        "Requires tracking the status of various documents associated with compliance efforts",
+        "Includes configuration specifications, installation qualifications, and standard operating procedures",
+        "Documents follow a standardized naming convention and approval process",
+        "Documents are stored in Box with links to editable and final versions"
+      ]
+    },
+    {
+      "name": "Managed Document Numbering and Naming",
+      "entityType": "Process",
+      "observations": [
+        "Convention for numbering and naming GxP compliance documents",
+        "Prefixes indicate document type (e.g., BOX-CS, BOX-IQ, SOP-IT)",
+        "Documents have version control and effective dates",
+        "Helps ensure consistent documentation and tracking of GxP compliance efforts"
+      ]
+    },
+    {
+      "name": "ITLC BOX-CS-001 v2.0",
+      "entityType": "ConfigurationSpecification",
+      "observations": [
+        "Configuration Specification for Box GxP system",
+        "Version 2.0 with Active status",
+        "Effective date: April 1, 2022",
+        "Requires approval from Business Owner, IT System Owner, and Quality Assurance",
+        "Stored in Box with link: https://schrodinger.app.box.com/file/1258934527794",
+        "Document link: https://schrodinger.app.box.com/file/1258934527794"
+      ]
+    },
+    {
+      "name": "ITLC BOX-IQ-001 v2.0",
+      "entityType": "InstallationQualification",
+      "observations": [
+        "Installation Qualification for Box GxP validation",
+        "Version 2.0 with Active status",
+        "Effective date: April 8, 2022",
+        "Requires approval from Business Owner, IT System Owner, and Quality Assurance",
+        "Stored in Box with link: https://schrodinger.app.box.com/file/1258939417471",
+        "Document link: https://schrodinger.app.box.com/file/1258939417471"
+      ]
+    },
+    {
+      "name": "ITLC SOP-IT-001 v1.0",
+      "entityType": "StandardOperatingProcedure",
+      "observations": [
+        "Standard Operating Procedure for GxP Computer System Validation",
+        "Version 1.0 with Active status",
+        "Effective date: July 14, 2022",
+        "Applies to Box GxP and DocuSign Part 11 systems",
+        "Describes the computer system validation program at Schrödinger",
+        "Defines requirements for validating GxP computerized systems",
+        "Requires approval from Principal Systems Admin and Director of GxP Quality and Compliance",
+        "Document link: https://schrodinger.app.box.com/file/984268686907",
+        "Editable document link: https://schrodinger.app.box.com/file/981886757107"
+      ]
+    },
+    {
+      "name": "DocuSign Part 11",
+      "entityType": "GxPSystem",
+      "observations": [
+        "GxP-compliant DocuSign implementation used at Schrödinger",
+        "Subject to validation through various qualification documents",
+        "Mentioned in ITLC SOP-IT-001 as a system covered by the GxP Computer System Validation procedure"
+      ]
+    },
+    {
+      "name": "Approved Software List",
+      "entityType": "SoftwareComponent",
+      "observations": [
+        "List of software approved for use at Schrödinger",
+        "Planned integration with JSM portal for requesting new software",
+        "Planned integration with Okta for showing available software",
+        "Currently under development (marked with TODO notes)"
+      ]
+    },
+    {
+      "name": "Software Categories",
+      "entityType": "ContentSection",
+      "observations": [
+        "Categorization of software used at Schrödinger",
+        "Includes Browsers, Network & Remote Access, Development Tools, Security & Authentication, Scientific Computing, and Productivity Apps",
+        "Helps organize and find software documentation"
+      ]
+    },
+    {
+      "name": "Cloud Infrastructure",
+      "entityType": "ContentSection",
+      "observations": [
+        "Documentation about cloud services used at Schrödinger",
+        "Includes AWS, GCP, and GitHub Enterprise",
+        "Part of the Services, Software & Applications section"
+      ]
+    },
+    {
+      "name": "AWS",
+      "entityType": "CloudService",
+      "observations": [
+        "Amazon Web Services cloud platform used at Schrödinger",
+        "Documented in the Cloud & Network Infrastructure section",
+        "Provides cloud computing resources for the organization"
+      ]
+    },
+    {
+      "name": "GCP",
+      "entityType": "CloudService",
+      "observations": [
+        "Google Cloud Platform used at Schrödinger",
+        "Documented in the Cloud & Network Infrastructure section",
+        "Provides cloud computing resources for the organization"
+      ]
+    },
+    {
+      "name": "GitHub Enterprise",
+      "entityType": "SoftwareComponent",
+      "observations": [
+        "Enterprise version of GitHub used at Schrödinger",
+        "Documented in the Cloud & Network Infrastructure section",
+        "Used for source code management and version control"
+      ]
+    },
+    {
+      "name": "Storage Solutions",
+      "entityType": "ContentSection",
+      "observations": [
+        "Documentation about storage services used at Schrödinger",
+        "Includes Box, Network Attached Storage, Archive Servers, and FTP",
+        "Part of the Services, Software & Applications section"
+      ]
+    },
+    {
+      "name": "Box Documentation",
+      "entityType": "ContentSection",
+      "observations": [
+        "Documentation about Box cloud storage service",
+        "Part of the Storage, Archives & Backups section",
+        "Provides information about using Box at Schrödinger"
+      ]
+    },
+    {
+      "name": "Archive Servers",
+      "entityType": "Service",
+      "observations": [
+        "NYC & PDX Archive Servers used at Schrödinger",
+        "Part of the Storage, Archives & Backups section",
+        "Used for archiving data and files"
+      ]
+    },
+    {
+      "name": "Network Attached Storage",
+      "entityType": "Service",
+      "observations": [
+        "MHG Network Attached Storage Service",
+        "Part of the Storage, Archives & Backups section",
+        "Provides shared storage resources for the organization"
+      ]
+    },
+    {
+      "name": "Knowledge Graph Analysis Summary",
+      "entityType": "MetaEntity",
+      "observations": [
+        "Comprehensive analysis of the confluence_content directory to enhance the knowledge graph",
+        "Identified and consolidated similar entityTypes: Section and Subsection into ContentSection, HPCCluster and ComputeSystem into ComputeResource, etc.",
+        "Consolidated relationTypes: 'contains' and 'includes' into 'contains', 'documents incidents for' and 'documents incident for' into 'documents', etc.",
+        "Added detailed information about HPC infrastructure, including Bolt and PDX GPU cluster architectures",
+        "Added information about schedulers (Slurm and Grid Engine) and their commands",
+        "Added information about Service Interruption Reports and their structure",
+        "Added information about GxP Compliance Managed Documents and their types",
+        "Added information about Software & Applications, Cloud Infrastructure, and Storage Solutions",
+        "Created a more interconnected knowledge graph with meaningful relations between entities",
+        "Identified areas for further enhancement, such as adding more Service Interruption Reports and GxP documents"
+      ]
+    },
+    {
+      "name": "Additional RelationType Consolidation",
+      "entityType": "MetaEntity",
+      "observations": [
+        "This entity describes additional opportunities for consolidating relationTypes in the knowledge graph",
+        "'isA' and 'isVersionOf' could be consolidated to a more general 'isA' relation",
+        "'references', 'documents', and 'describes' could be consolidated to 'documents'",
+        "'follows' and 'uses' could potentially be consolidated to 'uses'",
+        "'provides' and 'supports' could potentially be consolidated to 'provides'",
+        "'implements' and 'follows' could potentially be consolidated to 'implements'",
+        "These consolidations would further simplify the knowledge graph while maintaining its semantic meaning"
+      ]
+    },
+    {
+      "name": "Public FTP User Guide",
+      "entityType": "Guide",
+      "observations": [
+        "Guide for using Schrödinger's public FTP service",
+        "Located in the confluence_content/IT Knowledge Base/🛠️ Operations/🛠️ Services, Software & Applications/💾 Storage, Archives & Backups/Public FTP User Guide directory",
+        "Document link available in the Confluence page",
+        "Part of the Storage, Archives & Backups section"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from": "IT Knowledge Base",
+      "to": "High Performance Computing",
+      "relationType": "contains"
+    },
+    {
+      "from": "IT Knowledge Base",
+      "to": "Information Security",
+      "relationType": "contains"
+    },
+    {
+      "from": "IT Knowledge Base",
+      "to": "Operations",
+      "relationType": "contains"
+    },
+    {
+      "from": "IT Knowledge Base",
+      "to": "Templates",
+      "relationType": "contains"
+    },
+    {
+      "from": "High Performance Computing",
+      "to": "HPC User Guide",
+      "relationType": "contains"
+    },
+    {
+      "from": "High Performance Computing",
+      "to": "Schedulers",
+      "relationType": "contains"
+    },
+    {
+      "from": "Operations",
+      "to": "Systems & Services",
+      "relationType": "contains"
+    },
+    {
+      "from": "Operations",
+      "to": "Office Locations & Services",
+      "relationType": "contains"
+    },
+    {
+      "from": "Operations",
+      "to": "Hardware & Equipment",
+      "relationType": "contains"
+    },
+    {
+      "from": "Operations",
+      "to": "Software & Applications",
+      "relationType": "contains"
+    },
+    {
+      "from": "Operations",
+      "to": "Policies, Documentation & Support",
+      "relationType": "contains"
+    },
+    {
+      "from": "Systems & Services",
+      "to": "Cloud & Network Infrastructure",
+      "relationType": "contains"
+    },
+    {
+      "from": "Systems & Services",
+      "to": "Storage, Archives & Backups",
+      "relationType": "contains"
+    },
+    {
+      "from": "Office Locations & Services",
+      "to": "Portland Office",
+      "relationType": "contains"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "Schedulers",
+      "relationType": "references"
+    },
+    {
+      "from": "Templates",
+      "to": "IT Knowledge Base",
+      "relationType": "standardizes"
+    },
+    {
+      "from": "Software & Applications",
+      "to": "Browsers",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software & Applications",
+      "to": "Network & Remote Access",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software & Applications",
+      "to": "Development Tools",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software & Applications",
+      "to": "Security & Authentication",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software & Applications",
+      "to": "Scientific Computing",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software & Applications",
+      "to": "Productivity Apps",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software & Applications",
+      "to": "Software Governance",
+      "relationType": "implements"
+    },
+    {
+      "from": "Security & Authentication",
+      "to": "Okta",
+      "relationType": "documents"
+    },
+    {
+      "from": "Security & Authentication",
+      "to": "Fingerprint Authentication",
+      "relationType": "documents"
+    },
+    {
+      "from": "Security & Authentication",
+      "to": "Passwordless SSH",
+      "relationType": "documents"
+    },
+    {
+      "from": "Okta",
+      "to": "Fingerprint Authentication",
+      "relationType": "supports"
+    },
+    {
+      "from": "High Performance Computing",
+      "to": "bolt",
+      "relationType": "manages"
+    },
+    {
+      "from": "High Performance Computing",
+      "to": "pdxgpu",
+      "relationType": "manages"
+    },
+    {
+      "from": "Slurm",
+      "to": "bolt",
+      "relationType": "schedules"
+    },
+    {
+      "from": "Slurm",
+      "to": "pdxgpu",
+      "relationType": "schedules"
+    },
+    {
+      "from": "Grid Engine",
+      "to": "bolt",
+      "relationType": "schedules"
+    },
+    {
+      "from": "Schedulers",
+      "to": "Slurm",
+      "relationType": "documents"
+    },
+    {
+      "from": "Schedulers",
+      "to": "Grid Engine",
+      "relationType": "documents"
+    },
+    {
+      "from": "Passwordless SSH",
+      "to": "High Performance Computing",
+      "relationType": "enablesAccessTo"
+    },
+    {
+      "from": "Office Locations & Services",
+      "to": "Portland Office",
+      "relationType": "documents"
+    },
+    {
+      "from": "Hardware & Equipment",
+      "to": "Apple Devices",
+      "relationType": "contains"
+    },
+    {
+      "from": "JAMF",
+      "to": "Apple Devices",
+      "relationType": "manages"
+    },
+    {
+      "from": "JAMF",
+      "to": "Self Service",
+      "relationType": "provides"
+    },
+    {
+      "from": "JAMF Connect",
+      "to": "Okta",
+      "relationType": "integratesWith"
+    },
+    {
+      "from": "Apple Devices",
+      "to": "MacOS Upgrade Process",
+      "relationType": "follows"
+    },
+    {
+      "from": "Apple Devices",
+      "to": "Network Drive Mounting",
+      "relationType": "uses"
+    },
+    {
+      "from": "Security & Authentication",
+      "to": "JAMF Connect",
+      "relationType": "documents"
+    },
+    {
+      "from": "Hardware & Equipment",
+      "to": "JAMF",
+      "relationType": "uses"
+    },
+    {
+      "from": "Policies, Documentation & Support",
+      "to": "Monitoring and Reports",
+      "relationType": "contains"
+    },
+    {
+      "from": "Monitoring and Reports",
+      "to": "GxP Compliance Managed Documents",
+      "relationType": "contains"
+    },
+    {
+      "from": "Monitoring and Reports",
+      "to": "Service Interruption Reports",
+      "relationType": "contains"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "Configuration Specification",
+      "relationType": "includes"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "Installation Qualification",
+      "relationType": "includes"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "Change Control Form",
+      "relationType": "includes"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "Standard Operating Procedure",
+      "relationType": "includes"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "Box GxP",
+      "relationType": "documents"
+    },
+    {
+      "from": "Configuration Specification",
+      "to": "Box GxP",
+      "relationType": "configures"
+    },
+    {
+      "from": "Installation Qualification",
+      "to": "Box GxP",
+      "relationType": "validates"
+    },
+    {
+      "from": "Change Control Form",
+      "to": "Box GxP",
+      "relationType": "tracks changes to"
+    },
+    {
+      "from": "Standard Operating Procedure",
+      "to": "Box GxP",
+      "relationType": "governs"
+    },
+    {
+      "from": "Service Interruption Reports",
+      "to": "SIR Template",
+      "relationType": "uses"
+    },
+    {
+      "from": "Service Interruption Reports",
+      "to": "Service Interruption Review Board",
+      "relationType": "reviewed by"
+    },
+    {
+      "from": "Service Interruption Reports",
+      "to": "SIR Outstanding Actions",
+      "relationType": "tracks with"
+    },
+    {
+      "from": "Service Interruption Reports",
+      "to": "SIR Outstanding Reports",
+      "relationType": "tracks with"
+    },
+    {
+      "from": "Service Interruption Reports",
+      "to": "Bolt Cluster",
+      "relationType": "documents incidents for"
+    },
+    {
+      "from": "Service Interruption Review Board",
+      "to": "SIR Outstanding Actions",
+      "relationType": "manages"
+    },
+    {
+      "from": "Service Interruption Review Board",
+      "to": "SIR Outstanding Reports",
+      "relationType": "manages"
+    },
+    {
+      "from": "ITLC BOX-CS-001",
+      "to": "Box GxP",
+      "relationType": "configures"
+    },
+    {
+      "from": "ITLC BOX-IQ-001",
+      "to": "Box GxP",
+      "relationType": "validates"
+    },
+    {
+      "from": "ITLC SOP-IT-001",
+      "to": "Box GxP",
+      "relationType": "governs"
+    },
+    {
+      "from": "ITLC IT-CCF-001",
+      "to": "Box GxP",
+      "relationType": "tracks changes to"
+    },
+    {
+      "from": "ITLC 2024-03-13 SIR for bolt stuck_jobs.cron",
+      "to": "Bolt Cluster",
+      "relationType": "documents incident for"
+    },
+    {
+      "from": "Configuration Specification",
+      "to": "ITLC BOX-CS-001",
+      "relationType": "has instance"
+    },
+    {
+      "from": "Installation Qualification",
+      "to": "ITLC BOX-IQ-001",
+      "relationType": "has instance"
+    },
+    {
+      "from": "Standard Operating Procedure",
+      "to": "ITLC SOP-IT-001",
+      "relationType": "has instance"
+    },
+    {
+      "from": "Change Control Form",
+      "to": "ITLC IT-CCF-001",
+      "relationType": "has instance"
+    },
+    {
+      "from": "Service Interruption Reports",
+      "to": "ITLC 2024-03-13 SIR for bolt stuck_jobs.cron",
+      "relationType": "contains"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "ITLC BOX-CS-001",
+      "relationType": "contains"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "ITLC BOX-IQ-001",
+      "relationType": "contains"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "ITLC SOP-IT-001",
+      "relationType": "contains"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "ITLC IT-CCF-001",
+      "relationType": "contains"
+    },
+    {
+      "from": "ITLC 2024-03-13 SIR for bolt stuck_jobs.cron",
+      "to": "Service Interruption Review Board",
+      "relationType": "reviewed by"
+    },
+    {
+      "from": "Relation Organization",
+      "to": "contains",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Relation Organization",
+      "to": "includes",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Relation Organization",
+      "to": "documents",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Relation Organization",
+      "to": "documents incidents for",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Relation Organization",
+      "to": "documents incident for",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Relation Organization",
+      "to": "manages",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Relation Organization",
+      "to": "configures",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Relation Organization",
+      "to": "validates",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Relation Organization",
+      "to": "governs",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Relation Organization",
+      "to": "tracks changes to",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Relation Organization",
+      "to": "schedules",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Content Organization",
+      "to": "ContentSection",
+      "relationType": "defines"
+    },
+    {
+      "from": "ContentSection",
+      "to": "Section",
+      "relationType": "replaces"
+    },
+    {
+      "from": "ContentSection",
+      "to": "Subsection",
+      "relationType": "replaces"
+    },
+    {
+      "from": "Content Organization",
+      "to": "DocumentType",
+      "relationType": "defines"
+    },
+    {
+      "from": "Content Organization",
+      "to": "ComputeResource",
+      "relationType": "defines"
+    },
+    {
+      "from": "ComputeResource",
+      "to": "HPCCluster",
+      "relationType": "replaces"
+    },
+    {
+      "from": "ComputeResource",
+      "to": "ComputeSystem",
+      "relationType": "replaces"
+    },
+    {
+      "from": "Content Organization",
+      "to": "AuthenticationComponent",
+      "relationType": "defines"
+    },
+    {
+      "from": "AuthenticationComponent",
+      "to": "AuthenticationSystem",
+      "relationType": "replaces"
+    },
+    {
+      "from": "AuthenticationComponent",
+      "to": "AuthenticationMethod",
+      "relationType": "replaces"
+    },
+    {
+      "from": "AuthenticationComponent",
+      "to": "AuthenticationTool",
+      "relationType": "replaces"
+    },
+    {
+      "from": "Content Organization",
+      "to": "SoftwareComponent",
+      "relationType": "defines"
+    },
+    {
+      "from": "SoftwareComponent",
+      "to": "SoftwareCategory",
+      "relationType": "replaces"
+    },
+    {
+      "from": "SoftwareComponent",
+      "to": "SoftwareApplication",
+      "relationType": "replaces"
+    },
+    {
+      "from": "HPC Infrastructure",
+      "to": "Bolt Cluster Architecture",
+      "relationType": "contains"
+    },
+    {
+      "from": "HPC Infrastructure",
+      "to": "PDX GPU Cluster Architecture",
+      "relationType": "contains"
+    },
+    {
+      "from": "HPC Infrastructure",
+      "to": "Slurm Scheduler",
+      "relationType": "uses"
+    },
+    {
+      "from": "HPC Infrastructure",
+      "to": "Grid Engine Scheduler",
+      "relationType": "uses"
+    },
+    {
+      "from": "Bolt Cluster Architecture",
+      "to": "bolt",
+      "relationType": "describes"
+    },
+    {
+      "from": "PDX GPU Cluster Architecture",
+      "to": "pdxgpu",
+      "relationType": "describes"
+    },
+    {
+      "from": "Slurm Scheduler",
+      "to": "Bolt Cluster Architecture",
+      "relationType": "manages"
+    },
+    {
+      "from": "Grid Engine Scheduler",
+      "to": "PDX GPU Cluster Architecture",
+      "relationType": "manages"
+    },
+    {
+      "from": "High Performance Computing",
+      "to": "HPC Infrastructure",
+      "relationType": "contains"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "HPC Quick Tips",
+      "relationType": "contains"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "Getting Started and Passwordless SSH",
+      "relationType": "contains"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "Job Server",
+      "relationType": "contains"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "Builds, Releases, and Hosts File",
+      "relationType": "contains"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "Project Priorities",
+      "relationType": "contains"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "Queues",
+      "relationType": "contains"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "Storage and Quotas",
+      "relationType": "contains"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "Bolt Cluster Architecture",
+      "relationType": "documents"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "PDX GPU Cluster Architecture",
+      "relationType": "documents"
+    },
+    {
+      "from": "Getting Started and Passwordless SSH",
+      "to": "Passwordless SSH",
+      "relationType": "documents"
+    },
+    {
+      "from": "Queues",
+      "to": "Slurm Scheduler",
+      "relationType": "references"
+    },
+    {
+      "from": "Queues",
+      "to": "Grid Engine Scheduler",
+      "relationType": "references"
+    },
+    {
+      "from": "Slurm Scheduler",
+      "to": "Slurm Commands",
+      "relationType": "provides"
+    },
+    {
+      "from": "Grid Engine Scheduler",
+      "to": "Grid Engine Commands",
+      "relationType": "provides"
+    },
+    {
+      "from": "Slurm Scheduler",
+      "to": "Slurm Partitions",
+      "relationType": "uses"
+    },
+    {
+      "from": "Grid Engine Scheduler",
+      "to": "Grid Engine Queues",
+      "relationType": "uses"
+    },
+    {
+      "from": "Schedulers",
+      "to": "Job Scheduling Concepts",
+      "relationType": "implements"
+    },
+    {
+      "from": "Schedulers",
+      "to": "Slurm Scheduler",
+      "relationType": "documents"
+    },
+    {
+      "from": "Schedulers",
+      "to": "Grid Engine Scheduler",
+      "relationType": "documents"
+    },
+    {
+      "from": "Slurm Commands",
+      "to": "sbatch",
+      "relationType": "includes"
+    },
+    {
+      "from": "Slurm Commands",
+      "to": "srun",
+      "relationType": "includes"
+    },
+    {
+      "from": "Slurm Commands",
+      "to": "scancel",
+      "relationType": "includes"
+    },
+    {
+      "from": "Grid Engine Commands",
+      "to": "qsub",
+      "relationType": "includes"
+    },
+    {
+      "from": "Grid Engine Commands",
+      "to": "qstat",
+      "relationType": "includes"
+    },
+    {
+      "from": "Grid Engine Commands",
+      "to": "qdel",
+      "relationType": "includes"
+    },
+    {
+      "from": "Operations",
+      "to": "Office Locations",
+      "relationType": "contains"
+    },
+    {
+      "from": "Operations",
+      "to": "Hardware and Equipment",
+      "relationType": "contains"
+    },
+    {
+      "from": "Office Locations",
+      "to": "Portland Office Details",
+      "relationType": "contains"
+    },
+    {
+      "from": "Hardware and Equipment",
+      "to": "Apple Devices",
+      "relationType": "contains"
+    },
+    {
+      "from": "JAMF Management",
+      "to": "Apple Devices",
+      "relationType": "manages"
+    },
+    {
+      "from": "JAMF Management",
+      "to": "Self Service",
+      "relationType": "provides"
+    },
+    {
+      "from": "Hardware and Equipment",
+      "to": "JAMF Management",
+      "relationType": "uses"
+    },
+    {
+      "from": "Operations",
+      "to": "IT Support Channels",
+      "relationType": "contains"
+    },
+    {
+      "from": "IT Support Channels",
+      "to": "IT Support Portal",
+      "relationType": "documents"
+    },
+    {
+      "from": "IT Support Channels",
+      "to": "IT Support Hotline",
+      "relationType": "documents"
+    },
+    {
+      "from": "IT Support Channels",
+      "to": "InfoSec Hotline",
+      "relationType": "documents"
+    },
+    {
+      "from": "IT Support Channels",
+      "to": "In-Office Support Locations",
+      "relationType": "contains"
+    },
+    {
+      "from": "Operations",
+      "to": "Software & Applications Section",
+      "relationType": "contains"
+    },
+    {
+      "from": "Operations",
+      "to": "Cloud & Network Infrastructure Section",
+      "relationType": "contains"
+    },
+    {
+      "from": "Operations",
+      "to": "Storage, Archives & Backups Section",
+      "relationType": "contains"
+    },
+    {
+      "from": "InfoSec Hotline",
+      "to": "Information Security",
+      "relationType": "supports"
+    },
+    {
+      "from": "Software & Applications Section",
+      "to": "Cloud & Network Infrastructure Section",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software & Applications Section",
+      "to": "Storage, Archives & Backups Section",
+      "relationType": "contains"
+    },
+    {
+      "from": "Knowledge Graph Consolidation",
+      "to": "Content Organization",
+      "relationType": "implements"
+    },
+    {
+      "from": "Knowledge Graph Consolidation",
+      "to": "Relation Organization",
+      "relationType": "implements"
+    },
+    {
+      "from": "EntityType Consolidation Update",
+      "to": "Content Organization",
+      "relationType": "extends"
+    },
+    {
+      "from": "RelationType Consolidation Update",
+      "to": "Relation Organization",
+      "relationType": "extends"
+    },
+    {
+      "from": "RelationType Consolidation Update",
+      "to": "has instance",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "RelationType Consolidation Update",
+      "to": "reviewed by",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "RelationType Consolidation Update",
+      "to": "tracks with",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "RelationType Consolidation Update",
+      "to": "describes",
+      "relationType": "consolidates"
+    },
+    {
+      "from": "Bolt Cluster Architecture",
+      "to": "Slurm Scheduler",
+      "relationType": "uses"
+    },
+    {
+      "from": "PDX GPU Cluster Architecture",
+      "to": "Grid Engine Scheduler",
+      "relationType": "uses"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "Slurm Commands",
+      "relationType": "documents"
+    },
+    {
+      "from": "HPC User Guide",
+      "to": "Grid Engine Commands",
+      "relationType": "documents"
+    },
+    {
+      "from": "Service Interruption Reports",
+      "to": "Service Interruption Report Template",
+      "relationType": "uses"
+    },
+    {
+      "from": "Service Interruption Reports",
+      "to": "Service Interruption Review Board Operation",
+      "relationType": "follows"
+    },
+    {
+      "from": "Service Interruption Review Board",
+      "to": "Service Interruption Review Board Operation",
+      "relationType": "follows"
+    },
+    {
+      "from": "Service Interruption Reports",
+      "to": "ITLC 2022-09-19 SIR for NYC License Server",
+      "relationType": "contains"
+    },
+    {
+      "from": "ITLC 2022-09-19 SIR for NYC License Server",
+      "to": "NYC License Server",
+      "relationType": "documents"
+    },
+    {
+      "from": "NYC License Server",
+      "to": "License Server",
+      "relationType": "isA"
+    },
+    {
+      "from": "IT Support Hotline",
+      "to": "NYC License Server",
+      "relationType": "supports"
+    },
+    {
+      "from": "GxP Compliance Program",
+      "to": "Managed Document Numbering and Naming",
+      "relationType": "uses"
+    },
+    {
+      "from": "GxP Compliance Program",
+      "to": "GxP Compliance Managed Documents",
+      "relationType": "manages"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "ITLC BOX-CS-001 v2.0",
+      "relationType": "contains"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "ITLC BOX-IQ-001 v2.0",
+      "relationType": "contains"
+    },
+    {
+      "from": "GxP Compliance Managed Documents",
+      "to": "ITLC SOP-IT-001 v1.0",
+      "relationType": "contains"
+    },
+    {
+      "from": "ITLC BOX-CS-001 v2.0",
+      "to": "Box GxP",
+      "relationType": "configures"
+    },
+    {
+      "from": "ITLC BOX-IQ-001 v2.0",
+      "to": "Box GxP",
+      "relationType": "validates"
+    },
+    {
+      "from": "ITLC SOP-IT-001 v1.0",
+      "to": "Box GxP",
+      "relationType": "governs"
+    },
+    {
+      "from": "ITLC SOP-IT-001 v1.0",
+      "to": "DocuSign Part 11",
+      "relationType": "governs"
+    },
+    {
+      "from": "ITLC BOX-CS-001 v2.0",
+      "to": "ITLC BOX-CS-001",
+      "relationType": "isVersionOf"
+    },
+    {
+      "from": "ITLC BOX-IQ-001 v2.0",
+      "to": "ITLC BOX-IQ-001",
+      "relationType": "isVersionOf"
+    },
+    {
+      "from": "ITLC SOP-IT-001 v1.0",
+      "to": "ITLC SOP-IT-001",
+      "relationType": "isVersionOf"
+    },
+    {
+      "from": "Software & Applications",
+      "to": "Approved Software List",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software & Applications",
+      "to": "Software Categories",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software Categories",
+      "to": "Browsers",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software Categories",
+      "to": "Network & Remote Access",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software Categories",
+      "to": "Development Tools",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software Categories",
+      "to": "Security & Authentication",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software Categories",
+      "to": "Scientific Computing",
+      "relationType": "contains"
+    },
+    {
+      "from": "Software Categories",
+      "to": "Productivity Apps",
+      "relationType": "contains"
+    },
+    {
+      "from": "Cloud & Network Infrastructure",
+      "to": "Cloud Infrastructure",
+      "relationType": "contains"
+    },
+    {
+      "from": "Cloud Infrastructure",
+      "to": "AWS",
+      "relationType": "contains"
+    },
+    {
+      "from": "Cloud Infrastructure",
+      "to": "GCP",
+      "relationType": "contains"
+    },
+    {
+      "from": "Cloud Infrastructure",
+      "to": "GitHub Enterprise",
+      "relationType": "contains"
+    },
+    {
+      "from": "Storage, Archives & Backups",
+      "to": "Storage Solutions",
+      "relationType": "contains"
+    },
+    {
+      "from": "Storage Solutions",
+      "to": "Box Documentation",
+      "relationType": "contains"
+    },
+    {
+      "from": "Storage Solutions",
+      "to": "Archive Servers",
+      "relationType": "contains"
+    },
+    {
+      "from": "Storage Solutions",
+      "to": "Network Attached Storage",
+      "relationType": "contains"
+    },
+    {
+      "from": "Box Documentation",
+      "to": "Box GxP",
+      "relationType": "documents"
+    },
+    {
+      "from": "Knowledge Graph Analysis Summary",
+      "to": "Knowledge Graph Consolidation",
+      "relationType": "extends"
+    },
+    {
+      "from": "Additional RelationType Consolidation",
+      "to": "RelationType Consolidation Update",
+      "relationType": "extends"
+    },
+    {
+      "from": "Knowledge Graph Analysis Summary",
+      "to": "Additional RelationType Consolidation",
+      "relationType": "identifies"
+    },
+    {
+      "from": "Storage Solutions",
+      "to": "Public FTP User Guide",
+      "relationType": "contains"
+    }
+  ]
+}

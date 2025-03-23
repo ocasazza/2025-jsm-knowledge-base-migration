@@ -1,0 +1,6 @@
+id: 195690603
+title: Stub procedure banner
+version: 1
+space_key: ITLC
+parent_id: 195690498
+parent_title: 🪧 IT Public Docs Banners

@@ -1,4 +1,0 @@
-id: 54822127
-title: Tips for Advanced Searching in Jira
-version: 3
-space_key: ITLC

@@ -1,4 +1,0 @@
-id: 54822537
-title: ITLC SDGR-IQ-01
-version: 1
-space_key: ITLC

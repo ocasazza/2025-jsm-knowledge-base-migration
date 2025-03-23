@@ -1,0 +1,6 @@
+id: 54823294
+title: Mounting Regional SMB Exports
+version: 3
+space_key: ITLC
+parent_id: 191037993
+parent_title: 💾 Storage, Archives & Backups

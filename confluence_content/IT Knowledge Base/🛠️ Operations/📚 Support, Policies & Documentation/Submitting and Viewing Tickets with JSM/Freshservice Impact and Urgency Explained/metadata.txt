@@ -1,0 +1,6 @@
+id: 54825746
+title: Freshservice Impact and Urgency Explained
+version: 4
+space_key: ITLC
+parent_id: 54824236
+parent_title: Submitting and Viewing Tickets with JSM

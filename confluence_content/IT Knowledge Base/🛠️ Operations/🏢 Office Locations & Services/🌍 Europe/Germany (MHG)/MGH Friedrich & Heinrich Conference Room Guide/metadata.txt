@@ -2,3 +2,5 @@ id: 54820985
 title: MGH Friedrich & Heinrich Conference Room Guide
 version: 5
 space_key: ITLC
+parent_id: 191103347
+parent_title: Germany (MHG)

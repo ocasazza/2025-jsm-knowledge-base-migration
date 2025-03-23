@@ -2,3 +2,5 @@ id: 54822212
 title: Troubleshooting MacOS Ventura (v13) SSH Login Issues with Older Hosts
 version: 5
 space_key: ITLC
+parent_id: 54821498
+parent_title: ❓MacOS FAQs

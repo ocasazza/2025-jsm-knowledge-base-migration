@@ -1,0 +1,6 @@
+id: 54822609
+title: 📝 Generating Schrodinger Email Signature
+version: 4
+space_key: ITLC
+parent_id: 196313089
+parent_title: 🎓 Getting Started for New Schrödinger Employees

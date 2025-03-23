@@ -1,4 +1,0 @@
-id: 54821754
-title: 7-Zip - Windows
-version: 4
-space_key: ITLC

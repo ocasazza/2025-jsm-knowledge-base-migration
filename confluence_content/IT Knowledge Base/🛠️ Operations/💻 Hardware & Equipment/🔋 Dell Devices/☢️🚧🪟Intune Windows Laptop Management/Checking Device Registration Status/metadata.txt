@@ -2,3 +2,5 @@ id: 213418114
 title: Checking Device Registration Status
 version: 2
 space_key: ITLC
+parent_id: 200409100
+parent_title: ☢️🚧🪟Intune Windows Laptop Management

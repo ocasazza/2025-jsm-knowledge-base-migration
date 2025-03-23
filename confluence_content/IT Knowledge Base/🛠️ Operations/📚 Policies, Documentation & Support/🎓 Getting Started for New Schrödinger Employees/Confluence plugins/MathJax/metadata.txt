@@ -1,4 +1,0 @@
-id: 54824730
-title: MathJax
-version: 2
-space_key: ITLC

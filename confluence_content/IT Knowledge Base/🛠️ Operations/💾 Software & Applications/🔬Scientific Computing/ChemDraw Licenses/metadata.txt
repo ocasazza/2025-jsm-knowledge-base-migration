@@ -1,4 +1,0 @@
-id: 54825184
-title: ChemDraw Licenses
-version: 5
-space_key: ITLC

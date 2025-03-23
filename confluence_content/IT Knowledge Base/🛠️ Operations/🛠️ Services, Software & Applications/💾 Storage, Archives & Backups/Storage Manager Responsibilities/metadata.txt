@@ -1,0 +1,6 @@
+id: 54822248
+title: Storage Manager Responsibilities
+version: 4
+space_key: ITLC
+parent_id: 191037993
+parent_title: 💾 Storage, Archives & Backups

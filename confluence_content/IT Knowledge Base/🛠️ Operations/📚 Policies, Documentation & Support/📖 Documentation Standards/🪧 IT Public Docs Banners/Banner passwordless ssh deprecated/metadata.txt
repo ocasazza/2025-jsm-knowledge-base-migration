@@ -1,4 +1,0 @@
-id: 195690545
-title: Banner passwordless ssh deprecated
-version: 4
-space_key: ITLC

@@ -1,4 +1,0 @@
-id: 54825054
-title: 🕊️Avoiding and Replacing Terms of Oppression
-version: 3
-space_key: ITLC

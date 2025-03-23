@@ -1,0 +1,6 @@
+id: 196149407
+title: GCP
+version: 1
+space_key: ITLC
+parent_id: 195920242
+parent_title: ☁️ Cloud & Network Infrastructure

@@ -2,3 +2,5 @@ id: 190480449
 title: High Tier Configuration
 version: 3
 space_key: ITLC
+parent_id: 190611457
+parent_title: 🐧 Ubuntu Workstations

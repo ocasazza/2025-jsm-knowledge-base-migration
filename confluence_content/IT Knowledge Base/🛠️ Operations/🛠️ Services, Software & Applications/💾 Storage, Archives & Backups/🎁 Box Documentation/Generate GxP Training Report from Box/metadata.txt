@@ -1,0 +1,6 @@
+id: 54825685
+title: Generate GxP Training Report from Box
+version: 5
+space_key: ITLC
+parent_id: 54822960
+parent_title: 🎁 Box Documentation

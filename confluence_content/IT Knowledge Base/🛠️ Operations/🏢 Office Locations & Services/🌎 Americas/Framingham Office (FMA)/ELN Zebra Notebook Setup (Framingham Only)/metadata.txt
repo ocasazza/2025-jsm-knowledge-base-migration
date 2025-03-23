@@ -2,3 +2,5 @@ id: 54821992
 title: ELN Zebra Notebook Setup (Framingham Only)
 version: 4
 space_key: ITLC
+parent_id: 54824081
+parent_title: Framingham Office (FMA)

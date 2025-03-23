@@ -1,6 +1,0 @@
-id: 214171791
-title: Software & Applications
-version: 2
-space_key: ITLC
-parent_id: 190775299
-parent_title: 🛠️ Services, Software & Applications

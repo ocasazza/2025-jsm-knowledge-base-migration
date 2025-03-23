@@ -2,3 +2,5 @@ id: 190611457
 title: 🐧 Ubuntu Workstations
 version: 3
 space_key: ITLC
+parent_id: 190447618
+parent_title: 💻 Hardware & Equipment

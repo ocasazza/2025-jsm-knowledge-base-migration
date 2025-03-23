@@ -2,3 +2,5 @@ id: 211288090
 title: How do I reserve an entire node for my job (great for performance analysis)?
 version: 2
 space_key: ITLC
+parent_id: 210894876
+parent_title: High Performance Computing FAQ(s)

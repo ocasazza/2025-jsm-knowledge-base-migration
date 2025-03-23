@@ -1,0 +1,6 @@
+id: 54821822
+title: Working with Box Metadata templates and File Requests
+version: 2
+space_key: ITLC
+parent_id: 54822960
+parent_title: 🎁 Box Documentation

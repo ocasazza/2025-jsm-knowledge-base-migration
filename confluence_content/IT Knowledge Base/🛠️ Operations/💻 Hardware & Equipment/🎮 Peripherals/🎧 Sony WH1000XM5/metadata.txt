@@ -2,3 +2,5 @@ id: 54821020
 title: 🎧 Sony WH1000XM5
 version: 2
 space_key: ITLC
+parent_id: 190513226
+parent_title: 🎮 Peripherals

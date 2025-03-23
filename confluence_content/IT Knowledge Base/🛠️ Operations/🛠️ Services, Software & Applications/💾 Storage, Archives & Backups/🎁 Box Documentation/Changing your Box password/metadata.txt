@@ -1,0 +1,6 @@
+id: 54822334
+title: Changing your Box password
+version: 4
+space_key: ITLC
+parent_id: 54822960
+parent_title: 🎁 Box Documentation

@@ -1,4 +1,0 @@
-id: 54824527
-title: ITLC 2021-08-31 SIR for pdx-idf14-r01 outage
-version: 1
-space_key: ITLC

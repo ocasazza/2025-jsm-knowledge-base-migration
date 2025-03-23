@@ -2,3 +2,5 @@ id: 54824317
 title: Newark Datacenter (EWR)
 version: 4
 space_key: ITLC
+parent_id: 191103301
+parent_title: 🌍 Europe

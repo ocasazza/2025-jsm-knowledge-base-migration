@@ -1,4 +1,0 @@
-id: 54825637
-title: Appgate Installation
-version: 3
-space_key: ITLC

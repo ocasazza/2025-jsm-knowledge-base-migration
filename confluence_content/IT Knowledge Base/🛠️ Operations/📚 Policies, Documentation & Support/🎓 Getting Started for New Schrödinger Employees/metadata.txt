@@ -1,4 +1,0 @@
-id: 196313089
-title: 🎓 Getting Started for New Schrödinger Employees
-version: 4
-space_key: ITLC

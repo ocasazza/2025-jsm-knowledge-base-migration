@@ -1,0 +1,6 @@
+id: 54825177
+title: Upgrade Appgate via Self Service
+version: 5
+space_key: ITLC
+parent_id: 54824293
+parent_title: 🔐 Appgate VPN

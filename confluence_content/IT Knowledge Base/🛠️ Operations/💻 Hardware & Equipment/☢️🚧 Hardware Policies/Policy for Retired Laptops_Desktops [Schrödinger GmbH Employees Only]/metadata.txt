@@ -2,3 +2,5 @@ id: 54821552
 title: Policy for Retired Laptops/Desktops [Schrödinger GmbH Employees Only]
 version: 4
 space_key: ITLC
+parent_id: 54821949
+parent_title: ☢️🚧 Hardware Policies

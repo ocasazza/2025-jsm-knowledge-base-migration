@@ -1,4 +1,0 @@
-id: 190775299
-title: 💾 Software & Applications
-version: 2
-space_key: ITLC

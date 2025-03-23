@@ -1,4 +1,0 @@
-id: 54825722
-title: 📝 Approved Note Taking Apps
-version: 4
-space_key: ITLC

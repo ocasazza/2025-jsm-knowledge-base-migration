@@ -2,3 +2,5 @@ id: 211288065
 title: How do I run my jobs on bolt-0 or bolt-2 nodes only?
 version: 2
 space_key: ITLC
+parent_id: 210894876
+parent_title: High Performance Computing FAQ(s)

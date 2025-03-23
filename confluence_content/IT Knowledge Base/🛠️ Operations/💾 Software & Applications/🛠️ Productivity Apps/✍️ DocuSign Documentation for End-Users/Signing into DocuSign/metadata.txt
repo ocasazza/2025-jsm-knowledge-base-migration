@@ -1,4 +1,0 @@
-id: 54822217
-title: Signing into DocuSign
-version: 2
-space_key: ITLC

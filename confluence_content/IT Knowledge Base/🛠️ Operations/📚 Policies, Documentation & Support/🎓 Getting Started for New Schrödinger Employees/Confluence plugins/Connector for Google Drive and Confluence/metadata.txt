@@ -1,4 +1,0 @@
-id: 54825624
-title: Connector for Google Drive and Confluence
-version: 4
-space_key: ITLC

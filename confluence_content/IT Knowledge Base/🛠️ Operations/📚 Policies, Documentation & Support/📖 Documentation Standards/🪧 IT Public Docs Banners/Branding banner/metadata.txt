@@ -1,4 +1,0 @@
-id: 195690556
-title: Branding banner
-version: 1
-space_key: ITLC

@@ -1,0 +1,6 @@
+id: 54821253
+title: Lucidchart Plugin
+version: 2
+space_key: ITLC
+parent_id: 54822054
+parent_title: Confluence plugins

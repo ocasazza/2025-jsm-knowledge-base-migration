@@ -1,0 +1,6 @@
+id: 54823499
+title: NX/NoMachine Remote Desktop
+version: 2
+space_key: ITLC
+parent_id: 191037735
+parent_title: 🖥️ Remote Desktop

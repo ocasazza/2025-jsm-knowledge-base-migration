@@ -301,20 +301,10 @@ graph TD
     POL_Q --> |Tickets| TICKET[Submitting Tickets]
 ```
 
-## Key Insights from Analysis
+##  Converting mcp/memory json format to kbg viewer format
 
-1. **Comprehensive IT Infrastructure Documentation**: The knowledge base provides extensive documentation covering all aspects of Schrödinger's IT infrastructure, from high-performance computing clusters to office-specific resources.
-
-2. **Focus on Scientific Computing**: The presence of detailed HPC documentation suggests Schrödinger's emphasis on scientific computing and research capabilities.
-
-3. **Global Organization**: The office locations section reveals Schrödinger's global presence across Americas, Europe, and Asia-Pacific regions.
-
-4. **Standardized Documentation**: The Templates section indicates an effort to maintain consistent documentation formats across the knowledge base.
-
-5. **Security Integration**: Multiple authentication systems (Okta, JAMF Connect) are integrated to provide secure access to resources.
-
-6. **Apple-Centric Environment**: Significant documentation around Apple devices, JAMF management, and MacOS suggests a primarily Apple-based computing environment.
-
-7. **Structured Knowledge Organization**: The knowledge base is well-organized into logical sections and subsections, making it easier for users to find relevant information.
-
-This analysis provides a comprehensive overview of Schrödinger's IT infrastructure, policies, and resources as documented in their Confluence knowledge base.
+jq '
+{
+  "entities": [.[] | select(.type == "entity") | {name: .name, entityType: .entityType, observations: .observations}],
+  "relations": [.[] | select(.type == "relation") | {from: .from, to: .to, relationType: .relationType}]
+}' /Users/casazza/Documents/Cline/MCP/servers/src/memory/data/confluence_kb.json > kb.json

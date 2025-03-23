@@ -1,0 +1,6 @@
+id: 54822009
+title: How to Create and Manage Your Tickets in FreshService
+version: 4
+space_key: ITLC
+parent_id: 54824236
+parent_title: Submitting and Viewing Tickets with JSM

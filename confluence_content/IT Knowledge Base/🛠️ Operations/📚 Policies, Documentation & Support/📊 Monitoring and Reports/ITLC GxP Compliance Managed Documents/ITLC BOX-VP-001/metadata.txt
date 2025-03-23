@@ -1,4 +1,0 @@
-id: 54822037
-title: ITLC BOX-VP-001
-version: 1
-space_key: ITLC

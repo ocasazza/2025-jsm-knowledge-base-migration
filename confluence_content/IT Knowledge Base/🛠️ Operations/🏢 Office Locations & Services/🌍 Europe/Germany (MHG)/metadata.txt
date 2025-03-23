@@ -2,3 +2,5 @@ id: 191103347
 title: Germany (MHG)
 version: 1
 space_key: ITLC
+parent_id: 191103301
+parent_title: 🌍 Europe

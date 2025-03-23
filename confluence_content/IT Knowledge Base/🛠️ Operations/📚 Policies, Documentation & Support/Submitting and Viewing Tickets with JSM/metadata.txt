@@ -1,4 +1,0 @@
-id: 54824236
-title: Submitting and Viewing Tickets with JSM
-version: 6
-space_key: ITLC

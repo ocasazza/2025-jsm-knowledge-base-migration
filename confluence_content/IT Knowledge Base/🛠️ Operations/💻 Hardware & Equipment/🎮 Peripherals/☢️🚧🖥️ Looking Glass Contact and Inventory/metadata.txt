@@ -2,3 +2,5 @@ id: 54822428
 title: ☢️🚧🖥️ Looking Glass Contact and Inventory
 version: 6
 space_key: ITLC
+parent_id: 190513226
+parent_title: 🎮 Peripherals

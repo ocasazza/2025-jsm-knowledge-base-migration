@@ -1,0 +1,6 @@
+id: 54822630
+title: Public FTP User Guide
+version: 4
+space_key: ITLC
+parent_id: 191037993
+parent_title: 💾 Storage, Archives & Backups
