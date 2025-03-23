@@ -1,0 +1,448 @@
+<ac:image ac:align="center" ac:custom-width="true" ac:layout="center" ac:original-height="30" ac:original-width="155" ac:src="https://schrodinger.atlassian.net/wiki/plugins/servlet/confluence/placeholder/macro?definition=e3RvY30&amp;locale=en_US&amp;version=2" ac:width="250">
+ <ri:url ri:value="https://schrodinger.atlassian.net/wiki/plugins/servlet/confluence/placeholder/macro?definition=e3RvY30&amp;locale=en_US&amp;version=2">
+ </ri:url>
+</ac:image>
+<h1>
+ Overview
+</h1>
+<p>
+ Druva inSync is a cloud-based backup solution that Schrödinger has deployed to create remote backups of users' files on their local machines and stored in Google Drive, and give users the ability to restore their own files on-demand.
+</p>
+<p>
+ The client is installed and configured remotely to be as un-intrusive as possible while giving users the ability to configure some options, pause backups, and include or exclude files beyond the default.
+</p>
+<h1>
+ Web Interface
+</h1>
+<p>
+ From the web interface you can download or restore files and folders from any of your backups.
+</p>
+<p>
+ This can be particularly helpful if you're trying to retrieve files from a system other than the one your client is running on, or if your primary system is unavailable.
+</p>
+<h2>
+ Logging in
+</h2>
+<p>
+ The web interface for your Druva account can be accessed via
+ <a href="https://schrodinger.okta.com/app/UserHome">
+  Okta
+ </a>
+ or by logging in directly at
+ <a data-card-appearance="inline" href="https://cloud.druva.com/home/">
+  https://cloud.druva.com/home/
+ </a>
+ :
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Go to
+   <a data-card-appearance="inline" href="https://cloud.druva.com/home/">
+    https://cloud.druva.com/home/
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   For username, enter the same Schrödinger email address you use to sign into
+   <a href="https://schrodinger.okta.com/">
+    https://schrodinger.okta.com/
+   </a>
+   .
+   <strong>
+    Leave the password field blank
+   </strong>
+   , then click Login.
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     If you were already signed into Okta in the same browser, you'll be logged into the inSync web interface.
+    </p>
+   </li>
+   <li>
+    <p>
+     If you weren't already signed into Okta, you'll be prompted to sign into Okta, and then you'll be logged into the inSync web interface
+    </p>
+   </li>
+  </ol>
+ </li>
+</ol>
+<h1>
+ InSync Client Activation
+</h1>
+<p>
+ The inSync client must be installed and activated on devices (laptops, desktops) which are to be backed up.
+</p>
+<ac:structured-macro ac:local-id="84720ac3-b3e8-48c9-b589-fdd8eb0488fb" ac:macro-id="8f8e9037-cf9a-478d-84af-0e7e36e24dc6" ac:name="children" ac:schema-version="2" data-layout="default">
+ <ac:parameter ac:name="allChildren">
+  true
+ </ac:parameter>
+</ac:structured-macro>
+<h1>
+ Launching and Using the inSync Client
+</h1>
+<p>
+ In your taskbar or menubar you'll see an icon resembling a pinwheel or a counter-clockwise arrow (depending on your platform).
+ <br/>
+ Click on that and select "Open Preferences…" to bring up the client interface.
+</p>
+<h2>
+ Backup Settings
+</h2>
+<p>
+ After launching the inSync client, you can click on Settings to see the backup settings.
+</p>
+<p>
+ For example (Windows client, version 7.1):
+</p>
+<ac:image ac:align="center" ac:alt="Windows client version 7.1" ac:custom-width="true" ac:layout="center" ac:original-height="612" ac:original-width="996" ac:src="https://schrodinger.atlassian.net/wiki/download/thumbnails/55256488/image2023-1-24_12-32-22.png?version=1&amp;modificationDate=1674581542947&amp;cacheVersion=1&amp;api=v2&amp;height=250" ac:width="250">
+ <ri:url ri:value="https://schrodinger.atlassian.net/wiki/download/thumbnails/55256488/image2023-1-24_12-32-22.png?version=1&amp;modificationDate=1674581542947&amp;cacheVersion=1&amp;api=v2&amp;height=250">
+ </ri:url>
+</ac:image>
+<p>
+ In addition to those settings, please note:
+</p>
+<ol start="1">
+ <li>
+  <p>
+   The operating system and applications
+   <strong>
+    are not backed
+   </strong>
+   up by inSync.
+  </p>
+ </li>
+ <li>
+  <p>
+   Your home folder on Mac and Windows, and only /scr* (not /home/
+   <em>
+    username
+   </em>
+   ) on Linux will be backed up, with some exclusions.  Those exclusions include:
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     Anything placed in a folder named
+     <strong>
+      donotbackup
+     </strong>
+     anywhere in the location being backed up will be excluded. You can have more than one folder named
+     <strong>
+      donotbackup
+     </strong>
+     .
+    </p>
+   </li>
+   <li>
+    <p>
+     Paths listed in the Global exclusions, which can be found using these instructions:
+     <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_6.8.0_for_inSync_Cloud/002Install_inSync_Client/040_Configure_inSync/016_View_Global_Exclusions_list">
+      How to View global exclusions
+     </a>
+    </p>
+   </li>
+   <li>
+    <p>
+     Mac: System Applications will not be backed up
+    </p>
+   </li>
+  </ol>
+ </li>
+</ol>
+<h3>
+ Adding backup locations
+</h3>
+<p>
+ You can also
+ <strong>
+  add
+ </strong>
+ folders to be backed up, if they are not already included in the locations above. See How to
+ <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_6.6.0_for_inSync_Cloud/002Install_inSync_Client/040_Configure_inSync/010_Configure_folders_for_backup/Add_folders#:~:text=Configure%20backup%20settings%20of%20the%20selected%20folder,-You%20can%20change&amp;text=Note%3A%20You%20cannot%20change%20the,has%20included%20in%20the%20backup.&amp;text=configure%20backup%20settings-,Start%20the%20inSync%20Client.,right%20pane%2C%20click%20Add%20folder.">
+  Add folders
+ </a>
+ .
+</p>
+<h3>
+ Retention times
+</h3>
+<p>
+ These cannot be adjusted by the user.
+ <strong>
+  Note
+ </strong>
+ : The last snapshot is saved indefinitely irrespective of the retention policy configured below.  That last snapshot is only removed if the device or account is deleted from inSync.
+</p>
+<h4>
+ Devices
+</h4>
+<p>
+ Retain all backups for 30 days
+</p>
+<p>
+ Retain weekly backups for 3 weeks
+</p>
+<p>
+ Retain monthly backups for 2 months
+</p>
+<h4>
+ Google Drive
+</h4>
+<p>
+ Retain all backups for 7 days
+</p>
+<p>
+ Retain weekly backups for 3 weeks
+</p>
+<p>
+ Retain monthly backups for 2 months
+</p>
+<h4>
+ Google Email
+</h4>
+<p>
+ Unlimited
+</p>
+<h2>
+ Backing Up
+</h2>
+<p>
+ The default backup settings will schedule backups to run periodically and automatically. If you need to run a backup manually, launch the inSync client, click on Backup &amp; Restore, and click Backup.
+</p>
+<h2>
+ Restoring
+</h2>
+<h3>
+ Using the client
+</h3>
+<table ac:local-id="92e799f7-11e1-4f4f-bf04-5d40892cb4c8" data-layout="default" data-table-width="760">
+ <tbody>
+  <tr>
+   <td>
+    <p>
+     Note: You'll need to use the web interface instead if you wish to restore Google Workspace items (Gmail, Google Docs, Calendar, Contacts)
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<ol start="1">
+ <li>
+  <p>
+   See
+   <a href="https://help.druva.com/en/articles/8829655-restore-data-using-the-insync-client">
+    these instructions
+   </a>
+   for restoring from the inSync client software
+  </p>
+ </li>
+</ol>
+<h3>
+ Using the web interface
+</h3>
+<ol start="1">
+ <li>
+  <p>
+   See
+   <a href="#">
+    Druva inSync Cloud Overview#WebInterface
+   </a>
+   if you need help logging into the inSync web interface
+  </p>
+ </li>
+ <li>
+  <p>
+   Once logged in, see
+   <a href="https://help.druva.com/en/articles/8829657-restore-data-using-the-insync-web">
+    these instructions
+   </a>
+   on how to restore your data, or see
+   <a href="https://help.druva.com/en/articles/8829660-download-data-using-the-insync-web">
+    these instructions
+   </a>
+   on how to download your data.
+  </p>
+ </li>
+</ol>
+<h2>
+ Pausing Backups and Other Settings
+</h2>
+<p>
+ Most of these options are configured administratively, but here you can configure settings such as:
+</p>
+<ul>
+ <li>
+  <p>
+   a "Blackout Window" to prevent backups during time periods, or pause backups. This can be helpful, for example, if you'll be in a video chat and don't want backups affecting your available bandwidth.  Please see
+   <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_7.2.0_for_inSync_Cloud/Backup_and_Restore/010_Back_up_data_and_monitor_inSync/020_Pause_and_resume_backup">
+    these instructions
+   </a>
+   .
+  </p>
+ </li>
+</ul>
+<h1>
+ Web Interface
+</h1>
+<p>
+ From the web interface you can download or restore files and folders from any of your backups.
+</p>
+<p>
+ This can be particularly helpful if you're trying to retrieve files from a system other than the one your client is running on, or if your primary system is unavailable.
+</p>
+<h2>
+ Logging in
+</h2>
+<p>
+ The web interface for your Druva account can be accessed via
+ <a href="https://schrodinger.okta.com/app/UserHome">
+  Okta
+ </a>
+ or by logging in directly at
+ <a data-card-appearance="inline" href="https://cloud.druva.com/home/">
+  https://cloud.druva.com/home/
+ </a>
+ :
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Go to
+   <a data-card-appearance="inline" href="https://cloud.druva.com/home/">
+    https://cloud.druva.com/home/
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   If you were already signed into Okta in the same browser, you'll be logged into the inSync web interface.
+  </p>
+ </li>
+ <li>
+  <p>
+   If you weren't already signed into Okta:
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     For username, enter the same Schrödinger email address you use to sign into
+     <a href="https://schrodinger.okta.com/">
+      https://schrodinger.okta.com/
+     </a>
+     .
+     <strong>
+      Leave the password field blank
+     </strong>
+     , then click Login.
+    </p>
+   </li>
+   <li>
+    <p>
+     You'll be prompted to sign into Okta, and then you'll be logged into the inSync web interface
+    </p>
+   </li>
+  </ol>
+ </li>
+</ol>
+<h1>
+ Uninstalling / Reinstalling
+</h1>
+<p>
+ If you find you need to uninstall and manually re-install:
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Uninstall
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_6.5.0_for_inSync_Cloud/002Install_inSync_Client/020_Install_and_activate_inSync/Uninstall_inSync_Client#Remove_configuration_details_and_inSync_Share_folder_manually">
+      Uninstall the 6.5 client
+     </a>
+    </p>
+   </li>
+   <li>
+    <p>
+     <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_6.6.0_for_inSync_Cloud/002Install_inSync_Client/020_Install_and_activate_inSync/Uninstall_inSync_Client">
+      Uninstall the 6.6 client
+     </a>
+    </p>
+   </li>
+   <li>
+    <p>
+     <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_6.7.0_for_inSync_Cloud/002Install_inSync_Client/020_Install_and_activate_inSync/Uninstall_inSync_Client">
+      Uninstall the 6.7 client
+     </a>
+    </p>
+   </li>
+   <li>
+    <p>
+     <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_6.8.0_for_inSync_Cloud/002Install_inSync_Client/020_Install_and_activate_inSync/Uninstall_inSync_Client">
+      Uninstall the 6.8 client
+     </a>
+    </p>
+   </li>
+   <li>
+    <p>
+     <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_6.9.0_for_inSync_Cloud/002Install_inSync_Client/020_Install_and_activate_inSync/Uninstall_inSync_Client">
+      Uninstall the 6.9 client
+     </a>
+    </p>
+   </li>
+   <li>
+    <p>
+     <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_7.0.0_for_inSync_Cloud/002Install_inSync_Client/020_Install_and_activate_inSync/Uninstall_inSync_Client">
+      Uninstall the 7.0 client
+     </a>
+    </p>
+   </li>
+   <li>
+    <p>
+     <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_7.1.0_for_inSync_Cloud">
+      Uninstall the 7.1 client
+     </a>
+    </p>
+   </li>
+   <li>
+    <p>
+     <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_7.2.0_for_inSync_Cloud">
+      Uninstall the 7.2 client
+     </a>
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Download -
+   <a data-card-appearance="inline" href="https://downloads.druva.com/insync/#inSync_Client">
+    https://downloads.druva.com/insync/#inSync_Client
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   Follow the relevant instructions from the
+   <a href="#">
+    Activation
+   </a>
+   section
+  </p>
+ </li>
+</ol>
+<h1>
+ Getting Help
+</h1>
+<p>
+ Please create a
+ <a href="https://schrodinger-sandbox.atlassian.net/servicedesk/customer/portal/3">
+  JSM ticket
+ </a>
+</p>
+<p>
+</p>

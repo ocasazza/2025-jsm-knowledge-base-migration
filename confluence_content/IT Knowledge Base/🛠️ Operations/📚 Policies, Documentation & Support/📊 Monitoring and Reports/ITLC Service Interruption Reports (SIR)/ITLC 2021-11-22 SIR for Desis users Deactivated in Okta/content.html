@@ -1,0 +1,593 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for Okta,  on 2021-11-22
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:page ri:content-title="Okta" ri:space-key="SYSMGR">
+          </ri:page>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="79f065c0-15ff-417a-add6-6a2c57447aeb" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             SYSMGR-61413
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         DESIS/Hyderabad
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2021-11-22">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2021-11-23">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="5d405c8181cbd30da3475cdf">
+          </ri:user>
+         </ac:link>
+         <div class="content-wrapper">
+          <p>
+           <br/>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    <span style="color: rgb(23,43,77);">
+     During automated hourly UKG import that started at On 22nd Nov 2021, 21:15:10 PST, 58 users were removed and 56 were re-added at once. The removal  triggered the deactivation of Desis users who had just been recently sourced by UKG/UltiPro. Although it seems many users were re-added at the same time as they were removed it in UKG, Okta did not see as update, but as new records. So users were removed from UKG and then re-added, not updated, which led to them being deactivated in Okta and their applications being removed due to profile source rules that assign applications.
+    </span>
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <ac:structured-macro ac:macro-id="cc7a44c4-bf79-43e0-88e3-8d0bbee18741" ac:name="info" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <span style="color: rgb(34,34,34);">
+       As part of the {Desis} transition, 72 people were uploaded last week into UKG by a UKG consultant. He mistakenly uploaded them into the wrong "component company" (this is one of the ways we identify what entity/location people are in within UKG). In correcting for this, he unfortunately deleted all of these users from UKG and re-added them with the right component company. This deletion caused these users to be deprovisioned from Okta/their apps. As a result, people had to reactivate Okta/change their Okta password. Apps that had been manually assigned also needed to be reassigned.
+      </span>
+     </p>
+     <p>
+      <span style="color: rgb(34,34,34);">
+       -Jessie Levkov
+      </span>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <strong>
+     Okta Profile Sources:
+    </strong>
+   </p>
+   <p>
+    Okta Sources information from 3 places and in Priority as follow: 1. UKG, 2. AD, 3. LDAP
+   </p>
+   <p>
+    <strong>
+     Okta Source Integrations:
+    </strong>
+   </p>
+   <p>
+    When a user is Deactivated from one of the sources above their Okta is also deactivated usually on the next hourly import.
+   </p>
+   <p>
+    <strong>
+     Okta Applications
+    </strong>
+    :
+   </p>
+   <p>
+    Most applications are assigned automatically via rules which usually depend on information from the Profile Sources e.g. Jira – is assigned based on the Org_Desis group within AD for Desis users. If an application is individually assigned and a user is deactivated the app has to be manually assigned.
+   </p>
+   <p>
+    <strong>
+     Okta General:
+    </strong>
+   </p>
+   <p>
+    When a user is deactivated applications are unassigned and Profile Sources are removed. Upon re-activation users Profile Sources must re-linked by performing a full import
+   </p>
+   <p>
+    Safe-Guards are in Place to prevent this, but they are set to 15% for App unassignment and 20% for Org unassignment. The amount of users deactivated in this import was well below both thresholds at 8% percent
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Describe the incident in as much (or little) detail as seems appropriate leaving the chronology, corrective action and analysis for their subsequent sub-section(s)
+    </ac:placeholder>
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    Time is in PST
+   </p>
+   <ul>
+    <li>
+     22nd Nov 2021, 20:10:10
+     <ul>
+      <li>
+       Hourly UKG import happened with one user removed.
+      </li>
+     </ul>
+    </li>
+    <li>
+     22nd Nov 2021, 21:15:10
+     <ul>
+      <li>
+       Following hourly UKG import  occurred which removed 58 users and added 56.
+      </li>
+     </ul>
+    </li>
+    <li>
+     22nd Nov 2021, 21:40
+     <ul>
+      <li>
+       First User reported in IT Hotline with subsequent Desis users reporting.
+      </li>
+     </ul>
+    </li>
+    <li>
+     22nd Nov 2021  22:12
+     <ul>
+      <li>
+       Promit reports in SYSMGR chat
+      </li>
+     </ul>
+    </li>
+    <li>
+     22nd Nov 2021  22:24
+     <ul>
+      <li>
+       Sid begins investigating via mobile and indicates it is a UKG issue.
+      </li>
+     </ul>
+    </li>
+    <li>
+     22nd Nov 2021 23:12
+     <ul>
+      <li>
+       Investigations determine users were deactivated via UKG. Users are then informed in the IT hotline that work is being done to fix the issue.
+      </li>
+      <li>
+       Work begins on getting all okta accounts reactivated.
+      </li>
+     </ul>
+    </li>
+    <li>
+     22nd, Nov 23:45
+     <ul>
+      <li>
+       Desis@ is notified via email about issue and what the process will be to get accounts back up and running
+      </li>
+      <li>
+       Work continues to relink AD and LDAP to okta accounts.
+      </li>
+     </ul>
+    </li>
+    <li>
+     23nd, Nov 00:10
+     <ul>
+      <li>
+       AD and LDAP accounts were synced but not sourced, so investigation continued
+      </li>
+     </ul>
+    </li>
+    <li>
+     23nd, Nov 00:15
+     <ul>
+      <li>
+       Determined all users ended up in the Tasks Page with Missing information.
+      </li>
+      <li>
+       Retried to provision from the task page, but this did not work
+      </li>
+      <li>
+       Missing info was of employeeType, so at this point conducted Full-Import of UKG
+      </li>
+      <li>
+       Verified users were not removed or deactivated from okta
+      </li>
+      <li>
+       Retried provisioning via the Task page and this time succeeded.
+      </li>
+      <li>
+       Verified AD/Okta accounts were sourced to users okta profile
+      </li>
+     </ul>
+    </li>
+    <li>
+     23nd, Nov 00:26
+     <ul>
+      <li>
+       Desis@  is informed that accounts are restored and they would have to update their password.
+      </li>
+     </ul>
+    </li>
+    <li>
+     23nd, Nov 00:29
+     <ul>
+      <li>
+       Informed users via the hotline
+      </li>
+     </ul>
+    </li>
+   </ul>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <ol>
+    <li>
+     Identify affected users
+    </li>
+    <li>
+     Reactivate the affected users in okta
+    </li>
+    <li>
+     Within Okta do a full import of LDAP, AD, UKG in that order
+    </li>
+    <li>
+     Verify users have been linked to AD and LDAP by visiting "Directory integration" and verify they are listed under the People or Users Tab.
+    </li>
+    <li>
+     If were not visible as being linked in #4 then check the Okta tasks page and retry users with issues or fill out information if needed(There was no missing info, but I did have to retry all the users)
+    </li>
+    <li>
+     repeat step 4
+    </li>
+    <li>
+     Inform users and have them go through the Invitation phase once more and set a new password.
+    </li>
+   </ol>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    Safeguards failed since the amount of users deactivated was 8% which is under the 15% application and 20% org threshold.
+   </p>
+   <p>
+    Although order of imports are not supposed to matter it makes it easier to understand if you begin imports from the lowest priority source.
+   </p>
+   <p>
+    oktacli was pretty useful in activating all the affected users at once.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    The issue was reported at 21:40 in the IT hotline and then reported in SYSMGR chat at 22:12
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    The problem was detected by users reporting in the IT Hotline.
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    Detection can be improved by reducing the lower limit of the unassignment safeguards.
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    30 Minutes for it to be reported after first report in hotline to reach sysmgr and
+   </p>
+   <p>
+    1 hour report for it to a proper investigation
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Once Investigation and work began users in hotline were informed. A second update with instruction and what to expect was sent out 30 minutes later to both the hotline and to desis@.
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    When informing users in the hotline also prove and communication to appropriate email group and affected users.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    Deactivation for AD and LDAP was disabled, so those accounts were not deactivated.
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    Additional training in okta and how profiles are sourced for sysmgrs.
+   </p>
+   <p>
+    Provide education to those who manage UKG/UtiPro on the effects of removing users and the effects that occur downstream.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    Provide education to those who manage UKG/UtiPro on the effects of removing users and downstream effects especially in bulk.
+   </p>
+   <p>
+    Look into additional safeguards or lower the app and org unassignment limit
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     After analyzing and talking about this incident what actions did the reviewers and management decide should be done to address shortfalls in detection, mitigation or avoidance. Use tasks, assignments and due dates or link to created jira tickets.
+    </ac:placeholder>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

@@ -1,0 +1,202 @@
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="8409d425-6b14-4314-b9c5-71ce88658eb1" ac:name="excerpt" ac:schema-version="1">
+ <ac:parameter ac:name="atlassian-macro-output-type">
+  INLINE
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   We have an MDM (mobile device management) platform for managing Windows based endpoints like desktops and laptops. This page lists the applications we're deploying and managing and other settings that may be relevant to end-users
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<hr/>
+<p>
+ <ac:structured-macro ac:macro-id="85951eb9-e73b-4be9-a147-5c1ec989ef95" ac:name="toc" ac:schema-version="1">
+ </ac:structured-macro>
+</p>
+<p>
+ <br/>
+</p>
+<hr/>
+<h1>
+ Enrollment
+</h1>
+<p>
+ See
+ <a href="https://docs.google.com/document/d/1e-hRaHKkRulR2gE28pTC-MKpqP1HvtUpHG0PMkTnHD0">
+  Workspace ONE enrollment instructions
+ </a>
+</p>
+<h1>
+ Applications
+</h1>
+<ac:structured-macro ac:macro-id="9cd84bb9-c0e8-47f4-a457-00ae5617f9c8" ac:name="info" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   We will install or update the following applications.
+  </p>
+  <ac:structured-macro ac:macro-id="2ac7842b-5a20-4a0a-97da-15f80804a322" ac:name="note" ac:schema-version="1">
+   <ac:rich-text-body>
+    <p>
+     Once Workspace ONE has these applications under management, you'll still be able to manually update these applications or install newer versions yourself.
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ <ac:structured-macro ac:macro-id="ed18f2c6-c0a2-462e-8e2c-e188644fa291" ac:name="detailssummary" ac:schema-version="3">
+  <ac:parameter ac:name="firstcolumn">
+   Application
+  </ac:parameter>
+  <ac:parameter ac:name="headings">
+   Current version,Description,Issues
+  </ac:parameter>
+  <ac:parameter ac:name="sortBy">
+   Title
+  </ac:parameter>
+  <ac:parameter ac:name="cql">
+   label = "mdm_app" and label = "ws1" and space = currentSpace() and ancestor = "55255474"
+  </ac:parameter>
+ </ac:structured-macro>
+</p>
+<p>
+ <br/>
+</p>
+<hr/>
+<h1 class="auto-cursor-target">
+ Settings
+</h1>
+<p>
+ <span style="font-size: 24.0px;letter-spacing: -0.01em;">
+  <ac:structured-macro ac:macro-id="ace6456f-454d-4e79-815d-9a652c9efd55" ac:name="detailssummary" ac:schema-version="3">
+   <ac:parameter ac:name="firstcolumn">
+    Setting
+   </ac:parameter>
+   <ac:parameter ac:name="headings">
+    Description,Issues
+   </ac:parameter>
+   <ac:parameter ac:name="sortBy">
+    Title
+   </ac:parameter>
+   <ac:parameter ac:name="cql">
+    label = "mdm_setting" and label = "ws1" and space = currentSpace() and ancestor = "55255474"
+   </ac:parameter>
+  </ac:structured-macro>
+ </span>
+</p>
+<p>
+ <br/>
+</p>
+<h1>
+ <span style="font-size: 24.0px;letter-spacing: -0.01em;">
+  Self-Service Portal
+ </span>
+</h1>
+<p>
+ <span>
+  The self-service portal lets users see information about and take actions on their enrolled machines. Access to the portal will be granted once
+ </span>
+</p>
+<h2>
+ <span>
+  Accessing the Self-Service Portal
+ </span>
+</h2>
+<ol>
+ <li>
+  <span>
+   Go to
+   <a href="https://ds1506.awmdm.com/MyDevice/Login">
+    https://ds1506.awmdm.com/MyDevice/Login
+   </a>
+  </span>
+ </li>
+ <li>
+  <span>
+   Enter your Schrodinger email address (usually this is in the form of firstname.lastname@schrodinger.com) and press Next.
+  </span>
+ </li>
+ <li>
+  <span>
+   If you are already logged into
+   <a href="https://schrodinger.okta.com">
+    https://schrodinger.okta.com
+   </a>
+   in the same browser, you'll be directed to the self-service portal. Otherwise, you'll be asked to login to your Okta account before being redirected to the self-service portal.
+  </span>
+  <span>
+  </span>
+ </li>
+</ol>
+<h2>
+ <span>
+  BitLocker recovery key
+ </span>
+</h2>
+<p>
+ <span>
+  When your machine is assigned the Workspace ONE policy to enforce BitLocker encryption, it will store the recovery key in your self-service portal.  The policy assigns a new BitLocker recovery key, different from any previous one you may have on record.  To access this new recovery key:
+ </span>
+</p>
+<ol>
+ <li>
+  <span>
+   After logging in following the
+   <a href="https://schrodinger.atlassian.net/wiki/display/SYSMGR/Workspace+ONE+Windows+device+management#WorkspaceONEWindowsdevicemanagement-Access">
+    Access
+   </a>
+   instructions, click My Devices, then click the tab for the device of interest.
+  </span>
+ </li>
+ <li>
+  <span>
+   Click "Go to Details", then MORE, then SECURITY.
+  </span>
+ </li>
+ <li>
+  <span>
+   Your BitLocker recovery key will be listed under Encryption Recovery Key.
+  </span>
+ </li>
+</ol>
+<h1>
+ <span>
+  Troubleshooting
+ </span>
+</h1>
+<p>
+ <span>
+  <ac:structured-macro ac:macro-id="7f4554d3-a140-442b-a517-2d0d33ec0e5f" ac:name="contentbylabel" ac:schema-version="4">
+   <ac:parameter ac:name="cql">
+    label = "kb-troubleshooting-article" and ancestor = currentContent ( )
+   </ac:parameter>
+  </ac:structured-macro>
+ </span>
+</p>
+<p>
+ <span>
+  <ac:structured-macro ac:macro-id="507ef2af-56cd-4fc3-810f-1b43ec402d25" ac:name="create-from-template" ac:schema-version="1">
+   <ac:parameter ac:name="blueprintModuleCompleteKey">
+    com.atlassian.confluence.plugins.confluence-knowledge-base:kb-troubleshooting-article-blueprint
+   </ac:parameter>
+   <ac:parameter ac:name="contentBlueprintId">
+    5cfc26f3-a2fe-44b5-b6da-32e941dd9b0a
+   </ac:parameter>
+   <ac:parameter ac:name="templateName">
+    5cfc26f3-a2fe-44b5-b6da-32e941dd9b0a
+   </ac:parameter>
+   <ac:parameter ac:name="buttonLabel">
+    Create from template
+   </ac:parameter>
+  </ac:structured-macro>
+ </span>
+</p>
+<p>
+ <br/>
+</p>

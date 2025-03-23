@@ -1,0 +1,325 @@
+<ac:structured-macro ac:macro-id="6e6745c2-5f5f-41db-a709-b586ee150f07" ac:name="warning" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   Please note, this page is meant to share information between IT and
+   <ac:link>
+    <ri:user ri:account-id="557058:e667f89b-155f-4fbe-b18c-b523aac1e363">
+    </ri:user>
+   </ac:link>
+   for the management of Visual Studio licenses, and not intended as instructions for end users of Visual Studio licenses
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<ac:structured-macro ac:local-id="69848635-7d41-4e87-8815-a0def9cb4419" ac:macro-id="fed24556-f82b-4fdd-a414-34a256823472" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="atlassian-macro-output-type">
+  INLINE
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   We license Visual Studio Professional for a subset of our developers, with usage being tracked via AD group membership and renewed based on usage.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:local-id="24b120a6-f701-4460-8844-07a0f9ec92a2" ac:macro-id="79c74f38-5e0b-4cf4-8431-95b8db23921d" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h2>
+ <strong>
+  For End Users
+ </strong>
+</h2>
+<p>
+ Core Infrastructure &gt; Build Machines &gt;
+ <a href="https://schrodinger.atlassian.net/wiki/x/0Aj6Ag">
+  Windows build machines
+ </a>
+</p>
+<h2>
+ <strong>
+  Sysmgr Instructions
+ </strong>
+</h2>
+<p>
+ Approvals: See
+ <ac:link>
+  <ri:page ri:content-title="Visual Studio licenses" ri:space-key="SYSMGR" ri:version-at-save="6">
+  </ri:page>
+  <ac:link-body>
+   Visual Studio licenses
+  </ac:link-body>
+ </ac:link>
+</p>
+<h3>
+ Standalone Licenses
+</h3>
+<ol start="1">
+ <li>
+  <p>
+   In Active Directory, add the user to the group "App_Visual_Studio_Licensees"
+  </p>
+ </li>
+ <li>
+  <p>
+   If the user will only be spinning up Windows build machines in Spinner, you're done. Otherwise:
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     Provide the user with one of the license keys in
+     <a href="https://docs.google.com/spreadsheets/d/1ACVvQAPKAYL1sppv9ygEsxya_5g_RNhWaE7HEJXm3qA/edit#gid=447262681">
+      Software License Keys, sheet two: Microsoft
+     </a>
+     .
+    </p>
+    <ol start="1">
+     <li>
+      <p>
+       Hint: Search for "Visual Studio Professional 2019"
+      </p>
+     </li>
+     <li>
+      <p>
+       Use any of the three keys as we only track the qty of users, but
+       <strong>
+        note which key they're using
+       </strong>
+       .
+      </p>
+     </li>
+    </ol>
+   </li>
+   <li>
+    <p>
+     Provide the user a link to download the software:
+     <a href="https://visualstudio.microsoft.com/vs/">
+      https://visualstudio.microsoft.com/vs/
+     </a>
+    </p>
+   </li>
+  </ol>
+ </li>
+</ol>
+<p>
+ The old way of managing licenses is documented here:
+ <a href="https://docs.google.com/document/d/1qNnG7KrPLAqo-pLtCXYerHRI99zYsS8e9DDZv8OIA1Q/edit">
+  Visual Studio fulfillment/assignment instructions
+ </a>
+</p>
+<h3>
+ Subscription Based Licenses
+</h3>
+<ol start="1">
+ <li>
+  <p>
+   Sign into Microsoft's
+   <a href="https://manage.visualstudio.com/subscribers">
+    Visual Studio Subscriptions Admin Portal - Manage Subscribers
+   </a>
+   . Use the
+   <a href="mailto:it@schrodinger.com">
+    it@schrodinger.com
+   </a>
+   account listed under "Microsoft VLSC/Azure" in LastPass and read the LastPass notes on how to login.
+  </p>
+ </li>
+ <li>
+  <p>
+   Image for the following instructions:
+   <br/>
+  </p>
+  <ac:image ac:align="left" ac:layout="align-start" ac:original-height="898" ac:original-width="1534" ac:width="421">
+   <ri:attachment ri:filename="image2022-3-30_10-9-37.png" ri:version-at-save="1">
+   </ri:attachment>
+  </ac:image>
+ </li>
+ <li>
+  <p>
+   Make sure the correct organization is selected in the drop-down next to the username.  As of
+   <time datetime="2022-03-30">
+   </time>
+   , we have Schrodinger, Inc, and Schrodinger LiveDesign.  For Visual Studio subsciptions, you should normally select Schrodinger, Inc. from the drop-down.
+  </p>
+ </li>
+ <li>
+  <p>
+   In the drop-down next to Add agreement, ensure the correct agreement is selected.
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <time datetime="2022-03-30">
+     </time>
+     OLV: V8158887 from
+     <ac:structured-macro ac:macro-id="ca5dc916-f64f-4cca-90bc-d7701dd1c5ca" ac:name="jira" ac:schema-version="1">
+      <ac:parameter ac:name="key">
+       SYSMGR-61196
+      </ac:parameter>
+      <ac:parameter ac:name="serverId">
+       b2a2abc6-677a-31ef-bef3-17f162f52bcb
+      </ac:parameter>
+      <ac:parameter ac:name="server">
+       System Jira
+      </ac:parameter>
+     </ac:structured-macro>
+    </p>
+   </li>
+   <li>
+    <p>
+     <time datetime="2022-05-04">
+     </time>
+     OLV: V6521913 from
+     <ac:structured-macro ac:macro-id="97b09f94-b736-42c3-83b8-abc3e35ccd62" ac:name="jira" ac:schema-version="1">
+      <ac:parameter ac:name="key">
+       SYSMGR-62859
+      </ac:parameter>
+      <ac:parameter ac:name="serverId">
+       b2a2abc6-677a-31ef-bef3-17f162f52bcb
+      </ac:parameter>
+      <ac:parameter ac:name="server">
+       System Jira
+      </ac:parameter>
+     </ac:structured-macro>
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Under All subscriptions, click
+   <strong>
+    +Add
+   </strong>
+   and provide the username and email address of the user, or bulk add.
+   <br/>
+   Note: The sign-in address will need to match what's set for them in Azure Active Directory. Generally
+   <a href="mailto:first.last@schrodinger.com">
+    first.last@schrodinger.com
+   </a>
+   but it could be
+   <a href="mailto:username@schrodinger.com">
+    username@schrodinger.com
+   </a>
+   .
+  </p>
+ </li>
+ <li>
+  <p>
+   Under "
+   <span style="color: rgb(51,51,51);">
+    Subscriber can access software downloads and product keys", make sure that's set to
+   </span>
+   <strong>
+    <span style="color: rgb(51,51,51);">
+     Allow
+    </span>
+   </strong>
+   <span style="color: rgb(51,51,51);">
+    .
+   </span>
+   <br/>
+   <ac:image ac:height="250">
+    <ri:attachment ri:filename="image2022-3-30_11-9-3.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <br/>
+   <ac:image ac:height="250">
+    <ri:attachment ri:filename="image2022-3-30_11-9-16.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <br/>
+   <ac:image ac:height="250">
+    <ri:attachment ri:filename="image2022-3-30_11-9-27.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+  </p>
+ </li>
+</ol>
+<p>
+ <span style="color: rgb(51,51,51);">
+  More information can be found in
+ </span>
+ <a href="https://schrodinger.atlassian.net/browse/SYSMGR-50088">
+  <span style="color: rgb(51,51,51);">
+   SYSMGR-50088
+  </span>
+ </a>
+ <span style="color: rgb(51,51,51);">
+  and this
+ </span>
+ <a href="https://docs.google.com/presentation/d/1NNFEyBtusZRDDL1JzCIgADj1bxIPNSCagnF94ldg1n0/edit#slide=id.g6fced275d9_0_22">
+  <span style="color: rgb(51,51,51);">
+   presentation
+  </span>
+ </a>
+ <span style="color: rgb(51,51,51);">
+  .
+ </span>
+</p>
+<h2>
+ Related articles
+</h2>
+<p>
+ <ac:placeholder>
+  Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+ </ac:placeholder>
+</p>
+<ac:structured-macro ac:local-id="f158481a-79bc-4a1c-b4b9-eaf61e97b21f" ac:macro-id="26c9c899-27b9-408c-b7fa-6a9d4958984e" ac:name="contentbylabel" ac:schema-version="4" data-layout="default">
+ <ac:parameter ac:name="showLabels">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="max">
+  5
+ </ac:parameter>
+ <ac:parameter ac:name="spaces">
+  SYSMGR
+ </ac:parameter>
+ <ac:parameter ac:name="showSpace">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="sort">
+  modified
+ </ac:parameter>
+ <ac:parameter ac:name="reverse">
+  true
+ </ac:parameter>
+ <ac:parameter ac:name="type">
+  page
+ </ac:parameter>
+ <ac:parameter ac:name="cql">
+  label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+ </ac:parameter>
+ <ac:parameter ac:name="labels">
+  kb-how-to-article
+ </ac:parameter>
+</ac:structured-macro>
+<ac:structured-macro ac:local-id="fdb02447-d548-4f25-bec4-0a8ca68699f6" ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+  </p>
+  <table ac:local-id="b98713fc-f541-4a1f-b98a-7b7b78dc2470" data-layout="default">
+   <tbody>
+    <tr>
+     <th>
+      <p>
+       <strong>
+        Related issues
+       </strong>
+      </p>
+     </th>
+     <td>
+      <p>
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+</p>

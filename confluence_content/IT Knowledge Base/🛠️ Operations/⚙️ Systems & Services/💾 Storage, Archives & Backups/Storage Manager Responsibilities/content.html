@@ -1,0 +1,501 @@
+<ac:structured-macro ac:local-id="b20c89a5-fa45-49f1-ac94-6bf3888b73cc" ac:macro-id="0bde6b20-8bde-4c2c-8a6c-2eb566ce9d08" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h2>
+ <strong>
+  Storage Manager Responsibilities
+ </strong>
+</h2>
+<p>
+ A Storage Manager is the person responsible for particular shared disk space.
+</p>
+<p>
+ Storage Managers will:
+</p>
+<ul>
+ <li>
+  <p>
+   Justify and request quota increases
+  </p>
+ </li>
+ <li>
+  <p>
+   Ensure the disk space is used efficiently
+  </p>
+ </li>
+ <li>
+  <p>
+  </p>
+  <ul>
+   <li>
+    <p>
+     Files are compressed
+    </p>
+   </li>
+   <li>
+    <p>
+     Files are not needlessly duplicated
+    </p>
+   </li>
+   <li>
+    <p>
+     Files are archived as appropriate
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   Plan for future needs and growth
+  </p>
+ </li>
+ <li>
+  <p>
+   Work with IT to restrict access to the data as appropriate
+  </p>
+ </li>
+ <li>
+  <p>
+  </p>
+  <ul>
+   <li>
+    <p>
+     Review the list of people who have access to the storage
+    </p>
+   </li>
+   <li>
+    <p>
+     Ensure file and directory permissions are set appropriately
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   Work with IT for snapshot, backup, and data retention policies
+  </p>
+ </li>
+ <li>
+  <p>
+   Work with IT to set appropriate alert levels
+  </p>
+ </li>
+ <li>
+  <p>
+   Communicate with their teams to represent their needs and convey best practices
+  </p>
+ </li>
+</ul>
+<h2>
+ <strong>
+  IT Storage Manager tracking
+ </strong>
+</h2>
+<p>
+ Until an updated procedure is in place, the best way for IT to determine who might be the Storage Manager for a particular filesystem is to see who is the owner of the related quota notification Google group. For the naming convention for such groups, so you can find them, see
+ <ac:link>
+  <ri:page ri:content-title="Create a new quota on Qumulo" ri:space-key="SYSMGR" ri:version-at-save="7">
+  </ri:page>
+  <ac:link-body>
+   Create a new quota on Qumulo
+  </ac:link-body>
+ </ac:link>
+ .
+</p>
+<h2>
+ <strong>
+  Capacity Planning
+ </strong>
+</h2>
+<p>
+ IT will work with you and give you regular reports on the space that you are managing.  You’ll be able to see the growth rate over time and how close you are to your limit.  Here’s a guideline for sizing your disk space:
+</p>
+<table ac:local-id="ef0629e2-a399-4c44-944c-6eeb927ec1a6" data-layout="default" data-table-width="760">
+ <tbody>
+  <tr>
+   <td>
+    <p>
+     <strong>
+      % Full
+     </strong>
+    </p>
+   </td>
+   <td>
+    <p>
+     <strong>
+      Description
+     </strong>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     90%-100%
+    </p>
+   </td>
+   <td>
+    <p>
+     Performance Degradation &amp; Risk for other problems
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     80%-90%
+    </p>
+   </td>
+   <td>
+    <p>
+     Warning Zone
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     25%-80%
+    </p>
+   </td>
+   <td>
+    <p>
+     All Clear
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     0-25%
+    </p>
+   </td>
+   <td>
+    <p>
+     Under Utilized - some may be reclaimed
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+</p>
+<h2>
+ <strong>
+  Periodic Review
+ </strong>
+</h2>
+<p>
+ Periodically, we will review your disk utilization and see if you’re trending toward the yellow or red zones above and proactively plan for the growth you need in the future.
+</p>
+<p>
+ As part of this review, we will also verify backups, ensure the Storage Manager on record is the correct person, and ask you to ensure the disk space is being managed properly:
+</p>
+<ul>
+ <li>
+  <p>
+   files are compressed, deleted, and/or moved to archives as appropriate
+  </p>
+ </li>
+ <li>
+  <p>
+   review the list of people who have access to the storage
+  </p>
+ </li>
+ <li>
+  <p>
+   ensure file and directory permissions are set appropriately
+  </p>
+ </li>
+</ul>
+<p>
+ Here is the full
+ <a href="https://schrodinger.atlassian.net/wiki/display/SYSMGR/Storage+Capacity+Review+Procedure">
+  Storage Capacity Review Procedure
+ </a>
+ .
+</p>
+<h2>
+ <strong>
+  Requesting Additional Space
+ </strong>
+</h2>
+<p>
+ If you need additional disk space on your share, here are the guidelines for how that will be managed.  (
+ <strong>
+  Please note, this process is different for home directories
+ </strong>
+ ).  The table below shows the level of authorization different management levels have based on how much total disk space is required.
+</p>
+<table ac:local-id="5863ed3a-c706-4ef1-9459-dec874a5585e" data-layout="default" data-table-width="760">
+ <tbody>
+  <tr>
+   <td>
+    <p>
+     <strong>
+      Total Space
+     </strong>
+    </p>
+   </td>
+   <td>
+    <p>
+     <strong>
+      Signoff Level Required
+     </strong>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     &lt;=1TB
+    </p>
+   </td>
+   <td>
+    <p>
+     None
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     1TB - 5TB
+    </p>
+   </td>
+   <td>
+    <p>
+     Manager
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     5TB - 20TB
+    </p>
+   </td>
+   <td>
+    <p>
+     Division Head / Senior Director
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     &gt;20TB
+    </p>
+   </td>
+   <td>
+    <p>
+     Ramy, Pat, Robert, or Shane
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ To formally request a space increase, a Storage Manager should open a Freshservice ticket and include anyone necessary to provide approval as a watcher. You should expect your request to be fulfilled within a day or two, however larger file systems (&gt;2TB) may require a week or more as additional backend work may be needed for them.
+ <strong>
+  Please make sure to include the following information
+ </strong>
+ (you can get this from
+ <code>
+  df
+ </code>
+ on a Linux system or looking under My Computer on Windows):
+</p>
+<ul>
+ <li>
+  <p>
+   Full path for the mount,
+  </p>
+ </li>
+ <li>
+  <p>
+  </p>
+  <ul>
+   <li>
+    <p>
+     (eg
+     <a href="http://pdx-stor-i01/ifs/pdx/cluster/working/fep">
+      pdx-stor-i01:/ifs/pdx/cluster/working/fep
+     </a>
+     or \\pdx-stor\marketing)
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   Your desired total capacity for the space,
+  </p>
+ </li>
+ <li>
+  <p>
+   Any changes in alerting levels, backup needs, etc.,
+  </p>
+ </li>
+ <li>
+  <p>
+   The business justification of why this is needed,
+  </p>
+ </li>
+ <li>
+  <p>
+   If this is a permanent or temporary increase
+  </p>
+ </li>
+ <li>
+  <p>
+  </p>
+  <ul>
+   <li>
+    <p>
+     If temporary, when should we follow up to reclaim?
+    </p>
+   </li>
+  </ul>
+ </li>
+</ul>
+<h2>
+ <strong>
+  Requesting New Storage
+ </strong>
+</h2>
+<p>
+ Requesting new storage space is an easy process.
+</p>
+<p>
+ Approvals needed are the same as for requesting additional space, but some additional information is required:
+</p>
+<ul>
+ <li>
+  <p>
+   Briefly describe what this space will be used for.
+  </p>
+ </li>
+ <li>
+  <p>
+   Describe the nature of the data and who will need access to it.
+  </p>
+ </li>
+ <li>
+  <p>
+   Will this contain confidential or proprietary information?
+  </p>
+ </li>
+ <li>
+  <p>
+  </p>
+  <ul>
+   <li>
+    <p>
+     If so, group based authentication is highly preferred.
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   What is the business justification for this storage?
+  </p>
+ </li>
+ <li>
+  <p>
+   Who will be the Storage Manager?
+  </p>
+ </li>
+ <li>
+  <p>
+   How much disk space do you need day one?
+  </p>
+ </li>
+ <li>
+  <p>
+   How much disk space do you need in 1 year?
+  </p>
+ </li>
+ <li>
+  <p>
+   How frequently will snapshots be needed? (4/day, daily, weekly)
+  </p>
+ </li>
+ <li>
+  <p>
+   Will this need to be backed up?
+  </p>
+ </li>
+</ul>
+<h2>
+ <strong>
+  Data Backups
+ </strong>
+</h2>
+<h3>
+ <strong>
+  Snapshots
+ </strong>
+</h3>
+<p>
+ Snapshots protect against accidental modification or deletion.  They are easy to use and fast, but most limited in the protection they provide.  Snapshots are point in time saves that live in a hidden directory on the same storage device.  These make it easy for people to quickly grab a prior version of a file that they accidentally deleted or changed. You can find these in /&lt;volume&gt;/.snapshot:
+</p>
+<p>
+ <sup>
+  bolt(~)$ ls -l ~/.snapshot
+ </sup>
+ <br/>
+ <sup>
+  total 84
+ </sup>
+ <br/>
+ <sup>
+  drwxr-xr-x 27 brauner psgvb 37376 Apr  3 23:35 57031_cluster daily snapshot_cluster/
+ </sup>
+ <br/>
+ <sup>
+  drwxr-xr-x 27 brauner psgvb 37376 Apr  4 23:35 57032_cluster daily snapshot_cluster/
+ </sup>
+ <br/>
+ <sup>
+  drwxr-xr-x 27 brauner psgvb 37376 Apr  5 23:35 57033_cluster daily snapshot_cluster/
+ </sup>
+ <br/>
+ <sup>
+  drwxr-xr-x 27 brauner psgvb 37376 Apr  6 23:35 57034_cluster daily snapshot_cluster/
+ </sup>
+ <br/>
+ <sup>
+  drwxr-xr-x 27 brauner psgvb 37376 Apr  7 23:35 57035_cluster daily snapshot_cluster/
+ </sup>
+ <br/>
+ <sup>
+  drwxr-xr-x 27 brauner psgvb 37376 Apr  8 23:35 57036_cluster daily snapshot_cluster/
+ </sup>
+ <br/>
+ <sup>
+  drwxr-xr-x 27 brauner psgvb 37376 Apr  9 23:35 57037_cluster daily snapshot_cluster/
+ </sup>
+</p>
+<p>
+ You can see above that my home directory has a snapshot taken each day that is retained for a week.  To retrieve a snapshots file, just copy it out of the .snapshot directory to where you need it.
+</p>
+<h3>
+ <strong>
+  Replication and Backups
+ </strong>
+</h3>
+<p>
+ Our /home and /nfs filesystems (excluding /nfs/archive) replicate to a secondary storage array located in the EWR remote datacenter (which also houses bolt).  This provides an additional copy of the data external to the primary storage device.  This gives additional protection from site or device failure or filesystem corruption.
+</p>
+<p>
+ Restoration from the replica requires IT assistance and will take some time for the data to transfer back to the original filesystem.  If time is critical, we can explore utilizing data live from the replica.
+</p>
+<h3>
+ <strong>
+  Archival Copies
+ </strong>
+</h3>
+<p>
+ We are exploring using long term storage in the cloud for archival purposes.  Archived files are point in time saves that are intended to be written once, and (almost) never read.
+</p>

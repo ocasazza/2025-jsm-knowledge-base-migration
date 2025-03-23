@@ -1,0 +1,335 @@
+<ac:structured-macro ac:local-id="24feab91-43b9-4a80-918f-c9108d051306" ac:macro-id="4e295fba-eb5e-4661-893a-39ed1ddd6db3" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<p>
+ <span style="color: rgb(0,0,0);">
+  This document is intended for users who need to replace their MFA device to connect to Okta.
+ </span>
+ <br/>
+</p>
+<h2>
+ <span style="color: rgb(0,0,0);">
+  Background
+ </span>
+</h2>
+<p>
+ <span style="color: rgb(0,0,0);">
+  Multi-Factor Authentication (MFA) increases your account security when signing in to Okta and other applications you use, and SYSMGR recommends configuring multiple verification methods (phone and laptop fingerprint reader or security key, for example) when setting up your Okta account.
+ </span>
+ <br/>
+ <span style="color: rgb(0,0,0);">
+  This will, for example, allow you to to still sign into Okta using your laptop fingerprint reader or a security key as the second factor if your phone is not available (it's broken, or you've switched to a new phone and need to enroll it).  Having multiple verification methods configured will help you if you have lost or replaced a phone configured with the Okta Verify app or a physical security key, or if your MFA device is not being properly recognized.
+ </span>
+</p>
+<p>
+ <strong>
+  <span style="color: rgb(21,21,21);">
+   Some restrictions apply if you do not have a second method of authenticating.
+  </span>
+ </strong>
+</p>
+<p>
+ <span style="color: rgb(0,0,0);">
+  Currently, there are two options for MFA when signing into Okta at Schrodinger:
+ </span>
+</p>
+<ul>
+ <li>
+  <p>
+   <span style="color: rgb(0,0,0);">
+    Okta Verify app for your mobile device:
+   </span>
+   <a href="https://help.okta.com/en/prod/end-user/Content/Topics/end-user/ov-new-install.htm">
+    <span style="color: rgb(0,0,0);">
+     Install Okta Verify
+    </span>
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   <span style="color: rgb(0,0,0);">
+    Use a hardware security key or the built-in fingerprint reader on your MacBook Pro.
+   </span>
+  </p>
+  <ul>
+   <li>
+    <p>
+     <span style="color: rgb(0,0,0);">
+      For instructions on setting up your laptop's fingerprint reader for use with Okta, see
+     </span>
+     <ac:link>
+      <ri:page ri:content-title="Authenticate Okta with Built-in Fingerprint Readers on Laptops" ri:version-at-save="1">
+      </ri:page>
+      <ac:link-body>
+       <span style="color: rgb(0,0,0);">
+        ITLC Authenticate Okta with Built-in Fingerprint Readers on Laptops
+       </span>
+      </ac:link-body>
+     </ac:link>
+     <span style="color: rgb(0,0,0);">
+     </span>
+    </p>
+    <ul>
+     <li>
+      <p>
+       <span style="color: rgb(0,0,0);">
+        Note: Some laptops may not have a Biometric reader therefore a Hardware Security key will be required as a second option when authenticating.
+       </span>
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     <span style="color: rgb(0,0,0);">
+      Please open an SYSMGR ticket if you would like to request a Hardware Security Key.
+     </span>
+    </p>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p>
+ <span style="color: rgb(0,0,0);">
+  Reasons to reset:
+ </span>
+</p>
+<ul>
+ <li>
+  <p>
+   Reset Okta Verify if you are in one of these situations:
+  </p>
+  <ul>
+   <li>
+    <p>
+     You wiped or reset your current device after you already set up Okta Verify.
+    </p>
+   </li>
+   <li>
+    <p>
+     You want to set up your current Okta Verify account on a new device.
+    </p>
+   </li>
+   <li>
+    <p>
+     You're stuck in an authentication loop - the browser instructs you to check the Okta Verify app but the app doesn't receive a push notification or display a one-time code.
+    </p>
+   </li>
+   <li>
+    <p>
+     You can't sign in to your account even if you enter the correct passcode from the app or approve a push notification sent to your device.
+    </p>
+   </li>
+   <li>
+    <p>
+     You keep receiving a verification code error in the Okta Verify app.
+    </p>
+   </li>
+  </ul>
+ </li>
+</ul>
+<h2>
+ Prerequisites
+</h2>
+<ol start="1">
+ <li>
+  <p>
+   A second method to authenticate into Okta must be configured. (Ex. Biometric/Fingerprint-reader or Hardware Security Key.
+   <br/>
+   <strong>
+    If you do not have this set-up please reach out to IT-Help for assistance.
+   </strong>
+  </p>
+ </li>
+</ol>
+<h2>
+ Instructions
+</h2>
+<h3>
+ Remove Existing MFA App / Device
+</h3>
+<ol start="1">
+ <li>
+  <p>
+   From a browser, sign in to your Okta account. If you can't sign in with your existing Okta Verify app, or with another authentication factor, contact IT.
+  </p>
+ </li>
+ <li>
+  <p>
+   Go to
+   <strong>
+    Settings
+   </strong>
+   . (
+   <span style="color: rgb(21,21,21);">
+    Settings page from the menu in the upper-right corner.)
+   </span>
+  </p>
+ </li>
+</ol>
+<p>
+</p>
+<ac:image ac:align="center" ac:layout="wide" ac:original-height="290" ac:original-width="2380" ac:width="680">
+ <ri:attachment ri:filename="Screen Shot 2020-11-30 at 11.10.07 PM.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<p>
+</p>
+<p>
+ 3. Click the
+ <strong>
+  Edit Profile
+ </strong>
+ button.
+</p>
+<p>
+ <ac:image ac:width="800">
+  <ri:attachment ri:filename="Screen Shot 2020-11-30 at 11.14.27 PM.png" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:image>
+</p>
+<p>
+ 4. Enter your password when prompted.
+</p>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="678" ac:original-width="1284" ac:width="462">
+ <ri:attachment ri:filename="Screen Shot 2020-11-30 at 11.19.26 PM.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<p>
+ 5.  Scroll down to the
+ <strong>
+  Extra Verification
+ </strong>
+ section.
+</p>
+<p>
+ <ac:image ac:height="250">
+  <ri:attachment ri:filename="Remove.png" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:image>
+ <br/>
+ 6. Next to Okta Verify, click
+ <strong>
+  Remove
+ </strong>
+ . This removes the existing Okta Verify registration from your device, which is mandatory before you can reset Okta Verify on your current device or on a new one.
+</p>
+<p>
+ 7.
+ <span style="color: rgb(9,9,9);">
+  When prompted to confirm removal, click
+ </span>
+ <strong>
+  Yes
+ </strong>
+</p>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="640" ac:original-width="1442" ac:width="550">
+ <ri:attachment ri:filename="Screen Shot 2020-12-01 at 11.50.50 AM.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<p>
+</p>
+<h3>
+ Enroll Your Mobile Device Running Okta Verify
+</h3>
+<p>
+ 1. In the Okta Verify row, click
+ <strong>
+  Set up
+ </strong>
+ to reset your enrollment or enroll a new device.
+</p>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="648" ac:original-width="870" ac:width="326">
+ <ri:attachment ri:filename="setup.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<p>
+ <span style="color: rgb(9,9,9);">
+  2. On the
+ </span>
+ <strong>
+  Setup Okta Verify
+ </strong>
+ <span style="color: rgb(9,9,9);">
+  page, select your device type and click
+ </span>
+ <strong>
+  Next.
+ </strong>
+</p>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="894" ac:original-width="854" ac:width="238">
+ <ri:attachment ri:filename="Screen Shot 2020-11-30 at 11.30.39 PM.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<p>
+ 3. After selecting your device type a QR code should appear on the screen.
+</p>
+<p>
+ 4. On your mobile device, download the Okta Verify app from the app store (Apple or Google Play) and install it.
+</p>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="462" ac:original-width="1444" ac:width="455">
+ <ri:attachment ri:filename="Screen Shot 2020-12-01 at 12.00.30 PM.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="780" ac:original-width="1546" ac:width="455">
+ <ri:attachment ri:filename="Screen Shot 2020-12-01 at 12.00.50 PM.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<ol start="1">
+ <li>
+  <p>
+   Open Okta Verify on your device and follow the instructions.
+  </p>
+ </li>
+ <li>
+  <p>
+   Tap
+   <strong>
+    Add account
+   </strong>
+   . When prompted, allow
+   <strong>
+    notifications
+   </strong>
+   and
+   <strong>
+    access to your camera
+   </strong>
+   .
+  </p>
+ </li>
+ <li>
+  <p>
+   If the following screen appears on your browser, click
+   <strong>
+    Finish
+   </strong>
+   . (This screen appears only in some cases).
+  </p>
+ </li>
+</ol>
+<p>
+ <ac:image ac:width="350">
+  <ri:attachment ri:filename="Screen Shot 2020-12-01 at 12.03.00 PM.png" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:image>
+</p>
+<p>
+ 5. Completely Log out of Okta and verify that you are now able to use your mobile device as your second form of authentication.
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>

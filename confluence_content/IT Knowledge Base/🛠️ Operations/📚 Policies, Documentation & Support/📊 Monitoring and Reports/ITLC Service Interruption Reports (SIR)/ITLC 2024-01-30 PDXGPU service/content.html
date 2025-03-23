@@ -1,0 +1,427 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    pdxgpu
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for PDXGPU cluster on
+      <ac:structured-macro ac:macro-id="36bdab40-6f38-4ba6-a843-4d2969bf628a" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITHPC-690
+       </ac:parameter>
+      </ac:structured-macro>
+      <time datetime="2024-01-16">
+      </time>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           PDXGPU
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="494179f0-7d2f-45c0-b047-6c2e61c2afbd" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="columnIds">
+             issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="columns">
+             key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             ITHPC-690
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         PDXGPU cluster
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2024-01-16">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2024-01-30">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="557058:8aff9fa7-fab5-4a58-8371-4bbe29336cd2">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2024-01-30">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         IT
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    SGE package was upgraded from 8.1.9 to 8.1.10 to support two new nodes (pdxgpu-0-16 and pdxgpu-0-16) which run RockyLinux 9.3.   The newer version of SGE prefers to use default service ports for SGE qmaster (6444) and execd (6445).  Considering the existing service ports (536 and 537) are not service compliant. Sysmgr attempted to change to the service ports to 6444 and 6445.  However, some jobserver processes still retain the existing port numbers, which caused some jobs launched by the jobserver processes not able to communicated with SGE qmaster.
+   </p>
+   <p>
+    Had a meeting STU members doing troubleshooting. At the time, we did not understand fully about the root cause and the scale the of the impact.  So we reverted back to existing port settings.   Then checked all running jobserver and job control processes. Restarted the processes as needed (when found incorrect port numbers).  This resolved the issue.
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   We want to add to two new nodes, which are running RockyLinux 9.3.  The stock SGE packages are built for CentOS 7.  So we need to build a version of SGE packages that support both CentOS 7 and RockyLinux 9.   The newer version of SGE package suggests/prefers to use standard service ports for SGE qmaster and execd.  So an attempt was made to switch to the standard ports.
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   After switching to the standard ports from existing 536 and 537, some running jobserver processes continue to use 536 and 537 and thus any jobs submitted via the jobserver processes were not able to communicate with SGE qmaster and therefore not able to run.
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    The issue likely started from 1/13/24 when the change was made. It was fixed on 1/17/24.
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <ol>
+    <li>
+     Went through all PDXGPU nodes checking SGE environment settings in /etc/profile.d and /opt/gridengine/default/common
+    </li>
+    <li>
+     Checked all buildbot jobserver or job control processes on all PDXGPU nodes. When incorrect port settings found, the process got restarted.
+    </li>
+   </ol>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    <span style="color: rgb(51,51,51);">
+     <span style="background-color: rgb(245,245,245);">
+      <em>
+       The upgrade and port change itself were done correctly. But sysmgr missed the user running processes that may already load the previous SGE environment setting.  These processes need to reload to use the new port settings.
+      </em>
+     </span>
+    </span>
+   </p>
+   <h3>
+    Introduced Issues
+   </h3>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="1dcb527e-6cb6-45a4-a4a1-55cf9b51022f" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,priority,status,summary,created,updated,reporter,customfield_11008
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,priority,status,summary,created,updated,reporter,Sprint
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITDW-123, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    <span style="color: rgb(51,51,51);">
+     <span style="background-color: rgb(245,245,245);">
+      <em>
+       The issue was reported within two days
+      </em>
+     </span>
+    </span>
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    It was detected by STU users after they saw multiple failed jobs that was not commonly reported
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    N/A
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    Sysmgr immediately responded to the users who reported the issue in the chat room and started investigation. Also created a JIra ticket to follow up with the issue.
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Sysmgr communicated with the STU users in the chat room and directly with the users who reported the issue.  Also the updates is made in the Jira ticket.
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    N/A
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    Quickly checked all nodes and all buildbot processes on the PDXGPU nodes.  Took correction actions.
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    <span style="color: rgb(51,51,51);">
+     <span style="background-color: rgb(245,245,245);">
+      <em>
+       Closely working with the STU users who reported the issue and re-produced the issue with the controlled tests.
+      </em>
+     </span>
+    </span>
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    Better change management.  Communicate with STU users about the incoming changes.
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     After analyzing and talking about this incident what actions did the reviewers and management decide should be done to address shortfalls in detection, mitigation or avoidance. Use tasks, assignments and due dates or link to created jira tickets.
+    </ac:placeholder>
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      <span class="placeholder-inline-tasks">
+       Type your task here, using "@" to assign to a user and "//" to select a due date
+      </span>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

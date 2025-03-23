@@ -1,0 +1,482 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for SAN Primary ISP on 11/21/23
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <ac:placeholder>
+            Link to Service Page for affected service
+           </ac:placeholder>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="746af9de-d83e-4233-881e-17a11ce3ffec" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="columnIds">
+             issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="columns">
+             key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             ITINFRA-2339
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         San Diego (SAN)
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-11-21">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-11-28">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         Sean McManus
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use // for date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          List of people who had a part in reviewing or commenting on the report
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    At approximately 5:15am PST on 11/21, the Lumen primary internet circuit in SAN began having packet loss. The oncall Peter updated the IT-Core chat at ~5:30am PST saying there were pagerduty alerts about SAN devices being unreachable. Scottie luckily arrived on-site soon after at ~5:45, and INFRA (Nate W. and Sean) worked with him to get logged into the firewall and move office traffic over the the secondary ISP circuit. At ~12:45pm PST, service was restored after bad fiber was replaced by Lumen techs in the field.
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     If this incident requires any background knowledge to understand or history that's relevant include it here.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    The primary internet circuit at the San Diego office went offline at 5:15am local time, and IT personnel restored office internet connectivity a bit over one hour later via the secondary ISP. The primary ISP Lumen determined there was damaged fiber on their plant, and replacement fiber was spliced and service restored by 12:45pm local time.
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    (Times are in PST)
+   </p>
+   <ul>
+    <li>
+     5:15am  - The Lumen ISP circuit in SAN begins having packet loss and goes down.
+    </li>
+    <li>
+     5:28  - Peter Bolcshazi updates the chat about the PD alert that SAN devices are unreachable.
+    </li>
+    <li>
+     5:38 - Ops and Infra personnel begin investigating
+    </li>
+    <li>
+     ~5:45  - Scottie Shepherd arrives onsite at SAN and checks power, equipment status in the MDF, and wired/wireless connectivity.
+    </li>
+    <li>
+     ~6:30  - Office internet connectivity is restored after IT-Infra (Nate W and Sean) work with Scottie to log in to the firewall and change ISP route priorities to make the secondary ISP active.
+    </li>
+    <li>
+     12:45pm - Service restored via the fiber repair
+    </li>
+    <li>
+     1:40 - Lumen ticket update that the repair was completed and service restored
+    </li>
+    <li>
+     11/22 ~7:00am  - SAN office moved back to Lumen as the active ISP
+    </li>
+   </ul>
+   <p>
+    <span style="font-size: 16.0px;font-weight: bold;letter-spacing: -0.006em;">
+     Corrective Action
+    </span>
+   </p>
+   <p>
+    The immediate mitigation was to make the secondary ISP active for the office. The ultimate corrective action was Lumen repairing their damaged fiber and restoring service, after which we moved the Lumen circuit back to active status on the local firewall.
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe any findings (other than this report itself)
+    </ac:placeholder>
+   </p>
+   <h3>
+    Introduced Issues
+   </h3>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="1dcb527e-6cb6-45a4-a4a1-55cf9b51022f" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,priority,status,summary,created,updated,reporter,customfield_11008
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,priority,status,summary,created,updated,reporter,Sprint
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITDW-123, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    The issue was reported immediately by Peter in the IT-Core chat after receiving the PD alerts, about 15 minutes after the issue itself started.
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    A pagerduty alert was sent to the on-call person, and the issue was then reported in the IT-Core chat.
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    <ac:placeholder>
+     If you have any ideas for ways this can be improved list or describe them here.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    Members of Ops and Infra began troubleshooting the issue within ten minutes of the chat update at 8:28 EST and mitigation (secondary ISP active) was in place within 45 minutes of troubleshooting beginning.
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Since there are not resources hosted out of SAN for remote users, and most local users were not yet in the office, very few users were affected. There may have been one or two others present at the office when Scottie arrived, who were ensured that the issue was being worked on immediately.
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    In the case of an outage during normal local time working hours, ensuring that everyone is familiar with email distribution groups for a particular office and who will be the point person for comms. In the case of a site hosting resources that are accessed remotely, making sure that we can quickly notify affected teams.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <span style="font-size: 20.0px;letter-spacing: -0.008em;">
+     Mitigation
+    </span>
+   </p>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    Scottie in Ops was arriving at the office shortly after the outage began, which was hugely helpful. We were able to quickly get the office internet traffic moved to the secondary ISP, and by the time most people arrived at the office (after ~6:30am PST), full internet connectivity was restored (though not to Bolt and GCP resources while on secondary).
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    Ensure that the secondary IPSEC tunnel to NYC is passing the same BGP route advertisements as the primary tunnel. Further testing to be sure INFRA team members can reach the firewall via ssh or web UI to perform the manual failover to the secondary ISP when the primary is down. Also, eventually have automatic ISP failover in place for this office location.
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    While we are unable to control whether we experience an ISP outage, short of moving to a different ISP circuit if they are too frequent, we can continue to shore up our resilience to these outages. In the case of the SAN office, this can be done by repairing (recreating) the secondary SAN - NYC IPSEC tunnel so that SAN can receive BGP advertisements over this link. This was not happening at the time of this outage, and attempts to fix have not been successful with the existing tunnel. There will be less disruption in the case of a future outage with this in place.
+   </p>
+   <p>
+    Another benefit in a situation like this will be to have automatic failover in place for the office.
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     After analyzing and talking about this incident what actions did the reviewers and management decide should be done to address shortfalls in detection, mitigation or avoidance. Use tasks, assignments and due dates or link to created jira tickets.
+    </ac:placeholder>
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <span class="placeholder-inline-tasks">
+       <ac:link>
+        <ri:user ri:userkey="712020:668ed8e3-9979-4f45-ba67-1748ea426e8c">
+        </ri:user>
+       </ac:link>
+       Get the secondary SAN - NYC tunnel advertising routes via BGP
+      </span>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      4
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      <span>
+      </span>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      5
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      Related articles
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

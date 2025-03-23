@@ -1,0 +1,251 @@
+<p>
+</p>
+<h1>
+ Builds, Releases, and the Schrodinger Hosts File
+</h1>
+<p>
+ Various builds of Schrödinger software are installed on the cluster and managed by
+ <a href="https://schrodinger.atlassian.net/browse/BLDMGR">
+  Build Manager
+ </a>
+ . Older installations will not be installed. If you require an exception, please file a
+ <a href="https://schrodinger.atlassian.net/browse/BLDMGR">
+  Build Manager
+ </a>
+ JIRA case.
+</p>
+<h2>
+ Stable Releases
+</h2>
+<p>
+ Stable releases are installed under
+ <code>
+  /nfs/working/releases/
+ </code>
+ .
+</p>
+<h2>
+ Official Builds
+</h2>
+<p>
+ Official builds are regularly installed on the new cluster under
+ <code>
+  /nfs/working/builds/OB/
+ </code>
+ , e.g.,
+ <code>
+  /nfs/working/builds/OB/2014-1/build02
+ </code>
+ .
+</p>
+<h2>
+ Nightly Builds
+</h2>
+<p>
+ Nightly builds are installed on the clusters under
+ <code>
+  /nfs/working/builds/NB/
+ </code>
+ .
+</p>
+<h2>
+ schrodinger.hosts file
+</h2>
+<ul>
+ <li>
+  <p>
+   <strong>
+    PLEASE DO NOT MAINTAIN YOUR OWN HOSTFILE
+   </strong>
+   <a href="https://groups.google.com/a/schrodinger.com/d/msg/cluster-group/A-tI7GnnYM4/JqT69nkGhN0J">
+    see here for why
+   </a>
+   . If you must, please use
+   <a href="http://build-download.schrodinger.com/generatehosts">
+    http://build-download.schrodinger.com/generatehosts
+   </a>
+   to generate it!
+  </p>
+ </li>
+ <li>
+  <p>
+   The hostfile for the cluster is located at:
+   <code>
+    /nfs/working/builds/install_templates/schrodinger.hosts.&lt;cluster&gt;.base
+   </code>
+   .
+  </p>
+ </li>
+</ul>
+<h3>
+ For general GPU jobs
+</h3>
+<ul>
+ <li>
+  <p>
+   Use
+   <code>
+    bolt_cpu
+   </code>
+   as
+   <code>
+    -HOST
+   </code>
+   .
+  </p>
+ </li>
+</ul>
+<h3>
+ For general FEP+ GPU job
+</h3>
+<ul>
+ <li>
+  <p>
+   Use
+   <code>
+    bolt_fepdriver
+   </code>
+   as
+   <code>
+    -HOST
+   </code>
+   .
+  </p>
+ </li>
+ <li>
+  <p>
+   Use the
+   <code>
+    -SUBHOST
+   </code>
+   as shown in the table below.
+  </p>
+ </li>
+</ul>
+<h3>
+ For a short MD GPU job that completes within 30 minutes
+</h3>
+<ul>
+ <li>
+  <p>
+   Use
+   <code>
+    multisim -HOST &lt;cluster&gt;_short_one_node:1 -mode umbrella …
+   </code>
+   .
+  </p>
+ </li>
+ <li>
+  <p>
+   Do not use
+   <code>
+    -maxjob
+   </code>
+   and
+   <code>
+    -SUBHOST
+   </code>
+   options.
+  </p>
+ </li>
+</ul>
+<h3>
+ For pdxgpu, see additional information in
+ <a href="https://docs.google.com/document/d/1rtuVNDxlaQlmwTIcyipWs2sbCyXJVn9-EE9oJniS34g/edit?ts=587a9640#heading=h.vviksx6p9zsc">
+  this doc
+ </a>
+ .
+</h3>
+<table ac:local-id="29230c3c-0b80-4606-bf01-153a074aa16c" data-layout="default" data-table-width="760">
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      System Size
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Number of GPUs
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      -SUBHOST
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Description
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     N/A
+    </p>
+   </td>
+   <td>
+    <p>
+     1
+    </p>
+   </td>
+   <td>
+    <p>
+     bolt_gpu_short
+    </p>
+   </td>
+   <td>
+    <p>
+     For jobs that complete in 30 minutes
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     All
+    </p>
+   </td>
+   <td>
+    <p>
+     1~8
+    </p>
+   </td>
+   <td>
+    <p>
+     bolt_gpu:
+    </p>
+   </td>
+   <td>
+    <p>
+     This should be your default queue. It sends to bolt-0 and bolt-2 nodes
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<ac:structured-macro ac:local-id="d962c129-7d35-478b-8a7d-b398b17142a8" ac:macro-id="9326056b410520b72096d65108bef6583060e03dd89ee97bb9957cdb55244fcc" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:parameter ac:name="name">
+  Researcher Story
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   As a researcher, I need to understand how to access different builds of Schrödinger software on the cluster and how to properly configure the hosts file so I can run my simulations with the correct software versions and hardware configurations.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+</p>

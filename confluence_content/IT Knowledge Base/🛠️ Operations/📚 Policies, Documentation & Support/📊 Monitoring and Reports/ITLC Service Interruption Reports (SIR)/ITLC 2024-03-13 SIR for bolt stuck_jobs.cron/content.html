@@ -1,0 +1,654 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for bolt computes on
+      <time datetime="2024-03-12">
+      </time>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <ac:link>
+            <ri:page ri:content-title="Bolt Cluster" ri:space-key="SYSMGR" ri:version-at-save="25">
+            </ri:page>
+           </ac:link>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <ac:structured-macro ac:macro-id="9e0b7f94-5a4d-49ed-98b5-adfeb5a9120d" ac:name="jira" ac:schema-version="1">
+          <ac:parameter ac:name="server">
+           System Jira
+          </ac:parameter>
+          <ac:parameter ac:name="columnIds">
+           issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+          </ac:parameter>
+          <ac:parameter ac:name="columns">
+           key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+          </ac:parameter>
+          <ac:parameter ac:name="serverId">
+           ac6def98-2140-30c3-8103-4b52b8b31135
+          </ac:parameter>
+          <ac:parameter ac:name="key">
+           ITHPC-825
+          </ac:parameter>
+         </ac:structured-macro>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         Bolt cluster
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <time datetime="2024-03-12">
+         </time>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <time datetime="2024-03-13">
+         </time>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="712020:150466d7-5e91-4699-896e-d72275b1982e">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use // for date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          List of people who had a part in reviewing or commenting on the report
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    A script for clearing out stuck jobs what rolled out to the bolt cluster.  The script was supposed to only kill processes no longer associated with active jobs on the compute node.  However, the script seemed to be killing processes across valid jobs.  The script was a part of a scheduled cron running every 4 hours, user reports of failed jobs corresponded with that time frame.
+   </p>
+   <p>
+    The script has been removed from the cluster since.
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    The stuck jobs script and its related cron file was developed as a result of SYSMGR-20031 in Oct 31 2013.
+   </p>
+   <p>
+    These cron and scripts were intended to be a part of the bolt compute node configuration and were listed in the postnodecfg.sh script that configures each compute node when provisioned.   During a clean-up of the postnodecfg.sh script, it was found that the path to stuck job files was incorrect; therefore, the files were not being deployed to the compute nodes.  It is unknown for how long the script location was incorrect, since the postnodecfg.sh script and the specified cron file was not under version control.
+   </p>
+   <p>
+    It had been noticed in the past that there were many stuck jobs that were having to be removed manually by sys admins.  It was determined by the HPC team that the scripts could be deployed to the computes as expected.  An update was made to incorporate all of the code into version control and point to the correct script location so that it would be successfully deployed onto the compute nodes.
+   </p>
+   <p>
+    The configuration was gradually rolled out across the environment and fully rolled out on March 12.  In the afternoon several users reported jobs mysteriously failing/disappearing.  The timing corresponded to the intervals of the stuck jobs script.
+   </p>
+   <p>
+    <br/>
+    <br/>
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    The original postnodecfg.sh script which runs every time a compute node is provisioned or re-installed:
+   </p>
+   <ac:structured-macro ac:macro-id="dfeff987-4fb7-4ed5-a734-5c85dc6fe8a8" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[edmonds@bolt.schrodinger.com:/export/apps/scripts $ grep -B 1  stuck_jobs.cron postnodecfg.sh
+# Clean up stuck jobs
+cp /tmp/apps/scripts/stuck_jobs.cron /etc/cron.d]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+   <p>
+    It was found that the file under /apps/scripts/stuck_jobs.cron no longer existed.  Although the corresponding scripts used by the cron were in the folder.
+   </p>
+   <ac:structured-macro ac:macro-id="ee89cf34-d9a4-4e99-94c2-875a48b55830" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[edmonds@bolt.schrodinger.com:/export/apps/scripts $ ls -l /tmp/apps/scripts/stuck_jobs.cron
+ls: cannot access /tmp/apps/scripts/stuck_jobs.cron: No such file or directory
+edmonds@bolt.schrodinger.com:/export/apps/scripts $ ls -l /export/apps/scripts/stuck_jobs.cron
+ls: cannot access /export/apps/scripts/stuck_jobs.cron: No such file or directory
+
+edmonds@bolt.schrodinger.com:/export/apps $ find /export/apps/scripts/ -name stuck_jobs* 
+/export/apps/scripts/stuck_jobs.py
+/export/apps/scripts/stuck_jobs_wrapper.sh]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+   <p>
+    The cron file was found with functionally identical copies of the scripts in an alternate directory
+   </p>
+   <ac:structured-macro ac:macro-id="20b2cb79-1556-4114-865b-7df5eceb9dbd" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[edmonds@bolt.schrodinger.com:/export/apps $ find /nfs/working/sysmgr/ -name stuck_jobs* 
+/nfs/working/sysmgr/it-shared/scripts/stuck_jobs.py
+/nfs/working/sysmgr/it-shared/scripts/stuck_jobs_wrapper.sh
+/nfs/working/sysmgr/it-shared/crontabs/stuck_jobs.cron
+
+edmonds@bolt.schrodinger.com:/export/apps $ diff /nfs/working/sysmgr/it-shared/scripts/stuck_jobs.py /export/apps/scripts/stuck_jobs.py
+75c75
+<          this_cmdline = p.cmdline()
+---
+>          this_cmdline = p.cmdline
+78c78
+<       except psutil.NoSuchProcess:
+---
+>       except psutil._error.NoSuchProcess:
+115c115
+< output_file.close()
+\ No newline at end of file
+---
+> output_file.close()
+edmonds@bolt.schrodinger.com:/export/apps $ diff /nfs/working/sysmgr/it-shared/scripts/stuck_jobs_wrapper.sh /export/apps/scripts/stuck_jobs_wrapper.sh 
+11c11
+< /usr/local/sbin/stuck_jobs.py
+\ No newline at end of file
+---
+> /nfs/working/sysmgr/scripts/stuck_jobs.py]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+   <p>
+    Rather than replace the files under /export/apps/scripts/ with what was found under /nfs/working/sysmgr/it-shared/scripts/, the code was brought into ansible (configuration management software) so that the deployment of the scripts could be managed and versioned more robustly:
+    <br/>
+    Pull request to incorporate code:
+    <a href="https://github.com/schrodinger/hpc-ansible-collection/pull/16">
+     https://github.com/schrodinger/hpc-ansible-collection/pull/16
+    </a>
+    <br/>
+    Specific line of change:
+    <a href="https://github.com/schrodinger/hpc-ansible-collection/blob/d4451ce9e499f63de368d4b56deb8f85609edcf0/roles/grid_engine_compute/tasks/main.yml#L2">
+     https://github.com/schrodinger/hpc-ansible-collection/blob/d4451ce9e499f63de368d4b56deb8f85609edcf0/roles/grid_engine_compute/tasks/main.yml#L2
+    </a>
+   </p>
+   <p>
+    Pull request for change to bolt:
+    <a href="https://github.com/schrodinger/hpc-bolt/pull/4">
+     https://github.com/schrodinger/hpc-bolt/pull/4
+    </a>
+    <br/>
+    Specific application of change to bolt:
+    <a href="https://github.com/schrodinger/hpc-bolt/blob/f7e067ddec16536e4dfb473e42c17cd8196d8146/bolt.yml#L160">
+     https://github.com/schrodinger/hpc-bolt/blob/f7e067ddec16536e4dfb473e42c17cd8196d8146/bolt.yml#L160
+    </a>
+    <br/>
+    <br/>
+    After the change had been rolled out the bolt, it was found that the code for determining which processes to kill was flawed and was killing unintended processes.
+    <br/>
+    Once known, the cron was immediately disabled and subsequently removed.
+    <br/>
+    <br/>
+    Pull request to disable:
+    <a href="https://github.com/schrodinger/hpc-ansible-collection/pull/30/files">
+     https://github.com/schrodinger/hpc-ansible-collection/pull/30/files
+    </a>
+    <br/>
+    Pull request to remove entirely:
+    <a href="https://github.com/schrodinger/hpc-ansible-collection/pull/31">
+     https://github.com/schrodinger/hpc-ansible-collection/pull/31
+    </a>
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <table>
+    <colgroup>
+     <col/>
+     <col/>
+    </colgroup>
+    <tbody>
+     <tr>
+      <th>
+       <br/>
+      </th>
+      <th>
+       <br/>
+      </th>
+     </tr>
+     <tr>
+      <td>
+       March 4th
+      </td>
+      <td>
+       Pull request merged to incorporate stuck jobs code into ansible:
+       <a href="https://github.com/schrodinger/hpc-ansible-collection/pull/16">
+        https://github.com/schrodinger/hpc-ansible-collection/pull/16
+       </a>
+      </td>
+     </tr>
+     <tr>
+      <td colspan="1">
+       March 8th
+      </td>
+      <td colspan="1">
+       Change applied to bolt computes in testing.q
+      </td>
+     </tr>
+     <tr>
+      <td colspan="1">
+       March 11th
+      </td>
+      <td colspan="1">
+       Change applied to subset of production computes
+       <span>
+        bolt-*-[0-9].local
+       </span>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       March 12th - 11:16 AM
+      </td>
+      <td>
+       <p>
+        Pull request merged to apply to all of bolt
+        <a href="https://github.com/schrodinger/hpc-bolt/pull/4">
+         https://github.com/schrodinger/hpc-bolt/pull/4
+        </a>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td colspan="1">
+       March 12th - 12:00 PM
+      </td>
+      <td colspan="1">
+       Cron to kill stuck jobs runs (it is scheduled to repeat every four hours)
+      </td>
+     </tr>
+     <tr>
+      <td colspan="1">
+       March 12th - 4:00 PM
+      </td>
+      <td colspan="1">
+       Cron to kill stuck jobs runs again
+      </td>
+     </tr>
+     <tr>
+      <td colspan="1">
+       <br/>
+      </td>
+      <td colspan="1">
+       Ahmed see threads in several chats about failing jobs
+       <br/>
+       Ahmed and Victoria identify issue and begin rollback plan
+      </td>
+     </tr>
+     <tr>
+      <td>
+       March 12th - 4:24 PM
+      </td>
+      <td>
+       Code disabled and removed
+       <br/>
+       <a href="https://github.com/schrodinger/hpc-ansible-collection/pull/30/files">
+        https://github.com/schrodinger/hpc-ansible-collection/pull/30/files
+       </a>
+       <br/>
+       <a href="https://github.com/schrodinger/hpc-ansible-collection/pull/31">
+        https://github.com/schrodinger/hpc-ansible-collection/pull/31
+       </a>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <p>
+    <br/>
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    Code disabled and removed
+    <br/>
+    <a href="https://github.com/schrodinger/hpc-ansible-collection/pull/30/files">
+     https://github.com/schrodinger/hpc-ansible-collection/pull/30/files
+    </a>
+    <br/>
+    <a href="https://github.com/schrodinger/hpc-ansible-collection/pull/31">
+     https://github.com/schrodinger/hpc-ansible-collection/pull/31
+    </a>
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe any findings (other than this report itself)
+    </ac:placeholder>
+   </p>
+   <h3>
+    Introduced Issues
+   </h3>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="1dcb527e-6cb6-45a4-a4a1-55cf9b51022f" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      Schrodinger JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,priority,status,summary,created,updated,reporter,customfield_11008
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,priority,status,summary,created,updated,reporter,Sprint
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITDW-123, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      30708cbf-faf5-3b5d-8703-8205cb365354
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    We know that the cron first ran at 12:00 PM
+   </p>
+   <p>
+    Users started reporting its effects in Google Chat.  The first found message was at
+    <span class="legacy-color-text-blue3">
+     1:45 PM
+     <br/>
+    </span>
+   </p>
+   <p>
+    <span class="legacy-color-text-blue3">
+     HPC admins responded around 4:00 PM
+    </span>
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    Google Chat
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    The script printed out information about processes it was killing but it was being piped to /dev/null so it was not being reported to HPC admins.  If this script is ever used again, it can be updated to send notification to admins when it takes action.
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    Cron was disabled within 10 minutes of notice.
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Admins responded to relevant threads in Google Chat
+   </p>
+   <p>
+    Email notice to cluster-group that jobs may need to be resubmitted
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe here any ways we can or should make our communication better.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    Since code had been ansible-ized it was easy to revert changes cluster-wide.
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    Better testing for legacy scripts
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    Better testing for all scripts
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    This script is Grid Engine centric, and the new cluster will be Slurm-based.  The HPC team is focused on migrating code to Slurm for this transition.  Given that, we are unlikely to troubleshoot the script for this environment and will permanently retire it from bolt and not attempt to revive it.  However, it will be considered if such functionality is necessary and should be ported for Slurm-based environment for future clusters
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="14f21836-14cf-4e5c-95a1-d6b0acc6c269" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System Jira
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITHPC-800
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

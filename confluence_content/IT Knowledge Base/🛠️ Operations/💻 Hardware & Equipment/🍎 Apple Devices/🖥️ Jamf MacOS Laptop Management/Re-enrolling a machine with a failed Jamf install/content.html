@@ -1,0 +1,162 @@
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="fed24556-f82b-4fdd-a414-34a256823472" ac:name="excerpt" ac:schema-version="1">
+ <ac:parameter ac:name="atlassian-macro-output-type">
+  INLINE
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   If someone's Macbook has a Device Enrollment notification pop-up repeatedly, or if a Jamf installation has gone wrong, use these steps to re-enroll a computer without wiping.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h2>
+ Step-by-step guide
+</h2>
+<h3>
+ IT actions
+</h3>
+<ol>
+ <li>
+  Before re-enrolling, we need to remove the current MDM profile.
+  <span class="legacy-color-text-default">
+   This can be done from the device record in Jamf Pro.
+  </span>
+ </li>
+ <li>
+  Pull up the device record of the affected computer and click the Management tab.
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   Click 'Remove MDM Profile' (This removes all configuration profiles)
+   <br/>
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="48796dde-e8cc-49cb-b2c3-972b35660c25" ac:name="info" ac:schema-version="1">
+   <ac:rich-text-body>
+    Once this is finished, this triggers the
+    <strong>
+     Enrollment Complete
+    </strong>
+    Jamf trigger, so DEPNotify will begin and the Schrodinger splash page will appear as all the initial policies begin to run again. If you
+    <em>
+     don't
+    </em>
+    want that to happen, just put the computer in the exception scope of the "Install DEPNotify" policy under Device Settings.
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+</ol>
+<h3>
+ User actions
+</h3>
+<ol>
+ <li>
+  To request help with the actions IT needs to perform, please see
+  <ac:link ac:anchor="Submittingtickets">
+   <ri:page ri:content-title="🆘 IT Support Resources" ri:version-at-save="4">
+   </ri:page>
+  </ac:link>
+  .
+ </li>
+ <li>
+  On the client Macbook run this command in terminal:
+  <strong>
+   <span class="legacy-color-text-default">
+    sudo profiles renew -type enrollment
+   </span>
+  </strong>
+ </li>
+ <li>
+  <span class="legacy-color-text-default">
+   After running this command, a Device Enrollment notification will appear in the upper right corner or in the notification center.
+  </span>
+ </li>
+ <li>
+  <span class="legacy-color-text-default">
+   Tap 'Details' on the Device Enrollment notification and follow the prompts. For more details, see
+   <ac:link>
+    <ri:page ri:content-title="Enrolling Your Apple Device in Jamf Management at Schrödinger" ri:version-at-save="4">
+    </ri:page>
+    <ac:plain-text-link-body>
+     <![CDATA[Enrolling your Apple Device to Jamf “Schrödinger”]]>
+    </ac:plain-text-link-body>
+   </ac:link>
+   .
+  </span>
+ </li>
+</ol>
+<p>
+ <br/>
+</p>
+<h2>
+ Related articles
+</h2>
+<p>
+ <ac:placeholder>
+  Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+ </ac:placeholder>
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="b1bc2c83-6992-4e44-a595-064dfb4e0d50" ac:name="contentbylabel" ac:schema-version="4">
+  <ac:parameter ac:name="showLabels">
+   false
+  </ac:parameter>
+  <ac:parameter ac:name="max">
+   5
+  </ac:parameter>
+  <ac:parameter ac:name="spaces">
+   SYSMGR
+  </ac:parameter>
+  <ac:parameter ac:name="showSpace">
+   false
+  </ac:parameter>
+  <ac:parameter ac:name="sort">
+   modified
+  </ac:parameter>
+  <ac:parameter ac:name="reverse">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="type">
+   page
+  </ac:parameter>
+  <ac:parameter ac:name="cql">
+   label = "kb-troubleshooting-article" and type = "page" and space = "SYSMGR"
+  </ac:parameter>
+  <ac:parameter ac:name="labels">
+   kb-troubleshooting-article
+  </ac:parameter>
+ </ac:structured-macro>
+</p>
+<ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <table class="wrapped">
+   <tbody>
+    <tr>
+     <th>
+      Related issues
+     </th>
+     <td>
+      <br/>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>

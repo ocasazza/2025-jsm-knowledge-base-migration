@@ -1,0 +1,370 @@
+<ac:layout>
+ <ac:layout-section ac:breakout-mode="default" ac:type="single">
+  <ac:layout-cell>
+   <p>
+    Activating your Druva inSync client Linux should take less than two minutes, as you'll just need to launch the inSync client and log into it with your Okta credentials.
+   </p>
+   <p>
+    Please find the detailed instructions with screenshots below.
+   </p>
+   <hr/>
+   <table ac:local-id="1545466a-7fc6-44bc-b9fc-a6cdc08ead9b" data-layout="default">
+    <tbody>
+     <tr>
+      <th>
+       <p style="text-align: center;">
+        <strong>
+         Please note, any directories named 'donotbackup' will not be backed up.
+        </strong>
+       </p>
+       <p style="text-align: center;">
+        <strong>
+         If you do wish to move files into 'donotbackup' directories, do this before proceeding below.
+        </strong>
+       </p>
+      </th>
+     </tr>
+    </tbody>
+   </table>
+   <hr/>
+   <ac:structured-macro ac:local-id="c2c890a1-0f49-4881-8d80-87122039485f" ac:macro-id="d7cab0d6-24a5-4739-980f-64531f791874" ac:name="toc" ac:schema-version="1" data-layout="default">
+   </ac:structured-macro>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="single">
+  <ac:layout-cell>
+   <hr/>
+   <h1>
+    Confirm that the software is installed
+   </h1>
+   <ul>
+    <li>
+     <p>
+      Unless you have a self-managed desktop, you will not need to install the inSync client manually on your laptop or desktop.
+     </p>
+    </li>
+    <li>
+     <p>
+      The IT department will have alreedy installed the client software via an automated deployment.
+     </p>
+    </li>
+    <li>
+     <p>
+      To confirm the software is installed, you should see the following:
+     </p>
+     <ul>
+      <li>
+       <p>
+        An inSync client System Tray icon in the lower right corner (assuming you’re using the default KDE desktop).
+       </p>
+      </li>
+      <li>
+       <p>
+        Notice a red exclamation point on the inSync Icon? Thais indicates that the inSync client is install but not-yet activated.
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ul>
+   <hr/>
+   <h1>
+    Before Attempting to Activate the inSync client
+   </h1>
+   <p>
+    Please first check these two items, otherwise, you might have issues after clicking “Activate” on the inSync client.
+   </p>
+   <ac:structured-macro ac:macro-id="3faae428-28d9-4329-b9a3-cc83ca63b3a1" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ol start="1">
+      <li>
+       <p>
+        Please make sure you have either Firefox (/usr/bin/firefox) or Google Chrome/Chromium (/opt/google/chrome/chrome or /usr/bin/chromium-browser) as your default web browser for the inSync client to authenticate correctly. Figures a, b, and c below should help you find how to set your desktop's default web browser:
+       </p>
+       <ol start="1">
+        <li>
+         <ac:image ac:align="left" ac:layout="align-start" ac:original-height="456" ac:original-width="449" ac:width="238">
+          <ri:attachment ri:filename="Screenshot_2020-09-03_12-29-07.png" ri:version-at-save="1">
+          </ri:attachment>
+         </ac:image>
+        </li>
+        <li>
+         <ac:image ac:align="left" ac:layout="align-start" ac:original-height="473" ac:original-width="632" ac:width="326">
+          <ri:attachment ri:filename="Screenshot_2020-09-03_12-29-31.png" ri:version-at-save="1">
+          </ri:attachment>
+         </ac:image>
+        </li>
+        <li>
+         <ac:image ac:align="left" ac:layout="align-start" ac:original-height="465" ac:original-width="629" ac:width="326">
+          <ri:attachment ri:filename="Screenshot_2020-09-03_12-29-48.png" ri:version-at-save="1">
+          </ri:attachment>
+         </ac:image>
+        </li>
+       </ol>
+      </li>
+      <li>
+       <p>
+        After you've set your Linux desktop's default web browser to either Firefox, Chrome, or Chromium, please open it and sign into your
+        <a href="http://schrodinger.okta.com">
+         schrodinger.okta.com
+        </a>
+        account.
+       </p>
+      </li>
+     </ol>
+     <p>
+      Once you're logged into your preferred browser, please proceed to
+      <a href="http://schrodinger.okta.com">
+       schrodinger.okta.com
+      </a>
+      and log into your Okta account.
+     </p>
+     <p>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+   </p>
+   <hr/>
+   <h1>
+    Activation
+   </h1>
+   <p>
+    Once the inSync client software is installed on your computer, it needs to be activated by the owner of the system. In general, this involves opening inSync client, entering your
+    <a href="mailto:first.last@schrodinger.com">
+     first.last@schrodinger.com
+    </a>
+    email address, and signing into Okta in your browser when prompted (works best if you're already signed into Okta). Some specific instructions are included below (click the expand for details).
+   </p>
+   <p>
+    Once you activate the software, the backups will start.
+   </p>
+   <p>
+    You may notice the first backup will have a more noticeable impact on your computer than subsequent ones.
+   </p>
+   <ac:structured-macro ac:macro-id="8d04cb63-eb67-4a4b-a6dc-41dd93908970" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ol start="1">
+      <li>
+       <p>
+        Launch the inSync client by clicking on the Druva inSync icon in your System Tray.
+       </p>
+       <ol start="1">
+        <li>
+         <ac:image ac:align="left" ac:layout="align-start" ac:original-height="97" ac:original-width="254" ac:width="244">
+          <ri:attachment ri:filename="image7.png" ri:version-at-save="1">
+          </ri:attachment>
+         </ac:image>
+        </li>
+       </ol>
+      </li>
+      <li>
+       <p>
+        Enter your
+        <a href="mailto:first.last@schrodinger.com">
+         first.last@schrodinger.com
+        </a>
+        email address, but leave the password field blank. Then click “Activate” to continue.
+       </p>
+       <ol start="1">
+        <li>
+         <ac:image ac:align="left" ac:layout="align-start" ac:original-height="403" ac:original-width="558" ac:width="340">
+          <ri:attachment ri:filename="image3.png" ri:version-at-save="1">
+          </ri:attachment>
+         </ac:image>
+        </li>
+       </ol>
+      </li>
+      <li>
+       <p>
+        Because you already have the system’s default web browser open with an open tab which is already signed into your
+        <a href="http://schrodinger.okta.com">
+         schrodinger.okta.com
+        </a>
+        account (from the "Before Attempting Activate the inSync client" step above), the authentication should complete and display an “open with” dialog
+       </p>
+       <ol start="1">
+        <li>
+         <ac:image ac:align="left" ac:layout="align-start" ac:original-height="547" ac:original-width="813" ac:width="360">
+          <ri:attachment ri:filename="image11.png" ri:version-at-save="1">
+          </ri:attachment>
+         </ac:image>
+        </li>
+        <li>
+         <p>
+          Soon after you see the successfully activated Druva webpage, you should get a pop-up asking how you would like to open the redirected link. Please choose to open the activation link as follows:
+         </p>
+         <table class="relative-table wrapped" style="width: 78.5047%;">
+          <colgroup>
+           <col style="width: 49.0066%;"/>
+          </colgroup>
+          <colgroup>
+           <col style="width: 50.9934%;"/>
+          </colgroup>
+          <tbody>
+           <tr>
+            <th>
+             <span>
+              The “Open link” window from Firefox
+             </span>
+            </th>
+            <th>
+             <span>
+              The “Open xdg-open” window from Chrome
+             </span>
+            </th>
+           </tr>
+           <tr>
+            <td>
+             <div class="content-wrapper">
+              <p>
+               <ac:image ac:height="250" ac:thumbnail="true">
+                <ri:attachment ri:filename="image4.png" ri:version-at-save="1">
+                </ri:attachment>
+               </ac:image>
+              </p>
+             </div>
+            </td>
+            <td>
+             <div class="content-wrapper">
+              <p>
+               <br/>
+              </p>
+              <p>
+               <ac:image ac:width="400">
+                <ri:attachment ri:filename="image5.png" ri:version-at-save="1">
+                </ri:attachment>
+               </ac:image>
+              </p>
+             </div>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <p>
+         </p>
+        </li>
+       </ol>
+      </li>
+      <li>
+       <p>
+        After the authentication completes you will get redirected back to the inSync client.
+       </p>
+       <ol start="1">
+        <li>
+         <p>
+          If you don’t get forward back to the inSync client, please ensure that you are already signed into your Schrodinger OKta account and that you also have the OKta plugin installed for that browser
+         </p>
+        </li>
+        <li>
+         <p>
+          If you are still having trouble with the browser sending the authentication back to the inSync client, please contact IT in the
+          <a href="https://chat.google.com/room/AAAAGsR5Z2g">
+           Druva inSync help (alpha and beta periods)
+          </a>
+          google chat room.
+         </p>
+        </li>
+       </ol>
+      </li>
+      <li>
+       <p>
+        Once you’ve been signed into the inSync client, if you do not already have another device enrolled, the backup will start.
+       </p>
+       <ol start="1">
+        <li>
+         <p>
+          If you do already have another device enrolled, choose "Add as New Device" and click “Continue”.
+         </p>
+        </li>
+        <li>
+         <ac:image ac:align="left" ac:layout="align-start" ac:original-height="399" ac:original-width="551" ac:width="340">
+          <ri:attachment ri:filename="image8.png" ri:version-at-save="1">
+          </ri:attachment>
+         </ac:image>
+        </li>
+       </ol>
+      </li>
+      <li>
+       <p>
+        With the activation process completed, and the new device now added, the inSync client will start initializing any /scr* backups you may have on your Linux desktop.
+       </p>
+       <ol start="1">
+        <li>
+         <ac:image ac:align="left" ac:layout="align-start" ac:original-height="487" ac:original-width="760" ac:width="380">
+          <ri:attachment ri:filename="image10.png" ri:version-at-save="1">
+          </ri:attachment>
+         </ac:image>
+        </li>
+       </ol>
+      </li>
+      <li>
+       <p>
+        Also notice that once you’ve activated the inSync client, the System Tray icon no longer has the red exclamation point.
+       </p>
+       <ol start="1">
+        <li>
+         <p>
+          It will also flash if it’s syncing data.
+         </p>
+        </li>
+        <li>
+         <ac:image ac:align="left" ac:layout="align-start" ac:original-height="317" ac:original-width="437" ac:width="340">
+          <ri:attachment ri:filename="image2.png" ri:version-at-save="1">
+          </ri:attachment>
+         </ac:image>
+        </li>
+       </ol>
+      </li>
+      <li>
+       <p>
+        Please note that
+        <strong>
+         the inSync client will only work under a GUI session
+        </strong>
+        .
+       </p>
+       <ol start="1">
+        <li>
+         <p>
+          If you’re logged into the desktop’s GUI environment IRL, it will be working in the background.
+          <ac:emoticon ac:emoji-fallback="👍" ac:emoji-id="1f44d" ac:emoji-shortname=":thumbsup:" ac:name="thumbs-up">
+          </ac:emoticon>
+         </p>
+        </li>
+        <li>
+         <p>
+          If you’re logged into the desktop'S GUI environment remotely (X2Go/FreeNX/NoMachine/VNC), it will be working in the background.
+          <ac:emoticon ac:emoji-fallback="👍" ac:emoji-id="1f44d" ac:emoji-shortname=":thumbsup:" ac:name="thumbs-up">
+          </ac:emoticon>
+         </p>
+        </li>
+        <li>
+         <p>
+          If you're logged into the desktop's GUI environment remotely, and you close the remote window
+          <strong>
+           but never logout
+          </strong>
+          , it will be working in the background.
+          <ac:emoticon ac:emoji-fallback="👍" ac:emoji-id="1f44d" ac:emoji-shortname=":thumbsup:" ac:name="thumbs-up">
+          </ac:emoticon>
+         </p>
+        </li>
+        <li>
+         <p>
+          <strong>
+           If you’re logged into the desktop via ssh only, it will NOT be working in the background!!!
+          </strong>
+          <ac:emoticon ac:emoji-fallback="👎" ac:emoji-id="1f44e" ac:emoji-shortname=":thumbsdown:" ac:name="thumbs-down">
+          </ac:emoticon>
+         </p>
+        </li>
+       </ol>
+      </li>
+     </ol>
+     <p>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

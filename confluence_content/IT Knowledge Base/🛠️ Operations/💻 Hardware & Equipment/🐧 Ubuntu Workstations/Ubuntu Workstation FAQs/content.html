@@ -1,0 +1,859 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    Details various questions and answers for the Ubuntu 20.04+ Desktops,
+    <s>
+     Laptops
+    </s>
+    , and VMware Virtual Machines.
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <hr/>
+   <p>
+    <ac:structured-macro ac:macro-id="e9096c68-591d-499e-a31d-67425a601524" ac:name="toc" ac:schema-version="1">
+    </ac:structured-macro>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p style="text-align: center;">
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="a6eda81a-56db-409d-9320-7283a90e7ad5" ac:name="details" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Technical contact
+        </th>
+        <th>
+         <div class="content-wrapper">
+          <ac:link>
+           <ri:user ri:userkey="712020:20683bcb-b5d6-4474-a40c-2a3ae5aaee4f">
+           </ri:user>
+          </ac:link>
+         </div>
+        </th>
+       </tr>
+       <tr>
+        <td>
+         other
+        </td>
+        <td>
+         <ac:placeholder>
+          Who primarily controls or has dominion over this service?
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <hr/>
+   <h1>
+    Ubuntu 20+ general information:
+   </h1>
+   <ul>
+    <li>
+     LDAP credentials will grant you access to the workstation
+    </li>
+   </ul>
+   <ul>
+    <li>
+     Your $HOME directory is not shared, instead it's mounted on the NVMe drive for faster IO
+    </li>
+   </ul>
+   <ul>
+    <li>
+     Regional shares under /nfs are still available (except from VLAN51 (the 172.18.254.0/24 network) )
+    </li>
+   </ul>
+   <ul>
+    <li>
+     <code>
+      /scr
+     </code>
+     is the mountpoint for the 1TB HDD (default hardware config)
+    </li>
+   </ul>
+   <ul>
+    <li>
+     <code>
+      /scr-sdd
+     </code>
+     is just a directory on the NVMe with the same permissions as
+     <code>
+      /scr
+     </code>
+     , but may be used for fast version of scratch
+    </li>
+   </ul>
+   <ul>
+    <li>
+     By default, the assigned user may use
+     <code>
+      sudo
+     </code>
+     to
+     <code>
+      reboot
+     </code>
+     or
+     <code>
+      poweroff
+     </code>
+     their workstation
+    </li>
+   </ul>
+   <ul>
+    <li>
+     Updates (
+     <code>
+      apt
+     </code>
+     and
+     <code>
+      snap
+     </code>
+     ) take place every morning (3AM local time) but the system is NOT set to automatically reboot if required to apply an update
+     <br/>
+     <ul>
+      <li>
+       Please take note to reboot the system every few weeks/months (you'll see a message upon an SSH login)
+      </li>
+     </ul>
+    </li>
+   </ul>
+   <h2>
+    Developing on Linux
+   </h2>
+   <ul>
+    <li>
+     Linux machines can be managed or unmanaged.
+    </li>
+    <li>
+     If a Linux machine is managed, you get NFS access but no
+     <code>
+      sudo
+     </code>
+     access.
+    </li>
+    <li>
+     If a Linux machine is unmanaged, you get
+     <code>
+      sudo
+     </code>
+     access but no NFS access.
+    </li>
+    <li>
+     If you want to use Docker, you'll get a machine configured to use it. You can now use Docker whether or not you have a managed or an unmanaged machine.
+    </li>
+   </ul>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    How does an assigned user login to their workstation?
+   </h1>
+   <ac:structured-macro ac:macro-id="7c2ccafd-f619-4c26-aeb8-0efaa4a8aa63" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ul>
+      <li>
+       <p>
+        The desktop is already setup for the assigned user, which means the system already has created the assigned user's home directory.
+       </p>
+      </li>
+     </ul>
+     <ul>
+      <li>
+       <p>
+        And because the assigned user has their home directory created at build time, the assigned user may login to the system from the GUI out-of-the-box.
+       </p>
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+     <hr/>
+     <ul>
+      <li>
+       Example of the first login to an assigned desktop:
+       <br/>
+       <br/>
+      </li>
+     </ul>
+     <pre>laptop:~ &gt; ssh hanvey@desk-lu101<br/>The authenticity of host 'desk-lu101 (172.18.8.188)' can't be established.<br/>ED25519 key fingerprint is SHA256:xaWR/w2W7YGyA9LjpvxKn8u+kXeVjBSwnbtnxWzerzc.<br/>Are you sure you want to continue connecting (yes/no/[fingerprint])? yes<br/>Warning: Permanently added 'desk-lu101,172.18.8.188' (ED25519) to the list of known hosts.<br/>Authorized uses only. All activity may be monitored and reported.<br/>hanvey@desk-lu101's password: <br/>Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-121-generic x86_64)<br/><br/>  System information as of Thu 30 Jun 2022 05:26:18 PM UTC<br/><br/>  System load:  0.04               Processes:                286<br/>  Usage of /:   5.1% of 466.97GB   Users logged in:          0<br/>  Memory usage: 6%                 IPv4 address for docker0: 10.1.0.1<br/>  Swap usage:   0%                 IPv4 address for eno1:    172.18.8.188<br/>  Temperature:  41.0 C<br/><br/><br/>2 devices have a firmware upgrade available.<br/>Run `fwupdmgr get-upgrades` for more information.<br/><br/><br/>1 update can be applied immediately.<br/>1 of these updates is a standard security update.<br/>To see these additional updates run: apt list --upgradable<br/><br/><br/>Authorized uses only. All activity may be monitored and reported.<br/>Last login: Thu Jun 30 16:26:45 2022 from 172.18.4.36<br/>Authorized uses only. All activity may be monitored and reported.<br/>hanvey@desk-lu101:~$ <br/>hanvey@desk-lu101:~$ hostname<br/><a href="http://desk-lu101.schrodinger.com">desk-lu101.schrodinger.com</a><br/>hanvey@desk-lu101:~$ <br/>hanvey@desk-lu101:~$ w<br/> 17:26:25 up 19:20,  1 user,  load average: 0.11, 0.11, 0.09<br/>USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT<br/>hanvey   pts/0    172.18.4.36      17:26    0.00s  0.06s  0.02s w<br/>hanvey@desk-lu101:~$ </pre>
+     <pre>hanvey@desk-lu101:~$ </pre>
+     <hr/>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    How does an unassigned user login to a workstation?
+   </h1>
+   <ac:structured-macro ac:macro-id="ed575a20-1190-488a-a7a7-d05636061928" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ul>
+      <li>
+       <p>
+        In this case, the system hasn't created the user's home directory, but the home directory will get created upon a successful ssh connection to the desktop.
+       </p>
+      </li>
+     </ul>
+     <ul>
+      <li>
+       <p>
+        And because the non-assigned user doesn't have their home directory created at build time, the non-assigned user may not login to the system from the GUI out-of-the-box.
+        <strong>
+         The non-assigned user must first ssh into the system for the desktop's GUI to be accessible for them to login to the system's GUI.
+        </strong>
+       </p>
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+     <hr/>
+     <ul>
+      <li>
+       Example of the first login to an unassigned desktop:
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+     <pre>laptop:~ &gt; ssh hanvey@desk-lu167<br/><br/>...<br/><br/>Last login: Tue Jul 19 20:01:57 2022 from 172.18.4.36<br/>Authorized uses only. All activity may be monitored and reported.<br/>Could not chdir to home directory /home/hanvey: No such file or directory<br/>-e <br/><br/></pre>
+     <pre>==================================================================================<br/><br/><br/>  Greetings!<br/><br/><br/>  Because you are not the assigned user of the system, no home directory (/home/hanvey) was created at build time.<br/><br/>  That's why you're currently in / (type pwd, you'll see you're not in your home directory) <br/><br/>  You can cd into your newly created home directory now (cd /home/hanvey).<br/>  <br/>  But you should really logout and back in to make sure you get placed into it on the next login.<br/><br/><br/>==================================================================================</pre>
+     <br/>
+     <pre><br/><br/>  <br/>hanvey@desk-lu167:/$ pwd<br/>/<br/>hanvey@desk-lu167:/$ <br/>hanvey@desk-lu167:/$ id -nu<br/>hanvey<br/>hanvey@desk-lu167:/$ <br/>hanvey@desk-lu167:/$ exit<br/>logout<br/>Connection to desk-lu167 closed.<br/>22:45:54 laptop2:~ &gt; </pre>
+     <hr/>
+     <ul>
+      <li>
+       Example of any future logins to the unassigned desktop:
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+     <pre>laptop:~ &gt; ssh hanvey@desk-lu167<br/><br/>...<br/><br/>Authorized uses only. All activity may be monitored and reported.<br/>Last login: Wed Jul 20 02:45:35 2022 from 172.18.4.36<br/>Authorized uses only. All activity may be monitored and reported.<br/>-bash: TMOUT: readonly variable<br/>hanvey@desk-lu167:~$ <br/>hanvey@desk-lu167:~$ pwd<br/>/home/hanvey<br/>hanvey@desk-lu167:~$ <br/>hanvey@desk-lu167:~$ id -nu<br/>hanvey<br/>hanvey@desk-lu167:~$ <br/>hanvey@desk-lu167:~$ exit<br/>logout<br/>Connection to desk-lu167 closed.<br/>22:46:16 laptop2:~ &gt; </pre>
+     <hr/>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    How to troubleshoot SSH issues?
+   </h1>
+   <h2>
+    How to deal with REMOTE HOST IDENTIFICATION SSH warnings?
+   </h2>
+   <ac:structured-macro ac:macro-id="9ee794a6-82fb-4965-8449-f2c967baae08" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ul>
+      <li>
+       What to do if you see this warning message:
+      </li>
+     </ul>
+     <blockquote>
+      <pre>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br/>@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @<br/>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br/>IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!<br/>Someone could be eavesdropping on you right now (man-in-the-middle attack)!<br/>It is also possible that a host key has just been changed.</pre>
+     </blockquote>
+     <ul>
+      <li>
+       This message means that the ssh host keys of the remote system have changed from the last time you connected to the remote system.
+      </li>
+      <li>
+       It likely means your system has been re-provisioned between now and the last time you attempted to connect to the system.
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+     <hr/>
+     <ul>
+      <li>
+       You may remove the old entry by deleting the line in question from your local "known_hosts" file, or you may remove the old entry just by running the command below:
+       <ul>
+        <li>
+         ssh-keygen -f "/PATH/TO/YOUR/.ssh/known_hosts" -R "&lt;REMOTE_HOST_NAME&gt;"
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+     <hr/>
+     <ul>
+      <li>
+       But if you see this warning message and you know the system was not re-provisioned, please alert infosec as it might indicate that your system has been altered by someone other than Schrodinger IT.
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    How to remotely access a workstation's Graphical User Interface (GUI)?
+   </h1>
+   <ul>
+    <li>
+     By default, X2Go and VNC are available on a Ubuntu Desktop workstation.
+    </li>
+    <li>
+     If the "
+     <code>
+      /INSTALL_TERADICI
+     </code>
+     " is found on the system,
+     <code>
+      postinstall
+     </code>
+     will install Teradici
+    </li>
+   </ul>
+   <h2>
+    How to access a workstation using X2Go?
+   </h2>
+   <ac:structured-macro ac:macro-id="03921711-a773-4e34-873f-2a75b74faeda" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ul>
+      <li>
+       <p>
+        TODO ...
+       </p>
+      </li>
+     </ul>
+     <br/>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h2>
+    How to access a workstation using VNC?
+   </h2>
+   <ac:structured-macro ac:macro-id="234788d2-93f3-4c23-8eb7-edfec3b2638f" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ul>
+      <li>
+       <p>
+        Tigervnc stand alone server is installed on all the Ubuntu 20.04+ workstations.
+       </p>
+      </li>
+     </ul>
+     <ul>
+      <li>
+       <p>
+        The default tigervnc configuration allows a user to start a vnc session with XFCE4 at 1920x1200.
+       </p>
+      </li>
+     </ul>
+     <ul>
+      <li>
+       Please ensure you first have a working home directory by sshing to the workstation and exiting before attempting to start a VNC session on a workstation.
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+     <hr/>
+     <ul>
+      <li>
+       To access a workstation via VNC, first ssh to the workstation and start the VNC server:
+      </li>
+     </ul>
+     <pre><br/>laptop:~ &gt; ssh hanvey@desk-lu167<br/><br/>...<br/><br/>Authorized uses only. All activity may be monitored and reported.<br/>Last login: Wed Jul 20 02:45:35 2022 from 172.18.4.36<br/>hanvey@desk-lu167:~$ <br/>hanvey@desk-lu167:~$ pwd<br/>/home/hanvey<br/>hanvey@desk-lu167:~$<br/>hanvey@desk-lu167:~$ vncserver <br/><br/>New Xtigervnc server '<a href="http://desk-lu101.schrodinger.com">desk-lu167.schrodinger.com</a>:1 (hanvey)' on port 5901 for display :1.<br/>Use xtigervncviewer -SecurityTypes VncAuth,TLSVnc -passwd /home/hanvey/.vnc/passwd <a href="http://desk-lu101.schrodinger.com">desk-lu167.schrodinger.com</a>:1 to connect to the VNC server.<br/><br/>hanvey@desk-lu167:~$ <br/>hanvey@desk-lu167:~$ exitlogout<br/>Connection to desk-lu167 closed.<br/>22:46:16 laptop2:~ &gt; </pre>
+     <hr/>
+     <p>
+      <br/>
+     </p>
+     <ul>
+      <li>
+       Once the VNC session is started, you may connect to it via &lt;workstation_hostname&gt;:590&lt;remote_display_id&gt;. In the example above, the syntax would be
+       <a href="http://desk-lu167.schrodinger.com">
+        desk-lu167.schrodinger.com
+       </a>
+       :5901
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h2>
+    How to access a workstation using Teradici?
+   </h2>
+   <ac:structured-macro ac:macro-id="49274451-5e79-4f8b-8764-1addf3c6f9c2" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ul>
+      <li>
+       <p>
+        TODO ...
+       </p>
+      </li>
+     </ul>
+     <br/>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    How to switch desktop GUI environments on Ubuntu (Gnome, KDE, Cinnamon, or XFCE)?
+   </h1>
+   <ac:structured-macro ac:macro-id="2f06dad9-3611-43e6-afb6-2437cc7d9c32" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ul>
+      <li>
+       <p>
+        By default, some systems might be set to use a desktop GUI that's not configured correctly at startup, or is having issues for an unknown reason.
+       </p>
+      </li>
+     </ul>
+     <ul>
+      <li>
+       Also, please note that Ubuntu 22.04 has some default options to use Wayland over X11/xorg
+       <ul>
+        <li>
+         We recommend using a desktop environment that mentions "X11" or "xorg" to  ensure the desktop environment is not using Wayland
+         <ul>
+          <li>
+           The following items are know issues on Wayland:
+           <ul>
+            <li>
+             Druva's inSync Client
+            </li>
+            <li>
+             <s>
+              Appgate Client
+             </s>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <ul>
+      <li>
+       <p>
+        No matter the reason, if you wish select another desktop GUI environment, such as Gnome, KDE, Cinnamon, or XFCE, then you may do so at the GUI login screen.
+       </p>
+      </li>
+     </ul>
+     <ul>
+      <li>
+       <p>
+        For the image examples below, "
+        <u>
+         a" denotes Ubuntu 20.04
+        </u>
+        screenshot and "
+        <u>
+         b" denotes Ubuntu 22.04
+        </u>
+        screenshot.
+       </p>
+       <br/>
+       <ul>
+        <li>
+         Please follow these directions to choose another desktop GUI environment:
+         <ol>
+          <li>
+           Make sure you're at the desktop's login screen:
+           <br/>
+           <ol>
+            <li>
+             <ac:image ac:height="250">
+              <ri:attachment ri:filename="ubuntu-desktop-login-01.png" ri:version-at-save="1">
+              </ri:attachment>
+             </ac:image>
+            </li>
+            <li>
+             <ac:image ac:width="335">
+              <ri:attachment ri:filename="ubuntu-2204-login-screen-01.png" ri:version-at-save="1">
+              </ri:attachment>
+             </ac:image>
+            </li>
+           </ol>
+          </li>
+          <li>
+           Select "Other" or "Not listed" from the user menu, then enter your Unix username or select your Unix username if it's already in the user list:
+           <ol>
+            <li>
+             <ac:image ac:height="250">
+              <ri:attachment ri:filename="ubuntu-desktop-login-02.png" ri:version-at-save="1">
+              </ri:attachment>
+             </ac:image>
+             <ac:image ac:height="250">
+              <ri:attachment ri:filename="ubuntu-desktop-login-03.png" ri:version-at-save="1">
+              </ri:attachment>
+             </ac:image>
+            </li>
+            <li>
+             <ac:image ac:width="336">
+              <ri:attachment ri:filename="ubuntu-2204-login-screen-01-1.png" ri:version-at-save="1">
+              </ri:attachment>
+             </ac:image>
+             <ac:image ac:width="334">
+              <ri:attachment ri:filename="ubuntu-2204-login-screen-02.png" ri:version-at-save="1">
+              </ri:attachment>
+             </ac:image>
+            </li>
+           </ol>
+          </li>
+          <li>
+           After selecting or entering your Unix username, please enter your Okta password,
+           <strong>
+            but do NOT hit enter and do NOT click "Log In" just yet!
+           </strong>
+           <ol>
+            <li>
+             <ac:image ac:height="250">
+              <ri:attachment ri:filename="ubuntu-desktop-login-04.png" ri:version-at-save="1">
+              </ri:attachment>
+             </ac:image>
+            </li>
+            <li>
+             <ac:image ac:width="336">
+              <ri:attachment ri:filename="ubuntu-2204-login-screen-04.png" ri:version-at-save="1">
+              </ri:attachment>
+             </ac:image>
+            </li>
+           </ol>
+          </li>
+          <li>
+           Before clicking "Log In" or hitting the "Enter" key, go to the upper or lower right corner of the screen and click on the cogwheel (sometimes it might show up as a gnome-foot icon):
+           <ol>
+            <li>
+             <ac:image ac:height="250">
+              <ri:attachment ri:filename="ubuntu-desktop-login-05.png" ri:version-at-save="1">
+              </ri:attachment>
+             </ac:image>
+            </li>
+            <li>
+             <ac:image ac:width="335">
+              <ri:attachment ri:filename="ubuntu-2204-login-screen-05.png" ri:version-at-save="1">
+              </ri:attachment>
+             </ac:image>
+            </li>
+           </ol>
+          </li>
+          <li>
+           After you've selected your desktop GUI environment, you may then click the "Log In" button, and you should then get logged into the desktop GUI you selected. If you didn't get to the correct desktop GUI environment, then you likely selected the GUI first before entering your user details (the GUI selector get reset once you type anything in the user or password fields).
+          </li>
+         </ol>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    How backups work on the Ubuntu workstations
+   </h1>
+   <ac:structured-macro ac:macro-id="190f2075-a428-4e77-852c-a438308aa843" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ul>
+      <li>
+       The old CentOS7 desktops used shared NFS home directories (coming from their regional NFS server ([nyc|pdx]-
+       <a href="http://stor.schrodinger.com">
+        stor.schrodinger.com
+       </a>
+       ).
+       <ul>
+        <li>
+         This means that the entire home directory (/home/&lt;UNIX_USERNAME&gt;) was backed up for a few weeks on the regional NFS server.
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+     <ul>
+      <li>
+       <strong>
+        However, the new Ubuntu desktops do not have shared NFS home directories!
+       </strong>
+       <ul>
+        <li>
+         Your home directory on an Ubuntu desktop is locally stored on the M.2 SSD (which will make it much more responsive).
+        </li>
+        <li>
+         Ubuntu desktop users should rely on Druva's inSync client to backup any data they wish.
+         <br/>
+         <ul>
+          <li>
+           Please note, that Druva will only backup data under any of the following scratch directories:
+           <ul>
+            <li>
+             /scr-ssd         (this is just a directory that's on the desktop's M.2/SSD; just faster scratch)
+            </li>
+            <li>
+             /scr-nvme     (points to an additional M.2 NMVe drive; this is NOT standard and most builds will not see this mountpoint)
+            </li>
+            <li>
+             /scr                 (typically, this is the desktop's 1TB HDD)
+            </li>
+            <li>
+             /scr2
+            </li>
+            <li>
+             /scr3
+            </li>
+            <li>
+             /scr4
+            </li>
+            <li>
+             /scr5
+            </li>
+            <li>
+             /scr6
+            </li>
+            <li>
+             /scr7
+            </li>
+            <li>
+             /scr8
+            </li>
+           </ul>
+          </li>
+          <li>
+           If you have a directory under your home directory that you want backed up, some find it more convenient to first move the directory under /scr-ssd, and then create a symlink from the scratch directory to your home directory, such as:
+           <ul>
+            <li>
+             <pre>mv /home/&lt;UNIX_USERNAME&gt;/foo /scr-ssd/ &amp;&amp; ln -s /scr-ssd/foo /home/&lt;UNIX_USERNAME&gt;/foo</pre>
+            </li>
+            <li>
+             <pre>mv /home/&lt;UNIX_USERNAME&gt;/bar /scr-ssd/ &amp;&amp; ln -s /scr-ssd/bar /home/&lt;UNIX_USERNAME&gt;/bar<br/><br/></pre>
+            </li>
+           </ul>
+          </li>
+          <li>
+           Here's an example of some useful symlinks to create:
+           <br/>
+           <ul>
+            <li>
+             <pre><br/>LIST="<br/>.config<br/>.local<br/>.mozilla<br/>Desktop<br/>Documents<br/>Downloads<br/>Pictures<br/>"<br/>for FOLDER in $LIST ; do<br/>  [ -d /home/$USER/$FOLDER ] &amp;&amp; mv /home/$USER/$FOLDER /scr-ssd/<br/>  ln -s /scr-ssd/$FOLDER /home/$USER/$FOLDER<br/>done<br/><br/></pre>
+            </li>
+           </ul>
+          </li>
+          <li>
+           We may include other directories, but for now, Druva will only backup data that is under any of the listed scratch directories.
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    How to access your old shared home directory from the Ubuntu desktop (not yet in place)
+   </h1>
+   <ac:structured-macro ac:macro-id="6e8f20f9-fbdd-4253-92cb-4847be25ba84" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ul>
+      <li>
+       Although the new Ubuntu desktops don't have shared NFS mounted home directories, the old NFS home directory may temporarily be mounted read-only under /mnt/old-home-dirs on their new Ubuntu workstations
+      </li>
+      <li>
+       The /mnt/old-home-dirs mount-point will only be available for
+       <em>
+        a few weeks
+       </em>
+       .
+      </li>
+      <li>
+       The /mnt/old-home-dirs mount-point is only meant for users to migrate some of their old shared CentOS home directory data to their new non-shared home Ubuntu directory.
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    Troubleshooting Minor Issues:
+   </h1>
+   <h2>
+    How to deal with the bash timeout (TMOUT) issue?
+   </h2>
+   <ac:structured-macro ac:macro-id="60fe4f78-75e3-4cb7-9937-ef503d856e18" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <ul>
+      <li>
+       By default, there is a bash terminal timeout which is set to 900 seconds in
+       <code>
+        /etc/profile.d/tmout.sh
+       </code>
+       (
+       <code>
+        TMOUT=900
+       </code>
+       )
+      </li>
+      <li>
+       Before disabling the default timeout, please consider using a program such as [tmux|
+       <a href="https://wiki.archlinux.org/title/tmux">
+        https://wiki.archlinux.org/title/tmux
+       </a>
+       ] or [screen|
+       <a href="https://wiki.archlinux.org/title/GNU_Screen">
+        https://wiki.archlinux.org/title/GNU_Screen
+       </a>
+       ] if you require a persistent terminal.
+      </li>
+     </ul>
+     <br/>
+     <ul>
+      <li>
+       But if you must disable the
+       <code>
+        TMOUT
+       </code>
+       variable, you may add the following line to your local
+       <code>
+        ~/.bashrc
+       </code>
+       file:
+       <br/>
+       <ul>
+        <li>
+         <pre>TMOUT=0</pre>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    Resources
+   </h1>
+   <ac:structured-macro ac:macro-id="5b97e681-cc2f-40bc-a2f4-4fd95390f59e" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <a href="https://github.com/schrodinger/pxe-ubuntu">
+       https://github.com/schrodinger/pxe-ubuntu
+      </a>
+     </p>
+     <p>
+      <a href="https://github.com/schrodinger/ubuntu-unique-data">
+       https://github.com/schrodinger/ubuntu-unique-data
+      </a>
+     </p>
+     <p>
+      <a href="https://github.com/schrodinger/ansible-galaxy-post-os-install">
+       https://github.com/schrodinger/ansible-galaxy-post-os-install
+      </a>
+     </p>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

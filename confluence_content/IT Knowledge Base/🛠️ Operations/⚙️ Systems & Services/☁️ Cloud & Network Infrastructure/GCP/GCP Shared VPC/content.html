@@ -1,0 +1,443 @@
+<h2>
+ Brief
+</h2>
+<p>
+ The
+ <a href="https://cloud.google.com/vpc/docs/shared-vpc">
+  shared services architecture
+ </a>
+ in GCP is a way to have many projects share a common set of VPC resources, like VPC networks, subnets, firewall rules, and VPN connections.
+ <br/>
+ By using a shared services host project to define common infrastructure, we can define shared resources once, and separate their permissions from service projects attached to the host project.
+ <br/>
+ For example:
+</p>
+<p>
+ We can create a host project, create some VPC networks, and some subnets. We can then configure a VPN back to our office, and set up firewall rules for allowing access to our services.
+ <br/>
+ If another user/team/customer needs to create resources on our shared network, we simply attach their project as a service project, and we are good to go. The networking is automatically shared, and we don't need to configure a separate network, subnet, and VPN for each project.
+</p>
+<p>
+ This can be a little confusing coming from AWS, but the intention is to use projects sort of like you would use a network folder. Each project has a separate set of permissions, so we can essentially delegate access to our shared infrastructure without giving any control to the service projects. This tiered security model is great for a number of reasons.
+</p>
+<p>
+ <ac:structured-macro ac:local-id="7469f64a-2273-4228-ab10-62ebe036bd56" ac:macro-id="2cdb4b05-b43e-445a-a7c9-0bd582f7dd09" ac:name="lucidchart" ac:schema-version="1">
+  <ac:parameter ac:name="pageCount">
+   ()
+  </ac:parameter>
+  <ac:parameter ac:name="autoUpdate">
+   false
+  </ac:parameter>
+  <ac:parameter ac:name="align">
+   left
+  </ac:parameter>
+  <ac:parameter ac:name="type">
+   rich
+  </ac:parameter>
+  <ac:parameter ac:name="autoSize">
+   0
+  </ac:parameter>
+  <ac:parameter ac:name="macroId">
+   2cdb4b05-b43e-445a-a7c9-0bd582f7dd09
+  </ac:parameter>
+  <ac:parameter ac:name="instanceId">
+   e92fd161-7399-3be5-a65f-f9ad76f445eb
+  </ac:parameter>
+  <ac:parameter ac:name="pages">
+  </ac:parameter>
+  <ac:parameter ac:name="width">
+   900
+  </ac:parameter>
+  <ac:parameter ac:name="documentId">
+   5f4973e2-235d-4d4f-b28b-4f10a0acdf09
+  </ac:parameter>
+  <ac:parameter ac:name="documentToken">
+   v2_b4fedcfdddf557968f71a873363058100926798c79c3cde1ced9c5eadb6c3cd6-a=103950779&amp;c=e92fd161-7399-3be5-a65f-f9ad76f445eb&amp;d=5f4973e2-235d-4d4f-b28b-4f10a0acdf09&amp;p=55269849
+  </ac:parameter>
+  <ac:parameter ac:name="updated">
+   1708127843916
+  </ac:parameter>
+  <ac:parameter ac:name="height">
+   900
+  </ac:parameter>
+ </ac:structured-macro>
+</p>
+<p>
+ Because the configurations in this guide reflect one of our real world deployments, please take extra care when copying/pasting.
+</p>
+<h2>
+ Host project creation
+</h2>
+<p>
+ I'm going to assume you have the
+ <a href="https://cloud.google.com/sdk/">
+  gcloud SDK
+ </a>
+ configured on your local machine.
+ <br/>
+ First, lets authenticate and make sure we're using the right user/configuration
+</p>
+<ac:structured-macro ac:macro-id="1d6b16b4-40c1-42fa-8315-529f48da1aac" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[#authenticate
+gcloud auth login
+#check config
+gcloud config list]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ <br/>
+ Next, we'll actually create the host project
+</p>
+<ac:structured-macro ac:macro-id="d80386cc-a181-4288-a7e3-71cda84ffb40" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud projects create livedesign-sharedservices --name="livedesign-sharedservices" \
+  --folder="LiveDesign"
+#enable shared VPC on the host project
+gcloud compute shared-vpc enable livedesign-sharedservices
+#you probably want to also set this as your default project
+gcloud config set project livedesign-shared-services]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ <br/>
+ If you want to use kubernetes on any of the service projects, enable the GKE API
+</p>
+<h5>
+ <strong>
+  Kubernetes only
+ </strong>
+</h5>
+<ac:structured-macro ac:macro-id="fec4f4b3-8444-42c3-be8d-c62267a43733" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud services enable container.googleapis.com --project livedesign-sharedservices]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ <br/>
+ Next, you likely want to remove the default networks created with the GCP project. This is kind of an irritating process. Personally, I think it's faster to do this bit via the web console
+</p>
+<ac:structured-macro ac:macro-id="d37f3d7f-68ac-4d5f-878f-390bcc7a29a7" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[#remove default network
+gcloud compute networks delete default --project livedesign-sharedservices
+#you may need to remove the automatic firewall rules first
+gcloud compute firewall-rules delete ...
+#you may need to delete auto-generated subnets first
+gcloud compute networks subnet delete ...]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<h2>
+ Service project creation
+</h2>
+<ac:structured-macro ac:macro-id="121e948f-71fb-4a23-891e-afd9d76a5332" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud projects create livedesign-jenkins --name="livedesign-jenkins" \
+  --folder="LiveDesign"]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ To enable the kubernetes API:
+</p>
+<h5>
+ <strong>
+  Kubernetes only
+ </strong>
+</h5>
+<ac:structured-macro ac:macro-id="85da5122-6f7f-4678-b37e-acc13a9b0e90" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud services enable container.googleapis.com --project livedesign-jenkins]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h3>
+ Service project association
+</h3>
+<p>
+ Next, associate the service project with the host project
+</p>
+<ac:structured-macro ac:macro-id="308e5fe2-b687-4bb8-8fc5-61ece82b101e" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud beta compute shared-vpc associated-projects add livedesign-jenkins \
+--host-project livedesign-sharedservices]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ see
+ <a href="https://cloud.google.com/vpc/docs/provisioning-shared-vpc#create-shared">
+  https://cloud.google.com/vpc/docs/provisioning-shared-vpc#create-shared
+ </a>
+ for details and some verification steps
+</p>
+<h2>
+ Creating a shared network
+</h2>
+<ac:structured-macro ac:macro-id="45d503d3-1049-45b9-8ba6-d85b98010a17" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud compute networks create shared-net \
+  --subnet-mode custom \
+  --project livedesign-sharedservices]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ I strongly recommend creating an allow all icmp rule
+</p>
+<ac:structured-macro ac:macro-id="be246d18-9702-4bac-8eb0-8a66b43a6307" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud compute firewall-rules create allow-icmp \
+  --network shared-net \
+  --allow icmp]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ Create any other network-wide rules
+</p>
+<ac:structured-macro ac:macro-id="8c3df01d-2531-44a6-b168-0af24d0577c0" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[#example rule for allowing SSH from RFC1918 private ranges
+gcloud compute firewall-rules create allow-ssh-private \
+  --network shared-net \
+  --allow tcp:22 \
+  --source-ranges 172.16.0.0/12,10.0.0.0/8]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h3>
+ Creating a subnet
+ <br/>
+</h3>
+<ac:structured-macro ac:macro-id="303a0a97-16b1-4f60-bfbb-9fb652fa5fde" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud compute networks subnets create jenkins-shared \
+--project livedesign-sharedservices \
+--network shared-net \
+--range 10.130.10.0/24 \
+--region us-east4 \
+--secondary-range jenkins-services=10.131.10.0/24,jenkins-pods=10.132.10.0/24]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ If you do not plan on using this subnet with GKE, omit the two secondary ranges (the last line)
+ <br/>
+ the secondary ranges are necessary for GKE to house the per-node subnet reservations for kubernetes services and pods
+</p>
+<p>
+</p>
+<h3>
+ Sharing a network
+</h3>
+<p>
+ First, you need to get the project numbers for the host and service projects. These are in the third column.
+</p>
+<ac:structured-macro ac:macro-id="d98951ca-c159-471c-89bf-fa1dd89f98b3" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud projects list | grep livedesign
+#<output truncated>
+livedesign-jenkins livedesign-jenkins 558000808420
+livedesign-sharedservices livedesign-sharedservices 749538089811
+#<output truncated>]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ Next, we need to get the etag for the service project's service account.
+</p>
+<ac:structured-macro ac:macro-id="e694a5dc-e875-4550-923b-8ecb1809b520" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud compute networks subnets get-iam-policy jenkins-shared \
+--project livedesign-sharedservices \
+--region us-east4
+
+#output below
+etag: ACAB]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ Create a local file called "jenkins-shared-policy.yaml" with the following contents
+</p>
+<ac:structured-macro ac:macro-id="b21a2e96-5cca-4cd8-976e-79abf9d7d4ea" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[bindings: 
+  - members:
+  - serviceAccount:558000808420@cloudservices.gserviceaccount.com
+  - serviceAccount:service-558000808420@container-engine-robot.iam.gserviceaccount.com 
+role: roles/compute.networkUser
+etag: ACAB]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ the service accounts use the project numbers we got in the beginning of this section, and the etag value should be in the output from the previous command.
+ <br/>
+ the second service account (container-engine-robot) is only necessary to include if you want to use GKE in the service project.
+</p>
+<p>
+ Now we can run
+</p>
+<ac:structured-macro ac:macro-id="22929a0f-051d-4989-b0dc-a0e5f4c2bae0" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud compute networks subnets set-iam-policy jenkins-shared \
+--project livedesign-jenkins \
+--region us-east4 jenkins-shared-policy.yml]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ Finally, you can attach the service project to the host project
+</p>
+<ac:structured-macro ac:macro-id="54e586dc-0472-4e03-9270-f032adee1268" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud compute shared-vpc associated-projects add \
+livedesign-jenkins \
+--host-project livedesign-sharedservices]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ gcloud compute shared-vpc associated-projects add \
+ <br/>
+ livedesign-jenkins \
+ <br/>
+ --host-project livedesign-sharedservices
+ <br/>
+ <br/>
+</p>
+<h2>
+ Additional GKE specific configuration
+</h2>
+<p>
+ We now need to grant the "Host Service Agent User" role to the service accounts for the service projects. This gives user-level access for GKE on the host project to the GKE service accounts in the service project.
+ <br/>
+ The official documentation for this procedure wins my yearly award for "most indecipherable documentation 2019":
+</p>
+<p style="margin-left: 30.0px;">
+ <span style="color: rgb(33,33,33);">
+  In each service project, you must grant the
+ </span>
+ <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/iam#host_service_agent_user">
+  Host Service Agent User
+ </a>
+ <span style="color: rgb(33,33,33);">
+  role to the GKE Service Account. This allows the GKE Service Account of the service project to use the GKE Service account of the host project to configure shared network resources.
+ </span>
+</p>
+<p>
+ This step is not required if you used the web console to attach the service project to the host project.
+</p>
+<ac:structured-macro ac:macro-id="268a44ca-51fc-4b8e-ac7d-8224d6a5311c" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud projects add-iam-policy-binding livedesign-sharedservices \
+  --member serviceAccount:service-558000808420@container-engine-robot.iam.gserviceaccount.com \
+  --role roles/container.hostServiceAgentUser]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ <br/>
+ if everything went well, you should be able to see everything with the container commands:
+</p>
+<ac:structured-macro ac:macro-id="d5583e48-3911-4190-9058-660a01e7c482" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud container subnets list-usable --project livedesign-jenkins --network-project livedesign-sharedservices
+#output below
+PROJECT                   REGION              NETWORK        SUBNET RANGE
+livedesign-sharedservices us-east4 shared-net jenkins-shared 10.130.10.0/24
+┌──────────────────────┬────────────────┬─────────────────────────────┐
+│ SECONDARY_RANGE_NAME │ IP_CIDR_RANGE  │ STATUS                      │
+├──────────────────────┼────────────────┼─────────────────────────────┤
+│ jenkins-pods         │ 10.132.10.0/24 │ usable for pods or services │
+│ jenkins-services     │ 10.131.10.0/24 │ usable for pods or services │
+└──────────────────────┴────────────────┴─────────────────────────────┘]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<p>
+ Finally, we can create the cluster
+</p>
+<ac:structured-macro ac:macro-id="ad314387-4259-4b82-a6be-a049cb0b748d" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[gcloud container clusters create jenkins-cluster \
+--project livedesign-jenkins \
+--zone=us-east4-a \
+--enable-ip-alias \
+--network projects/livedesign-sharedservices/global/networks/shared-net \
+--subnetwork projects/livedesign-sharedservices/regions/us-east4/subnetworks/jenkins-shared \
+--cluster-secondary-range-name jenkins-pods \
+--services-secondary-range-name jenkins-services \
+--default-max-pods-per-node=8]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<p>
+ IMPORTANT
+ <br/>
+ The max-pods-per-node setting defines how subnets are allocated. See:
+ <a href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">
+  https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr
+ </a>
+ <br/>
+ This setting is very important and must be taken into consideration when creating the shared service subnets, as their size limits the number of nodes we can create.
+</p>
+<p>
+ In other words, this setting defines the slice of each shared subnet that will be reserved when a new kubernetes node is created. There is a table mapping max-pods-per-node values to subnet reservation size.
+ <br/>
+ This is because all kubernetes IP space is pre-allocated when the node is created, so it does not matter how free/used the nodes are internally, only what this is set to.
+</p>
+<p>
+</p>
+<p>
+</p>

@@ -1,0 +1,409 @@
+<ac:structured-macro ac:macro-id="7eaa3c32-9e57-4341-ab69-444ae8a7e2df" ac:name="warning" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   This page is currently in draft. It will be announced when these features are ready for production use.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ We have the option to use GCP labels and AWS tags to define how resources are accessible via Appgate. Users can add and remove these tags at will in order to control access to the resource from Appgate.
+</p>
+<ac:structured-macro ac:macro-id="37e9920e-ad07-4f7c-932d-74dab9eb2241" ac:name="note" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   <span style="color: rgb(23,43,77);">
+    Tags are based off of our
+   </span>
+   <a href="https://schrodinger.atlassian.net/wiki/display/SYSMGR/Appgate+Inventory">
+    Appgate gateway locations
+   </a>
+   <span style="color: rgb(23,43,77);">
+    ; you may need to allow respective IPs from the gateways in order to access your resource properly if your resource uses IP safelisting.
+   </span>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h2>
+ <strong>
+  How to create a tag
+ </strong>
+</h2>
+<p>
+ Reference the below tables to create a tag for your instance or application. If you're unsure of what tag you should use, reach out to InfoSec in the
+ <a href="https://mail.google.com/chat/u/0/#chat/space/AAAAzFpUyA0">
+  Security Hotline
+ </a>
+ Google Chat channel. We generate tags using the below template;
+ <strong>
+  tags are case-sensitive.
+ </strong>
+</p>
+<p>
+ Each resource will need at least 2 tags in order to function. One tag will indicate where to route the request and another will indicate what groups of people are allowed to access which protocols groups.
+</p>
+<table ac:local-id="8f5d4d6a-b6ad-4fbb-aff9-f49dd4752cc4" data-layout="wide" data-table-width="955.2348000000001">
+ <colgroup>
+  <col style="width: 488.19px;"/>
+  <col style="width: 467.04px;"/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Tag
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Value
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     appgate-site
+    </p>
+   </td>
+   <td>
+    <p>
+     <strong>
+      Site Code
+     </strong>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     appgate-access
+    </p>
+   </td>
+   <td>
+    <p>
+     <strong>
+      Protocol Group
+     </strong>
+     and
+     <strong>
+      Department
+     </strong>
+     or
+     <strong>
+      Department Group
+     </strong>
+     separated by a dash "-"
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ <strong>
+  Site Locations
+ </strong>
+</p>
+<p>
+ In order to optimize speed and accessibility, choose a site that corresponds most closely with the instance or application you're trying to control access to. Please note that if your resource is in AWS, it
+ <strong>
+  must
+ </strong>
+ route through an AWS hosted site. Similarly if your resources are in GCP, they
+ <strong>
+  must
+ </strong>
+ route through a GCP site.
+</p>
+<table ac:local-id="188f76fb-8407-41fe-9173-57ac8f02b3bd" data-layout="wide" data-table-width="894.0024000000001">
+ <colgroup>
+  <col style="width: 216.12px;"/>
+  <col style="width: 206.89px;"/>
+  <col style="width: 240.14px;"/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Site Code
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Location
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Region
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     aite
+    </p>
+   </td>
+   <td>
+    <p>
+     AWS (IT)
+    </p>
+   </td>
+   <td>
+    <p>
+     us-east-1
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     alde
+    </p>
+   </td>
+   <td>
+    <p>
+     AWS (LiveDesign)
+    </p>
+   </td>
+   <td>
+    <p>
+     us-east-1
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     amu
+    </p>
+   </td>
+   <td>
+    <p>
+     AWS (LiveDesign)
+    </p>
+   </td>
+   <td>
+    <p>
+     ap-south-1
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     guse
+    </p>
+   </td>
+   <td>
+    <p>
+     GCP
+    </p>
+   </td>
+   <td>
+    <p>
+     US-East
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     geuw
+    </p>
+   </td>
+   <td>
+    <p>
+     GCP
+    </p>
+   </td>
+   <td>
+    <p>
+     EU-West
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     gmum
+    </p>
+   </td>
+   <td>
+    <p>
+     GCP
+    </p>
+   </td>
+   <td>
+    <p>
+     Mumbai
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     gtyo
+    </p>
+   </td>
+   <td>
+    <p>
+     GCP
+    </p>
+   </td>
+   <td>
+    <p>
+     Toyko
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ <strong>
+  Protocol Groups
+ </strong>
+</p>
+<p>
+ We group protocols by general function for the sake of simplicity. We currently support the below protocols groups but can work with you if you need additional ports or groups added. We encourage managing your own access and adding/revoking access as needed.
+</p>
+<table ac:local-id="fdfb1309-ee3f-4252-8165-fa88d3088712" data-layout="wide" data-table-width="898.6157999999999">
+ <colgroup>
+  <col style="width: 332.19px;"/>
+  <col style="width: 566.51px;"/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Protocol Group
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Port
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     admin
+    </p>
+   </td>
+   <td>
+    <p>
+     22, 3389, 5900-5910, 8443
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     web
+    </p>
+   </td>
+   <td>
+    <p>
+     443
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     db
+    </p>
+   </td>
+   <td>
+    <p>
+     3306, 5432,
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     licensing
+    </p>
+   </td>
+   <td>
+    <p>
+     <em>
+      27008, 28518, 53000
+     </em>
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ <strong>
+  Examples
+ </strong>
+</h2>
+<p>
+ Scenario #1: You have a web application hosted in GCP US-East where you'd like to expose the web UI publicly but only want it to be accessible from within Schrodinger. In this case, you'd add the below tag which will route all traffic publicly through Appgate.
+</p>
+<table ac:local-id="17518e60-0f2a-4489-9f3a-bff59c7e5825" data-layout="default" data-table-width="760">
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Tag(s)
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Description
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     appgate-site:guse
+     <br/>
+     appgate-access:web-ei
+     <br/>
+     appgate-access:admin-dev
+    </p>
+   </td>
+   <td>
+    <p>
+     Allows
+     <strong>
+      HTTPS
+     </strong>
+     access for the
+     <strong>
+      Enterprise Informatics
+     </strong>
+     department routed publicly through the IT-managed GCP region US-East.
+     <br/>
+     Allow SSH/RDP access to the "Dev" group.
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+</p>

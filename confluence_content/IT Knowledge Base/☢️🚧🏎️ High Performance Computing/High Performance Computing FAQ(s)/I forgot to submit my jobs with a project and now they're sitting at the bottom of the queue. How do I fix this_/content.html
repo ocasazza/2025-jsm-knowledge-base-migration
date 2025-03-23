@@ -1,0 +1,35 @@
+<p>
+</p>
+<p>
+ You can alter your pending jobs with the command:
+</p>
+<p>
+ qalter -P
+</p>
+<p>
+ If you want to switch all of your jobs to the same project, you can run the following command, substituting your username and project name as appropriate. Note this is all one line:
+</p>
+<p>
+ for i in
+ <code>
+  qstat -s p -u &lt;username&gt;|tail -n +3 | awk '{print $1}'
+ </code>
+ ; do qalter -P  $i; done
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="1234" ac:name="excerpt" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="name">
+   User Story
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p>
+    As a researcher, I need to know how to update the project association for my already submitted jobs so I can ensure they receive the appropriate priority in the queue.
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+</p>
+<p>
+</p>

@@ -1,0 +1,526 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for Comcast ISP on
+      <time datetime="2022-11-30">
+      </time>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           Comcast ISP for PDX
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="dac03fbd-1d75-4ca1-ad40-a0d520379c2b" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             ITINFRA-816
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         <p>
+          Portland Wifi, pdx-git
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2022-11-30">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2022-12-06">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use // for date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          List of people who had a part in reviewing or commenting on the report
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    Comcast experienced an unplanned outage on
+    <time datetime="2022-11-30">
+    </time>
+    from ~11:30a to ~3:10p local time, leading to a short interruption to Internet access via Portland's wifi network and an interruption to service between AWS us-east-1 to resources in the Portland office.
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    Comcast is our secondary, but faster, ISP in the Portland office, used as primary for wifi egress, and a special IPsec tunnel between AWS us-east-1 and PDX due to the traffic generated historically by Core Infra and LiveDesign to resources in PDX like pdx-git, reviewboard, ldap, etc. (All other traffic between AWS us-east-1 and the Schrödinger WAN transit through the IPsec tunnel to NYC.)
+   </p>
+   <p>
+    In order to mitigate traffic on the primary ISP (Cogent) Portland's wifi network and inbound build traffic are confined by firewall policies to the Comcast link. As far as I could find, this was the only unplanned outage for Comcast in years, and the only interruption since Feb 2021.
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    <time datetime="2022-11-30">
+    </time>
+    :
+   </p>
+   <ul>
+    <li>
+     11:30a : Users begin reporting that Internet access via wifi is down in Portland.
+    </li>
+    <li>
+     11:35a : IT confirms that this only affects wifi, concludes that this is likely a Comcast outage and begins gathering information to confirm.
+    </li>
+    <li>
+     11:38a :
+     <ac:link>
+      <ri:user ri:userkey="557058:c19c6239-8657-4845-b158-eec62442daf4">
+      </ri:user>
+     </ac:link>
+     switches firewall policy to route wifi traffic over Cogent link, modifies NAT rule to allow traffic to flow properly; Internet access via wifi is restored.
+    </li>
+    <li>
+     ~11:50 : Support request opened with Comcast, verification of unplanned outage.
+    </li>
+    <li>
+     1:07p : Members of the build team notify IT via IT Hotline that resources in AWS us-east-1 are not able to reach resources in PDX, IT begins researching why this might be the case. Austin notes that build resources in us-east-1 are confined to the Comcast ISP link because they were saturating the Cogent link and causing significant slowdowns for users company-wide. Work-arounds for specific problems (directory services, for example) are implemented.
+    </li>
+    <li>
+     3:10p : Comcast service restored, all systems functioning normally.
+    </li>
+   </ul>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    Portland's wifi access was moved over to Cogent link, follow up with build team to reduce reliance on any single site or service.
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe any findings (other than this report itself)
+    </ac:placeholder>
+   </p>
+   <h3>
+    Introduced Issues
+   </h3>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="bf4e56d8-8faa-489f-875c-ed1c8bbae542" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,priority,status,summary,created,updated,reporter,customfield_11008
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,priority,status,summary,created,updated,reporter,Sprint
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITINFRA-816, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    The symptoms of the problem were detected immediately by users in the Portland office, including IT, but the root problem wasn't immediately identified without background knowledge about our ISP and firewall configuration. The root problem was detected by Comcast immediately.
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    The problem was detected by Comcast who notified us via email that we were experiencing a disruption to service.
+   </p>
+   <p>
+    <span style="font-size: 16.0px;font-weight: bold;letter-spacing: -0.006em;">
+     How can detection be improved?
+    </span>
+   </p>
+   <p>
+    Tickets created to enable monitoring of the Comcast link in Portland and fix ISP notifications (see below).
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    We responded immediately.
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    We communicated with impacted users via IT Hotline, but could have been more pro-active about reaching out to affected users once we realized that resources in AWS us-east-1 were not able to reach resources in Portland.
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    Knowing which users and services are dependent on
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    The initial understanding of the scope of the impact meant that we were able to quickly respond and remediate the issue for Portland's wifi users. Having wired users on a separate ISP meant that most everyone had a simple, easy way to re-gain Internet access.
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    Redundant ISPs, correctly configured for failover (see issues below).
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    Unplanned outages from our ISPs are unavoidable, but upgrading our ISPs and firewalls to use BGP pairing with our ISP will help us ensure that ISP outages do not impact services.
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     After analyzing and talking about this incident what actions did the reviewers and management decide should be done to address shortfalls in detection, mitigation or avoidance. Use tasks, assignments and due dates or link to created jira tickets.
+    </ac:placeholder>
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="656910d3-e567-4508-bee9-ee4f6e66c5bf" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-817
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      5
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="35ffca69-a372-4c78-9eb2-55cf8bf24c1a" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-818
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      6
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="da19634d-284a-4f34-bd63-4465c88b7125" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-550
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      7
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="ab5b7eae-009b-4e69-b11c-88e598099a20" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-205
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

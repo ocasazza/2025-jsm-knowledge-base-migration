@@ -1,0 +1,302 @@
+<ac:structured-macro ac:local-id="bcc61c1d-8c96-4ebb-986a-2d25176f6756" ac:macro-id="4efc06f7d43638692b472d2864820348f6d639dc09e865adb4fee61794ba4810" ac:name="children" ac:schema-version="2" data-layout="default">
+ <ac:parameter ac:name="depth">
+  3
+ </ac:parameter>
+ <ac:parameter ac:name="allChildren">
+  true
+ </ac:parameter>
+ <ac:parameter ac:name="style">
+ </ac:parameter>
+ <ac:parameter ac:name="sortAndReverse">
+ </ac:parameter>
+ <ac:parameter ac:name="first">
+  0
+ </ac:parameter>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="0ba8c016-ac37-4007-aa27-641ca92927c1" ac:name="info" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   This page contains the recommended desktop requirements provided to IT by the DESMOND development team, broken down by use case. Depending on the workflow needs of the end user, the appropriate configuration tier should be chosen :
+   <strong>
+    High, Standard
+   </strong>
+  </p>
+  <p>
+   Not every developer uses Linux or runs into CPU-based bottlenecks for building or running unit tests, so these are tiers that you might consider based on the developer needs of the team request. This is meant to provide the best hardware to developers
+   <em>
+    as needed
+   </em>
+   rather than by default to help keep hardware costs slim. Each team should be equipped with
+   <strong>
+    at least
+   </strong>
+   one developer or shared desktop for doing some development and testing on Linux. If that means a team just has a single mid-tier desktop, or many mid-tier desktops with a single high-tier desktop this is considered acceptable.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h2>
+ GPUs
+</h2>
+<p>
+ A separate compute GPU (separate from the graphics GPU) is not required for order unless the team requesting heavily utilizes it. Teams that might want a GPU are those that work directly on or develop workflows for GPU-based back ends (like Desmond and some of the active learning workflows). This recommendation helps keep overall hardware costs low and allows us to recommend more capable CPU and RAM more broadly.
+</p>
+<p>
+ If you need  GPU-based computations are needed only occasionally, utilizing our cluster as much as possible first is recommended. If the end-user could benefit from having another GPU in their desktop, it can always be ordered and seated later in which case see the recommendations for the Desmond GPU RTX 4000 Ada at this time for the High Tier build.
+</p>
+<p>
+ Devs need an approx. minimum of 8GB GPU memory.
+</p>
+<p>
+</p>
+<ac:adf-extension>
+ <ac:adf-node type="panel">
+  <ac:adf-attribute key="panel-type">
+   note
+  </ac:adf-attribute>
+  <ac:adf-content>
+   <p>
+    <strong>
+     Important:
+    </strong>
+    Both desktop specifications can be equipped with a compute GPU. The primary distinction between the different workstation models lies in the CPU, RAM, and GPU configurations. That being said, either workstation model can be enhanced with a GPU specifically for computational purposes, depending on the required workload.
+   </p>
+  </ac:adf-content>
+ </ac:adf-node>
+ <ac:adf-fallback>
+  <div class="panel conf-macro output-block" style="background-color: rgb(234,230,255);border-color: rgb(153,141,217);border-width: 1.0px;">
+   <div class="panelContent" style="background-color: rgb(234,230,255);">
+    <p>
+     <strong>
+      Important:
+     </strong>
+     Both desktop specifications can be equipped with a compute GPU. The primary distinction between the different workstation models lies in the CPU, RAM, and GPU configurations. That being said, either workstation model can be enhanced with a GPU specifically for computational purposes, depending on the required workload.
+    </p>
+   </div>
+  </div>
+ </ac:adf-fallback>
+</ac:adf-extension>
+<table ac:local-id="8f44e525-428d-4bb6-8de3-fb1eed4bc774" data-layout="full-width" data-table-width="1800">
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Configuration Tier
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Use Case
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Hardware Specs
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <strong>
+      High
+     </strong>
+    </p>
+   </td>
+   <td>
+    <p>
+     Primarily works on Linux and work on compiled code. End-user frequently builds the core suite and (optionally) needs a high-end GPU to develop for or run molecular dynamics jobs. Well suited for end-users that encounter clean builds multiple times a week.
+    </p>
+    <p>
+    </p>
+    <p>
+     Teams this might apply to:
+    </p>
+    <ul>
+     <li>
+      <p>
+       DESMOND back end
+      </p>
+     </li>
+     <li>
+      <p>
+       Jaguar back end
+      </p>
+     </li>
+     <li>
+      <p>
+       Glide/Skate back end
+      </p>
+     </li>
+     <li>
+      <p>
+       PSP back end
+      </p>
+     </li>
+     <li>
+      <p>
+       Scientific Infrastructure
+      </p>
+     </li>
+     <li>
+      <p>
+       Maestro back end
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     <strong>
+      CPU
+     </strong>
+     : Intel Xeon W5-2465X [16 physical cores/32 threads]
+    </p>
+    <p>
+     <strong>
+      Compute GPU:
+     </strong>
+     Nvidia RTX 4000 SFF Ada
+    </p>
+    <p>
+     <strong>
+      Desktop Chassis : 1350W
+     </strong>
+    </p>
+    <p>
+     <strong>
+      RAM
+     </strong>
+     : 4 x 16 GB
+    </p>
+    <p>
+     <strong>
+      Boot Drive
+     </strong>
+     : 512 GB
+    </p>
+    <p>
+     <strong>
+      Second Storage Drive
+     </strong>
+     : 2 TB (NVMe)
+    </p>
+    <p>
+     <strong>
+      Graphics GPU:
+     </strong>
+     Existing GPU card swapped from previous workstation or A2000
+    </p>
+    <p>
+     <a href="https://schrodinger.atlassian.net/wiki/x/a4RLAw">
+      High Tier Configuration - Dell Order
+     </a>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <strong>
+      Standard
+     </strong>
+    </p>
+   </td>
+   <td>
+    <p>
+     Primarily works on Mac or Windows, but still makes use of Linux and works on some compiled code, but mostly in python.
+    </p>
+    <p>
+     End-user usually builds the core suite if there's a failed NB, out-of-date swig wrapper, etc. They mostly work with a couple of unit tests and can benefit from extra parallelization when running all core suite unit tests, but don't do so all that often.
+    </p>
+    <p>
+     Teams this might apply to:
+    </p>
+    <ul>
+     <li>
+      <p>
+       DESMOND workflow
+      </p>
+     </li>
+     <li>
+      <p>
+       Jaguar workflow
+      </p>
+     </li>
+     <li>
+      <p>
+       Glide/Skate workflow
+      </p>
+     </li>
+     <li>
+      <p>
+       Scientific Infrastructure
+      </p>
+     </li>
+     <li>
+      <p>
+       Everyone else in the Core Suite
+      </p>
+     </li>
+    </ul>
+   </td>
+   <td>
+    <p>
+     <strong>
+      CPU
+     </strong>
+     : Intel Xeon W3-2435X [8 physical cores/16 threads]
+    </p>
+    <p>
+     <strong>
+      Compute/Graphics GPU:
+     </strong>
+     Nvidia RTX A2000 (RTX 2000 Ada not currently available yet)
+    </p>
+    <p>
+     <strong>
+      Desktop Chassis : 1350W
+     </strong>
+    </p>
+    <p>
+     <strong>
+      RAM
+     </strong>
+     : 2 x 16 GB
+    </p>
+    <p>
+     <strong>
+      Boot Drive
+     </strong>
+     : 512 GB
+    </p>
+    <p>
+     <strong>
+      Second Storage Drive
+     </strong>
+     : 2 TB (NVMe)
+    </p>
+    <p>
+     <a data-card-appearance="inline" href="https://schrodinger.atlassian.net/wiki/spaces/SYSMGR/pages/92078109">
+      https://schrodinger.atlassian.net/wiki/spaces/SYSMGR/pages/92078109
+     </a>
+    </p>
+    <p>
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+</p>
+<p>
+</p>

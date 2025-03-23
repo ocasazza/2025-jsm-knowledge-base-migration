@@ -1,0 +1,682 @@
+<p>
+ How to setup and use the Okta integration for AWS CLI usage
+</p>
+<ac:structured-macro ac:local-id="1bfd0203-78cf-4d67-b45a-055dd8e35f6c" ac:macro-id="e4e2d1b9-eb9c-4405-a380-bdf7c7123689" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h2>
+ Setup
+</h2>
+<h3>
+ Assumptions
+</h3>
+<ol start="1">
+ <li>
+  <p>
+   <a href="https://brew.sh/">
+    brew
+   </a>
+   is already installed, if you want to use it
+  </p>
+ </li>
+ <li>
+  <p>
+   <code>
+    python3
+   </code>
+   is already installed
+  </p>
+ </li>
+ <li>
+  <p>
+   python virtual environments are understood enough to create them as needed, including any shell integrations
+  </p>
+ </li>
+ <li>
+  <p>
+   Anyone who wants to use a Yubikey for MFA can update this with those details
+  </p>
+ </li>
+</ol>
+<h3>
+ Steps
+</h3>
+<ul>
+ <li>
+  <p>
+   Install the AWS CLI package, either using the
+   <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">
+    AWS docs
+   </a>
+   or
+   <a href="https://formulae.brew.sh/formula/awscli">
+    brew
+   </a>
+   .
+  </p>
+  <ul>
+   <li>
+    <p>
+     <code>
+      brew install awscli
+     </code>
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   Decide if you're going to use one venv for all aws work or multiple venvs.  Repeat as needed for each venv.
+  </p>
+  <ul>
+   <li>
+    <p>
+     The config will be stored in ~/.okta-aws so you should only need to do the install in subsequent venvs, not the config
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   Activate the venv
+  </p>
+ </li>
+ <li>
+  <p>
+   Install
+   <a href="https://github.com/okta-awscli/okta-awscli#installation">
+    okta-awscli
+   </a>
+   (and dependencies)
+  </p>
+  <ul>
+   <li>
+    <p>
+     <code>
+      pip3 install okta-awscli
+     </code>
+    </p>
+   </li>
+  </ul>
+ </li>
+</ul>
+<h3>
+ Config
+</h3>
+<ul>
+ <li>
+  <p>
+   First time only, create the config file
+  </p>
+  <ul>
+   <li>
+    <p>
+     <code>
+      okta-awscli --config
+     </code>
+    </p>
+   </li>
+  </ul>
+ </li>
+</ul>
+<table ac:local-id="2d988dc0-9c76-4ee5-8264-3b9e17742629" data-layout="full-width" data-table-width="1125">
+ <colgroup>
+  <col style="width: 104.0px;"/>
+  <col style="width: 542.0px;"/>
+  <col style="width: 479.0px;"/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Option
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Example
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Elaboration
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Okta profile name
+    </p>
+   </td>
+   <td>
+    <p>
+     default
+    </p>
+   </td>
+   <td>
+    <p>
+     Name of stanza to create in ~/.okta-aws, specified with okta-awscli -o
+    </p>
+    <p>
+     "default" should work for practically everyone.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     AWS profile name
+    </p>
+   </td>
+   <td>
+    <p>
+     default OR ${profile_name}
+    </p>
+   </td>
+   <td>
+    <p>
+     name of stanza to create in ~/.aws/credentials, can specify with AWS_PROFILE
+    </p>
+    <p>
+     "default" should be fine for most people.  If you have multiple AWS IAM profiles, this sentence makes sense to you and you should provide a unique profile name.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Okta base url
+    </p>
+   </td>
+   <td>
+    <p>
+     schrodinger.okta.com
+    </p>
+   </td>
+   <td>
+    <p>
+     hostname for Okta server
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Okta username
+    </p>
+   </td>
+   <td>
+    <p>
+     <a href="mailto:first.last@schrodinger.com">
+      first.last@schrodinger.com
+     </a>
+     OR first.last
+    </p>
+   </td>
+   <td>
+    <p>
+     Username to log into Okta with
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     AWS app-link
+    </p>
+   </td>
+   <td>
+    <p>
+     <a href="https://schrodinger.okta.com/app/amazon_aws/exk47o08bxsyJELlM2p7/sso/saml">
+      https://schrodinger.okta.com/app/amazon_aws/exk47o08bxsyJELlM2p7/sso/saml
+     </a>
+    </p>
+   </td>
+   <td>
+    <p>
+     API endpoint to auth AWS with at Okta
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Duration
+    </p>
+   </td>
+   <td>
+    <p>
+     3600
+    </p>
+   </td>
+   <td>
+    <p>
+     Current Schrödinger max session is 1 hour
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <em>
+      role
+     </em>
+    </p>
+   </td>
+   <td>
+    <p>
+     <em>
+      arn:aws:iam::350309565184:role/User
+     </em>
+    </p>
+   </td>
+   <td>
+    <p>
+     This is NOT asked for when using the --config flag
+    </p>
+    <p>
+     The AWS arn for the role to authenticate, a list of all available roles will be provided during first use and added to the config file.
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ the config file,
+ <code>
+  ~/.okta-aws
+ </code>
+ , can also be created manually
+</p>
+<h2>
+ Usage
+</h2>
+<p>
+ run
+ <code>
+  okta-awscli
+ </code>
+ to authenticate against Okta and get STS session credentials for 1 hour inserted into ~/.aws/credentials.  Advanced setups may need to specify the Okta profile (-o) and/or the AWS profile (-p).
+</p>
+<ol start="1">
+ <li>
+  <p>
+   You will be asked for your password, this is your Okta password.
+  </p>
+ </li>
+ <li>
+  <p>
+   You will be asked for a MFA method, push to the phone app, or TOTP2
+  </p>
+ </li>
+ <li>
+  <p>
+   <strong>
+    The first time
+   </strong>
+   , you will be asked for which one of your available AWS roles you want to authorize, even if you only have one.  This choice is added to ~/.okta-aws as "role"
+  </p>
+ </li>
+</ol>
+<p>
+ Now you can run awscli commands just like with a static api access key and secret, like
+ <code>
+  aws s3 ls
+ </code>
+ , or
+ <code>
+  aws sts get-caller-identity
+ </code>
+ , which is a good test.
+</p>
+<h3>
+ Session Timeout
+</h3>
+<p>
+ Under current Schrödinger setup, you'll need to re-authenticate every hour.  If this is an impediment to your work, there are some options.  Which AWS account you are working in matters, IT Infra can help with the SYSMGR AWS account and we've gotten pre-approval from InfoSec for 4 hour sessions.
+</p>
+<ol start="1">
+ <li>
+  <p>
+   IT INFRA can increase the time to 4 hours in the SYSMGR account (350309565184), please open an ITINFRA ticket, and provide the full role ARN.
+  </p>
+ </li>
+ <li>
+  <p>
+   In other accounts (see the output of
+   <code>
+    aws sts get-caller-identity
+   </code>
+   ), you will need to coordinate with the account owner and InfoSec.
+  </p>
+ </li>
+</ol>
+<p>
+ If you want an even longer session, please open an INFOSEC ticket requesting an increase.  You must include the full ARN for the role.  (It should be listed in the ~/.okta-aws file, and is also visible after clicking the AWS tile in Okta if you have multiple roles.)  After Info Sec approval, some combination of Info Sec and the AWS Account Owner will increase the session timeout.
+</p>
+<h2>
+ References
+</h2>
+<p>
+ <a href="https://github.com/okta-awscli/okta-awscli">
+  https://github.com/okta-awscli/okta-awscli
+ </a>
+</p>
+<p>
+ <sup>
+  $ okta-awscli --help
+ </sup>
+ <br/>
+ <sup>
+  Usage: okta-awscli [OPTIONS] [AWSCLI_ARGS]...
+ </sup>
+ <br/>
+ <br/>
+ <sup>
+  Authenticate to awscli using Okta
+ </sup>
+ <br/>
+ <br/>
+ <sup>
+  Options:
+ </sup>
+ <br/>
+ <sup>
+  -v, --verbose            Enables verbose mode
+ </sup>
+ <br/>
+ <sup>
+  -V, --version            Outputs version number and sys.exits
+ </sup>
+ <br/>
+ <sup>
+  -d, --debug              Enables debug mode
+ </sup>
+ <br/>
+ <sup>
+  -f, --force              Forces new STS credentials. Skips STS credentials
+ </sup>
+ <br/>
+ <sup>
+  validation.
+ </sup>
+ <br/>
+ <sup>
+  -o, --okta-profile TEXT  Name of the profile to use in .okta-aws. If none is
+ </sup>
+ <br/>
+ <sup>
+  provided, then the default profile will be used.
+ </sup>
+ <br/>
+ <sup>
+  -p, --profile TEXT       Name of the profile to store temporary credentials
+ </sup>
+ <br/>
+ <sup>
+  in ~/.aws/credentials. If profile doesn't exist, it
+ </sup>
+ <br/>
+ <sup>
+  will be created. If omitted, credentials will
+ </sup>
+ <br/>
+ <sup>
+  output to console.
+ </sup>
+ <br/>
+ <sup>
+  -c, --cache              Cache the default profile credentials to ~/.okta-
+ </sup>
+ <br/>
+ <sup>
+  credentials.cache
+ </sup>
+ <br/>
+ <sup>
+  -r, --refresh-role       Refreshes the AWS role to be assumed
+ </sup>
+ <br/>
+ <sup>
+  -t, --token TEXT         TOTP token from your authenticator app
+ </sup>
+ <br/>
+ <sup>
+  -l, --lookup             Look up AWS account names
+ </sup>
+ <br/>
+ <sup>
+  -U, --username TEXT      Okta username
+ </sup>
+ <br/>
+ <sup>
+  -P, --password TEXT      Okta password
+ </sup>
+ <br/>
+ <sup>
+  --config                 Okta config initialization/addition
+ </sup>
+ <br/>
+ <sup>
+  -s, --switch             Switch to another okta profile and refresh the
+ </sup>
+ <br/>
+ <sup>
+  token
+ </sup>
+ <br/>
+ <sup>
+  --help                   Show this message and exit.
+ </sup>
+</p>
+<h2>
+ Troubleshooting
+</h2>
+<h3>
+ Basic Sanity Checks
+</h3>
+<ul>
+ <li>
+  <p>
+   Verify that the user can log in to the GUI console via the Okta tile at
+   <a href="https://schrodinger.okta.com">
+    https://schrodinger.okta.com
+   </a>
+   <br/>
+   This should be a quick, simple step to make sure that the user is a member of the proper Okta groups, and the AWS configuration is valid for the role.
+   <br/>
+   Make a note of the AWS account id and role the user chooses on the list of AWS accounts and roles the user has access to.  And verify that these are the same as what the user is choosing when running
+   <code>
+    okta-awscli
+   </code>
+   .
+   <br/>
+   If the GUI login doesn't work, transfer/create the Freshservice ticket to ITDW with the AWS account id and role.
+  </p>
+ </li>
+ <li>
+  <p>
+   When testing, use
+   <code>
+    aws sts get-caller-identity --debug
+   </code>
+   instead of any other sub-commands.  This is simple, and only involves the STS service, and not anything else that might or might not be attached to the AWS role.  (A successful console login means that the role has the necessary STS permissions.)
+  </p>
+ </li>
+</ul>
+<h3>
+ Software Updates
+</h3>
+<ul>
+ <li>
+  <p>
+   If the user is getting any warnings or messages about using a deprecated version of python, upgrade the python version as indicated.
+  </p>
+ </li>
+ <li>
+  <p>
+   Find out what version of
+   <code>
+    okta-awscli
+   </code>
+   the user is running, for most people
+   <code>
+    okta-awscli --version
+   </code>
+   or
+   <code>
+    pip3 list | grep okta
+   </code>
+   should give the version.  If neither does, ask the user to upgrade/reinstall, including all dependencies, both python (example: requests) and aws (awscli, boto3)
+   <br/>
+   Compare this to the current release on
+   <a href="https://github.com/okta-awscli/okta-awscli/releases/">
+    https://github.com/okta-awscli/okta-awscli/releases/
+   </a>
+   if it's not the current release, ask the user to upgrade/re-install.
+   <br/>
+   We can only support the latest release.
+  </p>
+ </li>
+</ul>
+<h3>
+ General Steps
+</h3>
+<ul>
+ <li>
+  <p>
+   Identify which program is throwing the error,
+   <code>
+    okta-awscli
+   </code>
+   or
+   <code>
+    aws
+   </code>
+   .  Both programs have a
+   <code>
+    --debug
+   </code>
+   flag which should be used.
+  </p>
+ </li>
+ <li>
+  <p>
+   Make sure the workstation/laptop has the correct time
+  </p>
+ </li>
+ <li>
+  <p>
+   When
+   <code>
+    okta-awscli
+   </code>
+   finishes, it will update
+   <code>
+    ~/.aws/credentials
+   </code>
+   , so check to make sure the timestamp of that file has changed.
+  </p>
+ </li>
+</ul>
+<h4>
+ okta-awscli
+</h4>
+<ul>
+ <li>
+  <p>
+   Search the GitHub issues
+   <a href="https://github.com/okta-awscli/okta-awscli/issues?q=is%3Aissue">
+    https://github.com/okta-awscli/okta-awscli/issues?q=is%3Aissue
+   </a>
+  </p>
+ </li>
+</ul>
+<h4>
+ aws
+</h4>
+<ul>
+ <li>
+  <p>
+   Sometimes clearing the troublesome profile out of
+   <code>
+    ~/.aws/credentials
+   </code>
+   and re-running
+   <code>
+    okta-awscli
+   </code>
+   has helped.
+  </p>
+ </li>
+ <li>
+  <p>
+   Find out what version of
+   <code>
+    aws
+   </code>
+   the user is running,
+   <code>
+    aws --version
+   </code>
+   <br/>
+   Look at the troubleshooting section of the appropriate CLI user guide, linked below.
+  </p>
+ </li>
+</ul>
+<p>
+ Most of the time, upgrading okta-awscli and all related packages solves the problem.  If there are still issues, have the user create a Freshservice ticket if there isn't one already, and transfer it to ITDW for the next round of investigation.  Please include details of the above steps.
+</p>
+<h2>
+ See Also
+</h2>
+<ul>
+ <li>
+  <p>
+   <ac:link>
+    <ri:page ri:content-title="Setup Okta AWSCLI" ri:space-key="SA" ri:version-at-save="6">
+    </ri:page>
+    <ac:link-body>
+     Setup Okta AWSCLI
+    </ac:link-body>
+   </ac:link>
+  </p>
+ </li>
+ <li>
+  <p>
+   <ac:link>
+    <ri:page ri:content-title="Authenticating using okta-awscli" ri:space-key="~rdiep" ri:version-at-save="1">
+    </ri:page>
+    <ac:link-body>
+     Authenticating using okta-awscli
+    </ac:link-body>
+   </ac:link>
+  </p>
+ </li>
+ <li>
+  <p>
+   AWS CLI v2 Troubleshooting
+   <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-troubleshooting.html">
+    https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-troubleshooting.html
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   AWS CLI v1 Troubleshooting
+   <a href="https://docs.aws.amazon.com/cli/v1/userguide/cli-chap-troubleshooting.html">
+    https://docs.aws.amazon.com/cli/v1/userguide/cli-chap-troubleshooting.html
+   </a>
+  </p>
+ </li>
+</ul>
+<p>
+</p>
+<p>
+</p>

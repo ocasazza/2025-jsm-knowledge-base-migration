@@ -1,0 +1,249 @@
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="fed24556-f82b-4fdd-a414-34a256823472" ac:name="excerpt" ac:schema-version="1">
+ <ac:parameter ac:name="atlassian-macro-output-type">
+  INLINE
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   <ac:placeholder>
+    Describe when someone would need this information. For example "when connecting to wi-fi for the first time".
+   </ac:placeholder>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h1>
+ JQL functions
+</h1>
+<p>
+ There are "functions" available in JQL, which is what's used when filtering issues in JIRA:
+ <a href="https://support.atlassian.com/jira-software-cloud/docs/jql-functions/">
+  https://support.atlassian.com/jira-software-cloud/docs/jql-functions/
+ </a>
+</p>
+<p>
+ So you can search for issues in the current sprint with
+</p>
+<ac:structured-macro ac:macro-id="9e3104df-3114-4a67-86a5-673550c16714" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[sprint in openSprints()]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ <br/>
+</p>
+<h1>
+ ScriptRunner functions
+</h1>
+<p>
+ You can use some ScriptRunner functions for more advanced searching. Functions can be found on
+ <a href="https://docs.adaptavist.com/sr4js/latest/features/jql-functions/included-jql-functions">
+  https://docs.adaptavist.com/sr4js/latest/features/jql-functions/included-jql-functions
+ </a>
+ . To see differences in ScriptRunner functionality between Jira Server vs. Jira Cloud, see
+ <a href="https://scriptrunner-docs.connect.adaptavist.com/jiracloud/migrating.html#_feature_parity">
+  https://scriptrunner-docs.connect.adaptavist.com/jiracloud/migrating.html#_feature_parity
+ </a>
+ .
+</p>
+<h2>
+ Example: How to search Jira for issues where you commented
+</h2>
+<ol>
+ <li>
+  <p class="auto-cursor-target">
+   For example, to find issues where you commented in the last four weeks
+   <span>
+    , in Jira, under Issues→Search for issues, you'd enter:
+    <br/>
+   </span>
+  </p>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="62ccc626-fd5f-4acb-9ae2-21f1faa517ea" ac:name="code" ac:schema-version="1">
+   <ac:plain-text-body>
+    <![CDATA[issueFunction in commented("by currentuser() after -4w") ORDER BY updated DESC]]>
+   </ac:plain-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <a href="https://schrodinger.atlassian.net/issues/?jql=issueFunction%20in%20commented(%22by%20currentuser()%20after%20-4w%22)%20ORDER%20BY%20updated%20DESC">
+    https://jira.schrodinger.com/issues/?jql=issueFunction%20in%20commented(%22by%20currentuser()%20after%20-4w%22)%20ORDER%20BY%20updated%20DESC
+   </a>
+  </p>
+ </li>
+</ol>
+<ac:structured-macro ac:macro-id="48796dde-e8cc-49cb-b2c3-972b35660c25" ac:name="info" ac:schema-version="1">
+ <ac:rich-text-body>
+  <ac:placeholder>
+   You may also want to use visual panels to communicate related information, tips or things users need to be aware of.
+  </ac:placeholder>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ <br/>
+</p>
+<h2>
+ Ops-ready checklist
+</h2>
+<ac:structured-macro ac:macro-id="122d7044-b1e7-4340-bb35-c80d8fe39b13" ac:name="expand" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="6f3b678a-ffef-4f02-9f32-4efbf60eb693" ac:name="details" ac:schema-version="1">
+   <ac:parameter ac:name="id">
+    ops-ready
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+    <table class="wrapped">
+     <colgroup>
+      <col/>
+      <col/>
+     </colgroup>
+     <tbody>
+      <tr>
+       <th colspan="1">
+        Service
+       </th>
+       <td colspan="1">
+        <ac:placeholder>
+         Link to the service page(s) that the procedure covers.
+        </ac:placeholder>
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Edited for clarity
+       </th>
+       <td>
+        <ac:placeholder>
+         Put the '@mention' of the person who edited the page to make it initially ops-ready and the '//date'
+        </ac:placeholder>
+       </td>
+      </tr>
+      <tr>
+       <th>
+        <p>
+         Training given to
+        </p>
+       </th>
+       <td>
+        <ac:placeholder>
+         Put the '@mention' of the person(s) on the ops team to receive training and the '//date'  they received it.
+        </ac:placeholder>
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Training provided by
+       </th>
+       <td>
+        <ac:placeholder>
+         Put the '@mention' of the person who provided the training
+        </ac:placeholder>
+       </td>
+      </tr>
+      <tr>
+       <th colspan="1">
+        Training video
+       </th>
+       <td colspan="1">
+        <ac:placeholder>
+         Link to a screen capture or video recording, if there is one, of the training
+        </ac:placeholder>
+       </td>
+      </tr>
+      <tr>
+       <th colspan="1">
+        Ops-ready date
+       </th>
+       <td colspan="1">
+        <ac:placeholder>
+         '//date' of when the above were completed and the procedure became 'ops-ready'. Tag the page and add the banner.
+        </ac:placeholder>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h2>
+ Related articles
+</h2>
+<p>
+ <ac:placeholder>
+  Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+ </ac:placeholder>
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="7d041d5f-dbb1-4a8a-883b-a0278467cea9" ac:name="contentbylabel" ac:schema-version="4">
+  <ac:parameter ac:name="showLabels">
+   false
+  </ac:parameter>
+  <ac:parameter ac:name="max">
+   5
+  </ac:parameter>
+  <ac:parameter ac:name="spaces">
+   SYSMGR
+  </ac:parameter>
+  <ac:parameter ac:name="showSpace">
+   false
+  </ac:parameter>
+  <ac:parameter ac:name="sort">
+   modified
+  </ac:parameter>
+  <ac:parameter ac:name="reverse">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="type">
+   page
+  </ac:parameter>
+  <ac:parameter ac:name="cql">
+   label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+  </ac:parameter>
+  <ac:parameter ac:name="labels">
+   kb-how-to-article
+  </ac:parameter>
+ </ac:structured-macro>
+</p>
+<ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <table class="wrapped">
+   <tbody>
+    <tr>
+     <th>
+      Related issues
+     </th>
+     <td>
+      <br/>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>

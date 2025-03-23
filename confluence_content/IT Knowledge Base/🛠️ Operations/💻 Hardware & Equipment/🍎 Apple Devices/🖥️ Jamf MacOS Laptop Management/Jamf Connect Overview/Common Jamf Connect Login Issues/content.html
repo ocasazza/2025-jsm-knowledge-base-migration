@@ -1,0 +1,134 @@
+<p>
+</p>
+<table ac:local-id="8a380be1-80bb-406b-b4c7-e6a869d28a13" data-layout="full-width" data-table-width="1054.7496">
+ <colgroup>
+  <col style="width: 516.93px;"/>
+  <col style="width: 538.0px;"/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Issue
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Solution/Comments
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     User Never sees the Jamf Connect screen
+    </p>
+   </td>
+   <td>
+    <p>
+     The WiFi was not connected during laptop preference set up.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     User types in their email address and Okta password and a blank screen shows up afterwards.
+    </p>
+   </td>
+   <td>
+    <p>
+     Check the user's Okta profile has the
+     <strong>
+      Jamf
+     </strong>
+     application assigned to them. If not, please assign that application to their account.
+    </p>
+    <p>
+     If that does not work, check their Active Directory account is enabled. If it is disabled, please enable their account and run a Full Import in Okta under the
+     <strong>
+      Directory Integrations
+     </strong>
+     tab for Active Directory.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Returning user can not sign in
+    </p>
+   </td>
+   <td>
+    <p>
+     Check the user's Okta profile if they have any previous 2Factor Authentications still registered. If so, reset them and have the user set it up again.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     User forgot Okta password and still can not log in with Temporary Password
+    </p>
+   </td>
+   <td>
+    <p>
+     The laptop recovery key may be used here (found in Jamf). Although there are a few steps that we have to do to bypass the Jamf Login screen.
+    </p>
+    <ol start="1">
+     <li>
+      <p>
+       Boot into Recovery Mode
+      </p>
+     </li>
+     <li>
+      <p>
+       From the menu bar, click Utilities &gt; Terminal.
+      </p>
+     </li>
+     <li>
+      <p>
+       In Terminal, execute the following commands:
+      </p>
+     </li>
+    </ol>
+    <p>
+     <sup>
+      cd /Volumes/Macintosh\ HD/var/db/
+    rm ./auth.db
+    rm ./auth.db-shm
+    rm ./auth.db-wal
+     </sup>
+     <br/>
+     <br/>
+     <sup>
+      5. Restart the computer by executing the following command:
+     </sup>
+     <br/>
+     <sup>
+      shutdown -r now
+     </sup>
+    </p>
+    <p>
+     The computer restarts and the native macOS login window displays.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+    </p>
+   </td>
+   <td>
+    <p>
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+</p>

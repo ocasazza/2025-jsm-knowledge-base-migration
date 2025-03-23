@@ -1,0 +1,371 @@
+<p>
+ <ac:structured-macro ac:macro-id="87420e27-9896-49f2-9459-101fa579f636" ac:name="toc" ac:schema-version="1">
+ </ac:structured-macro>
+</p>
+<h3>
+ Explanation
+</h3>
+<p>
+ The below examples are all meant to be used inside of NetSuite "Formula" type Saved Search fields.  They are essentially Oracle SQL expressions but also utilize many of NetSuite's idiosyncratic functions and behaviors.
+</p>
+<h5>
+ Adding embedded HTML links to a record to mimic the default NetSuite column.
+</h5>
+<p>
+ Transaction
+</p>
+<ac:structured-macro ac:macro-id="62a17a46-7119-40ea-9bb3-34d58497bd12" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[Formula Text: '<a target="_blank" href="/app/accounting/transactions/transaction.nl?id=' || {internalid} || '">View</a>' || '|' || '<a target="_blank" href="/app/accounting/transactions/transaction.nl?id=' ||{internalid} || '&e=T">Edit</a>']]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<p>
+ Customer
+</p>
+<ac:structured-macro ac:macro-id="186c81fc-059e-4e1f-9e8e-9463d39d813d" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[Formula Text: '<a target="_blank" href="/app/common/entity/custjob.nl?id=' || {internalid} || '">View</a>' || '|' || '<a target="_blank" href="/app/common/entity/custjob.nl?id=' || {internalid} || '&e=T">Edit</a>']]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h5>
+ <br/>
+ Pulling out a single value from multiple values (especially when GROUPing)
+</h5>
+<ac:structured-macro ac:macro-id="d33666b7-b052-4502-9f4d-4798bda97155" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[CASE  WHEN INSTR({salesteamrole}, 'App Sci') != 0 THEN {salesteammember} ELSE '' END   ]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="9e960daf-23a3-4e15-ad92-667b8e962bb6" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[NVL2(NULLIF({item},'NS Item Group'), '',{memo})]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="b24c4956-1fa1-4e3b-83c6-6e2623ef4d2d" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[CASE WHEN INSTR({custrecord_sa_employee}, 'Laszczak') != 0 AND INSTR({custrecord_sa_country}, 'Poland') != 0 THEN 0 WHEN INSTR({custrecord_sa_employee}, 'Paul Davie') != 0 THEN ( {custrecord_sa_parent_transaction.amount} * {custrecord_sa_contribution})   WHEN INSTR({custrecord_sa_employee.departmentnohierarchy}, 'Sales - US+') != 0 AND INSTR({custrecord_sa_employee}, 'Keefe') = 0  AND INSTR({custrecord_sa_employee}, 'Index') = 0  THEN  ( {custrecord_sa_parent_transaction.amount} * {custrecord_sa_contribution}) ELSE 0 END]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ Summary Filter for showing either of two possible situations.
+</p>
+<table class="wrapped">
+ <colgroup>
+  <col/>
+  <col/>
+  <col/>
+  <col/>
+  <col/>
+  <col/>
+  <col/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <td>
+    (
+   </td>
+   <td>
+    Maximum
+   </td>
+   <td>
+    Principal Account Scientist (Custom)
+   </td>
+   <td>
+    is not empty
+   </td>
+   <td>
+    <br/>
+   </td>
+   <td>
+    <br/>
+   </td>
+   <td>
+    Or
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <br/>
+   </td>
+   <td>
+    <br/>
+   </td>
+   <td>
+    Maximum
+   </td>
+   <td>
+    Formula (Text)
+   </td>
+   <td>
+    is not empty
+   </td>
+   <td>
+    CASE WHEN INSTR({custrecord_sa_parent_customer.custrecord_sa_sales_role}, 'App Sci') != 0 THEN {custrecord_sa_parent_customer.custrecord_sa_employee} ELSE '' END
+   </td>
+   <td>
+    )
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h5>
+ Pulling out a single value from the Sales Team but count values using the Sales Team+ (especially when GROUPing)
+</h5>
+<ac:structured-macro ac:macro-id="4b1741f6-eaba-454a-9cb4-73f914b68a95" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[MAX: CASE  WHEN INSTR({salesteamrole}, 'App Sci') != 0 THEN {salesteammember} ELSE '' END   
+COUNT: CASE  WHEN INSTR({custrecord_sa_parent_customer.custrecord_sa_sales_role}, 'App Sci') != 0 THEN {custrecord_sa_parent_customer.custrecord_sa_employee} ELSE '' END  ]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<h5 class="auto-cursor-target">
+ Different Treatment for different values
+</h5>
+<div>
+ <p class="auto-cursor-target">
+  <br/>
+ </p>
+ <ac:structured-macro ac:macro-id="d2bbfa3d-7a15-4eb6-8597-e56e490f2ae7" ac:name="code" ac:schema-version="1">
+  <ac:parameter ac:name="language">
+   sql
+  </ac:parameter>
+  <ac:plain-text-body>
+   <![CDATA[CASE {item.internalid} WHEN 128 THEN NVL2({custcol_list_price}, -1 *{custcol_list_price} , -1 * {amount}) WHEN 129 THEN NVL2({custcol_list_price},-1 *{custcol_list_price}, -1 * {amount}) ELSE {amount} END]]>
+  </ac:plain-text-body>
+ </ac:structured-macro>
+ <p class="auto-cursor-target">
+  <br/>
+ </p>
+</div>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<h5 class="auto-cursor-target">
+ Comparing Time of Day
+</h5>
+<p class="auto-cursor-target">
+ Seconds since record was last modified (Assumes "Last Modified = Today"!  This math ONLY COUNTS THE SECONDS FOR CURRENT DAY - for example midnight will be exactly 0 and not a large integer reflecting the Unix Timestamp)
+</p>
+<ac:structured-macro ac:macro-id="308f2347-2495-431a-970c-787bdf2fbf40" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[Formula Numeric: (to_number(to_char({now}, 'SSSSS')) - to_number(to_char({lastmodifieddate}, 'SSSSS')))]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<div>
+ <p>
+  <br/>
+ </p>
+ <h5 class="auto-cursor-target">
+  Comparing Dates (Days, Months, and Years)
+ </h5>
+</div>
+<div>
+ Days
+ <br/>
+ <ac:structured-macro ac:macro-id="7a3054ac-939b-4cee-88c7-99d242087b63" ac:name="code" ac:schema-version="1">
+  <ac:parameter ac:name="language">
+   sql
+  </ac:parameter>
+  <ac:plain-text-body>
+   <![CDATA[Formula Numeric: {custcol_term_end_date}-{custcol_term_start_date}]]>
+  </ac:plain-text-body>
+ </ac:structured-macro>
+ <p class="auto-cursor-target">
+  <span style="letter-spacing: 0.0px;">
+   Months
+  </span>
+ </p>
+ <ac:structured-macro ac:macro-id="1383b5c2-32f1-4580-87b8-6a7e061b7dc8" ac:name="code" ac:schema-version="1">
+  <ac:parameter ac:name="language">
+   sql
+  </ac:parameter>
+  <ac:plain-text-body>
+   <![CDATA[Formula Numeric: MONTHS_BETWEEN( ROUND({trandate}, 'Y'),  ROUND({custcol_term_start_date}, 'Y'))
+
+]]>
+  </ac:plain-text-body>
+ </ac:structured-macro>
+ <p>
+  Years
+ </p>
+ <ac:structured-macro ac:macro-id="aa7f9777-60af-41e8-a29a-10df46b590f6" ac:name="code" ac:schema-version="1">
+  <ac:parameter ac:name="language">
+   sql
+  </ac:parameter>
+  <ac:plain-text-body>
+   <![CDATA[Formula Numeric: (ROUND({custrecord_lr_request_end_date}, 'D')-ROUND({custrecord_lr_request_start_date}, 'D'))/365
+
+
+With final rounding of the year fraction: ROUND((ROUND({custrecord_lr_request_end_date}, 'D')-ROUND({custrecord_lr_request_start_date}, 'D'))/365, 2)]]>
+  </ac:plain-text-body>
+ </ac:structured-macro>
+ <p class="auto-cursor-target">
+  <br/>
+ </p>
+ <p>
+  TO_NUMBER(TO_CHAR({trandate},'YYYY')) - TO_NUMBER(TO_CHAR({custcol_term_start_date},'YYYY'))
+ </p>
+</div>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<h5 class="auto-cursor-target">
+ Many choices between values
+</h5>
+<p>
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="c1dad101-34dd-462a-bceb-d18c345bd2e9" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[CASE WHEN {custentity_unix_id} = 'dcruz' THEN 'OtherLS' 
+WHEN {custentity_unix_id} = 'emico' THEN 'Materials' 
+WHEN {custentity_unix_id} = 'keefe' THEN 'Materials' 
+WHEN {custentity_unix_id} = 'jweiser' THEN 'EU+' 
+WHEN {custentity_unix_id} = 'akinsany' THEN 'US+' 
+WHEN {custentity_unix_id} = 'murco' THEN 'OtherLS' 
+WHEN INSTR({department}, 'Sales - ') != 0 THEN NVL(REPLACE({department},'Sales - ',''),'')
+ELSE '' END]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<h5 class="auto-cursor-target">
+ Grab the substring after the last occurrence of a character AND replace some text at the start.  In this example we remove "1234" AND extract the last piece. "1234 Test : Level2 : Level3" to "Level3" (where "1234" is "number"):
+</h5>
+<p>
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="23fb78e1-b3d8-4c7f-90e9-a5db7f108efd" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[REPLACE(REGEXP_SUBSTR({name},'[^:]+$'),{number},'')]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<h5 class="auto-cursor-target">
+ On a Contact Search, pull out ONE ROW PER CONTACT where ONLY the Company (proper) value is kept (this is what you would expect "Company (Primary)" to do but that option is wildly misleading in what it shows!):
+</h5>
+<p>
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="08ff5fd8-7534-4f18-a1ad-40f8f4c4c077" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[CASE WHEN LTRIM(REGEXP_SUBSTR({company.entityid},'[^:]+$'), ' ') = LTRIM(REGEXP_SUBSTR({company},'[^:]+$'), ' ') THEN 1 ELSE 0 END]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<h5 class="auto-cursor-target">
+ Subtract Tax from Transaction Total on a Saved Search for Sales Attributions (child record of Transaction) using a join to parent fields
+</h5>
+<ac:structured-macro ac:macro-id="af4aa0a9-9d70-4fcb-988d-a23af1d9061d" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[Formula (Currency): {custrecord_sa_parent_transaction.totalamount}-{custrecord_sa_parent_transaction.taxtotal}
+]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h5 class="auto-cursor-target">
+ Subtract Tax from Transaction Total on a Saved Search for Transactions directly.  MUST HANDLE NULLS OR SUBTRACTION RESULT CAN BE BLANK!
+</h5>
+<ac:structured-macro ac:macro-id="fbf4e57a-525d-4129-8212-2c13842b3c8c" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[Formula (Currency): {totalamount}-NVL({taxtotal},0)
+]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h5 class="auto-cursor-target">
+ Use a Bitmask Analogy for a Grouped Search to pick out specific combinations of values within a Grouped set where repeats are possible (we can't use MOD/modulus as a Group summary type function so that's why Average is used):
+</h5>
+<ac:structured-macro ac:macro-id="36971ab1-316b-4563-b5db-b829ed70cbbc" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[Formula (Numeric) SummaryType Average: CASE WHEN INSTR({systemnotes.field}, 'Document Status') != 0 AND COALESCE({systemnotes.oldvalue}, '0') != '0' THEN 0 WHEN INSTR({systemnotes.field}, 'Impact') != 0 OR INSTR({systemnotes.field}, 'Posting Period') != 0 OR INSTR({systemnotes.field}, 'Tax Period') != 0 THEN 0 ELSE 1 END
+]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ <br/>
+</p>
+<div>
+ <span style="font-family: monospace;white-space: pre;">
+  <br/>
+ </span>
+</div>
+<h5 class="auto-cursor-target">
+ Get the subtotal without tax and shipping:
+</h5>
+<ac:structured-macro ac:macro-id="b16fbd6b-3119-4fcd-aa32-6d92fe62237c" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  sql
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[Formula (Currency): {fxamount}-NVL(({taxtotal}*{exchangerate}),0) - NVL(({shippingamount}*{exchangerate}),0)]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>

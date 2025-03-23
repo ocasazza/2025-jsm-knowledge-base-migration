@@ -1,0 +1,216 @@
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="648e22ee-be8d-4ac0-80ed-23e83ed65300" ac:name="table-filter" ac:schema-version="1">
+ <ac:parameter ac:name="fixedCols">
+ </ac:parameter>
+ <ac:parameter ac:name="totalrow">
+ </ac:parameter>
+ <ac:parameter ac:name="hidelabels">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="ddSeparator">
+ </ac:parameter>
+ <ac:parameter ac:name="sparkName">
+  Sparkline
+ </ac:parameter>
+ <ac:parameter ac:name="hidePane">
+  Filtration panel
+ </ac:parameter>
+ <ac:parameter ac:name="limitHeight">
+ </ac:parameter>
+ <ac:parameter ac:name="sparkline">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="default">
+ </ac:parameter>
+ <ac:parameter ac:name="cell-width">
+ </ac:parameter>
+ <ac:parameter ac:name="hideColumns">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="totalRowName">
+ </ac:parameter>
+ <ac:parameter ac:name="totalColName">
+ </ac:parameter>
+ <ac:parameter ac:name="disabled">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="enabledInEditor">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="globalFilter">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="id">
+  1678220027118_0
+ </ac:parameter>
+ <ac:parameter ac:name="iconfilter">
+ </ac:parameter>
+ <ac:parameter ac:name="order">
+ </ac:parameter>
+ <ac:parameter ac:name="hideControls">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="inverse">
+ </ac:parameter>
+ <ac:parameter ac:name="numbering">
+ </ac:parameter>
+ <ac:parameter ac:name="datefilter">
+ </ac:parameter>
+ <ac:parameter ac:name="column">
+ </ac:parameter>
+ <ac:parameter ac:name="sort">
+ </ac:parameter>
+ <ac:parameter ac:name="totalcol">
+ </ac:parameter>
+ <ac:parameter ac:name="disableSave">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="rowsPerPage">
+ </ac:parameter>
+ <ac:parameter ac:name="separator">
+  Point (.)
+ </ac:parameter>
+ <ac:parameter ac:name="labels">
+ </ac:parameter>
+ <ac:parameter ac:name="thousandSeparator">
+ </ac:parameter>
+ <ac:parameter ac:name="ignoreFirstNrows">
+ </ac:parameter>
+ <ac:parameter ac:name="ddOperator">
+ </ac:parameter>
+ <ac:parameter ac:name="userfilter">
+ </ac:parameter>
+ <ac:parameter ac:name="datepattern">
+  dd M yy
+ </ac:parameter>
+ <ac:parameter ac:name="numberfilter">
+ </ac:parameter>
+ <ac:parameter ac:name="heightValue">
+ </ac:parameter>
+ <ac:parameter ac:name="updateSelectOptions">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="worklog">
+  365|5|8|y w d h m|y w d h m
+ </ac:parameter>
+ <ac:parameter ac:name="isOR">
+  AND
+ </ac:parameter>
+ <ac:parameter ac:name="showNRowsifNotFiltered">
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="7d47f472-fa9f-4111-9b85-b3afef597ce7" ac:name="table-joiner" ac:schema-version="1">
+   <ac:parameter ac:name="dateFormat">
+    dd M yy
+   </ac:parameter>
+   <ac:parameter ac:name="export-word">
+    false
+   </ac:parameter>
+   <ac:parameter ac:name="export-csv">
+    false
+   </ac:parameter>
+   <ac:parameter ac:name="join-column">
+   </ac:parameter>
+   <ac:parameter ac:name="separator">
+    .
+   </ac:parameter>
+   <ac:parameter ac:name="version">
+    2
+   </ac:parameter>
+   <ac:parameter ac:name="export-print">
+    false
+   </ac:parameter>
+   <ac:parameter ac:name="sql">
+    SELECT
+ T2.'Description' as 'Task',
+ T2.'Assignee',
+ T1.'Title' as 'SIR',
+ T1.'Outage date'
+FROM
+ T1
+ RIGHT JOIN
+  T* ON T1.'Title' = T2.'Task appears on'
+ORDER BY 'SIR' ASC
+   </ac:parameter>
+   <ac:parameter ac:name="thousand-separator">
+   </ac:parameter>
+   <ac:parameter ac:name="transposeResult">
+    false
+   </ac:parameter>
+   <ac:parameter ac:name="decimals">
+   </ac:parameter>
+   <ac:parameter ac:name="show-source">
+    false
+   </ac:parameter>
+   <ac:parameter ac:name="plainText">
+    false
+   </ac:parameter>
+   <ac:parameter ac:name="id">
+    1677187661749_-1867755074
+   </ac:parameter>
+   <ac:parameter ac:name="transpose">
+    false
+   </ac:parameter>
+   <ac:parameter ac:name="worklog">
+    365|5|8|y w d h m|y w d h m
+   </ac:parameter>
+   <ac:parameter ac:name="export-pdf">
+    false
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p class="auto-cursor-target">
+     <ac:structured-macro ac:macro-id="5622b1db-98b8-43c6-9946-769f5f985fc6" ac:name="detailssummary" ac:schema-version="2">
+      <ac:parameter ac:name="headings">
+       Outage date
+      </ac:parameter>
+      <ac:parameter ac:name="pageSize">
+       200
+      </ac:parameter>
+      <ac:parameter ac:name="id">
+       SIR-metadata
+      </ac:parameter>
+      <ac:parameter ac:name="cql">
+       label = "sir" and space = "SYSMGR"
+      </ac:parameter>
+     </ac:structured-macro>
+    </p>
+    <p>
+     <ac:structured-macro ac:macro-id="8419da41-358a-4b28-8eb8-905e295f54a2" ac:name="tasks-report-macro" ac:schema-version="1">
+      <ac:parameter ac:name="columns">
+       description,location,assignee
+      </ac:parameter>
+      <ac:parameter ac:name="spaces">
+       SYSMGR
+      </ac:parameter>
+      <ac:parameter ac:name="pageSize">
+       200
+      </ac:parameter>
+      <ac:parameter ac:name="sortBy">
+       page title
+      </ac:parameter>
+      <ac:parameter ac:name="labels">
+       sir
+      </ac:parameter>
+     </ac:structured-macro>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>

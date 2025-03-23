@@ -1,0 +1,94 @@
+<p>
+</p>
+<h1>
+ Quick Tips and FEP Tips
+</h1>
+<h2>
+ FEP tips
+</h2>
+<ul>
+ <li>
+  <p>
+   To save space you should delete the stage 3 directory that contains the individual fep legs IF you are sure that you have finished with the calculation and do not wish to extend it further. Please note that bolt cluster automatically deletes FEP stage 3 directories and files that are older than 30 days (
+   <a href="https://schrodinger.atlassian.net/browse/SYSMGR-46862">
+    SYSMGR-46862
+   </a>
+   )
+  </p>
+ </li>
+ <li>
+  <p>
+   Generally, you will want to write the input files out from the GUI so that the correct commands are printed in the .sh script for FEP+ or the msj file for Desmond jobs:
+  </p>
+ </li>
+ <li>
+  <p>
+   fep_plus -HOST bolt_fepdriver -SUBHOST bolt_gpu -ppj  -P  for FEP+ jobs. The number of GPU slots should be 1, 2 or 4 only.
+  </p>
+ </li>
+</ul>
+<h2>
+ Quick tips
+</h2>
+<ul>
+ <li>
+  <p>
+   Store your files in your home directory in /home/ on the submission node, or /nfs/working/
+  </p>
+ </li>
+ <li>
+  <p>
+   For a large amount of data files, please only use /nfs/working/
+  </p>
+ </li>
+ <li>
+  <p>
+   ssh to the submission node
+  </p>
+ </li>
+ <li>
+  <p>
+   The first time, you may be prompted to set up your ssh keys for passwordless ssh between the submission nodes and the compute nodes. Use a blank passphrase.
+  </p>
+ </li>
+ <li>
+  <p>
+   Submission nodes: boltsub2, pdxgpusub1
+  </p>
+ </li>
+ <li>
+  <p>
+   Use the boltio node for transferring user data/files to or out of bolt cluster.
+  </p>
+ </li>
+ <li>
+  <p>
+   Builds can be found under /nfs/working/builds and /nfs/working/releases
+  </p>
+ </li>
+ <li>
+  <p>
+   Be sure to add -QARG "-P yourprojectname" to obtain higher priority
+  </p>
+ </li>
+ <li>
+  <p>
+   see the project section below for more info
+  </p>
+ </li>
+</ul>
+<ac:structured-macro ac:local-id="ffd5380d-6dbe-4d03-9676-58f8d8942e1c" ac:macro-id="1924f186f1a7d68c02ed285a45a25df98b8cb2d05e43aa79931b0e4c4ee580c8" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:parameter ac:name="name">
+  Researcher Story
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   As a researcher, I need to understand the quick tips and FEP tips for the HPC clusters so I can efficiently run my calculations, manage storage space, and ensure my jobs have the appropriate priority.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+</p>

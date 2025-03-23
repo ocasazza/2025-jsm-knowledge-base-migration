@@ -1,0 +1,46 @@
+<p>
+ The job server is a new version of job control. For more information, see
+ <a href="https://schrodinger.atlassian.net/wiki/x/fwP6Ag">
+  https://schrodinger.atlassian.net/wiki/x/fwP6Ag
+ </a>
+ .
+</p>
+<ac:structured-macro ac:macro-id="64a0bee7-7fb1-4129-8f47-b2b7ab8996dd" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[---------- Forwarded message ---------
+From: Mike Beachy <mike.beachy@schrodinger.com>
+Date: Sat, Apr 3, 2021 at 12:35 PM
+Subject: [All] job server internal rollout - Monday April 5th
+To: <all@schrodinger.com>
+
+Hi all -
+
+We've been working on a new version of job control (called job server) for a while now. With it, you no longer need to worry that bolt jobs will fail if you launch them from your laptop and disconnect from the network. Additionally, you'll find that it's more scalable — it has been a key enabler of IFD-MD development for that reason.
+
+As the next step in rolling this out to customers, we will be switching internal deployments of the 2021-1 Schrödinger Suite to use job server by default on Monday, April 5th.
+
+Launching jobs works the same as it did before, and Maestro use is very similar, but with a new monitor panel. However, the command-line interface for querying jobs is different. 
+
+There are a few one-time setup steps you need to complete as a user: 1) You need to authenticate with the cluster job server (boltsub3.schrodinger.com:8030 for bolt). 2) For now, you need to run a command to start an automated download process to retrieve your results.
+
+The setup instructions depend a bit on whether you are a Maestro or command-line user and whether you are running local or cluster jobs. Please see Job Server Quick Start Instructions on Confluence for details. That page also has links to the full user docs and quick tips on the new command-line interface.
+
+If you have any questions, please reach out to us in the Job Server room on chat. We will prioritize fixing any problems people encounter, so please let us know about them.
+
+Thanks,  
+Mike]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:local-id="406216e6-282b-401a-ab3c-b588e64b2394" ac:macro-id="ab923d890083f67abcf2a4b25f574c4e38f7d020df99fe9aa38b49742e78fcbf" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:parameter ac:name="name">
+  Researcher Story
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   As a researcher, I need to understand the Job Server system so I can effectively submit, monitor, and manage my computational jobs on the HPC clusters.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>

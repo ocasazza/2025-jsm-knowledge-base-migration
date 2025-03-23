@@ -1,0 +1,25 @@
+<p>
+ Outage tickets without reports ready to review:
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="c92571f2-252f-41c4-91ad-e4e40fd06a72" ac:name="jira" ac:schema-version="1">
+  <ac:parameter ac:name="server">
+   System JIRA
+  </ac:parameter>
+  <ac:parameter ac:name="columnIds">
+   issuekey,priority,status,summary,created,updated,assignee,reporter,customfield_11008,customfield_18202
+  </ac:parameter>
+  <ac:parameter ac:name="columns">
+   key,priority,status,summary,created,updated,assignee,reporter,Sprint,SIR URL
+  </ac:parameter>
+  <ac:parameter ac:name="maximumIssues">
+   20
+  </ac:parameter>
+  <ac:parameter ac:name="jqlQuery">
+   type = Outage AND status NOT IN (Resolved, Review, Rejected, Closed, Done) ORDER BY created DESC
+  </ac:parameter>
+  <ac:parameter ac:name="serverId">
+   ac6def98-2140-30c3-8103-4b52b8b31135
+  </ac:parameter>
+ </ac:structured-macro>
+</p>

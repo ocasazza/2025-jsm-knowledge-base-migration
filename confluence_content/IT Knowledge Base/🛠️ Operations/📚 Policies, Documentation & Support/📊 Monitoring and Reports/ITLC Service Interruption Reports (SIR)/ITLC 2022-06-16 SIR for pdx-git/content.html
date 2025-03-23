@@ -1,0 +1,583 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for pdx-git on
+      <time datetime="2022-06-16">
+      </time>
+      <span style="color: rgb(0,82,204);">
+       <br/>
+      </span>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         pdx-git
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="f5c035c3-6cac-4e0f-9e45-db2e1ede6a2c" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="columnIds">
+             issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="columns">
+             key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             ITINFRA-285
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         pdx-git services
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2022-06-16">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2022-06-16">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <ac:link>
+            <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+            </ri:user>
+           </ac:link>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2022-07-28">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:page ri:content-title="ITLC 2022-07-28 SIR Review Board notes" ri:space-key="ITLC">
+          </ri:page>
+         </ac:link>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    Commits to pdx-git failed because /dev/sda1 had reached 100% capacity.
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    pdx-git is the central git server for most development at Schrödinger and is considered critical to the business. Any downtime impacts many users and is always a high priority.
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    Unanticipated usage of the local filesystem on pdx-git led to abnormal disk utilization causing an outage.
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    Times below are in Pacific time, unless otherwise noted.
+   </p>
+   <p>
+    7:30a -
+    <span style="color: rgb(23,43,77);">
+     Ricardo Rodriguez-Schmidt filed a FreshService ticket noting that he's not able to commit to the mmshare repo on pdx-git.
+     <br/>
+     7:37a - the ticket is escalated to Jira ITINFRA-285.
+     <br/>
+     7:49a -
+     <ac:link>
+      <ri:user ri:userkey="640b97dd93cf25994632639f">
+      </ri:user>
+     </ac:link>
+     posts in the IT-Infra chatroom that this needs immediate attention.
+     <br/>
+     7:51a -
+     <ac:link>
+      <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+      </ri:user>
+     </ac:link>
+     and
+     <ac:link>
+      <ri:user ri:userkey="557058:c11a8693-7dcc-4232-aa9d-d1adf489eef8">
+      </ri:user>
+     </ac:link>
+     begin investigating the cause. Within minutes, Grisha notes that /var/log is larger than expected and removes
+     <span style="color: rgb(32,33,36);">
+      {messages,secure}-2022* to clear space, reducing used space to 76%, ending the outage.
+      <br/>
+     </span>
+    </span>
+   </p>
+   <p>
+    <span style="color: rgb(23,43,77);">
+     <span style="color: rgb(32,33,36);">
+      Further analysis of the disk usage on this system revealed that a few users had written several GB of files to /scr on this system.
+      <ac:link>
+       <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+       </ri:user>
+      </ac:link>
+      reached out to those users to get their files moved and inform them that /scr is not an appropriate place for any user files.
+     </span>
+    </span>
+   </p>
+   <p>
+    <span style="color: rgb(23,43,77);">
+     <span style="color: rgb(32,33,36);">
+      After cleaning up those files, disk usage fell to
+      <em>
+       <strong>
+        below 30%
+       </strong>
+      </em>
+      .
+     </span>
+    </span>
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    <ac:link>
+     <ri:user ri:userkey="557058:c11a8693-7dcc-4232-aa9d-d1adf489eef8">
+     </ri:user>
+    </ac:link>
+    cleared space by removing unnecessary logs.
+   </p>
+   <p>
+    <ac:link>
+     <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+     </ri:user>
+    </ac:link>
+    cleared additional space by moving users files and reaching out to others to move their own files.
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    Log rotation should include compression.
+   </p>
+   <p>
+    Users should not be allowed to write to /scr.
+   </p>
+   <p>
+    Filesystem usage went from
+    <a href="https://librenms.schrodinger.com/graphs/to=1655395200/id=3936/type=storage_usage/from=1654185600">
+     less than 65% to over 90% on June 8
+    </a>
+    because an individual placed 4.6GB of data on /scr/, but no one was alerted to this utilization change.
+   </p>
+   <p>
+    It was noted that /dev/sda1 on this system is only 16GB. Given that minimal cleanup got usage to below 30%, I think 16GB is sufficient for /dev/sda1 as long as we have monitoring to alert us prior to it being consumed.
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    The problem was not detected until it caused an outage that affected (at least one) end user.
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    The problem was detected when a user attempted to commit to mmshare and was denied with the error "No space left on device" noted in
+    <a href="https://schrodinger.atlassian.net/browse/ITINFRA-285">
+     ITINFRA-285
+    </a>
+    .
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    Detection that the filesystem was nearing full could have been noted in LibreNMS, but wasn't until the problem manifested in an outage.
+   </p>
+   <p>
+    However, even though LibreNMS did detect a problem, a recent product update introduced a region code in the and defaulted to EU, which caused PagerDuty alerts to fail. The transport settings have been updated and tested.
+   </p>
+   <p>
+    Previously we'd configured an alert for disk utilization, but we found that to be too noisy – generating alerts for problems that were not service affecting. In
+    <a href="https://schrodinger.atlassian.net/browse/ITINFRA-290">
+     ITINFRA-290
+    </a>
+    , we're adjusting rules and notifications to email
+    <a href="mailto:it-alerts@schrodinger.com">
+     it-alerts@schrodinger.com
+    </a>
+    for storage over threshold alerts (rather than paging someone who might be sleeping when an update is downloaded and exceeds the threshold.)
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    We responded within moments of the issue being brought to our attention.
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    The sole user who reported an issue was updated as soon as the problem was resolved and expressed appreciation for the prompt response.
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    Our response and resolution were sufficiently fast that we likely didn't need to communicate the outage, but had we not been able to remediate it quickly, this would have been a larger issue requiring alerts to developers.
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    The problem occurred early in the morning, before most people were making commits.
+   </p>
+   <p>
+    <ac:link>
+     <ri:user ri:userkey="557058:c11a8693-7dcc-4232-aa9d-d1adf489eef8">
+     </ri:user>
+    </ac:link>
+    and
+    <ac:link>
+     <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+     </ri:user>
+    </ac:link>
+    were online immediately when the outage occurred and were able to respond immediately.
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    The more people we are able to migrate to GitHub, the smaller the impact will be if this recurs.
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    Prevent users from writing to local filesystem on pdx-git.
+   </p>
+   <p>
+    Fix alerting for disk usage.
+   </p>
+   <p>
+    Turn on compression for logrotate.
+   </p>
+   <p>
+    Separate partition for /var (and /tmp, assuming that no /tmp space is what as preventing commits from happening) would help contain issues like this.
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     After analyzing and talking about this incident what actions did the reviewers and management decide should be done to address shortfalls in detection, mitigation or avoidance. Use tasks, assignments and due dates or link to created jira tickets.
+    </ac:placeholder>
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <span class="placeholder-inline-tasks">
+       <ac:link>
+        <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+        </ri:user>
+       </ac:link>
+       did chown root:root /scr &amp;&amp; chmod 700 /scr to prevent any non-root user from writing there.
+      </span>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      3
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="2c513a3e-7164-4057-b9a1-8dbdce79c54f" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-1081
+       </ac:parameter>
+      </ac:structured-macro>
+      We will soon be starting a project to improve our monitoring and logging.
+      <a href="https://docs.google.com/document/d/1p99Z-P1iLIpzew17fHRwSPSkRzy_4oxLbAzBhjEVrwM/edit">
+       Prelim Scoping Doc
+      </a>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      7
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <span>
+       <ac:structured-macro ac:macro-id="26cda442-8127-4a94-b138-e383a5e56f7a" ac:name="jira" ac:schema-version="1">
+        <ac:parameter ac:name="server">
+         System JIRA
+        </ac:parameter>
+        <ac:parameter ac:name="columnIds">
+         issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+        </ac:parameter>
+        <ac:parameter ac:name="columns">
+         key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+        </ac:parameter>
+        <ac:parameter ac:name="serverId">
+         ac6def98-2140-30c3-8103-4b52b8b31135
+        </ac:parameter>
+        <ac:parameter ac:name="key">
+         ITINFRA-290
+        </ac:parameter>
+       </ac:structured-macro>
+       We will also fix email alerting from LibreNMS to send 'warning' level alerts to
+       <a href="mailto:it-alerts@schrodinger.com">
+        it-alerts@schrodinger.com
+       </a>
+       .
+       <br/>
+       (Checking on this already alerted us to three other systems w/ capacity issues which are being worked out.)
+      </span>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

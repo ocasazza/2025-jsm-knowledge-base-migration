@@ -1,0 +1,58 @@
+<p>
+ Bolt-0 nodes have GTX1080 GPU cards installed; bolt-2 nodes have GTX1080Ti GPU cards. If for any reason, you want to run all your jobs on the nodes with same type of GPU cards, you can add following additional complex resource to QARGS to your job submission script.
+</p>
+<table>
+ <thead>
+  <tr>
+   <th>
+    <strong>
+     GPU card type
+    </strong>
+   </th>
+   <th>
+    <strong>
+     QARGS
+    </strong>
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    GTX 1080
+   </td>
+   <td>
+    -l gtx1080
+   </td>
+  </tr>
+  <tr>
+   <td>
+    GTX 1080Ti
+   </td>
+   <td>
+    -l gtx1080ti
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ <strong>
+  Note:
+ </strong>
+ Requesting a particular type of GPU cards (nodes) will decrease the resource pool for the jobs and therefore it takes longer for the jobs to be dispatched. If a job runs fine with mixed GPU card types, it's recommended not requesting specific type GPU cards.
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="1234" ac:name="excerpt" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="name">
+   User Story
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p>
+    As a researcher, I need to know how to target specific GPU hardware for my jobs so I can ensure consistent performance or take advantage of specific hardware features.
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+</p>

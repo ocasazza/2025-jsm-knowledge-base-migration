@@ -1,0 +1,4 @@
+id: 54825618
+title: 🖥️ Dell Ultrasharp Monitor
+version: 2
+space_key: ITLC

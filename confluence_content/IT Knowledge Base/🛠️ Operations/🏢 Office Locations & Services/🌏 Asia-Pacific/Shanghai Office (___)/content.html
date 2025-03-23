@@ -1,0 +1,191 @@
+<ac:layout>
+ <ac:layout-section ac:breakout-mode="default" ac:type="single">
+  <ac:layout-cell>
+   <p>
+   </p>
+   <p>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="two_equal">
+  <ac:layout-cell>
+   <hr/>
+   <ac:structured-macro ac:local-id="1b4ef65b-dc91-4c25-9192-4499f75de5f1" ac:macro-id="e9096c68-591d-499e-a31d-67425a601524" ac:name="toc" ac:schema-version="1" data-layout="default">
+   </ac:structured-macro>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p style="text-align: center;">
+    <ac:structured-macro ac:local-id="970c1c66-6d3a-4f42-87b7-74a4cff10bf3" ac:macro-id="b919845e-9638-456f-a9a1-a36e029f1a68" ac:name="expandall" ac:schema-version="1">
+    </ac:structured-macro>
+   </p>
+   <p>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <ac:structured-macro ac:local-id="47576f4e-0a1a-4172-b55d-4a978e7c2ef8" ac:macro-id="a6eda81a-56db-409d-9320-7283a90e7ad5" ac:name="details" ac:schema-version="1" data-layout="default">
+    <ac:rich-text-body>
+     <table ac:local-id="06c745eb-c189-4f0c-916a-a90677b6b719" data-layout="default">
+      <tbody>
+       <tr>
+        <th>
+         <p>
+          <strong>
+           Office Name
+          </strong>
+         </p>
+        </th>
+        <td>
+         <p>
+          <ac:placeholder>
+           Office Regional Name
+          </ac:placeholder>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         <p>
+          <strong>
+           Office Location
+          </strong>
+         </p>
+        </th>
+        <td>
+         <p>
+          <ac:placeholder>
+           Office Address
+          </ac:placeholder>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         <p>
+          <strong>
+           Office Manager
+          </strong>
+         </p>
+        </th>
+        <td>
+         <p>
+          <em>
+           <span style="color: rgb(112,112,112);">
+            Name of Office Manager
+           </span>
+          </em>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         <p>
+          <strong>
+           D42 Link
+          </strong>
+         </p>
+        </th>
+        <td>
+         <p>
+          <em>
+           Insert D42 office link here
+          </em>
+         </p>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="single">
+  <ac:layout-cell>
+   <hr/>
+   <h1>
+    Building Access
+   </h1>
+   <ac:structured-macro ac:macro-id="744bd509-9eeb-474a-92ac-843e90066c08" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:placeholder>
+       Details of business access, Card or key information --who to contact for access if not the office manager
+      </ac:placeholder>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <h1>
+    Office Resources
+   </h1>
+   <ac:structured-macro ac:macro-id="cf885601-c641-4fd9-bd71-dcab352eef1c" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:placeholder>
+       Other office specific resources
+      </ac:placeholder>
+     </p>
+     <h3>
+      Printer Access
+     </h3>
+     <p>
+      Instructions for adding printers to your computer are
+      <a href="https://schrodinger.atlassian.net/wiki/x/z2JLAw">
+       here
+      </a>
+      .
+      <br/>
+      The naming convention for printers is generally:
+      <strong>
+       {{ LOCATION-PRINTER-FLOOR#-WING-COLOR|BW }}
+      </strong>
+     </p>
+     <h3>
+      Wireless Access
+     </h3>
+     <p>
+      The network name is
+      <strong>
+       schrodinger
+      </strong>
+      <br/>
+      The encryption type is
+      <strong>
+       WPA2/AES
+      </strong>
+      <br/>
+      The passphrase is
+      <strong>
+       M0l3cul3s!
+      </strong>
+     </p>
+     <p>
+      The passphrase is subject to occasional rotation. Check here for any changes.
+     </p>
+     <p>
+      It is fine to share the current passphrase with any visitors, etc.
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+   </p>
+   <ac:structured-macro ac:local-id="09a4559a-ee19-4b0c-b6e6-31c7a76647cc" ac:macro-id="d75b0ab5-6975-4613-93df-061a158d9ef9" ac:name="contentbylabel" ac:schema-version="4" data-layout="default">
+    <ac:parameter ac:name="showLabels">
+     false
+    </ac:parameter>
+    <ac:parameter ac:name="showSpace">
+     false
+    </ac:parameter>
+    <ac:parameter ac:name="sort">
+     title
+    </ac:parameter>
+    <ac:parameter ac:name="excerptType">
+     simple
+    </ac:parameter>
+    <ac:parameter ac:name="cql">
+     label = "office-location" and ancestor = currentContent ( )
+    </ac:parameter>
+   </ac:structured-macro>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

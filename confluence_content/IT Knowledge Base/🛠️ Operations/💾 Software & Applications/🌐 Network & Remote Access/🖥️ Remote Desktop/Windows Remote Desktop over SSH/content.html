@@ -1,0 +1,257 @@
+<ac:structured-macro ac:local-id="173bc388-67a4-4676-b7ac-0130e004d4a3" ac:macro-id="ff64884d-85f5-4c93-9152-29bcf75b6cc0" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h2>
+ Overview
+</h2>
+<p>
+ This document describes how to securely establish and use a Windows remote desktop connection from a remote client running a variety of operating systems.
+</p>
+<p>
+</p>
+<p>
+ The security and connectivity are provided by an ssh tunnel. We are essentially stuffing the remote desktop network packets into the ssh connection and sending them across the Internet to one of the Schrodinger gateways (pdx-gate or ny-gate) and asking the gateway to route them to the Windows machine. Please note the connection is only secured by ssh between the remote client and the ssh gateway. There is no ssh encryption from the gateway to the Windows machine.
+</p>
+<p>
+</p>
+<ac:image ac:align="center" ac:layout="center" ac:original-height="129" ac:original-width="526" ac:width="523">
+ <ri:attachment ri:filename="RemoteDesktopSSH.JPG" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<h2>
+ 1. Install Pre-requisites
+</h2>
+<table ac:local-id="75dd28aa-3908-43d1-bcdc-63fba0b49712" data-layout="default" data-table-width="1800">
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Client OS
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      ssh client
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Remote Desktop client
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Windows 10
+    </p>
+   </td>
+   <td>
+    <p>
+     <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">
+      Plink
+     </a>
+    </p>
+   </td>
+   <td>
+    <p>
+     Remote Desktop; pre-installed
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Linux
+    </p>
+   </td>
+   <td>
+    <p>
+     Pre-installed
+    </p>
+   </td>
+   <td>
+    <p>
+     rdesktop (in /utils/bin/)
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Mac OSX
+    </p>
+   </td>
+   <td>
+    <p>
+     Pre-installed
+    </p>
+   </td>
+   <td>
+    <p>
+     <a href="https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12">
+      Microsoft Remote Desktop
+     </a>
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ 2. Make ssh connection
+</h2>
+<table ac:local-id="deafb88c-d042-4977-bb99-4584804d58d6" data-layout="default" data-table-width="1800">
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Client OS
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Connection command
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Windows 10
+    </p>
+   </td>
+   <td>
+    <p>
+     Open Windows cmd shell
+     <br/>
+     <br/>
+     {path to plink}\plink -ssh -L 3391:{windows machine}:3389 {username}@{
+     <a href="http://pdx-gate.schrodinger.com">
+      pdx-gate.schrodinger.com
+     </a>
+     or
+     <a href="http://ny-gate.schrodinger.com">
+      ny-gate.schrodinger.com
+     </a>
+     }
+    </p>
+    <ac:image ac:align="left" ac:alt="TIP" ac:layout="align-start" ac:src="https://wiki.schrodinger.com/pub/TWiki/TWikiDocGraphics/tip.gif" ac:width="13">
+     <ri:url ri:value="https://wiki.schrodinger.com/pub/TWiki/TWikiDocGraphics/tip.gif">
+     </ri:url>
+    </ac:image>
+    <p>
+     The local port (immediately after the -L) is arbitrary but certain versions of the Windows client will generate errors is you try to connect to 3389 or 3390.
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Linux
+     <br/>
+     Mac OSX
+    </p>
+   </td>
+   <td>
+    <p>
+     Open a terminal window
+    </p>
+    <ac:structured-macro ac:macro-id="16883c77-ef93-4ec0-a23e-9944889630b8" ac:name="code" ac:schema-version="1">
+     <ac:plain-text-body>
+      <![CDATA[ssh -L 3391:{windows machine}:3389 {username}@{pdx-gate.schrodinger.com or ny-gate.schrodinger.com}]]>
+     </ac:plain-text-body>
+    </ac:structured-macro>
+    <p>
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ You will have to provide your password as you normally would when making the ssh connection and must leave this ssh session up and running throughout your remote desktop session.
+</p>
+<h2>
+ 3. Connect Remote Desktop Client to localhost
+</h2>
+<table ac:local-id="07dff280-3a7f-4d0d-b7a7-fce38257e214" data-layout="default" data-table-width="1800">
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Client OS
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Connection command
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Windows 10
+     <br/>
+     Mac OSX
+    </p>
+   </td>
+   <td>
+    <p>
+     Launch Remote Desktop Connection
+     <br/>
+     Enter localhost:3391 in Computer field
+     <br/>
+     Click 'Connect'
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Linux
+    </p>
+   </td>
+   <td>
+    <p>
+     rdesktop localhost:3391&amp;
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ 4. Disconnecting
+</h2>
+<ul>
+ <li>
+  <p>
+   When you are done please logout of the remote Windows machine from the Start menu.
+  </p>
+ </li>
+ <li>
+  <p>
+   Close your ssh session by typing exit and hitting enter.
+  </p>
+ </li>
+</ul>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>

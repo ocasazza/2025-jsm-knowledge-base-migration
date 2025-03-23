@@ -1,0 +1,40 @@
+<p>
+</p>
+<p>
+ For help cleaning up your jobcontrol directory, see
+ <a href="https://schrodinger.atlassian.net/wiki/pages/viewpage.action?pageId=55279605#Schr%C3%B6dingerHPCUserGuide-cleanjobdbI%27vebeennotifiedmyjobdatabaseistoolarge.HowcanIcleanitup/purgeit?">
+  this FAQ
+ </a>
+ <a href="#">
+  .
+ </a>
+</p>
+<p>
+ However, certain conditions, like your directory in /home, or the parent filesystem, completely filling up, can cause legacy jobcontrol (pre-Job Server job control) to get into a condition where it continuously tries to write "seelog internal error" to the jserver logs. So, even after space is freed, these processes continue writing to these error logs, and can use up the freed space again. These error logs can become GBs in size, and are in your hidden .schrodinger/.jobdb2/ directory. To find them, cd to your ~/.schrodinger/.jobdb2 directory on bolt and look for unusually large jserver..stderr files with 'ls -alrS'. ssh into the hostname referenced in the filename of the large jserver..stderr file, then run:
+</p>
+<p>
+ $SCHRODINGER/utilities/jserver -kill
+</p>
+<h1>
+ At this point, remove the the ~/.schrodinger/.jobdb2/jserver..stderr file(s), then run:
+</h1>
+<p>
+ $SCHRODINGER/utilities/jserver -force
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="1234" ac:name="excerpt" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="name">
+   User Story
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p>
+    As a researcher, I need to know how to manage disk space when my .schrodinger directory grows too large so I can continue working without hitting quota limits.
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+</p>
+<p>
+</p>

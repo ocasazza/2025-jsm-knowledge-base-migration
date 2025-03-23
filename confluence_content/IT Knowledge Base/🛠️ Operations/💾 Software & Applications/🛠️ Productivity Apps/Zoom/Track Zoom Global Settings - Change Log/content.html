@@ -1,0 +1,649 @@
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="882ebae3-e008-40a7-bc8b-6f62bb0db9ba" ac:name="excerpt" ac:schema-version="1">
+ <ac:parameter ac:name="atlassian-macro-output-type">
+  INLINE
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   This page lists Zoom setting changes that affect most users and why they change.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ 05 Oct 2022
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="c3b6e8bc-26ae-4af0-b798-a45de1931f11" ac:name="jira" ac:schema-version="1">
+  <ac:parameter ac:name="server">
+   System JIRA
+  </ac:parameter>
+  <ac:parameter ac:name="serverId">
+   ac6def98-2140-30c3-8103-4b52b8b31135
+  </ac:parameter>
+  <ac:parameter ac:name="key">
+   ITDW-657
+  </ac:parameter>
+ </ac:structured-macro>
+</p>
+<p>
+ We have enabled the following settings that will affect both Admins and end Users
+</p>
+<table>
+ <colgroup>
+  <col/>
+  <col/>
+  <col/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <td>
+    Setting
+   </td>
+   <td>
+    Current Setting description
+   </td>
+   <td>
+    Expected Change
+   </td>
+  </tr>
+  <tr>
+   <td>
+    Require Web Users to Sign-in Again After Inactivity
+   </td>
+   <td>
+    Users (including admins) connected to your account web console to are not being forced signed out after inactivity
+   </td>
+   <td>
+    <p>
+     Accounts who use email and password to login(via web browser) will be required to sign in again after 14 days . This does not affect those who sign in via SSO
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    Recording Disclaimer [Account Settings]
+   </td>
+   <td>
+    A customizable recording disclaimer isn't being shown to participants before a recording starts
+   </td>
+   <td>
+    All users whether guest or account members will see a recording disclaimer before the recording begins.This does not stop the recording
+   </td>
+  </tr>
+  <tr>
+   <td>
+    Local Recordings [User Settings]
+   </td>
+   <td>
+    Hosts and participants can record meetings to a local file
+   </td>
+   <td>
+    Local recording will be disabled for all users. Cloud recording and sharing is still possible
+   </td>
+  </tr>
+  <tr>
+   <td>
+    Billing Info Visibility
+   </td>
+   <td>
+    Administrators can see billing information
+   </td>
+   <td>
+    Admins will no longer be able to view billing information this would be limted to the account owner
+   </td>
+  </tr>
+  <tr>
+   <td>
+    Watermark On Screenshare
+   </td>
+   <td>
+    Watermark on screenshare is disabled
+   </td>
+   <td>
+    All users will now see a watermark when screensharing
+   </td>
+  </tr>
+  <tr>
+   <td>
+    Remote Control [User Settings]
+   </td>
+   <td>
+    Remote control is enabled while screenshare
+   </td>
+   <td>
+    Remote Control by meeting members whether domain or guests will no longer be available
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ <br/>
+</p>
+<p>
+ <time datetime="2022-07-20">
+ </time>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ We have enabled non end-user impacting security settings for Zoom to comply with Adaptive Shield recommendations.
+</p>
+<p>
+ <strong>
+  Security Settings
+ </strong>
+</p>
+<ul>
+ <li>
+  <span>
+   "Two-Factors Authentication Enforcement" is now
+   <u>
+    turned on
+   </u>
+   . (This should not affect SSO users - everyone with Schrodinger email)
+  </span>
+ </li>
+ <li>
+  <span>
+   "Passwords Containing Consecutive Characters" are
+   <u>
+    not allowed
+   </u>
+   . (This should not affect SSO users - everyone with Schrodinger email)
+  </span>
+ </li>
+ <li>
+  <span>
+   "Weak Passwords Detection" is
+   <u>
+    turned on
+   </u>
+   . (This should not affect SSO users - everyone with Schrodinger email, it will notify users if they have a password defined as "weak".)
+  </span>
+ </li>
+ <li>
+  <span>
+   "Password Includes Special Characters" is
+   <u>
+    turned on
+   </u>
+   to enforce usage of a special character in passwords. (This should not affect SSO users - everyone with Schrodinger email)
+  </span>
+ </li>
+ <li>
+  <span>
+   "Minimum Password Length" is now
+   <u>
+    set to 9
+   </u>
+   . This is in line with our
+   <ac:link>
+    <ri:page ri:content-title="Credential Management Policy" ri:space-key="SCP" ri:version-at-save="6">
+    </ri:page>
+    <ac:plain-text-link-body>
+     <![CDATA[/wiki/spaces/SCP/pages/111411229]]>
+    </ac:plain-text-link-body>
+   </ac:link>
+   . (This should not affect SSO users - everyone with Schrodinger email)
+  </span>
+ </li>
+ <li>
+  <span>
+   "Password Protection For Personal Meeting ID (PMI)" is now
+   <u>
+    turned on
+   </u>
+   . (some users had customized this setting but now it's reset to be on by default).
+  </span>
+ </li>
+ <li>
+  <span>
+   "Password Protection For Instant Meetings" is now
+   <u>
+    turned on
+   </u>
+   . (some users had customized this setting but now it's reset to be on by default).
+  </span>
+ </li>
+ <li>
+  <span>
+   "Embed Password In Meeting Link" is now
+   <u>
+    enabled
+   </u>
+   . (It used to be disabled since it included plain text passwords in the link but that is fixed now, this lets you share meeting links that don't require entering passcodes).
+  </span>
+ </li>
+</ul>
+<p>
+ <strong>
+  Recording Settings
+ </strong>
+</p>
+<ul>
+ <li>
+  <span>
+   Local Recordings is now
+   <u>
+    disabled
+   </u>
+   . You can not have Zoom record your meeting locally. Everything is recorded in the cloud and you can share that via a link with password.
+  </span>
+ </li>
+ <li>
+  <span>
+   Auto Save Chat is now
+   <u>
+    turned off
+   </u>
+   .
+  </span>
+ </li>
+ <li>
+  <span>
+   Live-streaming is now
+   <u>
+    disabled
+   </u>
+   . If you have an approved use case for live-streaming your meeting/webinar please create a Freshservice ticket a few days before your scheduled event.
+  </span>
+ </li>
+ <li>
+  <span>
+   Remote Control is now
+   <u>
+    disabled
+   </u>
+   . You can't let someone else control your screen/mouse while you are sharing your screen.
+  </span>
+ </li>
+ <li>
+  <span>
+   Recording Disclaimer is now
+   <u>
+    enabled
+   </u>
+   . You will see a popup letting you know that the meeting is recorded. If you don't want to be recorded, you have the choice to leave the meeting.
+  </span>
+ </li>
+ <li>
+  <span>
+   Far End Camera Control is now
+   <u>
+    disabled
+   </u>
+   .
+  </span>
+ </li>
+</ul>
+<p>
+ <strong>
+  User Experience
+ </strong>
+</p>
+<ul>
+ <li>
+  <span>
+   Participants Initial Video Mode is set to
+   <u>
+    off
+   </u>
+   . (You will join all meetings with your videos turned off by default, and you can then get ready and turn on your video if you choose to)
+  </span>
+ </li>
+ <li>
+  <span>
+   Initial Host Video Mode is still
+   <u>
+    on
+   </u>
+   . If you are a host, your video will be turned on by default at the start of the meeting.
+  </span>
+ </li>
+</ul>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <time datetime="2022-01-11">
+ </time>
+</p>
+<p>
+ As per suggestion from
+ <ac:link>
+  <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+  </ri:user>
+ </ac:link>
+ , Slide Control feature has now been
+ <u>
+  enabled
+ </u>
+ .
+</p>
+<h4 class="feature-name">
+ <span>
+  Slide Control :
+ </span>
+</h4>
+<p>
+ During a presentation, the person who is sharing can allow one or more meeting participants to control the PowerPoint or Keynote slide presentation.
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="0430820f-e038-420d-b47c-369aea4105ce" ac:name="jira" ac:schema-version="1">
+  <ac:parameter ac:name="server">
+   System JIRA
+  </ac:parameter>
+  <ac:parameter ac:name="serverId">
+   ac6def98-2140-30c3-8103-4b52b8b31135
+  </ac:parameter>
+  <ac:parameter ac:name="key">
+   SYSMGR-62102
+  </ac:parameter>
+ </ac:structured-macro>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <time datetime="2021-12-02">
+ </time>
+</p>
+<ul>
+ <li>
+  After reviewing the settings with
+  <ac:link>
+   <ri:user ri:userkey="557058:c11a8693-7dcc-4232-aa9d-d1adf489eef8">
+   </ri:user>
+  </ac:link>
+  , we decided not to lock the Waiting Room ON. Instead we left it On by default but can be change by a host if they prefer Passcodes instead. In favor of giving users options, just in case something prevents them from using the WR.
+ </li>
+ <li>
+  At least one security method is enforced. You can't have a meeting that doesn't use passcodes or doesn't have Waiting Room turned on. Choose one or the other.
+ </li>
+</ul>
+<p>
+ <br/>
+</p>
+<p>
+ <strong>
+  <ac:structured-macro ac:macro-id="e09c85c3-e8a2-43ef-b764-a5413f437b99" ac:name="jira" ac:schema-version="1">
+   <ac:parameter ac:name="server">
+    System JIRA
+   </ac:parameter>
+   <ac:parameter ac:name="columnIds">
+    issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+   </ac:parameter>
+   <ac:parameter ac:name="columns">
+    key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+   </ac:parameter>
+   <ac:parameter ac:name="serverId">
+    ac6def98-2140-30c3-8103-4b52b8b31135
+   </ac:parameter>
+   <ac:parameter ac:name="key">
+    SYSMGR-61170
+   </ac:parameter>
+  </ac:structured-macro>
+ </strong>
+</p>
+<p>
+ <strong>
+  <time datetime="2021-11-18">
+  </time>
+ </strong>
+</p>
+<ul>
+ <li>
+  <h1>
+   <strong>
+    Improve user friendliness settings on Zoom users
+   </strong>
+  </h1>
+ </li>
+ <li>
+  Here are the new settings.
+  <ul>
+   <li>
+    Turned off passcodes for new meetings, for instant meetings, and personal meetings.
+   </li>
+   <li>
+    I now locked Waiting Room ON – though it's already implied if "Require all meetings are secured with one security option" is on and passcodes are off then WR is the only option of security. But just to be safe, I disabled users from toggling that off.
+   </li>
+   <li>
+    Also turned off "Room Meeting ID Passcode" – not entirely sure if this was off or on prior to these changes. Grisha Levit if this creates issues for Zoom Rooms, then please let me know or adjust the setting here.
+   </li>
+  </ul>
+ </li>
+</ul>
+<p>
+ <br/>
+</p>
+<p>
+ <strong>
+  <time datetime="2021-03-04">
+  </time>
+ </strong>
+</p>
+<h3>
+ <strong>
+  <ac:structured-macro ac:macro-id="b6c6b693-44e3-4f26-9c64-f640b25c13b2" ac:name="jira" ac:schema-version="1">
+   <ac:parameter ac:name="server">
+    System JIRA
+   </ac:parameter>
+   <ac:parameter ac:name="serverId">
+    ac6def98-2140-30c3-8103-4b52b8b31135
+   </ac:parameter>
+   <ac:parameter ac:name="key">
+    SYSMGR-56390
+   </ac:parameter>
+  </ac:structured-macro>
+ </strong>
+</h3>
+<ul>
+ <li>
+  <h1>
+   <strong>
+    Secure All Meetings with at least one security method
+   </strong>
+  </h1>
+ </li>
+</ul>
+<h2>
+ <strong>
+  Original Setting:
+ </strong>
+</h2>
+<ul>
+ <li>
+  <em>
+   "Require that all meetings are secured with one security option"
+  </em>
+  : OFF, UNLOCKED
+ </li>
+ <li>
+  "
+  <em>
+   Waiting Room
+  </em>
+  ": ON, LOCKED
+ </li>
+ <li>
+  "
+  <em>
+   Require a passcode when scheduling new meetings
+  </em>
+  ": ON, UNLOCKED
+ </li>
+</ul>
+<h2>
+ <strong>
+  New Settings:
+ </strong>
+</h2>
+<ul>
+ <li>
+  <em>
+   "Require that all meetings are secured with one security option"
+  </em>
+  :
+  <strong>
+   ON
+  </strong>
+  ,
+  <strong>
+   LOCKED
+  </strong>
+ </li>
+ <li>
+  <em>
+   "Waiting Room"
+  </em>
+  :
+  <strong>
+   ON
+  </strong>
+  ,
+  <strong>
+   UNLOCKED
+  </strong>
+ </li>
+ <li>
+  <em>
+   "Require a passcode when scheduling new meetings"
+  </em>
+  : ON, UNLOCKED
+ </li>
+</ul>
+<h3>
+ <strong>
+  What prompted the Change?
+ </strong>
+</h3>
+<ul>
+ <li>
+  This is what we've always wanted but were not able to do previously.
+ </li>
+</ul>
+<hr/>
+<p>
+ <strong>
+  <time datetime="2021-02-02">
+  </time>
+ </strong>
+</p>
+<h3>
+ <strong>
+  <ac:structured-macro ac:macro-id="dd096b09-1804-4ba7-a938-c5b7c7b135d7" ac:name="jira" ac:schema-version="1">
+   <ac:parameter ac:name="server">
+    System JIRA
+   </ac:parameter>
+   <ac:parameter ac:name="columns">
+    key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+   </ac:parameter>
+   <ac:parameter ac:name="serverId">
+    ac6def98-2140-30c3-8103-4b52b8b31135
+   </ac:parameter>
+   <ac:parameter ac:name="key">
+    SYSMGR-55835
+   </ac:parameter>
+  </ac:structured-macro>
+ </strong>
+</h3>
+<ul>
+ <li>
+  <h1>
+   <strong>
+    Secure All Meetings with at least one security method
+   </strong>
+  </h1>
+ </li>
+</ul>
+<h2>
+ <strong>
+  Original Setting:
+ </strong>
+</h2>
+<ul>
+ <li>
+  Require passcode for participants joining by phone was not toggled on.
+ </li>
+ <li>
+  Dialed in users just get admitted if they have the Zoom event info.
+ </li>
+</ul>
+<h2>
+ <strong>
+  New Settings:
+ </strong>
+</h2>
+<ul>
+ <li>
+  "
+  <em>
+   Require passcode for participants joining by phone
+  </em>
+  " was turned on at the org level but it's
+  <em>
+   <strong>
+    NOT "Locked"
+   </strong>
+  </em>
+  . Some users can disable this feature for their own meetings that they host.
+  <ul>
+   <li>
+    This setting has now been
+    <strong>
+     locked
+    </strong>
+    . (04/28/2021, 9:30am PST).
+   </li>
+  </ul>
+ </li>
+ <li>
+  A numeric passcode will be required for participants joining by phone if your meeting has a passcode. For meeting with an alphanumeric passcode, a numeric version will be generated.
+ </li>
+</ul>
+<h3>
+ <strong>
+  What prompted the Change?
+ </strong>
+</h3>
+<ul>
+ <li>
+  <p>
+   Following a recommendation from
+   <ac:link>
+    <ri:user ri:userkey="557058:06e0cf88-5e2b-4a95-8f42-d4b029e0bc87">
+    </ri:user>
+   </ac:link>
+   and because it makes sense.
+  </p>
+ </li>
+</ul>
+<h3>
+ <strong>
+  Rationale/Justification for Change
+ </strong>
+</h3>
+<ul>
+ <li>
+  The setting is intended to further harden the security of our Zoom events and prevent unauthorized attendees from getting into meetings by dialing in without a passcode.
+ </li>
+ <li>
+  The setting can be "Locked" as admin to enforce it once we conclude there are no side effects.
+ </li>
+</ul>
+<p>
+ <br/>
+</p>

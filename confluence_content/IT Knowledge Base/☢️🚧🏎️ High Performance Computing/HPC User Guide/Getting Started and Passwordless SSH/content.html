@@ -1,0 +1,152 @@
+<h1>
+ <ac:structured-macro ac:local-id="ff5a6ce6-11a2-413d-9693-4bf98c6ee0ca" ac:macro-id="64c9f6b9-c6f5-4795-9000-f35d9d17a5a7" ac:name="anchor" ac:schema-version="1">
+  <ac:parameter ac:name="">
+   getting-started
+  </ac:parameter>
+ </ac:structured-macro>
+ Getting Started
+</h1>
+<ol start="1">
+ <li>
+  <p>
+   If you are on a machine external to the cluster (like your office desktop, or your laptop), you will only be able to reach the cluster submission node (boltsub2 for the bolt cluster) when your machine is connected to either:
+  </p>
+ </li>
+ <li>
+  <p>
+   Office wired ethernet
+  </p>
+ </li>
+ <li>
+  <p>
+   🔐 Appgate VPN
+  </p>
+ </li>
+ <li>
+  <p>
+   The cluster compute nodes are only accessible from other hosts within the cluster. For example, you would only be able to ssh to bolt-2-23 from boltsub2. You would not be able to ssh to bolt-2-23 from your desktop machine. Normally, you only need to ssh into a compute node manually if there is a problem with a job.
+  </p>
+ </li>
+ <li>
+  <p>
+   To get started, ssh to the submission node. For example, for the bolt cluster:
+   <code>
+    ssh boltsub2.schrodinger.com
+   </code>
+  </p>
+ </li>
+ <li>
+  <p>
+   If it's your first time logging in to the submission node, see the Passwordless SSH section below.
+  </p>
+ </li>
+</ol>
+<h1>
+ <ac:structured-macro ac:local-id="e218616a-3065-4080-9b0a-ade285683159" ac:macro-id="e774aa1c-6ddf-40ac-b12f-6eabe374eb1f" ac:name="anchor" ac:schema-version="1">
+  <ac:parameter ac:name="">
+   passwordless-ssh
+  </ac:parameter>
+ </ac:structured-macro>
+ Passwordless SSH
+</h1>
+<p>
+ To ensure your jobs run smoothly on the cluster, setting up passwordless SSH within the cluster environment is essential.
+</p>
+<p>
+ If this is your first time logging into the submission node via SSH, you may be prompted to configure your SSH keys for passwordless access. When prompted, simply press return without entering any additional information. This action will enable your SSH keys to function without requiring a passphrase.
+</p>
+<p>
+ If you're unsure whether passwordless SSH is correctly configured within the cluster, please perform the following test:
+</p>
+<ol start="1">
+ <li>
+  <p>
+   SSH into your machine to access the submission node.
+  </p>
+ </li>
+</ol>
+<p>
+ For example, for the bolt cluster:
+</p>
+<p>
+ ssh boltsub2.schrodinger.com 2. Once logged into boltsub2, attempt to SSH back to
+ <a href="http://boltsub2.schrodinger.com">
+  boltsub2.schrodinger.com
+ </a>
+ .
+</p>
+<ol start="1">
+ <li>
+  <p>
+   If you are
+   <strong>
+    not
+   </strong>
+   prompted for a password on boltsub2, then your passwordless SSH within the cluster
+   <strong>
+    is correctly set up
+   </strong>
+   .
+  </p>
+ </li>
+ <li>
+  <p>
+   If you
+   <strong>
+    are prompted
+   </strong>
+   for a password,
+   <strong>
+    you will need to set up passwordless SSH within the cluster by following
+   </strong>
+   <strong>
+    Setting up Passwordless SSH from Linux and MacOS Hosts.
+   </strong>
+  </p>
+ </li>
+ <li>
+  <p>
+   After successfully configuring passwordless SSH within the cluster, you can copy your submission files to boltsub2 and submit your job to the cluster via the command line.
+  </p>
+ </li>
+ <li>
+  <p>
+   If you wish to submit jobs directly to the cluster from an external machine (such as your office desktop or laptop), you must also establish passwordless SSH from that machine to the submission node. Ensure your machine is connected to the wired network in the main office or is on the VPN to access the submission node.
+  </p>
+ </li>
+ <li>
+  <p>
+   To set up passwordless SSH from your machine to the cluster submission node, refer to:
+  </p>
+ </li>
+ <li>
+  <p>
+   <a href="http://schrodinger.atlassian.net/wiki/display/SYSMGR/Setting+up+Passwordless+SSH+from+Linux+and+Mac+Hosts">
+    Setting up Passwordless SSH from Linux and Mac Hosts
+   </a>
+   and/or
+  </p>
+ </li>
+ <li>
+  <p>
+   <a href="http://schrodinger.atlassian.net/wiki/display/SYSMGR/Setting+Up+Passwordless+SSH+from+Windows+Hosts">
+    Setting Up Passwordless SSH from Windows Hosts
+   </a>
+  </p>
+ </li>
+</ol>
+<ac:structured-macro ac:local-id="831eec08-7a01-49f5-bb7b-698e11a100cc" ac:macro-id="2eb42c5721089b7fcb4d398744534fdbfcefb83d3b92fc5221f9ce4c9ad1d89d" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:parameter ac:name="name">
+  User Story
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   As a new HPC user, I need to understand how to connect to the cluster and set up passwordless SSH so I can submit and run jobs efficiently without authentication barriers.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+</p>

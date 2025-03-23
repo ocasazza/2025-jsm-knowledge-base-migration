@@ -1,0 +1,838 @@
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="fed24556-f82b-4fdd-a414-34a256823472" ac:name="excerpt" ac:schema-version="1">
+ <ac:parameter ac:name="atlassian-macro-output-type">
+  INLINE
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   As a Schrödinger employee, I'd like to install a Microsoft Office application such as Word, Excel, or Powerpoint.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="5db3d2d3-d380-4791-a545-e8df589503a4" ac:name="note" ac:schema-version="1">
+ <ac:parameter ac:name="title">
+  DO NOT USE OneDrive
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   <span>
+    Company data is not approved to be stored in OneDrive, and the ability to store data there using your Schrödinger account has been disabled.
+   </span>
+  </p>
+  <p>
+   <span>
+    OneNote requires OneDrive and should not be used. Use
+    <a href="https://keep.google.com/">
+     Google Keep
+    </a>
+    instead or contact
+    <a href="mailto:infosec@schrodinger.com">
+     infosec@schrodinger.com
+    </a>
+    for approval of alternatives.
+   </span>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="9afce47e-5747-454e-a24f-c64b4a95a459" ac:name="toc" ac:schema-version="1">
+ </ac:structured-macro>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="a2c184de-1ef2-4143-b8e2-8ee6218cf152" ac:name="expandall" ac:schema-version="1">
+ </ac:structured-macro>
+</p>
+<h2>
+ Step-by-step guide
+</h2>
+<h3>
+ Prerequisites
+</h3>
+<ol>
+ <li>
+  <strong>
+   <ac:structured-macro ac:macro-id="1a0f8cc3-54dd-4e67-b653-f12a20d688f0" ac:name="anchor" ac:schema-version="1">
+    <ac:parameter ac:name="">
+     prereq_activation
+    </ac:parameter>
+   </ac:structured-macro>
+   App Assignment:
+  </strong>
+  Please file an IT Help ticket to request a subscription for Office 365, and whether you need to
+  <strong>
+   host
+  </strong>
+  meetings with Microsoft Teams (the subscription we assign will be different if you do need to host Microsoft Teams meetings). If you do need to host meetings with Microsoft Teams, please describe the business case for that use in the IT Help ticket. Please keep in mind there may be a delay while a subscription is purchased for you.  See
+  <ac:link ac:anchor="getting_help">
+   <ri:content-entity ri:content-id="54824696" ri:version-at-save="1">
+   </ri:content-entity>
+   <ac:plain-text-link-body>
+    <![CDATA[Getting help]]>
+   </ac:plain-text-link-body>
+  </ac:link>
+  if you need details on how to file a IT Help ticket.
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="ae36cb30-b971-4874-b97e-a435ee898be8" ac:name="info" ac:schema-version="1">
+   <ac:rich-text-body>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+    <ac:structured-macro ac:macro-id="b9ef2c09-7588-4ac2-8cc3-0ad8112c722d" ac:name="note" ac:schema-version="1">
+     <ac:parameter ac:name="title">
+      SYSMGR Only
+     </ac:parameter>
+     <ac:rich-text-body>
+      <p>
+       <ac:link>
+        <ri:page ri:content-title="Assign Office 365 (O365) or Microsoft Teams applications to a user" ri:space-key="SYSMGR" ri:version-at-save="47">
+        </ri:page>
+        <ac:plain-text-link-body>
+         <![CDATA[/wiki/spaces/SYSMGR/pages/54407472]]>
+        </ac:plain-text-link-body>
+       </ac:link>
+       .
+      </p>
+     </ac:rich-text-body>
+    </ac:structured-macro>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+    <ac:structured-macro ac:macro-id="3367e330-e1b7-41a7-a5f3-940f06f37127" ac:name="note" ac:schema-version="1">
+     <ac:rich-text-body>
+      <p>
+       <span>
+        <strong>
+         The Okta 2-factor authentication prompt
+        </strong>
+        in the Office 365 window does not use your web browser, and does not currently support the laptop's fingerprint reader or USB key as the second factor. You'll need to have a phone enrolled as one of your Okta 2-factor methods in order to complete the Office 365 Okta login. (
+        <ac:structured-macro ac:macro-id="72499984-9177-4fa9-a390-f5f85eda9bd7" ac:name="jira" ac:schema-version="1">
+         <ac:parameter ac:name="server">
+          System JIRA
+         </ac:parameter>
+         <ac:parameter ac:name="serverId">
+          ac6def98-2140-30c3-8103-4b52b8b31135
+         </ac:parameter>
+         <ac:parameter ac:name="key">
+          SYSMGR-57277
+         </ac:parameter>
+        </ac:structured-macro>
+        )
+       </span>
+      </p>
+     </ac:rich-text-body>
+    </ac:structured-macro>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   <strong>
+    Mac uninstall:
+   </strong>
+   If you've previously activated Office 2019 on your Mac computer, please run the Office license removal tool. Please see
+   <a href="https://support.microsoft.com/en-us/office/how-to-remove-office-license-files-on-a-mac-b032c0f6-a431-4dad-83a9-6b727c03b193">
+    this page
+   </a>
+   for instructions
+  </p>
+  <ac:structured-macro ac:macro-id="9f6a4b94-6bc6-45a1-ad08-8b834bf43ae7" ac:name="tip" ac:schema-version="1">
+   <ac:rich-text-body>
+    <p>
+     <span>
+      If you currently have an older version of Microsoft Office installed on your
+     </span>
+     <strong>
+      Mac
+     </strong>
+     <span>
+      , You do not need to uninstall the applications as Microsoft Office 365 will install over your current version.  However, if you want to
+      <a href="https://support.microsoft.com/en-us/office/uninstall-office-for-mac-eefa1199-5b58-43af-8a3d-b73dc1a8cae3">
+       this page
+      </a>
+      for instructions.
+     </span>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   <strong>
+    Windows uninstall
+   </strong>
+   <span>
+    : If you currently have another version of Microsoft Office installed, please uninstall it first.  This includes 32-bit versions of Microsoft Office, as we are deploying the 64-bit version. Having a 32-bit version installed will likely result in this message if you try to install the 64-bit version:
+   </span>
+  </p>
+  <ac:structured-macro ac:macro-id="e09f97ef-0ba4-4efd-8a2b-865fdc349aa3" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Example error message...
+   </ac:parameter>
+   <ac:rich-text-body>
+    <ac:image ac:height="250" ac:thumbnail="true">
+     <ri:attachment ri:filename="image4.png" ri:version-at-save="1">
+     </ri:attachment>
+    </ac:image>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+</ol>
+<h3 class="auto-cursor-target">
+ Installation
+</h3>
+<ol>
+ <li>
+  <span>
+   Go to
+  </span>
+  <a href="https://www.office.com/">
+   <span>
+    office.com
+   </span>
+  </a>
+ </li>
+ <li>
+  <span>
+   Login with firstName.lastName@schrodinger.com and Okta password.
+  </span>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   <span>
+    Click
+   </span>
+   <strong>
+    Install Office
+   </strong>
+   <span>
+    in the upper right.
+   </span>
+  </p>
+  <ac:structured-macro ac:macro-id="7ea1b058-7765-4d7c-a070-9ebf6ebb6414" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Screenshot...
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="185">
+      <ri:attachment ri:filename="image3.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   <span>
+    Windows: Run the downloaded .
+   </span>
+   <em>
+    <span>
+     exe
+    </span>
+   </em>
+   <span>
+    or .
+   </span>
+   <em>
+    <span>
+     dmg
+    </span>
+   </em>
+   <span>
+    file
+   </span>
+   <span>
+    Mac: Run the downloaded package installation
+    <em>
+     .pkg
+    </em>
+   </span>
+  </p>
+  <ac:structured-macro ac:macro-id="404c99dd-cbf0-4a2a-9c4c-cba5aaf78857" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Mac Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250">
+      <ri:attachment ri:filename="image2021-4-19_19-46-54.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   <span>
+    On your computer, after a few moments you should see the Office 365 installer run.
+   </span>
+  </p>
+  <ac:structured-macro ac:macro-id="f39a5c7f-4077-4923-aa83-1280bcd7df92" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Windows Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250">
+      <ri:attachment ri:filename="image2.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="709b1a18-fb5b-4a5f-9273-696a9cb71f75" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Mac Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250">
+      <ri:attachment ri:filename="image2021-4-19_20-1-7.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   Click
+   <strong style="letter-spacing: 0.0px;">
+    Close
+   </strong>
+   <span style="letter-spacing: 0.0px;">
+    once the installation is complete.
+    <br/>
+   </span>
+  </p>
+  <ac:structured-macro ac:macro-id="26eed5a3-3334-4ec0-8652-1271a2f1c995" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Windows Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250" ac:thumbnail="true">
+      <ri:attachment ri:filename="image9.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="94a10735-0e49-4f05-9f68-041f95d8db72" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Mac Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250">
+      <ri:attachment ri:filename="image2021-4-19_19-53-25.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+</ol>
+<h3>
+ <ac:structured-macro ac:macro-id="c2d62340-7e5e-42c1-b4fb-951162744901" ac:name="anchor" ac:schema-version="1">
+  <ac:parameter ac:name="">
+   activation
+  </ac:parameter>
+ </ac:structured-macro>
+ Activation
+</h3>
+<ol>
+ <li>
+  <span>
+   Please note the
+   <ac:link ac:anchor="prereq_activation">
+    <ri:content-entity ri:content-id="54824696" ri:version-at-save="1">
+    </ri:content-entity>
+    <ac:plain-text-link-body>
+     <![CDATA[prerequisites before trying to activate.]]>
+    </ac:plain-text-link-body>
+   </ac:link>
+  </span>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="b70c9a09-192a-413a-9255-fd6067788ee1" ac:name="note" ac:schema-version="1">
+   <ac:rich-text-body>
+    <p>
+     <span>
+      <strong>
+       The Okta 2-factor authentication prompt
+      </strong>
+      in the Office 365 window does not use your web browser, and does not currently support the laptop's fingerprint reader or USB key as the second factor. You'll need to have a phone enrolled as one of your Okta 2-factor methods in order to complete the Office 365 Okta login. (
+      <ac:structured-macro ac:macro-id="80547f54-8a96-4769-83df-51d72ffaf443" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        SYSMGR-57277
+       </ac:parameter>
+      </ac:structured-macro>
+      )
+     </span>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   <span>
+    Launch any Office 365 application (Excel for example) to be prompted to sign in
+   </span>
+  </p>
+  <ac:structured-macro ac:macro-id="a18be995-4347-4acd-9ea4-dbfd6bb5b063" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Windows Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250">
+      <ri:attachment ri:filename="image6.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="626b8bd3-1634-4a7b-98a4-55e63c8d59bd" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Mac Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250">
+      <ri:attachment ri:filename="image2021-4-19_20-8-31.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+    <p>
+     Note: If you are not prompted to log in to Microsoft when the application launches click Activate.
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   <span>
+    Click the Sign in button and use your
+   </span>
+   <a href="mailto:first.last@schrodinger.com">
+    <span>
+     first.last@schrodinger.com
+    </span>
+   </a>
+   <span>
+    email address
+   </span>
+  </p>
+  <ac:structured-macro ac:macro-id="a62cacb8-2dfd-4d0c-8c2a-69f89d3234a9" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Windows Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250" ac:thumbnail="true">
+      <ri:attachment ri:filename="image1.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="975e6ad0-67a9-4633-84f0-2c2f8d82e78a" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Mac Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250" ac:thumbnail="true">
+      <ri:attachment ri:filename="image2021-4-19_20-18-19.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   Complete the Okta login. Again, p
+   <span>
+    lease note the
+    <ac:link ac:anchor="prereq_activation">
+     <ri:content-entity ri:content-id="54824696" ri:version-at-save="1">
+     </ri:content-entity>
+     <ac:plain-text-link-body>
+      <![CDATA[prerequisites before trying to activate.]]>
+     </ac:plain-text-link-body>
+    </ac:link>
+   </span>
+  </p>
+  <ac:structured-macro ac:macro-id="fb9a745b-9ed0-4428-88c7-3ffc95811fca" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Windows Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250" ac:thumbnail="true">
+      <ri:attachment ri:filename="image8.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="fd13e101-55cb-4613-8e7f-4396991f8f4e" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Mac Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250" ac:thumbnail="true">
+      <ri:attachment ri:filename="image2021-4-19_20-21-37.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="d461bdae-4660-4bf3-bb9c-7320baeee7c6" ac:name="info" ac:schema-version="1">
+   <ac:rich-text-body>
+    <p class="auto-cursor-target">
+     If you are on a Mac, Microsoft office will activate after you log in. Your Microsoft Office subscription is activated if you receive this prompt.
+    </p>
+    <ac:structured-macro ac:macro-id="e2ef4ea2-5251-4077-9a60-abcd9eeb092c" ac:name="expand" ac:schema-version="1">
+     <ac:parameter ac:name="title">
+      Mac Screenshot
+     </ac:parameter>
+     <ac:rich-text-body>
+      <p>
+       <ac:image ac:height="250" ac:thumbnail="true">
+        <ri:attachment ri:filename="image2021-4-19_20-32-23.png" ri:version-at-save="1">
+        </ri:attachment>
+       </ac:image>
+      </p>
+     </ac:rich-text-body>
+    </ac:structured-macro>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+  </p>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   Windows: Click "No, sign in to this app only" when notified about staying signed in
+  </p>
+  <ac:structured-macro ac:macro-id="88a2e805-69cd-4219-a2c6-cd7086b21038" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Windows Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250" ac:thumbnail="true">
+      <ri:attachment ri:filename="image5.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   Windows: Chose 'No, don't
+   <strong style="letter-spacing: 0.0px;">
+   </strong>
+   <span style="letter-spacing: 0.0px;">
+    send optional data' when asked.
+    <br/>
+   </span>
+  </p>
+  <ac:structured-macro ac:macro-id="6bf9cfd3-f6b8-481e-9018-97dcd96573fc" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Windows Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250">
+      <ri:attachment ri:filename="image7.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <p class="auto-cursor-target">
+   To verify the software is activated, launch one program, for example Word, then click on Account. You should see that the program is listed as a Subscription Product.
+  </p>
+  <ac:structured-macro ac:macro-id="c53c02c0-baf1-456b-9a2a-b0a92bda801f" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Windows Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250">
+      <ri:attachment ri:filename="image2021-4-7_16-25-5.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   For Mac, you can open any Microsoft Office application and click the Application name on the Apple menu bar. Then select,
+   <em>
+    About Application Name
+   </em>
+   . Ex About Microsoft Word.
+  </p>
+  <ac:structured-macro ac:macro-id="dc2ec606-19b6-46ba-8638-ab9e86d8a3ed" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Mac Screenshot
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <br/>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+</ol>
+<h3>
+ Troubleshooting
+</h3>
+<ol>
+ <li>
+  <p class="auto-cursor-target">
+   If your software is not activated, you will see View Only (Unlicensed) when you click on Account in the software.  If you see this, please click on the View Only (Unlicensed) section of the application and follow the instructions in the activation section again.
+  </p>
+  <ac:structured-macro ac:macro-id="f6ef7256-62cf-472c-96d8-d67dcfc54a37" ac:name="expand" ac:schema-version="1">
+   <ac:parameter ac:name="title">
+    Screenshot...
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p>
+     <ac:image ac:height="250">
+      <ri:attachment ri:filename="image2021-4-7_15-26-59.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+</ol>
+<h3>
+ FAQS
+</h3>
+<p>
+ See
+ <ac:link>
+  <ri:page ri:content-title="Microsoft Office 365 (O365) FAQ's" ri:version-at-save="4">
+  </ri:page>
+ </ac:link>
+</p>
+<h3>
+ Microsoft Teams
+</h3>
+<p>
+ Please see
+ <ac:link>
+  <ri:page ri:content-title="Microsoft Teams" ri:version-at-save="1">
+  </ri:page>
+ </ac:link>
+</p>
+<h3>
+ <ac:structured-macro ac:macro-id="2e020136-9f0a-46ad-a6aa-bf04038b6441" ac:name="anchor" ac:schema-version="1">
+  <ac:parameter ac:name="">
+   getting_help
+  </ac:parameter>
+ </ac:structured-macro>
+ Getting help
+</h3>
+<p>
+ <ac:structured-macro ac:macro-id="a82a617a-1dd9-483f-bcc3-482d1c4df380" ac:name="include" ac:schema-version="1">
+  <ac:parameter ac:name="">
+   <ac:link>
+    <ri:page ri:content-title="ITLC Sysmgr help banner">
+    </ri:page>
+   </ac:link>
+  </ac:parameter>
+ </ac:structured-macro>
+</p>
+<p>
+ <br/>
+</p>
+<h2>
+ Related articles
+</h2>
+<p>
+ <ac:placeholder>
+  Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+ </ac:placeholder>
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="31f6625b-dae7-46ff-9dfa-84740600e418" ac:name="contentbylabel" ac:schema-version="4">
+  <ac:parameter ac:name="showLabels">
+   false
+  </ac:parameter>
+  <ac:parameter ac:name="max">
+   5
+  </ac:parameter>
+  <ac:parameter ac:name="spaces">
+   SYSMGR
+  </ac:parameter>
+  <ac:parameter ac:name="showSpace">
+   false
+  </ac:parameter>
+  <ac:parameter ac:name="sort">
+   modified
+  </ac:parameter>
+  <ac:parameter ac:name="reverse">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="type">
+   page
+  </ac:parameter>
+  <ac:parameter ac:name="cql">
+   label in ( "end-user" , "o365" ) and type = "page" and space = "SYSMGR"
+  </ac:parameter>
+  <ac:parameter ac:name="labels">
+   end-user o365
+  </ac:parameter>
+ </ac:structured-macro>
+</p>
+<ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <table class="wrapped">
+   <tbody>
+    <tr>
+     <th>
+      Related issues
+     </th>
+     <td>
+      <br/>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>

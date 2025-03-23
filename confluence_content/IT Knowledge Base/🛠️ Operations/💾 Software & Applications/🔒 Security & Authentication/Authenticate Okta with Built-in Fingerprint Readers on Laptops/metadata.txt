@@ -1,0 +1,4 @@
+id: 54821393
+title: Authenticate Okta with Built-in Fingerprint Readers on Laptops
+version: 4
+space_key: ITLC

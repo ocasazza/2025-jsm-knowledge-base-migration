@@ -1,0 +1,45 @@
+<p>
+</p>
+<p>
+ There are two queues for running CPU jobs, cpu.q and cpu_short.q. Jobs on cpu_short.q have 30 minutes hard wall clock limit. There are two ways to submit jobs to the CPU queues.
+</p>
+<ul>
+ <li>
+  With Schrodinger host file
+ </li>
+ <li>
+  Use "bolt_cpu" for running jobs on cpu.q
+ </li>
+ <li>
+  Use "bolt_cpu_short" for running jobs on cpu_short.q.
+ </li>
+ <li>
+  Without using Schrodinger host file
+ </li>
+ <li>
+  Use "-l cpuonly -pe one_node " for running jobs on cpu.q
+ </li>
+ <li>
+  Use "-l short -l cpuonly -pe one_node  -l h_rt=00:30:00" for running jobs on cpu_short.q.
+ </li>
+ <li>
+  Submitting jobs with Schrodinger host file is strongly recommended.
+ </li>
+</ul>
+<p>
+ <ac:structured-macro ac:macro-id="1234" ac:name="excerpt" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="name">
+   User Story
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p>
+    As a researcher, I need to know how to submit jobs to CPU queues so I can run calculations that don't require GPU resources.
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+</p>
+<p>
+</p>

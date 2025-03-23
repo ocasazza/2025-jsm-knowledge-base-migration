@@ -1,0 +1,276 @@
+<ac:structured-macro ac:local-id="bf5845d8-53df-4d20-b12c-994f7c98530a" ac:macro-id="e508c1fb-eb14-4a3a-b758-bd6fc87dfb4a" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h1>
+ Installation
+</h1>
+<p>
+ The software is installed in NYC in
+ <code>
+  /nfs/dbs/cambridge
+ </code>
+ .
+</p>
+<ac:structured-macro ac:macro-id="27c7d687-1a8b-443a-b322-f3880abb4771" ac:name="note" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   We only have a license for NYC.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ Installers are located in
+ <code>
+  /nfs/dbs/cambridge/Installers/latest
+ </code>
+</p>
+<p>
+ Older versions of this do exist in the filesystem but with expired licenses these are of limited value.
+</p>
+<h1>
+ How to get started
+</h1>
+<p>
+ Previous versions have expired licenses, so the instructions below are specific for the currently-licensed version.
+</p>
+<h1>
+ Set environment variables
+</h1>
+<h2>
+ For the latest version
+</h2>
+<h5>
+ <strong>
+  Add to your .cshrc:
+ </strong>
+</h5>
+<ac:structured-macro ac:macro-id="c1b23477-c62e-449a-92ae-ca505eee993c" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[setenv CSDHOME /nfs/dbs/cambridge/latest
+set path = ( $CSDHOME/bin $path  )]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h5>
+ <strong>
+  Add to your .bashrc
+ </strong>
+</h5>
+<ac:structured-macro ac:macro-id="9991faba-8944-49d0-a0f2-4257c994d49d" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[export CSDHOME=/nfs/dbs/cambridge/latest
+PATH=$CSDHOME/bin:$PATH]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h1>
+ Licensing
+</h1>
+<p>
+ As mentioned above,
+ <strong>
+  the CSD license is only for NYC.
+ </strong>
+ If you are trying to run the CSD software on a Linux machine in NYC and get a license activation dialog, set your environment variables as described above, then please run:
+</p>
+<ac:structured-macro ac:macro-id="dc79d3ea-2dbd-450d-9ac0-adc5bb50f880" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[ccdc_activator -a -k 53D2CB-A6D4B3-4CF8A5-203E17-B0AFFA-5DEBF7]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h1>
+ Running the software
+</h1>
+<p>
+ If you've run the graphical portion of the software in the past via ssh -X , this may no longer work for you (see
+ <ac:structured-macro ac:macro-id="86f870b7-fda3-4e06-bcd5-15dc0547fc73" ac:name="jira" ac:schema-version="1">
+  <ac:parameter ac:name="key">
+   SYSMGR-51175
+  </ac:parameter>
+  <ac:parameter ac:name="serverId">
+   b2a2abc6-677a-31ef-bef3-17f162f52bcb
+  </ac:parameter>
+  <ac:parameter ac:name="server">
+   System Jira
+  </ac:parameter>
+ </ac:structured-macro>
+ ).   You'll instead need to run the software via NX or X2Go
+</p>
+<p>
+ A substructure search can be done by starting the program ConQuest by setting your environment variables as described above, then typing:
+</p>
+<p>
+ <code>
+  cq
+ </code>
+</p>
+<p>
+ If you get an error about GLX, try adding vglrun before your command-line invocation of the executable. For example:
+</p>
+<ac:structured-macro ac:macro-id="73863d0c-8883-4cd1-855a-fa8de51f6b0b" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[vglrun /nfs/dbs/cambridge/latest/bin/mercury]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h1>
+ CSD Software Available
+</h1>
+<ul>
+ <li>
+  <p>
+   ConQuest - The Interface for the CSD System
+  </p>
+ </li>
+ <li>
+  <p>
+   Mercury - Crystal Structure Visualisation and Exploration Made Easy
+  </p>
+ </li>
+ <li>
+  <p>
+   Mogul - A Knowledge Base of Molecular Geometry
+  </p>
+ </li>
+ <li>
+  <p>
+   VISTA - Statistical Analysis and display of Geometric and Other Data
+  </p>
+ </li>
+ <li>
+  <p>
+   IsoStar - A Knowledge Base of Intermolecular Interactions
+  </p>
+ </li>
+ <li>
+  <p>
+   PreQuest - Creation of In-House Databases in CSD format
+  </p>
+ </li>
+</ul>
+<p>
+ More details (from
+ <a href="https://schrodinger.atlassian.net/browse/SYSMGR-47879">
+  SYSMGR-47879
+ </a>
+ ):
+</p>
+<p>
+ Our license is for CSD-System:
+</p>
+<ul>
+ <li>
+  <p>
+   Find structures with WebCSD
+  </p>
+  <ul>
+   <li>
+    <p>
+     Cross-platform web-based structure retrieval to support your
+     <br/>
+     research, education or peer review
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   Search with ConQuest
+  </p>
+  <ul>
+   <li>
+    <p>
+     Answer very specific structure questions on your desktop using
+     <br/>
+     highly flexible 3D searching of the CSD and local in-house databases
+    </p>
+   </li>
+   <li>
+    <p>
+     Quickly identify structures based on a wide range of properties
+    </p>
+   </li>
+   <li>
+    <p>
+     Use interaction and structure-property knowledge to drive design
+     <br/>
+     decisions
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   Visualise and analyse in Mercury
+  </p>
+  <ul>
+   <li>
+    <p>
+     Represent molecular conformations, crystal structures,
+     <br/>
+     crystallographic planes and simulated morphologies with high quality
+     <br/>
+     graphics and videos
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   3D print your molecules and structures
+  </p>
+ </li>
+ <li>
+  <p>
+   Conformations using Mogul
+  </p>
+  <ul>
+   <li>
+    <p>
+     Harness the millions of chemically classified bond lengths,
+     <br/>
+     angles, torsion angles, and ring conformations in the CSD to obtain precise
+     <br/>
+     information on preferred molecular geometries
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   Interactions with IsoStar
+  </p>
+  <ul>
+   <li>
+    <p>
+     Use the wealth of structural information available in the CSD to
+     <br/>
+     investigate the probability and characteristics of intermolecular
+     <br/>
+     interactions between pairs of chemical functional groups
+     <br/>
+     Connect with the CSD Python API (Application Programming Interface)
+    </p>
+   </li>
+   <li>
+    <p>
+     Create tailored scripts using the whole spectrum of CSD
+     <br/>
+     functionality to answer your targeted research questions
+    </p>
+   </li>
+   <li>
+    <p>
+     Integrate access to crystal data and CSD functions seamlessly with
+     <br/>
+     3rd party software
+    </p>
+   </li>
+  </ul>
+ </li>
+</ul>
+<h2>
+ Documentation:
+</h2>
+<p>
+ See
+ <a href="http://www.ccdc.cam.ac.uk/support/documentation">
+  http://www.ccdc.cam.ac.uk/support/documentation
+ </a>
+</p>

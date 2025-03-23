@@ -1,0 +1,303 @@
+<ac:layout>
+ <ac:layout-section ac:breakout-mode="default" ac:type="two_right_sidebar">
+  <ac:layout-cell>
+   <p>
+   </p>
+   <ac:structured-macro ac:local-id="4118ede3-f2e2-4d62-8b2c-98c002e21619" ac:macro-id="3ac4bcad-da9d-482c-9bcf-c98d431a5c5b" ac:name="toc" ac:schema-version="1" data-layout="default">
+   </ac:structured-macro>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Summary:
+   </h2>
+   <ul>
+    <li>
+     <p>
+      NYC and PDX archive server aren't accessible directly to non-admin users
+     </p>
+    </li>
+    <li>
+     <p>
+      Bastion servers, denoted by "archive-nfs-lv", allow non-admin user to rsync data to and from the archive servers
+     </p>
+    </li>
+   </ul>
+   <hr/>
+   <h2>
+    NYC and PDX Archive Server details
+   </h2>
+   <ul>
+    <li>
+     <p>
+      nyc-archive-f01.schrodinger.com is the source of on-premises archiving in NYC (nyc-archive-l01.schrodinger.com was decommissioned in late 2022)
+     </p>
+     <ul>
+      <li>
+       <p>
+        nyc-archive.schrodinger.com is aliased to nyc-archive-f01.schrodinger.com, just as it was for the old archive server
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ul>
+   <ul>
+    <li>
+     <p>
+      pdx-archive-f01.schrodinger.com is the source of on-premises archiving in PDX (pdx-archive-l01.schrodinger.com was decommissioned in early 2023)
+     </p>
+     <ul>
+      <li>
+       <p>
+        pdx-archive.schrodinger.com is aliased to nyc-archive-f01.schrodinger.com, just as it was for the old archive server
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ul>
+   <ul>
+    <li>
+     <p>
+      <strong>
+       However, unlike the old archive servers, only admins can connect directly to nyc-archive-f01.schrodinger.com
+      </strong>
+      and
+      <strong>
+       pdx-archive-f01.schrodinger.com
+      </strong>
+      <br/>
+     </p>
+     <ul>
+      <li>
+       <p>
+        Therefore, instead of accessing the nyc and pdx archive servers directly, we've setup a bastion virtual machine per region,
+        <strong>
+         nyc-archive-nfs-lv01
+        </strong>
+        and
+        <strong>
+         pdx-archive-nfs-lv01
+        </strong>
+       </p>
+      </li>
+      <li>
+       <p>
+        The bastions archive servers are really only necessary for users that need access to their archived data, but don't have access to a desktop where /nfs/archive from each region is also accessible.
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ul>
+   <hr/>
+   <h2>
+    NYC and PDX Archive Server access
+   </h2>
+   <ul>
+    <li>
+     <p>
+      You may ssh to nyc-archive-nfs-lv01 or pdx-archive-nfs-lv01 and look under "/archive/group/" for anything you might need access to from either archive
+     </p>
+    </li>
+   </ul>
+   <ul>
+    <li>
+     <p>
+      <strong>
+       If you need to retrieve something from "/archive/group", you may use nyc-archive-nfs-lv01 or pdx-archive-nfs-lv01 as so:
+      </strong>
+     </p>
+     <ul>
+      <li>
+       <p>
+        <strong>
+         rsync -avuz nyc-archive-nfs-lv01.schrodinger.com:/archive/group/
+        </strong>
+        <em>
+         <strong>
+          group_name/path/to/file.txt
+         </strong>
+        </em>
+       </p>
+      </li>
+      <li>
+       <p>
+        <strong>
+         rsync -avuz pdx-archive-nfs-lv01.schrodinger.com:/archive/group/
+        </strong>
+        <em>
+         <strong>
+          group_name/path/to/file.txt
+         </strong>
+        </em>
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ul>
+   <ul>
+    <li>
+     <p>
+      <strong>
+       If you need to send something to "/archive/group", you may use nyc-archive-nfs-lv01 or pdx-archive-nfs-lv01 as so:
+      </strong>
+     </p>
+     <ul>
+      <li>
+       <p>
+        <strong>
+         rsync -av /path/to/file.txt nyc-archive-nfs-lv01.schrodinger.com:/archive/group/
+        </strong>
+        <em>
+         <strong>
+          group_name/path/to/your_folder
+         </strong>
+        </em>
+       </p>
+      </li>
+      <li>
+       <p>
+        <strong>
+         rsync -av /path/to/file.txt pdx-archive-nfs-lv01.schrodinger.com:/archive/group/
+        </strong>
+        <em>
+         <strong>
+          group_name/path/to/your_folder
+         </strong>
+        </em>
+       </p>
+      </li>
+     </ul>
+    </li>
+   </ul>
+   <ul>
+    <li>
+     <p>
+      SFTP access from either regional bastion server is currently not available
+     </p>
+    </li>
+   </ul>
+   <hr/>
+   <h2>
+    How to Check the Quota of a Mounted Export (no admin needed)
+   </h2>
+   <ul>
+    <li>
+     <p>
+      Once a NAS export is mounted, if it has a quota on it, you may view the limits of the quota by using standard Linux commands, such as
+      <code>
+       df
+      </code>
+      .
+     </p>
+    </li>
+    <li>
+     <p>
+      You just need to know the full path of the export's mountpoint on the system.
+     </p>
+    </li>
+    <li>
+     <p>
+      On the archive servers, there are two main parent directories, "group" and "user"
+     </p>
+    </li>
+   </ul>
+   <ac:structured-macro ac:macro-id="bc11542f-cf85-4b29-837d-0e1a5ec62d93" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[hanvey@nyc-archive-nfs-lv01:~$ ls -l /archive/
+total 75
+drwxr-xr-x   50 root wheel   50 Aug  1  2023 group
+drwxr-xr-x 1577 root wheel 1577 Aug 15  2022 user
+hanvey@nyc-archive-nfs-lv01:~$ ]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+   <h3>
+    "group" directory Quotas
+   </h3>
+   <ul>
+    <li>
+     <p>
+      Each directory under the "group" directory has it's own quota set for it
+     </p>
+    </li>
+   </ul>
+   <ul>
+    <li>
+     <p>
+      Here's an example of using the
+      <code>
+       df
+      </code>
+      command to check a quota from one of the NFS bastion servers:
+     </p>
+    </li>
+   </ul>
+   <ac:structured-macro ac:macro-id="dde67971-553f-4dfc-9810-2dca8994b391" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[hanvey@nyc-archive-nfs-lv01:~$ df -h /archive/group/sysmgr/
+Filesystem                                                                             Size  Used Avail Use% Mounted on
+nyc-archive-f01.schrodinger.com:/mnt/Pool2/NYCArchiveReplication/archive/group/sysmgr  4.0T  2.7T  1.4T  68% /archive/group/sysmgr
+hanvey@nyc-archive-nfs-lv01:~$ ]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+   <p style="margin-left: 60.0px;">
+    Same idea, different path when checking from a desktop workstation:
+   </p>
+   <ac:structured-macro ac:macro-id="3242174f-39eb-4063-9585-2157709c67d0" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[nyc-desk-l250:~ > df -h /nfs/archive/group/sysmgr/
+Filesystem                                                         Size  Used Avail Use% Mounted on
+nyc-archive:/mnt/Pool2/NYCArchiveReplication/archive/group/sysmgr  4.0T  2.7T  1.4T  68% /nfs/archive/group/sysmgr
+nyc-desk-l250:~ > ]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+   <h3>
+    "user" directory Quotas
+   </h3>
+   <ul>
+    <li>
+     <p>
+      each directory under the "user" directory does NOT have it's own quota set for it
+     </p>
+    </li>
+    <li>
+     <p>
+      the "user" archive is just one export with a large quota of 65TB so all the user folder share the same quota
+     </p>
+    </li>
+    <li>
+     <p>
+      Here's an example of using the
+      <code>
+       df
+      </code>
+      command to check a the quota of the user directory from one of the NFS bastion servers:
+     </p>
+    </li>
+   </ul>
+   <ac:structured-macro ac:macro-id="529c7250-c71e-4821-b21c-862efdcc6655" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[hanvey@nyc-archive-nfs-lv01:~$ df -h /archive/user/hanvey
+Filesystem                                                                     Size  Used Avail Use% Mounted on
+nyc-archive-f01.schrodinger.com:/mnt/Pool2/NYCArchiveReplication/archive/user   65T   41T   25T  62% /archive/user
+hanvey@nyc-archive-nfs-lv01:~$ ]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+   <p style="margin-left: 60.0px;">
+    Again, same idea, different path when checking from a desktop workstation:
+   </p>
+   <ac:structured-macro ac:macro-id="9f542701-e46e-4e61-b52b-39c969051eb5" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[nyc-desk-l250:~ > df -h /nfs/archive/user/hanvey
+Filesystem                                                 Size  Used Avail Use% Mounted on
+nyc-archive:/mnt/Pool2/NYCArchiveReplication/archive/user   65T   41T   25T  62% /nfs/archive/user
+nyc-desk-l250:~ > ]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

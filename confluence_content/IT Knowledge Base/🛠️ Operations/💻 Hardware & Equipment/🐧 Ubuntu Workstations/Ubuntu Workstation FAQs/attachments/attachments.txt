@@ -1,0 +1,168 @@
+Title: Screenshot_2022-06-03_13-33-14.png
+ID: att54822314
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: uefi-grub-menu-ubuntu-2204-select-desktop.png
+ID: att54824670
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: uefi-grub-menu-ubuntu-2004-select-desktop.png
+ID: att54822614
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: Image_20220413_160309.jpg
+ID: att54823832
+MediaType: image/jpeg
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: PXL_20220404_212410121.jpg
+ID: att54823883
+MediaType: image/jpeg
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: uefi-grub-menu-01.png
+ID: att54821980
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_12.png
+ID: att54825437
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_11.png
+ID: att54824184
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_10.png
+ID: att54825245
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_09.png
+ID: att54824508
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_08.png
+ID: att54821963
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_07.png
+ID: att54824050
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_06.png
+ID: att54823573
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_05.png
+ID: att54823971
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_04.png
+ID: att54824791
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_03.png
+ID: att54824036
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_01.png
+ID: att54824490
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu_2004_install_flow_pictures_02.png
+ID: att54821211
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu-desktop-login-02.png
+ID: att54822758
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu-desktop-login-01.png
+ID: att54823991
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu-desktop-login-04.png
+ID: att54821229
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu-desktop-login-03.png
+ID: att54822687
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu-desktop-login-05.png
+ID: att54824604
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu-2204-login-screen-01.png
+ID: att54822652
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu-2204-login-screen-01-1.png
+ID: att54822180
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu-2204-login-screen-02.png
+ID: att54823422
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu-2204-login-screen-04.png
+ID: att54821450
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------
+Title: ubuntu-2204-login-screen-05.png
+ID: att54821836
+MediaType: image/png
+Comment: 
+Created: 
+--------------------------------------------------------------------------------

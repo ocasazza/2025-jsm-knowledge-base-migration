@@ -1,0 +1,24 @@
+<p>
+ Grid Engine will reserve a place for larger jobs (that's what the "-R y" part of the Qargs line in the hostfile does). However, Grid Engine doesn't know when jobs will finish (unless users tell it, but that's a different story). Once it has a spot reserved for a big job, it will allow smaller jobs to fill other spaces on the cluster (though, if a big enough spot opens up, the top priority job would use it).
+</p>
+<p>
+ You can see the pending queue on gibbs (which include the relative priority of jobs) by running "qstat -s p -ext". This gives you a listing of the order that gibbs will try to run the next job.
+</p>
+<p>
+ Generally, larger jobs will have to wait longer than a smaller job because it takes longer for more resources to become available, but the larger job is given priority and a guaranteed spot to run.
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="1234" ac:name="excerpt" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="name">
+   User Story
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p>
+    As a researcher, I need to understand how job size affects queue time so I can better plan my computational experiments and set realistic expectations for results delivery.
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+</p>

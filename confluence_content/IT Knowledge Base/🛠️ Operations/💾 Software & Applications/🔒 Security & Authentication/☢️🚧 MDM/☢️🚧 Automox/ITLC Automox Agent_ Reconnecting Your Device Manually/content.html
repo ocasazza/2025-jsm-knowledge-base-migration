@@ -1,0 +1,98 @@
+<p>
+</p>
+<p>
+ This document explains how to reconnect your device (whether it be a Windows or Mac device) back to our Automox Environment. Automox is a platform that automates the management of endpoints, including patching, configuration, and security.
+</p>
+<h2>
+ <strong>
+  For Macs
+ </strong>
+</h2>
+<ac:structured-macro ac:macro-id="d8f1597a-5044-40dd-a6af-201b13bcee16" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[Check status of Automox agent on device by running the following on terminal:
+ps aux | grep amagent
+
+To reconnect and re-establish connection, restart the Automox agent on terminal: 
+sudo launchctl kickstart -k system/com.automox.agent
+
+**For safe measure, please reboot your device to ensure changes are done successfully.
+
+When re-running the status command on your terminal, the timestamp should be relative
+to the time you ran the restart. 
+]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h2>
+ For Windows
+</h2>
+<p>
+ Open the Task Manager, navigate to the "Services" tab, and look for the "Automox Agent" service; if it's listed as "Running," the agent is active; if not, you can right-click and select "Start" to initiate it.
+</p>
+<p>
+ For safe measure, please restart your device here as well.
+</p>
+<h2>
+ For Linux/Ubuntu
+</h2>
+<ac:structured-macro ac:macro-id="16c42959-5c7f-4995-bb2d-4a1cc18e2d1e" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[To reconnect and re-establish connection, restart the Automox agent on terminal: 
+sudo service amagent restart
+
+**For safe measure, please reboot your device to ensure changes are done successfully.]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<h2>
+ <strong>
+  When Devices still show a disconnection:
+ </strong>
+</h2>
+<p>
+ When devices are still disconnected after restarting the agent and rebooting your device, there may be an incompatibility between the device itself and the Automox environment. Following the compatibility checklist is a prerequisite to establishing proper connection between two.
+</p>
+<p>
+</p>
+<p>
+ Compatibility Checklist (Agent Requirements):
+</p>
+<ac:structured-macro ac:macro-id="73c7be49-fb0f-4322-b17f-f74fb02ea1dd" ac:name="info" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   For Mac:
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ -3GB of Disk Space Free
+</p>
+<p>
+ -Mac device requires
+ <a href="https://help.automox.com/hc/en-us/articles/5352197527956-Install-and-Configure-Automox-Agent-for-Apple-Silicon-Devices">
+  Secure Token User Permission
+ </a>
+</p>
+<p>
+ -Connectivity to Patch source on Device: Mac App Store
+</p>
+<ac:structured-macro ac:macro-id="562f8ef7-038f-4029-b63d-bdbba20d369c" ac:name="info" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   For Windows:
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ -3GB of Disk Space Free
+</p>
+<p>
+ -Powershell Installed
+</p>
+<p>
+ -WMI Check
+</p>
+<p>
+ -Connectivity to Patch source on Device: Windows Update Server
+</p>

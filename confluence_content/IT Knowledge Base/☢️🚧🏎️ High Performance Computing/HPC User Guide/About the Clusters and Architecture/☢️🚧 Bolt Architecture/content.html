@@ -1,0 +1,311 @@
+<ac:layout>
+ <ac:layout-section ac:breakout-mode="default" ac:type="fixed-width">
+  <ac:layout-cell>
+   <p>
+    The Bolt cluster is composed of 1,000 GTX 1080 graphics cards, each equipped with 8GB of RAM, distributed across 250 GPU nodes. There are an additional
+   </p>
+   <h1>
+    Tech specs
+   </h1>
+   <table ac:local-id="619071f8-4011-4a8b-a9e8-605f0586be20" data-layout="default">
+    <tbody>
+     <tr>
+      <th>
+       <p>
+        Node Type
+       </p>
+      </th>
+      <th>
+       <p>
+        Node Count
+       </p>
+      </th>
+      <th>
+       <p>
+        CPU
+       </p>
+      </th>
+      <th>
+       <p>
+        GPU
+       </p>
+      </th>
+      <th>
+       <p>
+        RAM
+       </p>
+      </th>
+      <th>
+       <p>
+        Storage
+       </p>
+      </th>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        GPU Compute Nodes (bolt-0-*)
+       </p>
+      </td>
+      <td>
+       <p>
+        125
+       </p>
+      </td>
+      <td>
+       <p>
+        Dual Intel Xeon CPU E5-2620 v4 @ 2.10GHz (16 cores total)
+       </p>
+      </td>
+      <td>
+       <p>
+        Nvidia GeForce GTX1080
+       </p>
+      </td>
+      <td>
+       <p>
+        32GB
+       </p>
+      </td>
+      <td>
+       <p>
+        ~400GB /scr on SSD
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        CPU Compute Nodes (bolt-1-*)
+       </p>
+      </td>
+      <td>
+       <p>
+        4
+       </p>
+      </td>
+      <td>
+       <p>
+        Dual 10-core Nodes @ 2.40GHz
+       </p>
+      </td>
+      <td>
+       <p>
+        N/A
+       </p>
+      </td>
+      <td>
+       <p>
+        126GB
+       </p>
+      </td>
+      <td>
+       <p>
+        N/A
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        GPU Compute Nodes (bolt-2-*)
+       </p>
+      </td>
+      <td>
+       <p>
+        250
+       </p>
+      </td>
+      <td>
+       <p>
+        Dual Intel Xeon CPU E5-2620 v4 @ 2.10GHz (16 cores total)
+       </p>
+      </td>
+      <td>
+       <p>
+        Nvidia GeForce GTX1080Ti (12GB memory)
+       </p>
+      </td>
+      <td>
+       <p>
+        64GB
+       </p>
+      </td>
+      <td>
+       <p>
+        ~840GB /scr on SSD
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        CPU Compute Nodes (bolt-3-*)
+       </p>
+      </td>
+      <td>
+       <p>
+        50
+       </p>
+      </td>
+      <td>
+       <p>
+        Dual Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz
+       </p>
+      </td>
+      <td>
+       <p>
+        N/A
+       </p>
+      </td>
+      <td>
+       <p>
+        192GB
+       </p>
+      </td>
+      <td>
+       <p>
+        932GB /scr on SSD
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Interactive Submission Nodes (boltsub1, boltsub2)
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        Dual 10-core CPUs @2.40GHz
+       </p>
+      </td>
+      <td>
+       <p>
+        N/A
+       </p>
+      </td>
+      <td>
+       <p>
+        128GB
+       </p>
+      </td>
+      <td>
+       <p>
+        840GB /scr on SSD
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Data Transfer Node (boltio)
+       </p>
+      </td>
+      <td>
+       <p>
+        1
+       </p>
+      </td>
+      <td>
+       <p>
+        Dual 10-core CPUs @2.40GHz
+       </p>
+      </td>
+      <td>
+       <p>
+        N/A
+       </p>
+      </td>
+      <td>
+       <p>
+        128GB
+       </p>
+      </td>
+      <td>
+       <p>
+        672GB /scr disk space
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Master Node (bolt)
+       </p>
+      </td>
+      <td>
+       <p>
+        1
+       </p>
+      </td>
+      <td>
+       <p>
+        Dual 10-core CPUs at 2.40GHz
+       </p>
+      </td>
+      <td>
+       <p>
+        N/A
+       </p>
+      </td>
+      <td>
+       <p>
+        126GB
+       </p>
+      </td>
+      <td>
+       <p>
+        N/A
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h1>
+    Storage
+   </h1>
+   <p>
+    Four node Qc-107 Qumulo cluster (~270TB total).
+   </p>
+   <h1>
+    Architecture Diagrams
+   </h1>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="two_equal">
+  <ac:layout-cell>
+   <h2>
+    Logical Topology
+   </h2>
+   <p>
+   </p>
+   <ac:image ac:align="center" ac:custom-width="true" ac:layout="center" ac:original-height="825" ac:original-width="1224" ac:width="250">
+    <ri:attachment ri:filename="AD_4nXc1rwkMTYleo_w8U1k0V6esfRO1JH0RZiwkPMRNBDQVBEUOfy3-StUvnByiqN4nWfVTHV2XCIf8Hx57Pmr7HovId8hFglOMAUhzp2fnvigEmH8FHuEHSRe6i8KBikhA4pnz9hlcXwXSzG53NJPe5yPFGw?key=LNa0Gf7sbSi08FahO-AJOQ" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <h2>
+    Network Topology
+   </h2>
+   <p>
+   </p>
+   <ac:image ac:align="center" ac:custom-width="true" ac:layout="center" ac:original-height="1269" ac:original-width="1224" ac:width="250">
+    <ri:attachment ri:filename="AD_4nXdUKLkTvZm8PUcEAlyBmjqX2Nwtg9r1lJfAHcI3LOQJwn8XEiJPzyboRKoYTHmL38KEEH4V-2nxY3rifmN-K1MzhKeDd7wSYA-rZdZJbBMqBDFQ6uF0VXn3tG9BKdQTOAjXu2VhCvQq1ISdeO_Eu5AwlQ?key=LNa0Gf7sbSi08FahO-AJOQ" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="fixed-width">
+  <ac:layout-cell>
+   <p>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

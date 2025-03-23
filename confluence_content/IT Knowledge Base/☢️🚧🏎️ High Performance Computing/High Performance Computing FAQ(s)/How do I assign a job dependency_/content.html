@@ -1,0 +1,21 @@
+<p>
+ If you would like one job to wait on another job's completion before it runs, you can use the -hold_jid wc_job_list option to qsub when you submit your job. You can also add this to your -QARG option in your hostfile. wc_job_list should contain a comma separated list of the jobs you will wait on for completion.
+</p>
+<p>
+ If the job that you want to have wait is already submitted in the queue, you can run "qalter -hold_jid wc_job_list jobIDYouWantHeld"
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="1234" ac:name="excerpt" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="name">
+   User Story
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p>
+    As a researcher, I need to know how to set up dependencies between jobs so I can ensure they execute in the correct sequence and optimize my workflow.
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+</p>

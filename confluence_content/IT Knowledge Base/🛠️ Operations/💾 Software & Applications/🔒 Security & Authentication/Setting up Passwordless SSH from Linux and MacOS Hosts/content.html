@@ -1,0 +1,200 @@
+<ac:structured-macro ac:local-id="a1f5aaef-89de-4641-85cd-d4397f1497c2" ac:macro-id="dbee1564d1df88f4b93ad15b107e9f33ee7887c819933551deefb0905db89d88" ac:name="include" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="">
+  <ac:link>
+   <ri:page ri:content-title="Banner passwordless ssh deprecated" ri:version-at-save="1">
+   </ri:page>
+  </ac:link>
+ </ac:parameter>
+</ac:structured-macro>
+<h3>
+ The following steps allow you to use ssh between computers that share your login directory without specifying a password.
+</h3>
+<ol start="1">
+ <li>
+  <p>
+   Open a terminal window.
+  </p>
+ </li>
+ <li>
+  <p>
+   Generate a public/private RSA key pair on a host of your choice, whose home directory is shared with the remote hosts that you want to run jobs on:
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <sup>
+      cd ~/.ssh
+     </sup>
+    </p>
+   </li>
+   <li>
+    <p>
+     <sup>
+      ssh-keygen -t rsa
+     </sup>
+    </p>
+   </li>
+   <li>
+    <p>
+     When asked for a passphrase do not enter one; just press
+     <strong>
+      ENTER
+     </strong>
+     . If you specify a passphrase it defeats the purpose of configuring passwordless ssh.  You do not need to do this if you already have a key pair that does not use a passphrase.
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Add your public key to the list of keys allowed to log in to your account:
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <sup>
+      cat id_rsa.pub &gt;&gt; authorized_keys
+     </sup>
+    </p>
+   </li>
+   <li>
+    <p>
+     <sup>
+      cat id_rsa.pub &gt;&gt; authorized_keys2
+     </sup>
+    </p>
+   </li>
+   <li>
+    <p>
+     The two separate files are necessary to support both OpenSSH 1.5 and OpenSSH 2.0 protocols. Some versions use just one or the other of these files.
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Remove your known_hosts file:
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <sup>
+      rm known_hosts*
+     </sup>
+    </p>
+   </li>
+   <li>
+    <p>
+     This is necessary so that the new RSA key-pair mechanism is used for every host. Otherwise, hosts to which you previously connected using passwords might not use the new system automatically.
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Make sure your home directory cannot be written by anyone but you:
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <sup>
+      chmod go-w ~
+     </sup>
+    </p>
+   </li>
+   <li>
+    <p>
+     This is required before SSH will allow passwordless access to your account.
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Make sure your .ssh directory cannot be read or written by anyone but you:
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <sup>
+      chmod go-rw ~/.ssh
+     </sup>
+    </p>
+   </li>
+   <li>
+    <p>
+     This is required before SSH will allow passwordless access to your account.
+    </p>
+   </li>
+  </ol>
+ </li>
+</ol>
+<p>
+ For each home directory that is not shared with that of the chosen host, you need to copy the keys to the .ssh subdirectory.
+</p>
+<p>
+ <span style="color: rgb(23,43,77);">
+  Make sure your .ssh directory cannot be read
+ </span>
+ On Linux, you can simply run the following command:
+</p>
+<p>
+ <sup>
+  ssh-copy-id user@remote-host
+ </sup>
+</p>
+<p>
+ This command copies the keys and performs the necessary setup and permissions changes.
+</p>
+<p>
+ On Mac, or if the above command does not work on Linux, you can do the setup manually as follows:
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Copy the public and private keys to the target home directory:
+  </p>
+  <p>
+   <sup>
+    scp ~/.ssh/id_rsa* other-host:~/.ssh/
+   </sup>
+  </p>
+ </li>
+ <li>
+  <p>
+   Connect to the host on which that home directory is mounted and change to the .ssh directory:
+  </p>
+  <p>
+   <sup>
+    cd ~/.ssh
+   </sup>
+  </p>
+ </li>
+ <li>
+  <p>
+   Repeat Step 3 through Step 6 above.
+  </p>
+ </li>
+ <li>
+  <p>
+   <sup>
+    Ensure that id_rsa (the private key) is readable and writable only by the user:
+   </sup>
+   <br/>
+   <sup>
+    chmod go-rwx ~/.ssh/id_rsa
+   </sup>
+  </p>
+ </li>
+</ol>
+<p>
+ To test that passwordless SSH has been set up properly, you can execute a command on a remote host for which it is set up as follows:
+</p>
+<p>
+ <sup>
+  ssh username@remotehost date
+ </sup>
+</p>
+<p>
+ You should see a single line of output reporting the date on the remote host. If you are prompted for a password, the setup has not been done correctly. You should review the steps above to ensure that you have completed them all, especially the permissions.
+</p>

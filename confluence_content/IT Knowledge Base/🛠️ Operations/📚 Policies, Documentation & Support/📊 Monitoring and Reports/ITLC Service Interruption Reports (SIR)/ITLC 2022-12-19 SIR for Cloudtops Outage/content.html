@@ -1,0 +1,462 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for Cloudtops via the Teradici client on 2022-12-19
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           Cloudtops
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="74e3ddef-c0fa-421c-a500-d760644d6b43" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="columnIds">
+             issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="columns">
+             key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             ITINFRA-871
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         DESIS/HYD All Cloudtop users
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2022-12-19">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <ac:placeholder>
+          Use // for date macro for the date the report was filed
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="557058:898bb344-b31e-4ae9-b386-376a86469c7d">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use // for date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          List of people who had a part in reviewing or commenting on the report
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    At 1am Eastern on 2022-12-19 we received a ping from the Cloudtops room stating that people were unable to log into their Cloudtops due to an invalid certificate. The certificate had expired the prior day and the cert authority we used had trouble issuing a new certificate.
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    <span style="color: rgb(23,43,77);">
+     Cloudtops are virtual desktops that exist in the cloud and are delivered by cloud providers.  Schrodinger cloud provider for our Cloudtop virtual machines is GCP. These Virtual instances are primarily used by our Dev and QA teams in India.
+    </span>
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    <span style="color: rgb(23,43,77);">
+     The Gateway certificate expired for the Cloudtops CAC server (cac-mumbai-0) on 2022-12-18. The CAC server did try to get a new certificate but ZeroSSL was having trouble processing orders and thus we failed to get a new certificate for the server and that caused the cloudtops to be inaccessible.
+    </span>
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <ul>
+    <li>
+     1am we received a ping from Jay Dora with a Cloudtops invalid certificate error
+    </li>
+    <li>
+     Other users followed up stating the same, indicating this being a widespread issue amongst cloudtop users
+    </li>
+    <li>
+     Ragahavendra pinged the IT - SOS room at 6:10am Eastern to say there was a cert issue with the cloudtops. He provided logs from the cac server that indicated zerossl was unable to process the order for a new cert and the script was timing out.
+    </li>
+    <li>
+     <ac:link>
+      <ri:user ri:userkey="557058:898bb344-b31e-4ae9-b386-376a86469c7d">
+      </ri:user>
+     </ac:link>
+     started troubleshooting this at 10:08am, confirming this was the case. She was able to get a bit further in the process, eventually getting a 'success' that we might have gotten a new cert issue, but the subsequent processing timed out to a 504 Gateway error
+    </li>
+    <li>
+     <ac:link>
+      <ri:user ri:userkey="557058:c19c6239-8657-4845-b158-eec62442daf4">
+      </ri:user>
+     </ac:link>
+     was able to jump in and assist with the troubleshooting after standup
+    </li>
+    <li>
+     He was able to switch from zerossl to let's encrypt in order to get a new cert issued. After rebooting the cac server, things started responding
+    </li>
+   </ul>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    Instead of running the usual command to renew the certification (
+    <span style="color: rgb(0,0,0);">
+     sudo /root/.acme.sh/acme.sh --force --issue --standalone -d cloudtops.sdgr.io)
+    </span>
+    <ac:link>
+     <ri:user ri:userkey="557058:c19c6239-8657-4845-b158-eec62442daf4">
+     </ri:user>
+    </ac:link>
+    changed the cert server by using this command:
+   </p>
+   <ac:structured-macro ac:macro-id="4fd8f248-6b15-4a6c-b296-912da33cf60f" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[/root/.acme.sh/acme.sh --force --issue --standalone -d cloudtops.sdgr.io --server letsencrypt]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+   <p>
+    After that command ran successfully, we made sure all the docker containers were running again and the Teradici console started to detect the new cert.
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    It's likely this might happen again because we are currently using free certificate authorities. ZeroSSL had some issues giving us a new certificate, and that in turn impeded the Cloudtops from starting until we directed the script to get a new cert from an alternate source. Also, because the cert authority connects to the cac server on port 80 to issue a new cert, this process has to happen when the Teradici docker containers are NOT running, because the Teradici docker container is mapped to port 80 on the cac server. This makes automation of this cert process tricky.
+   </p>
+   <h3>
+    Introduced Issues
+   </h3>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="19974a77-d656-4b76-955d-d1a97afa50a5" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,priority,status,summary,created,updated,reporter,customfield_11008
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,priority,status,summary,created,updated,reporter,Sprint
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITINFRA-871, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe how soon after the advent of the bad action or incident we did, should or could have been aware of it. If an automated system identified the problem even if we ignored it please use this as the point of detection.
+    </ac:placeholder>
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe what system or mechanism we used to detect the problem.
+    </ac:placeholder>
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    <ac:placeholder>
+     If you have any ideas for ways this can be improved list or describe them here.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe how much and why time passed between when the incident was detected and when we did something about it.
+    </ac:placeholder>
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe how we communicated with our user community about this incident and assess how effective or pertinent to the situation that was.
+    </ac:placeholder>
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe here any ways we can or should make our communication better.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe all of the fortunate circumstances that made this incident better than it could have been. Include IT actions as well as just elements of dumb-luck.
+    </ac:placeholder>
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe things we could do now, soon or eventually that would make this better if/when it happened again. Don't list things that prevent it--that's avoidance and we'll get to that.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe any ideas you have (even potentially impractical ones) for assuring problems like this one don't happen again. Complete avoidance is probably not an attainable goal but shoot for at least highly unlikely.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     After analyzing and talking about this incident what actions did the reviewers and management decide should be done to address shortfalls in detection, mitigation or avoidance. Use tasks, assignments and due dates or link to created jira tickets.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

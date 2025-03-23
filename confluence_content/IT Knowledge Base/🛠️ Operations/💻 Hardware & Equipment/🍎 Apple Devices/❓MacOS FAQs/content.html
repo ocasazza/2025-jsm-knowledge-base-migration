@@ -1,0 +1,603 @@
+<p>
+ <ac:structured-macro ac:macro-id="925bb958-903b-4706-a781-b641a264eba2" ac:name="toc" ac:schema-version="1">
+ </ac:structured-macro>
+</p>
+<h2>
+ Application Tips
+</h2>
+<h3>
+ Changing your default login shell to bash
+</h3>
+<p>
+ Newer versions of macOS use zsh as the default login shell. While in most cases this will not cause problems, in some cases, you may wish to switch your default shell to bash, to be more consistent with our Linux environments.
+</p>
+<p>
+ See
+ <ac:link>
+  <ri:page ri:content-title="003. Changing terminal from zsh to bash" ri:space-key="MS" ri:version-at-save="5">
+  </ri:page>
+ </ac:link>
+ for more information on changing your default shell to bash.
+</p>
+<h3>
+ Terminal: Set the home/end keys to work properly
+</h3>
+<p>
+ Open up the Terminal &gt; Preferences.
+</p>
+<ol>
+ <li>
+  <p>
+   Select the 'Profiles' tab.
+  </p>
+ </li>
+ <li>
+  <p>
+   Select your default settings from the pane on the left. Select 'Keyboard' on the right.
+  </p>
+ </li>
+ <li>
+  <p>
+   Scroll down the list until you find end and click 'Edit'.
+  </p>
+ </li>
+ <li>
+  <p>
+   Change the action drop-down to 'send string to shell:'
+  </p>
+ </li>
+ <li>
+  <p>
+   Put \033OF in the field below and click 'OK'.
+  </p>
+ </li>
+ <li>
+  <p>
+   Scroll down the list until you find home and click 'Edit'.
+  </p>
+ </li>
+ <li>
+  <p>
+   Change the action drop-down to 'send string to shell:'
+  </p>
+ </li>
+ <li>
+  <p>
+   Put \033OH in the field below and click 'OK'.
+  </p>
+ </li>
+ <li>
+  <p>
+   Sit back and enjoy the sweet, sweet bliss of terminal keys that do what they ought to.
+  </p>
+ </li>
+</ol>
+<h3>
+ iTerm: Set the Opt+Arrow keys to jump forward and backwords by word
+</h3>
+<ol>
+ <li>
+  <p>
+   Open iTerm preferences and go to the Keys tab.
+  </p>
+ </li>
+ <li>
+  <p>
+   Click '+' under Global Shortcut Keys
+  </p>
+ </li>
+ <li>
+  <p>
+   Hold option + arrow key for the direction you want while in the keyboard shortcut field.
+  </p>
+ </li>
+ <li>
+  <p>
+   Select Send Escape Sequence in the Action: drop-down
+  </p>
+ </li>
+ <li>
+  <p>
+   For left-arrow but 'b' in the Esc+ field and an 'f' for right-arrow
+  </p>
+ </li>
+ <li>
+  <p>
+   Repeat #2-5 for the other direction.
+  </p>
+ </li>
+</ol>
+<h3>
+ VNC: Connect to an OS X Shared Desktop
+</h3>
+<ul>
+ <li>
+  <p>
+   From Linux: vncviewer -FullColor -Shared hostname. When prompted for a password for the VNC session, use Sun$h1ne.
+  </p>
+ </li>
+ <li>
+  <p>
+   From Windows: Use your favorite VNC client (
+   <span>
+   </span>
+   <span class="twikiNewLink">
+    <a href="https://wiki.schrodinger.com/bin/edit/Bin/edit/Sysmgr/TightVNCTopicparent=Sysadmin/ProcedureMacBookSetupNowysiwyg=0?topicparent=Sysmgr.MacOSXUserHintsTips;nowysiwyg=0" rel="nofollow" style="text-decoration: none;">
+     TightVNC
+    </a>
+   </span>
+   <span>
+   </span>
+   for example) to connect to the Mac's hostname, and when prompted for a password for the VNC session, use Sun$h1ne.
+  </p>
+ </li>
+</ul>
+<h3>
+ <ac:link>
+  <ri:page ri:content-title="How to connect from MacOS to a Windows Virtual Machine running in our VMware vSphere" ri:space-key="SYSMGR" ri:version-at-save="7">
+  </ri:page>
+ </ac:link>
+</h3>
+<h2>
+ Mounting Drives
+</h2>
+<p>
+ There are a number of ways to mount network drives on a mac, some might be more appropriate for particular applications than others.
+</p>
+<h3>
+ CIFS
+</h3>
+<p>
+ CIFS provides the easiest way to connect securely - no need to worry about having the same UID and being part of the same groups on Mac, Windows, or Linux.
+</p>
+<h4>
+ Creating the mount
+</h4>
+<ul>
+ <li>
+  <p>
+   In the Finder, select "Connect to Server..." from the "Go" menu.
+  </p>
+ </li>
+ <li>
+  <p>
+   Enter the path to the server, for example smb://pdx-stor.
+  </p>
+  <ul>
+   <li>
+    <p>
+     Available Servers:
+    </p>
+    <ul>
+     <li>
+      <p>
+       pdx-stor
+      </p>
+     </li>
+     <li>
+      <p>
+       nyc-stor
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   Enter your windows username and password, specifying the domain as SCHRODINGER\username
+  </p>
+ </li>
+ <li>
+  <p>
+   Select the shares you wish to use (hold the command key to select multiple shares)
+  </p>
+ </li>
+ <li>
+  <p>
+   The mountpoints will be created as /Volumes/sharename on your local system.
+  </p>
+ </li>
+ <li>
+  <p>
+   It’s possible that the mounted drive will not appear on the desktop due to a system setting. If you want the mapped drive icon to be visible on the Desktop, do the following:
+  </p>
+  <ul>
+   <li>
+    <p>
+     From the Finder, open Finder Preferences by hitting Command + [comma]
+    </p>
+   </li>
+   <li>
+    <p>
+     Click the General tab
+    </p>
+   </li>
+   <li>
+    <p>
+     Enable the checkbox for Connected Servers
+    </p>
+   </li>
+  </ul>
+ </li>
+</ul>
+<h4>
+ Re-connecting to the Share
+</h4>
+<p>
+ There are a few ways to do this:
+</p>
+<ul>
+ <li>
+  <p>
+   Drag the volume to the dock and click on it when you need it again.
+  </p>
+ </li>
+</ul>
+<p>
+ Or:
+</p>
+<ul>
+ <li>
+  <p>
+   Right-click on the mapped network drive on the Mac OS desktop, and select “Make Alias”. You can drag the alias to the Dock.
+  </p>
+ </li>
+</ul>
+<p>
+ Or:
+</p>
+<ul>
+ <li>
+  <p>
+   Drag the volume to your "Login Items" list in the "Accounts" System Preferences pane.
+  </p>
+ </li>
+</ul>
+<p>
+ Or:
+</p>
+<ul>
+ <li>
+  <p>
+   Just hit Command+K in the Finder and your last connected server will be displayed
+  </p>
+ </li>
+</ul>
+<h3>
+ A note about /Volumes
+</h3>
+<p>
+ This path is used by the OS to present available volumes to the user. For example, when saving a file, you will have easy access to any volume mounted here. Additionally, Parallels makes all these volumes visible under /media/psf. If you mount a volume in any other path, you will have to either create a link to it under /Volumes or take some other steps to get to it.
+</p>
+<h2>
+ MacOS Upgrade Tips
+</h2>
+<ac:structured-macro ac:macro-id="e432c94f-e8ab-4f1f-a12c-a75eee94051f" ac:name="warning" ac:schema-version="1">
+ <ac:parameter ac:name="title">
+  MacOS 13 Warning
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   First few releases of a major MacOS upgrade is usually plagued with bugs and waiting is generally a good strategy. In addition, compatibility with Schrodinger Suite can not be determined immediately after release.
+  </p>
+  <p>
+   MacOS Ventura is
+   <strong>
+    NOT
+   </strong>
+   officially supported by IT and you're not allowed to upgrade till there is an official communication announcing otherwise. If you are too excited and your day-to-day work doesn't depend on using the Schrodinger Suite, then you can request to be part of the beta testing group if you so desire. Just file a IT-Help / Freshservice ticket indicating your interest.
+  </p>
+  <p>
+   We're targeting 23-? for compatibility with our software suite. (This needs to be updated for Ventura)
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h3>
+ Preparation
+</h3>
+<ul>
+ <li>
+  First make sure your current MacBook will pass the
+  <a href="https://support.apple.com/en-us/HT212551">
+   Compatibility
+  </a>
+  check. Every year older Macs start becoming incompatible with the newest OS release.
+ </li>
+ <li>
+  <u>
+   Make sure
+  </u>
+  Druva has completed one last round of backup with all your recent changes and work in progress.
+ </li>
+ <li>
+  Please read
+  <a href="https://developer.apple.com/documentation/macos-release-notes">
+   MacOS Release Notes
+  </a>
+  to understand the biggest changes and known but not-yet-fixed issues before upgrading.
+ </li>
+ <li>
+  Also review
+  <a href="https://schrodinger.atlassian.net/wiki/display/SYSMGR/Upgrading+your+macOS+Version">
+   this page in Confluence
+  </a>
+  .
+ </li>
+ <li>
+  Make sure you have anywhere between 45mins to a couple hours to perform the upgrade.
+ </li>
+ <li>
+  We recommend you do your OS upgrade Friday after office hours or over the weekend.
+ </li>
+ <li>
+  Make sure you are plugged in to a power source and reliable internet connection for the entirety of the upgrade process.
+  <ul>
+   <li>
+    Watch out for children/yourself accidentally bumping into your power adaptor/internet cable and disconnecting it if you leave the computer unattended.
+   </li>
+   <li>
+    If the power adaptor or internet connection is interrupted, you may leave your machine bricked or un-bootable.
+   </li>
+  </ul>
+ </li>
+</ul>
+<h3>
+ Installation
+</h3>
+<ul>
+ <li>
+  To start the upgrade process, please click on the apple logo in the top left corner of your display →
+  <strong>
+   <em>
+    About this Mac
+   </em>
+  </strong>
+  .
+  <ul>
+   <li>
+    Here you will see which MacOS version you currently are on and your MacBook's model year.
+   </li>
+   <li>
+    It is not recommended that you jump between major OS releases. That is, for example, from MacOS 10.15 (Catalina) to MacOS 13 (Ventura).
+   </li>
+   <li>
+    Instead
+    <a href="https://support.apple.com/en-us/HT211683">
+     first upgrade to an intermediate MacOS version like MacOS 11
+    </a>
+    (Big Sur), if possible and then upgrade to the latest version.
+   </li>
+  </ul>
+ </li>
+ <li>
+  From this screen click on
+  <strong>
+   <em>
+    Software Update...
+   </em>
+  </strong>
+ </li>
+ <li>
+  Your computer will check for the latest OS upgrade available and offer you an option to
+  <em>
+   <strong>
+    Upgrade Now.
+   </strong>
+  </em>
+ </li>
+ <li>
+  Before you click on that, make sure to compare the update size (
+  <em>
+   <strong>
+    usually
+   </strong>
+  </em>
+  <strong>
+   10+ GB
+  </strong>
+  ) with your available disk space. (Click
+  <ac:image ac:thumbnail="true" ac:width="16">
+   <ri:attachment ri:filename="image2021-11-2_11-20-50.png" ri:version-at-save="1">
+   </ri:attachment>
+  </ac:image>
+  →
+  <em>
+   About this Mac
+  </em>
+  →
+  <em>
+   Storage
+  </em>
+  → (Optionally click "
+  <em>
+   Manage
+  </em>
+  " to manage your storage space).
+ </li>
+ <li>
+  Follow the on-screen instructions, agree with Apple's terms of use and continue the installation. Again, make sure your Mac is plugged in to a power source and connected to a reliable internet.
+ </li>
+ <li>
+  It's perfectly normal that your computer restarts multiple times during the installation process.
+ </li>
+ <li>
+  Don't interrupt the installation process, you can't pause and resume this process.
+ </li>
+</ul>
+<h3>
+ Post Installation
+</h3>
+<p>
+ Depending on what you use your Mac for and the tools you have installed, you may have to do a few things once the installation completes.
+</p>
+<ul>
+ <li>
+  If you use developer tools, you may have to launch Xcode and accept the new terms and conditions.
+ </li>
+ <li>
+  <p>
+   Also make sure to run the following command, then accept the license terms and install Command Line Tools (even if you had it installed prior to the upgrade).
+  </p>
+  <p class="default s-code-block" style="margin-left: 0.0px;">
+   <code class="hljs language-lua">
+    xcode-
+    <span class="hljs-built_in">
+     select
+    </span>
+    <span class="hljs-comment">
+     --install
+     <br/>
+     <br/>
+    </span>
+   </code>
+  </p>
+ </li>
+ <li>
+  <p>
+   If the command doesn't accomplish it, then go to
+   <a href="https://developer.apple.com/download/more/" style="text-decoration: underline;text-align: left;">
+    Apple Developer Website
+   </a>
+   and download the latest
+   <strong style="text-align: left;">
+    Command Line Tools for Xcode.
+   </strong>
+  </p>
+ </li>
+ <li>
+  If you don't do this, chances are you will run into the following error often and Git or other tools won't work.
+ </li>
+</ul>
+<p style="margin-left: 30.0px;">
+ <code>
+  xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+ </code>
+</p>
+<p>
+ <br/>
+</p>
+<ul>
+ <li>
+  M1 Macs could run into some issues as well when running some applications or tools.
+  <ul>
+   <li>
+    Please run the following command →
+    <code>
+     <span style="text-decoration: none;">
+      /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+     </span>
+    </code>
+   </li>
+  </ul>
+ </li>
+ <li>
+  Expect
+  <em>
+   Spotlight Search
+  </em>
+  to be much slower, it's probably rebuilding the index.
+ </li>
+ <li>
+  For other most common issues, please try
+  <span class="legacy-color-text-default">
+   <span>
+   </span>
+  </span>
+  <a href="https://support.apple.com/en-us/HT201295" style="text-decoration: none;">
+   resetting your SMC
+  </a>
+  <span class="legacy-color-text-default">
+   <span>
+   </span>
+   and
+   <span>
+   </span>
+  </span>
+  <a href="https://support.apple.com/en-us/HT204063" style="text-decoration: none;">
+   your computer's NVRAM
+  </a>
+  before reaching out to IT. Most issues can be fixed by performing these.
+ </li>
+ <li>
+  Please report other issues you encounter via a Jira ticket or the IT Support Hotline, if urgent (otherwise, you'll be notified of G Chat room to discuss version specific issues)
+ </li>
+</ul>
+<h3>
+ Troubleshooting (Stub)
+</h3>
+<ul>
+ <li>
+  <h4>
+   Update Download
+  </h4>
+  <ul>
+   <li>
+    <p>
+     <span style="color: rgb(26,26,26);">
+      “Installation Failed. Error Occurred while installing the selected updates.”
+     </span>
+    </p>
+   </li>
+   <li>
+    <span style="color: rgb(26,26,26);">
+     "An error occurred preparing the software update"
+    </span>
+   </li>
+   <li>
+    "An error occurred preparing the update. Failed to personalize the software update. Please try again." (M1 Macs)
+   </li>
+  </ul>
+ </li>
+ <li>
+  <h4>
+   Installation
+  </h4>
+  <ul>
+   <li>
+    <p>
+     Update progress gets stuck mid installation
+    </p>
+   </li>
+   <li>
+    <p>
+     Installer stuck on an endless boot loop.
+    </p>
+   </li>
+   <li>
+    <p>
+     <br/>
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <h4>
+   Post-Installation
+  </h4>
+  <ul>
+   <li>
+    <p>
+     MacBook doesn't turn on (
+     <em>
+      Bricked/Dead
+     </em>
+     ).
+    </p>
+   </li>
+   <li>
+    can’t unlock settings in System Preferences
+   </li>
+  </ul>
+ </li>
+</ul>
+<h2>
+ Other Resources
+</h2>
+<p>
+ <ac:structured-macro ac:macro-id="a0c73c69-74b9-4b94-b081-164a5eb12d42" ac:name="children" ac:schema-version="2">
+ </ac:structured-macro>
+</p>
+<p>
+ <br/>
+</p>

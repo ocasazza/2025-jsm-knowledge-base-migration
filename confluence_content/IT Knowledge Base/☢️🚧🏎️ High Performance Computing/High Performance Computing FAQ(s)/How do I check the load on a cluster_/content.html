@@ -1,0 +1,56 @@
+<p>
+ Run "/nfs/working/sysmgr/sysmgr-repo/scripts/clustutil.pl -u -a". It will display the current usage of the cluster like this:
+</p>
+<ac:structured-macro ac:macro-id="f8fd7cf3-1683-48c9-9d4e-c496758b752e" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="theme">
+  Default
+ </ac:parameter>
+ <ac:parameter ac:name="language">
+  none
+ </ac:parameter>
+ <ac:parameter ac:name="linenumbers">
+  true
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[Open GPUs  / Queue
+--------------------
+28    admin.q
+20    cuda.q
+8    small.q
+388 / 416 physical GPUs (93.3%) in use
+32 GPUs currently offline:
+<cluster node>-0-25 <cluster node>-1-1 <cluster node>-1-8 <cluster node>-1-13 
+
+User      Run GPUs   Pend GPUs
+----------------------------------
+harder      1 4  0 0
+jshelley    2 2  0 0
+kim         2 8  0 0
+knight     25 100   54 216
+lebard     25 100  485 1895
+lupyan      4 4  0 0
+lwang      18 72    0 0
+maier       1 1  0 0
+mondal     12 48    0 0
+mshelley    5 5  0 0
+murdock     1 4  0 0
+sanders    11 44  129 513
+warshavi    1 4  0 0
+TOTAL     108 396    668 2624]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ <ac:structured-macro ac:macro-id="1234" ac:name="excerpt" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="name">
+   User Story
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p>
+    As a researcher, I need to know how to check the current load on the cluster so I can understand resource availability and estimate when my jobs might run.
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+</p>

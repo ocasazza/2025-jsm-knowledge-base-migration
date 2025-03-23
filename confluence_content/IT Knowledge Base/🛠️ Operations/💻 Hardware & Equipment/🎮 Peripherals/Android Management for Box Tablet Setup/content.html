@@ -1,0 +1,300 @@
+<p>
+ <strong>
+  <u>
+   OU setup in GAdmin
+  </u>
+ </strong>
+</p>
+<p>
+ Create a child OU under the main parent OU.
+</p>
+<ul>
+ <li>
+  <p>
+   Directory &gt; Organization Units &gt; Create Organizational Unit and fill out the following fields
+  </p>
+ </li>
+</ul>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="958" ac:original-width="990" ac:width="251">
+ <ri:attachment ri:filename="Screenshot 2023-09-29 at 12.44.24 PM.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<p>
+</p>
+<p>
+ <strong>
+  <u>
+   Creating Settings for Advanced Mobile Management
+  </u>
+ </strong>
+</p>
+<p>
+ In order to manage and have more control of devices, you will need to make sure Advanced Management is applied in the settings for that OU. Article on Advanced Management for reference:
+ <a href="https://apps.google.com/supportwidget/articlehome?hl=en&amp;article_url=https%3A%2F%2Fsupport.google.com%2Fa%2Fanswer%2F7396025%3Fhl%3Den&amp;assistant_event=welcome&amp;assistant_id=mdmbot&amp;product_context=7396025&amp;product_name=UnuFlow&amp;trigger_context=a">
+  https://apps.google.com/supportwidget/articlehome?hl=en&amp;article_url=https%3A%2F%2Fsupport.google.com%2Fa%2Fanswer%2F7396025%3Fhl%3Den&amp;assistant_event=welcome&amp;assistant_id=mdmbot&amp;product_context=7396025&amp;product_name=UnuFlow&amp;trigger_context=a
+ </a>
+</p>
+<ul>
+ <li>
+  <p>
+   In GAdmin, go to Devices &gt; Mobile and Endpoints &gt;  Settings &gt; Universal &gt; General &gt; select the OU you want to apply the Advanced settings to &gt; Override
+  </p>
+ </li>
+</ul>
+<p>
+ <ac:image ac:height="250">
+  <ri:attachment ri:filename="Screenshot 2023-09-29 at 2.42.41 PM.png" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:image>
+</p>
+<p>
+</p>
+<p>
+ <strong>
+  <u>
+   Android Settings
+  </u>
+ </strong>
+</p>
+<p>
+ The following settings will be in Devices &gt; Mobile and endpoints &gt; Settings &gt; Android .
+</p>
+<p>
+ <strong>
+  <u>
+   Make sure to select the correct OU you want to apply the settings to before applying a change
+  </u>
+ </strong>
+</p>
+<ul>
+ <li>
+  <p>
+   Work Profile: Enable Work profile creation
+  </p>
+ </li>
+ <li>
+  <p>
+   Users and Accounts:
+  </p>
+ </li>
+</ul>
+<ol start="1">
+ <li>
+  <p>
+   Accounts: Toggle off Allow User to add or remove accounts
+  </p>
+ </li>
+ <li>
+  <p>
+   Add users: Toggle off Allow user profiles
+  </p>
+ </li>
+</ol>
+<ul>
+ <li>
+  <p>
+   Device Features
+  </p>
+ </li>
+</ul>
+<ol start="1">
+ <li>
+  <p>
+   Factory Reset: Toggle off Allow users to factory reset a device
+  </p>
+ </li>
+ <li>
+  <p>
+   Administrator restriction pin: Toggle on Set administrator PIN remotely. Admin pin is in LastPass under, GAdmin Android Restriction Pin
+  </p>
+ </li>
+</ol>
+<ul>
+ <li>
+  <p>
+   Apps and data sharing: Available apps &gt; toggle Only allowed apps
+  </p>
+ </li>
+</ul>
+<p>
+ <strong>
+  <u>
+   Application Settings
+  </u>
+ </strong>
+</p>
+<p>
+ You can apply domain, allowed and blocked apps for specific OU's, once the user add's their schrodinger account via the Google Play store on the tablet
+</p>
+<ul>
+ <li>
+  <p>
+   Apps &gt; Google Workspace Marketplace apps
+  </p>
+ </li>
+</ul>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="1794" ac:original-width="2740" ac:width="380">
+ <ri:attachment ri:filename="Screenshot 2023-09-29 at 3.50.35 PM.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<p>
+</p>
+<p>
+ <strong>
+  <u>
+   Boox Tablet Setup
+  </u>
+ </strong>
+</p>
+<ul>
+ <li>
+  <p>
+   Turn on the tablet and run through all the general setup prompts (Power: Auto Sleep: 5 Mins; Auto Power-Off: Never; Navigation Bar, not Gestures, then default settings for the rest. While setting up the Wifi, select "Don't allow Onyx Boox to record audio") and you will be presented with the homepage, as follows:
+  </p>
+ </li>
+</ul>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="3024" ac:original-width="4032" ac:width="326">
+ <ri:attachment ri:filename="IMG-1802.jpg" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<p>
+ <strong>
+  Note: The serial number on the tablet will not show up as assigned, due to the devices being imported having a unique identity that is made up of an IMEI number, serial number and model number. I was able to find this number by importing the device with it's actual serial number and seeing how Google see's that device. Once I have that the serial number, I will delete the device by going to Devices &gt; Mobile and endpoints &gt; Devices
+ </strong>
+</p>
+<ul>
+ <li>
+  <p>
+   You will need to add the tablet to GAdmin by importing the serial number into the specified spreadsheet noted in the the following article:
+   <a href="https://apps.google.com/supportwidget/articlehome?article_url=https%3A%2F%2Fsupport.google.com%2Fa%2Fanswer%2F7129612&amp;assistant_event=welcome&amp;assistant_id=mdmbot&amp;product_context=7129612&amp;product_name=UnuFlow&amp;trigger_context=a">
+    https://apps.google.com/supportwidget/articlehome?article_url=https%3A%2F%2Fsupport.google.com%2Fa%2Fanswer%2F7129612&amp;assistant_event=welcome&amp;assistant_id=mdmbot&amp;product_context=7129612&amp;product_name=UnuFlow&amp;trigger_context=a
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   Download the csv template (You may need to add the download to Google drive and download as a CSV file from there to properly import it into Gadmin)
+  </p>
+ </li>
+</ul>
+<p>
+</p>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="386" ac:original-width="1592" ac:width="612">
+ <ri:attachment ri:filename="Screenshot 2023-10-03 at 7.16.29 AM.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<ul>
+ <li>
+  <p>
+   In GAdmin, go to Devices &gt; Mobile and endpoints &gt; click the +
+  </p>
+ </li>
+ <li>
+  <p>
+   Select the dropdown for Android and import the csv file
+  </p>
+ </li>
+</ul>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="1646" ac:original-width="2734" ac:width="244">
+ <ri:attachment ri:filename="Screenshot 2023-10-03 at 7.20.56 AM.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<ul>
+ <li>
+  <p>
+   Once imported, you will need to sign into the tablet in the Google Play store with the user who will be utilizing the tablet and follow the prompts for the setting up a Work Profile.
+  </p>
+ </li>
+</ul>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="3024" ac:original-width="4032" ac:width="326">
+ <ri:attachment ri:filename="IMG-1811.jpg" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="3024" ac:original-width="4032" ac:width="326">
+ <ri:attachment ri:filename="IMG-1812.jpg" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<ul>
+ <li>
+  <p>
+   In GAdmin, if you go to Devices &gt; Mobile and endpoints and search for the recently enrolled device, it will show as a company owned device.
+  </p>
+ </li>
+</ul>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="1764" ac:original-width="3264" ac:width="455">
+ <ri:attachment ri:filename="Screenshot 2023-10-03 at 11.14.10 AM.png" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<p>
+</p>
+<p>
+ <strong>
+  <u>
+   Tablet Home Screen and Settings Setup
+  </u>
+ </strong>
+</p>
+<ul>
+ <li>
+  <p>
+   We can add apps from the Google Play store that can be installed on the tablet once the user signs into the tablet and they will pre-install on the home screen. We cannot block or restrict the Boox local applications since they are not built in apps for Boox.
+  </p>
+ </li>
+ <li>
+  <p>
+   To turn off Boox Sync, you will navigate to the Notes app on the home screen &gt; Tap the hamburger in the top-right corner &gt; Sync Settings and toggle off note to Onyx
+  </p>
+ </li>
+</ul>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="3024" ac:original-width="4032" ac:width="326">
+ <ri:attachment ri:filename="IMG-1813.jpg" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<ul>
+ <li>
+  <p>
+   To clean up the excess local apps, you will need to move them into a folder and place on the 2nd page. The only apps that should be on the home screen's task bar should be the downloads, Google Play store, settings and scan application.
+  </p>
+ </li>
+</ul>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="3024" ac:original-width="4032" ac:width="326">
+ <ri:attachment ri:filename="IMG-1814.jpg" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<ac:image ac:align="left" ac:layout="align-start" ac:original-height="3024" ac:original-width="4032" ac:width="326">
+ <ri:attachment ri:filename="IMG-1815.jpg" ri:version-at-save="1">
+ </ri:attachment>
+</ac:image>
+<p>
+</p>
+<p>
+ <strong>
+  That's it! You can pass the tablet off to the user and it can be managed through Google Workspace .
+ </strong>
+</p>
+<p>
+</p>
+<p>
+ <strong>
+  <u>
+   Proper case cover for the tablet:
+  </u>
+ </strong>
+ <a href="https://www.bhphotovideo.com/c/product/1762298-REG/boox_10_3_tab_ultra_c.html?gclid=CjwKCAjw-IWkBhBTEiwA2exyO8MAi14U4kJ99FHmO898Klytkvb20swcJgqIDub-3EdgC6S8bwVF3hoCWgMQAvD_BwE">
+  <strong>
+   <u>
+    https://www.bhphotovideo.com/c/product/1762298-REG/boox_10_3_tab_ultra_c.html?gclid=CjwKCAjw-IWkBhBTEiwA2exyO8MAi14U4kJ99FHmO898Klytkvb20swcJgqIDub-3EdgC6S8bwVF3hoCWgMQAvD_BwE
+   </u>
+  </strong>
+ </a>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>

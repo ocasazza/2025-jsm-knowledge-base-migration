@@ -1,0 +1,28 @@
+<p>
+ Your job might have exceeded its runtime limit. Check the
+ <a href="https://docs.google.com/document/d/1fI_VBEfA3s5MQSEVegFaI6DsGcYMFujqSVOWR_moFdo/edit#heading=h.i6oz2tdr1w6h">
+  queues section
+ </a>
+ of this document for those limits. More information may be available in the messages file on the execution node, for example:
+</p>
+<p>
+ $ grep '|job 1728020\b' "$SGE_ROOT/$SGE_CELL/spool/${HOSTNAME%%.*}/messages"
+</p>
+<p>
+ 07/02/2016 12:40:32| main|bolt-1-43|W|job 1728020.1 exceeded soft wallclock time - initiate soft notify method
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="1234" ac:name="excerpt" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="name">
+   User Story
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p>
+    As a researcher, I need to understand why my running job suddenly disappeared from the queue so I can diagnose and prevent similar issues in the future.
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+</p>

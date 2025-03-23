@@ -1,0 +1,442 @@
+<h1>
+ Table of Contents
+</h1>
+<ac:structured-macro ac:local-id="4e1e31c6-4825-4108-881c-ed15f6cc2d8f" ac:macro-id="779c88bf-d902-4324-a9bc-f5ebd7dd0041" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h1>
+ Introduction
+</h1>
+<p>
+ In order to both standardize our AWS account configuration, apply baseline industry best practices, and improve our overall cloud governance and security footprint, some basic information is needed before we create a new AWS account.  This is not an approval process, but collecting the details needed so that the account can be created and delivered with minimal back-and-forth.
+</p>
+<p>
+ Questions, comments, feedback, concens, etc. can be sent to
+ <ac:link>
+  <ri:user ri:account-id="712020:460d116b-6dd0-4201-9370-8098156f6d6f">
+  </ri:user>
+ </ac:link>
+ .
+</p>
+<p>
+ (IT, this is the public document, the engineering details are in Service Documentation under Amazon Web Services.)
+</p>
+<h1>
+ Questions for Requestor
+</h1>
+<ol start="1">
+ <li>
+  <p>
+   What's a good name for the account?
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     What is it going to be used for?  This helps us understand a broader context.
+    </p>
+   </li>
+   <li>
+    <p>
+     We are going to be asked "Why not GCP?"  Please give us a sentence or two to help us respond to that question.
+     <br/>
+     <br/>
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   What group is going to be responsible for whatever and everything that happens within this new account?
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     One to three individuals who will be overall responsible for everything (Will be added to "Owners" contact for the account, which is a super-set that includes the next three, and can manage all four groups)
+    </p>
+   </li>
+   <li>
+    <p>
+     One to three individuals to be added to the "Infosec" contact, will be notified of any security or abuse issues, and can be point contacts for any needed Infosec remediation efforts. (Owners get all Security emails)
+    </p>
+   </li>
+   <li>
+    <p>
+     Individuals or a team email group to be added to the "Ops" contact, who will be notified of AWS driven maintenance activities, like degraded hardware and server reboots. (Owners get all Ops emails)
+    </p>
+   </li>
+   <li>
+    <p>
+     Optionally, individuals to be added to the "Billing" contact, who will get copies of monthly invoices, but no other AWS emails.  (Owners get all Billing emails)
+     <br/>
+     <br/>
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   What stage in the environment lifecycle will this account be used for?  (a suffix will be added to the end of the account alias)
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     This is a somewhat abstract
+     <em>
+      descriptive
+     </em>
+     list, very few projects need all stages, some projects only need one or two.  The purpose is to provide some operational context for how the account will be used, and to configure names and integrations to the rest of Schrödinger appropriately.
+    </p>
+    <ol start="1">
+     <li>
+      <p>
+       sandbox / foo-sbox
+      </p>
+      <ol start="1">
+       <li>
+        <p>
+         An environment where anything can happen at any time, including deletion of any resource.
+        </p>
+       </li>
+      </ol>
+     </li>
+     <li>
+      <p>
+       dev / foo-dev
+      </p>
+      <ol start="1">
+       <li>
+        <p>
+         An environment where incremental changes happen based on developing a new feature or specific change.
+        </p>
+       </li>
+      </ol>
+     </li>
+     <li>
+      <p>
+       testing/QA / foo-test
+      </p>
+      <ol start="1">
+       <li>
+        <p>
+         An environment where a group of incremental changes are made as a single larger change set for testing of various kinds
+        </p>
+       </li>
+      </ol>
+     </li>
+     <li>
+      <p>
+       staging / foo-stg
+      </p>
+      <ol start="1">
+       <li>
+        <p>
+         An environment where validated and verified changes are made as a single deployment activity
+        </p>
+       </li>
+      </ol>
+     </li>
+     <li>
+      <p>
+       production / foo-prod
+      </p>
+      <ol start="1">
+       <li>
+        <p>
+         An environment where a validated and verified deployment activity is made as the actual release
+         <br/>
+         <br/>
+        </p>
+       </li>
+      </ol>
+     </li>
+    </ol>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Initial users to be given ReadOnly access (
+   <code>
+    Okta-ReadOnly
+   </code>
+   )?
+   <br/>
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#awsmp_readonlyaccess">
+      https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#awsmp_readonlyaccess
+     </a>
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Initial users to be given PowerUser access (
+   <code>
+    Okta-PowerUser
+   </code>
+   )?
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/security-iam-awsmanpol.html#security-iam-awsmanpol-IAMReadOnlyAccess">
+      https://docs.aws.amazon.com/IAM/latest/UserGuide/security-iam-awsmanpol.html#security-iam-awsmanpol-IAMReadOnlyAccess
+     </a>
+    </p>
+   </li>
+   <li>
+    <p>
+     <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_developer-power-user">
+      https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_developer-power-user
+     </a>
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Initial users to be given SuperAdmin access (
+   <code>
+    Okta-SuperAdmin
+   </code>
+   )?
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_administrator">
+      https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_administrator
+     </a>
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Are any other IAM roles needed?
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     Other IAM roles will need to be setup in Okta, which may require a separate ticket.
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   What is the VPC design?  This directly impacts the IP address CIDR block assignment.  IP address allocation is basically impossible to re-do, and trying to speed through this step creates significant network technical debt.
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     What region(s)?  Each region needs a separate VPC and therefore a unique CIDR block.
+    </p>
+   </li>
+   <li>
+    <p>
+     Will there be both private and public subnets?  How big are they?
+    </p>
+   </li>
+   <li>
+    <p>
+     Will multiple availability zones be used?  How many?
+    </p>
+   </li>
+   <li>
+    <p>
+     What's the total CIDR size needed for each VPC?
+    </p>
+   </li>
+  </ol>
+ </li>
+</ol>
+<h1>
+ What the Requestor will get
+</h1>
+<ol start="1">
+ <li>
+  <p>
+   Mailing lists, with the specified "Owners" (#3 above) as both members and group owners, which will allow them to add and remove list members as needed. Managed at
+   <a href="https://groups.google.com/">
+    https://groups.google.com/
+   </a>
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <a href="mailto:aws-${account_alias}-owner@schrodinger.com">
+      aws-${account_alias}-owner@schrodinger.com
+     </a>
+    </p>
+    <ol start="1">
+     <li>
+      <p>
+       <a href="mailto:aws-owner-schrodinger-all@schrodinger.com">
+        aws-owner-schrodinger-all@schrodinger.com
+       </a>
+       will be a member and contains those outside the requestor's group who need visibility into all AWS accounts, e.g., leadership and IT Infra.
+      </p>
+     </li>
+    </ol>
+   </li>
+   <li>
+    <p>
+     <a href="mailto:aws-${account_alias}-owner@schrodinger.com">
+      aws-${account_alias}-billing@schrodinger.com
+     </a>
+    </p>
+    <ol start="1">
+     <li>
+      <p>
+       <a href="mailto:aws-owner-schrodinger-all@schrodinger.com">
+        aws-billing-schrodinger-all@schrodinger.com
+       </a>
+       will be a member and contains those outside the requestor's group who need visibility into all AWS accounts, e.g.,
+       <a href="mailto:accounting@schrodinger.com">
+        accounting@schrodinger.com
+       </a>
+      </p>
+     </li>
+    </ol>
+   </li>
+   <li>
+    <p>
+     <a href="mailto:aws-${account_alias}-owner@schrodinger.com">
+      aws-${account_alias}-security@schrodinger.com
+     </a>
+    </p>
+    <ol start="1">
+     <li>
+      <p>
+       <a href="mailto:aws-owner-schrodinger-all@schrodinger.com">
+        aws-security-schrodinger-all@schrodinger.com
+       </a>
+       will be a member and contains those outside the requestor's group who need visibility into all AWS accounts, e.g.,
+       <a href="mailto:infosec-team@schrodinger.com">
+        infosec-team@schrodinger.com
+       </a>
+      </p>
+     </li>
+    </ol>
+   </li>
+   <li>
+    <p>
+     <a href="mailto:aws-${account_alias}-owner@schrodinger.com">
+      aws-${account_alias}-ops@schrodinger.com
+     </a>
+    </p>
+    <ol start="1">
+     <li>
+      <p>
+       <a href="mailto:aws-owner-schrodinger-all@schrodinger.com">
+        aws-ops-schrodinger-all@schrodinger.com
+       </a>
+       will be a member and contains those outside the requestor's group who need visibility into all AWS accounts, e.g.,
+       <a href="mailto:it-infra@schrodinger.com">
+        it-infra@schrodinger.com
+       </a>
+      </p>
+     </li>
+    </ol>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Okta SSO enabled for the three standard roles. Each role has a group defined and managed within Okta.  Where possible, the named "Owners" will be given delegated Okta admin privileges to add and remove members of those groups themselves.  Managed at
+   <a href="https://schrodinger-admin.okta.com/admin/dashboard">
+    https://schrodinger-admin.okta.com/admin/dashboard
+   </a>
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     aws:${account_alias}:${account_id}:Okta-ReadOnly
+    </p>
+   </li>
+   <li>
+    <p>
+     aws:${account_alias}:${account_id}:Okta-PowerUser
+    </p>
+   </li>
+   <li>
+    <p>
+     aws:${account_alias}:${account_id}:Okta-SuperAdmin
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   The account will already be integrated with Wiz, an Infosec tool to monitor cloud resources
+  </p>
+ </li>
+ <li>
+  <p>
+   The default VPCs in all regions will be deleted.
+  </p>
+ </li>
+ <li>
+  <p>
+   An allocated internal CIDR block for VPC creation, based on the requestor's stated VPC design.
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     If asked, IT Infra can collaborate in VPC implementation
+    </p>
+   </li>
+   <li>
+    <p>
+     If specified, network access will be available and working.  The exact form is tbd, but could include
+    </p>
+    <ol start="1">
+     <li>
+      <p>
+       Layer 3 routing via IPsec tunnels between NYC &amp; PDX to the VPC
+      </p>
+     </li>
+     <li>
+      <p>
+       Appgate access, details tbd
+      </p>
+      <ol start="1">
+       <li>
+        <p>
+         gateway directly in vpc?
+        </p>
+       </li>
+       <li>
+        <p>
+         via NYC/PDX and tunnels
+        </p>
+       </li>
+      </ol>
+     </li>
+    </ol>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   The root account credentials are stored securely, and available to IT Infra, Infosec, and IT leadership on those very rare occasions when they might be needed.
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     <a href="https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html">
+      https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html
+     </a>
+    </p>
+   </li>
+  </ol>
+ </li>
+</ol>
+<p>
+</p>
+<p>
+</p>

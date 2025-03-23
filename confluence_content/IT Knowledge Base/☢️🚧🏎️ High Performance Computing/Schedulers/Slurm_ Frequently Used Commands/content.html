@@ -1,0 +1,500 @@
+<ac:structured-macro ac:local-id="96c054cb-ed50-4d5b-b08f-83dd4f74e454" ac:macro-id="42c45625-bf2d-4e2b-a89f-0c00b0e47c3e" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h2>
+ <a href="https://www.youtube.com/watch?v=U42qlYkzP9k">
+  Helpful tutorial video
+ </a>
+</h2>
+<h2>
+ Submitting job
+</h2>
+<h4>
+ How do I submit a batch job to scheduler?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://slurm.schedmd.com/sbatch.html">
+  sbatch
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ sbatch takes a script file name to submit to the scheduler.  It will parse the header of the script for flags to get the resources you need.
+</p>
+<p>
+ For example:
+ <code>
+  sbatch my_script.sh
+ </code>
+ <br/>
+ &lt;contents of my_script.sh&gt;
+</p>
+<ac:structured-macro ac:macro-id="50863d21-2687-4973-986c-0427c1ddfb41" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[#!/bin/bash
+#SBATCH --time 10
+#SBATCH --partition cuda.q
+#SBATCH --ntasks 4
+#SBATCH --gpus 2
+
+env
+srun nvidia-smi
+]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ More on what srun means in later section.
+</p>
+<p>
+ You can mix sbatch flags on the command line and in your script.
+</p>
+<p>
+ For example:
+ <code>
+  sbatch --job-name test-script-10 -mem 10G my_script.sh
+ </code>
+</p>
+<p>
+</p>
+<h4>
+ How do I get an interactive session from the scheduler?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://slurm.schedmd.com/salloc.html">
+  salloc
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ Use the
+ <code>
+  salloc
+ </code>
+ command along with whatever relevant flags to get the resources you need.
+ <br/>
+ For example:
+ <code>
+  salloc --nodes 1 --ntasks 6 --partition cpu.q
+ </code>
+</p>
+<p>
+ Once you have your interactive session you can run commands as normal.  You will need to use srun to run any commands in parallel, more on that in later section.
+</p>
+<p>
+</p>
+<h4>
+ What flags do I need to use?
+</h4>
+<p>
+ Flags describe which resources you want and how much of that resource.
+</p>
+<p>
+ You can use these flags directly with salloc/sbatch/srun, or in your schrodinger.hosts file on the Qargs line, or pass to the Schrödinger software commands with the -QARG flag
+</p>
+<p>
+ You can see all of the flags and example usage by clicking on the following links:
+ <a href="https://slurm.schedmd.com/salloc.html">
+  salloc
+ </a>
+ ,
+ <a href="https://slurm.schedmd.com/sbatch.html">
+  sbatch
+ </a>
+ ,
+ <a href="https://slurm.schedmd.com/srun.html">
+  srun
+ </a>
+ .  For the most part these 3 commands use the exact same flags in the same ways.   Here are some example flags.
+</p>
+<table ac:local-id="91ceab84-0d93-464d-8095-9c72f8701174" data-layout="default" data-table-width="1800">
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Flag
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Description
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Examples
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     --partition / -p
+    </p>
+   </td>
+   <td>
+    <p>
+     The name of the partition (sometimes referred to as a queue) for the job. A partition is a group of nodes(servers). Priority-ordered jobs are allocated nodes within a partition.
+    </p>
+   </td>
+   <td>
+    <p>
+     --partition cpu.q
+     <br/>
+     --partition cuda.q
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     --time / -t
+    </p>
+   </td>
+   <td>
+    <p>
+     Time limit on the total run time of the job allocation. If you exceed this time, slurm will kill your job. Jobs can always finish early. If you need more time after your job is running, contact a System Administrator as soon as possible.
+    </p>
+   </td>
+   <td>
+    <p>
+     --time 40 #40 minutes
+     <br/>
+     --time 0:30 #0 minutes, 30 seconds
+     <br/>
+     --time 4:0:0 #4 hours, 0 minutes, 0 seconds
+     <br/>
+     --time 1- #1 day
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     --ntasks / -n
+    </p>
+   </td>
+   <td>
+    <p>
+     Total number of tasks that will be running in parallel for the job. Which on it's own ultimately translates into number of CPU cores allocated.
+    </p>
+   </td>
+   <td>
+    <p>
+     -n 1
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     --gpus / --G
+    </p>
+   </td>
+   <td>
+    <p>
+     Total number of gpus for the job.
+     <br/>
+     You must have at least 1 task (core) per gpus. For example:
+     <br/>
+     BAD: ---gpus 2 -n 1
+     <br/>
+     GOOD: --gpus 2 -n 2
+     <br/>
+     GOOD: --gpus 1 -n 2)
+    </p>
+   </td>
+   <td>
+    <p>
+     --gpus 1
+     <br/>
+     --gpus rtx4000:2
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+</p>
+<h4>
+ How do I run a command in parallel once I have my slurm job?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://slurm.schedmd.com/srun.html">
+  srun
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ srun is used to consume and utilize the additional resources slurm has allocated to you.
+</p>
+<p>
+ If you are running single thread &amp; single process, then you don't need to use srun cause your main shell by default can scale onto your allocated resources.
+ <br/>
+ If you are running with multiple threads or multiple processes, then you will need to use srun.  srun interacts with the slurm scheduler to scale your commands across whichever resources slurm allocated to you (since it may not be contiguous).
+</p>
+<p>
+ It's as simple as putting srun in front of any command that you want to run in parallel.  Any commands you don't want to run in parallel, don't put srun in front of.
+ <br/>
+ For example:
+</p>
+<p>
+</p>
+<ac:structured-macro ac:macro-id="12d16498-ca98-4077-9a98-a39bbadd36e9" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[salloc --nodes 1 --ntasks 6 --partition cpu.q
+srun my_parallel_program
+srun hostname]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<p>
+ You can feed srun slurm flags if you want to override the resources you provided in your initial salloc/sbatch; in this case you can only use less than or equal to what was requested through salloc/sbatch.
+ <br/>
+ For example:
+</p>
+<ac:structured-macro ac:macro-id="6d1beabd-6b30-4176-85b8-02452e270841" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[salloc --nodes 1 --ntasks 6 --partition cpu.q
+srun --ntasks 2 my_parallel_program]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<h4>
+ How do I cancel a job?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://slurm.schedmd.com/scancel.html">
+  scancel
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ To cancel a pending or current job, pass the job ID to scancel.  For example:
+ <code>
+  scancel 123456
+ </code>
+</p>
+<p>
+ If you do not know the job ID, use the squeue / sacct commands below.
+</p>
+<p>
+</p>
+<h4>
+ Can I request resources that don't exist?
+</h4>
+<p>
+ For the most part no.  If you request resource configuration that doesn't exist (like say you ask for a quadrillion nodes) you should get an immediate error from slurm telling you what is incorrect.
+</p>
+<p>
+ If it not obvious what to correct based on the error message you can run:
+ <code>
+  scontrol show partition &lt;partition_name&gt;
+ </code>
+ which will print out the configuration for that partition (aka queue) and see what the differences are between what you requested and what is available.  You can check other partitions to see if there is a better fit, or update the resources you are requesting.
+</p>
+<p>
+</p>
+<h2>
+ Scheduling
+</h2>
+<h4>
+ What is the status of the my current jobs?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://slurm.schedmd.com/squeue.html">
+  squeue
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ This will show you the status of all jobs across all partitions.
+ <br/>
+ If you want to see the status of just your jobs run:
+ <code>
+  squeue --user your_username_here
+ </code>
+ <br/>
+ <code>
+ </code>
+</p>
+<p>
+ Once a job finishes it will no longer show up in squeue, since squeue is only for current jobs.
+</p>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://slurm.schedmd.com/sacct.html">
+  sacct
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ <code>
+  sacct
+ </code>
+ will show you the status of your current and recently completed/failed jobs.  "Recent" is a default time up to the scheduler but you can intentionally go further back by specifying "
+ <code>
+  --starttime
+ </code>
+ ".  For example:
+ <code>
+  sacct --starttime
+ </code>
+ <span style="color: rgb(70,84,92);">
+  2024-01-15
+ </span>
+</p>
+<p>
+</p>
+<h4>
+ When will my pending job run?  Who's job is next in line?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+  squeue --start
+ </code>
+</p>
+<p>
+ This command will list out all of the jobs pending in order of next to run.
+</p>
+<p>
+ It will also give slurm's
+ <em>
+  estimated
+ </em>
+ time when it will run.  This is an estimate!  For example: Your job could run sooner, because the jobs ahead you finished earlier than expected.  Your job could run later, because a new job came in with a higher priority and was slotted ahead of you.
+</p>
+<p>
+ The scheduled time is calculated based on jobs' "
+ <code>
+  --time/-t
+ </code>
+ " flag (the max run time of a job).  If jobs don't specify "
+ <code>
+  --time/-t
+ </code>
+ " then slurm really has no idea how long until the job will complete, which makes the start time less accurate.  So be as accurate as
+ <em>
+  feasible
+ </em>
+ , don't let it keep you up at night.  But good --time/-t can also help Slurm scoot you ahead of the line (backfilling) if it knows that your job can finish without delaying any other higher priority job.
+</p>
+<p>
+</p>
+<h4>
+ But why is my job not next in line?
+</h4>
+<p>
+ There are several factors that go into the priority score, most commonly: age, size, fair share.
+ <span style="color: rgb(23,43,77);">
+  These factors and others are all weighted differently and together yield the overall priority score.
+ </span>
+</p>
+<p>
+ <code>
+  sprio --long
+ </code>
+ will spit out the list of pending jobs in order of next to run AND tell you its priority score and the different factors that contributed to it.
+</p>
+<p>
+ Now if you are in an environment where the Slurm scheduler is simply doing first-in-first-out (FIFO) well then
+ <code>
+  sprio
+ </code>
+ doesnt tell you anything because the order is simply the order they were submitted, so you would just rely on
+ <code>
+  squeue --start
+ </code>
+ above.
+</p>
+<p>
+</p>
+<h2>
+ Resources
+</h2>
+<h4>
+ What partitions (queues) are available?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://slurm.schedmd.com/sinfo.html">
+  sinfo
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ The
+ <code>
+  sinfo
+ </code>
+ command will list the available partitions along with a summary of the compute nodes' states.
+</p>
+<p>
+ idle: means the node has no jobs running on it
+ <br/>
+ drain: means the node has been taken offline (likely for maintenance or troubleshooting)
+ <br/>
+ alloc: means all of the resources on the node are in use
+ <br/>
+ mix: means that some of the resources on the node are in use
+</p>
+<p>
+ Your job may still pend in partition that has idle/mix nodes because the scheduler is trying to accumulate enough resources for a higher priority job.
+</p>
+<p>
+</p>
+<h4>
+ Am I requesting the right amount of resources?  Am I using what I have asked for?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+  seff &lt;job id of completed job&gt;
+ </code>
+</p>
+<p>
+ The
+ <code>
+  seff
+ </code>
+ command is an add-on for slurm.  So if the command doesn't exist in your environment, ask one of your sys admins nicely.
+</p>
+<p>
+ <code>
+  seff
+ </code>
+ will give you pretty report of how much CPU and Memory resources your job used on
+ <em>
+  average
+ </em>
+ .  This is an average, which means it doesn't account for spikes.  (My kingdom for a standard deviation output in this report).  So you still need to understand your algorithm before making rash decisions based on the output.
+</p>
+<p>
+ But generally, you can use this as a good indicator if you can increase or decrease the amount of CPU or memory resources you request.  Currently does not support GPU.  Note you can run this command before the job completes, but don't.  Slurm isn't doing a running average, so the information won't be accurate.
+</p>
+<p>
+</p>

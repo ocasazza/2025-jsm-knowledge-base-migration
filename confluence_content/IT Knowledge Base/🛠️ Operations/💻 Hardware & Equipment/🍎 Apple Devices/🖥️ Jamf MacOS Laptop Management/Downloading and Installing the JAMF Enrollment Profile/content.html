@@ -1,0 +1,334 @@
+<ac:layout>
+ <ac:layout-section ac:breakout-mode="default" ac:type="fixed-width">
+  <ac:layout-cell>
+   <h1>
+    <strong>
+     Overview
+    </strong>
+   </h1>
+   <ac:structured-macro ac:macro-id="78a72a8f-0f67-4a03-9686-2d4f5687cf57" ac:name="tip" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      This document outlines troubleshooting steps if your Mac isn't enrolled in our Schrödinger JAMF instance, your JAMF Connect app is outdated or malfunctioning, or Self Service isn't installed.
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <hr/>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="two_equal">
+  <ac:layout-cell>
+   <ac:structured-macro ac:local-id="493700c6-4226-4011-9cec-522b62ee71a4" ac:macro-id="63b48ee7-c8c2-46b3-9fba-eec2e66d4214" ac:name="toc" ac:schema-version="1" data-layout="default">
+    <ac:parameter ac:name="maxLevel">
+     6
+    </ac:parameter>
+    <ac:parameter ac:name="minLevel">
+     1
+    </ac:parameter>
+    <ac:parameter ac:name="include">
+    </ac:parameter>
+    <ac:parameter ac:name="outline">
+     false
+    </ac:parameter>
+    <ac:parameter ac:name="indent">
+    </ac:parameter>
+    <ac:parameter ac:name="exclude">
+    </ac:parameter>
+    <ac:parameter ac:name="style">
+     none
+    </ac:parameter>
+    <ac:parameter ac:name="type">
+     list
+    </ac:parameter>
+    <ac:parameter ac:name="printable">
+     true
+    </ac:parameter>
+    <ac:parameter ac:name="class">
+    </ac:parameter>
+   </ac:structured-macro>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <ac:structured-macro ac:macro-id="8fb078fe-ea2e-49c4-a00a-22489e477854" ac:name="info" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <em>
+       <strong>
+        IMPORTANT NOTICE:
+       </strong>
+      </em>
+      Upon enrollment in the JAMF system, the installation of the JAMF Connect application will commence. Following the successful installation of JAMF Connect, your Mac password will be updated and synchronized with your Okta password. It is essential to be aware of this process. In the event that your local Mac password is not functioning, please attempt to use your Okta password. For further guidance on the JAMF Connect installation, please
+      <a href="https://schrodinger.atlassian.net/wiki/x/L4FLAw">
+       Refer to the JAMF Connect installation here
+      </a>
+      if JAMF Connect has not been installed.
+     </p>
+     <p>
+      <em>
+       <strong>
+        Screenshots are from macOS Version 13.6 and may differ based on your macOS version.
+       </strong>
+      </em>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="fixed-width">
+  <ac:layout-cell>
+   <hr/>
+   <h1>
+    Enrollment Instructions
+   </h1>
+   <h3>
+    <strong>
+     Create a Ticket:
+    </strong>
+   </h3>
+   <ul>
+    <li>
+     <p>
+      Submit a ticket to IT-Help detailing the issue you're experiencing with JAMF Connect/Self Service.
+     </p>
+    </li>
+    <li>
+     <p>
+      If you have received these instructions, it indicates that we need to re-enroll your computer in JAMF.
+     </p>
+    </li>
+   </ul>
+   <h3>
+    <strong>
+     Receive Your Invitation:
+    </strong>
+   </h3>
+   <p>
+    You will receive an email from JAMF inviting you to enroll in the company profile. The email will resemble the image below.
+   </p>
+   <h3>
+    <strong>
+     Click the Enrollment Link
+    </strong>
+    :
+    <br/>
+    <ac:image ac:height="150">
+     <ri:attachment ri:filename="Screenshot 2023-11-28 at 8.44.28 AM.png" ri:version-at-save="1">
+     </ri:attachment>
+    </ac:image>
+    <br/>
+   </h3>
+   <ol start="1">
+    <li>
+     <p>
+      <strong>
+       Login
+      </strong>
+      :
+     </p>
+     <ol start="1">
+      <li>
+       <p>
+        You'll be asked for your username and password. Your username for JAMF is your uID(typically lastname)+Okta password.
+       </p>
+       <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1380" ac:original-width="1734" ac:width="482">
+        <ri:attachment ri:filename="Screenshot 2023-11-28 at 8.46.38 AM.png" ri:version-at-save="1">
+        </ri:attachment>
+       </ac:image>
+      </li>
+     </ol>
+    </li>
+    <li>
+     <p>
+      <strong>
+       Download the Profile
+      </strong>
+      :
+     </p>
+     <ol start="1">
+      <li>
+       <p>
+        After logging in, JAMF will prompt you to download 2 sets of "profiles" which are files that contain the device management information.
+       </p>
+      </li>
+      <li>
+       <p>
+        The first profile prompt will be for what's call a "CA Certificate"
+       </p>
+      </li>
+      <li>
+       <p>
+        The second profile prompt will be for what's called an "MDM Profile"
+       </p>
+      </li>
+      <li>
+       <p>
+        Once the 2 profiles are downloaded, proceed to step 5
+        <br/>
+        <br/>
+        <strong>
+         (CA Certificate page):
+        </strong>
+       </p>
+       <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1356" ac:original-width="1796" ac:width="510">
+        <ri:attachment ri:filename="Screenshot 2023-11-28 at 8.48.29 AM.png" ri:version-at-save="1">
+        </ri:attachment>
+       </ac:image>
+       <p>
+        <br/>
+        <strong>
+         (MDM Profile page):
+        </strong>
+        <br/>
+       </p>
+       <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1356" ac:original-width="1796" ac:width="510">
+        <ri:attachment ri:filename="Screenshot 2023-11-28 at 8.48.41 AM.png" ri:version-at-save="1">
+        </ri:attachment>
+       </ac:image>
+       <p>
+        <br/>
+        <strong>
+         (Both profiles downloaded):
+        </strong>
+        <br/>
+       </p>
+       <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1356" ac:original-width="1796" ac:width="510">
+        <ri:attachment ri:filename="Screenshot 2023-11-28 at 8.48.50 AM.png" ri:version-at-save="1">
+        </ri:attachment>
+       </ac:image>
+      </li>
+     </ol>
+    </li>
+    <li>
+     <p>
+      <strong>
+       Install the Profile
+      </strong>
+      :
+     </p>
+     <ol start="1">
+      <li>
+       <p>
+        Next, you need to install this profile. Click on the Apple icon in the top left corner of your screen and choose "System Preferences" or "System Settings"
+        <br/>
+       </p>
+       <ac:image ac:align="left" ac:layout="align-start" ac:original-height="686" ac:original-width="590" ac:width="204">
+        <ri:attachment ri:filename="Screenshot 2023-11-28 at 9.13.06 AM.png" ri:version-at-save="1">
+        </ri:attachment>
+       </ac:image>
+       <p>
+        <br/>
+        <br/>
+       </p>
+      </li>
+      <li>
+       <p>
+        Scroll down and look for a new icon labeled "Profiles" or "Profile Manager" → Click on it.
+        <br/>
+       </p>
+       <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1474" ac:original-width="1654" ac:width="442">
+        <ri:attachment ri:filename="Screenshot 2023-11-28 at 9.15.26 AM.png" ri:version-at-save="1">
+        </ri:attachment>
+       </ac:image>
+      </li>
+      <li>
+       <p>
+        You should see the new profile listed there. It might be named something like "JAMF Enrollment Profile."
+        <br/>
+       </p>
+       <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1474" ac:original-width="1654" ac:width="442">
+        <ri:attachment ri:filename="Screenshot 2023-11-28 at 9.19.32 AM.png" ri:version-at-save="1">
+        </ri:attachment>
+       </ac:image>
+      </li>
+      <li>
+       <p>
+        Click on the profile and then press 'Install'.
+        <br/>
+       </p>
+       <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1474" ac:original-width="1654" ac:width="482">
+        <ri:attachment ri:filename="Screenshot 2023-11-28 at 9.20.04 AM.png" ri:version-at-save="1">
+        </ri:attachment>
+       </ac:image>
+      </li>
+     </ol>
+    </li>
+    <li>
+     <p>
+      <strong>
+       Follow the Prompts
+      </strong>
+      :
+     </p>
+     <ol start="1">
+      <li>
+       <p>
+        Your Mac will ask for your approval to install the applications and may also inform you on the system changes that will take place after accepting the profile.
+        <br/>
+       </p>
+       <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1474" ac:original-width="1654" ac:width="442">
+        <ri:attachment ri:filename="Screenshot 2023-11-28 at 2.57.17 PM.png" ri:version-at-save="1">
+        </ri:attachment>
+       </ac:image>
+      </li>
+     </ol>
+    </li>
+    <li>
+     <p>
+      <strong>
+       Confirmation
+      </strong>
+      :
+     </p>
+     <ol start="1">
+      <li>
+       <p>
+        After the installation, the profiles will appear in the list of installed profiles.
+       </p>
+      </li>
+      <li>
+       <p>
+        Your Mac might also start installing additional software or settings required for work that are not already installed according to our device configuration.
+       </p>
+      </li>
+      <li>
+       <p>
+        PLEASE NOTE! JAMF Connect should install and will prompt sign-in and device sync. This will change your local Mac password to sync with your Okta password. This means your Okta password will control and sync to be your Mac's login as well.
+        <br/>
+        <br/>
+       </p>
+      </li>
+     </ol>
+    </li>
+    <li>
+     <p>
+      <strong>
+       JAMF Connect Installation [if doesn't install upon enrollment]:
+      </strong>
+     </p>
+     <ol start="1">
+      <li>
+       <p>
+        Once everything is done, your Mac is now part of our managed devices. This means apps such as JAMF Connect and Self Service should install automatically.
+       </p>
+      </li>
+      <li>
+       <p>
+        Ensure JAMF Connect is installed shortly after enrollment. If JAMF Connect does not appear, please attempt to install.
+       </p>
+      </li>
+      <li>
+       <p>
+        JAMF Connect Install Instructions here →
+        <a href="https://schrodinger.atlassian.net/wiki/x/L4FLAw">
+         https://schrodinger.atlassian.net/wiki/x/L4FLAw
+        </a>
+        <br/>
+        <br/>
+        <br/>
+       </p>
+      </li>
+     </ol>
+    </li>
+   </ol>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

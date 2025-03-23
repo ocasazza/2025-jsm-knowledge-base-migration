@@ -1,0 +1,255 @@
+<ac:layout>
+ <ac:layout-section ac:breakout-mode="default" ac:type="two_equal">
+  <ac:layout-cell>
+   <ac:structured-macro ac:macro-id="ce743f75-d07f-4a0c-a756-9535e14d51f5" ac:name="info" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      JAMF Connect is crucial for maintaining seamless password synchronization and ensuring uninterrupted access to your Mac through Single Sign-On (SSO). It's an essential tool for keeping our systems running smoothly and securely. Please use this guide to install and/or update the Jamf Connect application version on your Mac computer.
+     </p>
+     <p>
+      <strong>
+       As of this writing, the current version of Jamf Connect is 2.29.0
+      </strong>
+      <strong>
+       11/2023
+      </strong>
+      <br/>
+      <strong>
+       ============
+      </strong>
+      <br/>
+      <strong>
+       <span style="color: rgb(255,0,0);">
+        IMPORTANT INFORMATION:
+       </span>
+      </strong>
+      If you DO NOT have JAMF Connect, your local Mac login password WILL UPDATE to your Okta login password once JAMF Connect is installed. Please ensure you know your Okta password before proceeding with instructions.
+      <br/>
+      <strong>
+       =========
+      </strong>
+      <br/>
+      If any issues arise, reach out in the
+      <a href="https://chat.google.com/room/AAAAsYj9xdk?cls=7">
+       IT Support Hotline ☎️
+      </a>
+      , or raise an
+      <a href="https://freshservice.schrodinger.com/support/tickets/new">
+       IT Ticket 🎫
+      </a>
+      and a member of the IT team will assist you
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <h1>
+    Table of Contents:
+   </h1>
+   <ac:structured-macro ac:local-id="147b9325-1101-404a-b4ce-b00d37c82c1f" ac:macro-id="eaf8a744-6fc5-4389-9b9a-959658e8f0cf" ac:name="toc" ac:schema-version="1" data-layout="default">
+    <ac:parameter ac:name="maxLevel">
+     6
+    </ac:parameter>
+    <ac:parameter ac:name="minLevel">
+     1
+    </ac:parameter>
+    <ac:parameter ac:name="include">
+    </ac:parameter>
+    <ac:parameter ac:name="outline">
+     true
+    </ac:parameter>
+    <ac:parameter ac:name="indent">
+    </ac:parameter>
+    <ac:parameter ac:name="exclude">
+    </ac:parameter>
+    <ac:parameter ac:name="style">
+     none
+    </ac:parameter>
+    <ac:parameter ac:name="type">
+     list
+    </ac:parameter>
+    <ac:parameter ac:name="printable">
+     true
+    </ac:parameter>
+    <ac:parameter ac:name="class">
+    </ac:parameter>
+   </ac:structured-macro>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="fixed-width">
+  <ac:layout-cell>
+   <hr/>
+   <h2>
+    🔎 How to check if you have JAMF Connect installed
+   </h2>
+   <hr/>
+   <ol start="1">
+    <li>
+     <p>
+      <strong>
+       Navigate to Finder → Applications → Look for JAMF Connect (image below)
+      </strong>
+     </p>
+    </li>
+   </ol>
+   <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1426" ac:original-width="2028" ac:width="550">
+    <ri:attachment ri:filename="Screenshot 2023-11-16 at 7.56.43 AM.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <p>
+    2. If you have JAMF Connect, fantastic! Proceed to the Step-by-step Installation Guide to update your version of JAMF Connect if it is outdated.
+   </p>
+   <p>
+    3. If you
+    <strong>
+     DO NOT
+    </strong>
+    have JAMF Connect installed (does not appear in Applications section) then please proceed with installation instructions below.
+    <strong>
+     Please note that installing JAMF Connect will override your local Mac login  to sync with your Okta password. You will be required to login to your Mac using your Okta password upon restart.
+    </strong>
+    <br/>
+    <br/>
+   </p>
+   <h2>
+    📋 How to Install JAMF Connect: Step-by-step Installation Guide
+   </h2>
+   <hr/>
+   <h3>
+    How to Install/Update Jamf Connect on your Mac:
+   </h3>
+   <ol start="1">
+    <li>
+     <p>
+      <strong>
+       Navigate to the Self Service Application
+      </strong>
+     </p>
+    </li>
+   </ol>
+   <p style="margin-left: 30.0px;">
+    Open Self Service on the Mac by going to Finder → Applications → Self Service (It will look like this application icon listed below)
+   </p>
+   <ac:image ac:align="center" ac:layout="wide" ac:original-height="1056" ac:original-width="1804" ac:width="680">
+    <ri:attachment ri:filename="Screenshot 2023-11-15 at 11.26.11 AM.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <p style="margin-left: 30.0px;">
+   </p>
+   <p>
+    2.
+    <strong>
+     Install Latest Jamf Connect via Self Service
+    </strong>
+   </p>
+   <p style="margin-left: 30.0px;">
+    Launch Self Service → Click Browse → Click JAMF Connect subsection.
+    <br/>
+    Run JAMF Connect Install by clicking the install button on the icon listed below in Self Service (it may also be in the Featured tab in Self Service).
+   </p>
+   <p>
+    <strong>
+    </strong>
+    <ac:image ac:width="600">
+     <ri:attachment ri:filename="Screenshot 2023-11-15 at 11.28.46 AM.png" ri:version-at-save="1">
+     </ri:attachment>
+    </ac:image>
+   </p>
+   <p>
+   </p>
+   <p>
+    3.
+    <strong>
+     Restart Mac &amp; Re-authenticate with Okta Credentials
+    </strong>
+   </p>
+   <p style="margin-left: 30.0px;">
+    Restart the Mac. Upon Restart, you will be prompted to log back into the device with your Okta credentials. The below message prompts will appear to let you know when to restart your computer.
+   </p>
+   <ac:image ac:align="left" ac:layout="align-start" ac:original-height="794" ac:original-width="1318" ac:width="646">
+    <ri:attachment ri:filename="image2023-11-15_11-10-29.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <ac:structured-macro ac:macro-id="3b9e691a-5821-4292-918c-c02605f2483b" ac:name="info" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      IMPORTANT INFORMATION: If you DO NOT have JAMF Connect, your local Mac login password
+      <strong>
+       WILL UPDATE
+      </strong>
+      to your Okta login password once JAMF Connect is installed. Please ensure you know your Okta password before proceeding with instructions. If any issues arise, please contact IT Via the IT Support Hotline, or by submitting a FreshService ticket.
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p style="margin-left: 30.0px;">
+   </p>
+   <p>
+    4.
+    <strong>
+     Verify Jamf Connect Version
+    </strong>
+   </p>
+   <p style="margin-left: 30.0px;">
+    Once installed, the JAMF Connect icon listed below will appear on your Mac toolbar.
+   </p>
+   <ac:image ac:align="center" ac:layout="wide" ac:original-height="82" ac:original-width="1534" ac:width="680">
+    <ri:attachment ri:filename="Screenshot 2023-11-15 at 11.21.39 AM.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <p>
+   </p>
+   <p style="margin-left: 30.0px;">
+    Click on the JAMF Connect icon and a dropdown menu appears. Click About to gather the version of JAMF Connect.
+   </p>
+   <ac:image ac:align="left" ac:layout="align-start" ac:original-height="524" ac:original-width="522" ac:width="238">
+    <ri:attachment ri:filename="Screenshot 2023-11-16 at 7.39.35 AM.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <p style="margin-left: 30.0px;">
+   </p>
+   <p style="margin-left: 30.0px;">
+    Check the version of JAMF Connect and ensure it is on the latest version (currently 2.29.0)🎉
+   </p>
+   <ac:image ac:align="left" ac:layout="align-start" ac:original-height="850" ac:original-width="1114" ac:width="510">
+    <ri:attachment ri:filename="Screenshot 2023-11-15 at 11.26.55 AM.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <p style="margin-left: 30.0px;">
+    <strong>
+     5. Post-installed JAMF Connect
+    </strong>
+   </p>
+   <p style="margin-left: 90.0px;">
+    Once you have updated JAMF Connect, you can proceed to work as expected.
+   </p>
+   <p style="margin-left: 90.0px;">
+    <strong>
+     If you DID NOT Have JAMF Connect and now have it installed, please remember that your local Mac login password is now your Okta password and will continue to sync when your Okta password is updated.
+    </strong>
+   </p>
+   <p>
+    As always, if you run into any issues, have any questions or need assistance with this process, please do not hesitate to reach out in the
+    <a href="https://chat.google.com/room/AAAAsYj9xdk?cls=7">
+     IT Support Hotline ☎️
+    </a>
+    , or raise an
+    <a href="https://freshservice.schrodinger.com/support/tickets/new">
+     IT Ticket 🎫
+    </a>
+    and someone from IT will gladly assist you.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

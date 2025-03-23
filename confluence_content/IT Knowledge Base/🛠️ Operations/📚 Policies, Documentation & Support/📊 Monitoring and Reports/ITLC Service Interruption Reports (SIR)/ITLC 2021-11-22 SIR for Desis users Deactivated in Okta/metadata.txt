@@ -1,0 +1,4 @@
+id: 54825209
+title: ITLC 2021-11-22 SIR for Desis users Deactivated in Okta
+version: 1
+space_key: ITLC

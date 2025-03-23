@@ -1,0 +1,46 @@
+<p>
+ If your legacy jobcontrol database gets too large (disk usage, number of files or directories), it can cause high load on the submission nodes when jobcontrol processes try to scan the database, in addition to using up disk space.
+</p>
+<p>
+ You can clean your jobcontrol database with the following command. However, please see the links below to understand the implications of running this command.
+</p>
+<p>
+ $SCHRODINGER/jobcontrol -delete all
+</p>
+<p>
+ For help in cleaning up / purging your jobcontrol database, see:
+</p>
+<ol>
+ <li>
+  Legacy Jobcontrol Limitations (JOBDB)
+ </li>
+ <li>
+  <a href="https://www.schrodinger.com/sites/default/files/s3/release/current/Documentation/html/job_control/jobcontrol_command_line_purging.htm?Highlight=clean%20jobcontrol%20database">
+   https://www.schrodinger.com/sites/default/files/s3/release/current/Documentation/html/job_control/jobcontrol_command_line_purging.htm?Highlight=clean%20jobcontrol%20database
+  </a>
+  . You need to sign in with your separate
+  <a href="http://www.schrodinger.com">
+   http://www.schrodinger.com
+  </a>
+  account to access this. If you don't already have one, you can sign up for one using your
+  <a href="mailto:first.last@schrodinger.com">
+   first.last@schrodinger.com
+  </a>
+  email address, and it'll be activated automatically.
+ </li>
+</ol>
+<p>
+ <ac:structured-macro ac:macro-id="1234" ac:name="excerpt" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="name">
+   User Story
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p>
+    As a researcher, I need to know how to manage and clean up my job database when it gets too large so I can maintain system performance and avoid storage issues.
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+</p>

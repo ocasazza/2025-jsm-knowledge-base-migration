@@ -1,0 +1,4 @@
+id: 54822805
+title: Downloading and Installing the JAMF Enrollment Profile
+version: 6
+space_key: ITLC

@@ -1,0 +1,171 @@
+<p>
+</p>
+<ac:structured-macro ac:local-id="cfbe4f7e-2591-4163-9c36-47d5dcde932e" ac:macro-id="db5962a0-4f63-4265-9684-3db77f4112b5" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="atlassian-macro-output-type">
+  INLINE
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   If you have previously
+   <em>
+    manually
+   </em>
+   connected to/configured a network drive on our VNX storage (pdx-stor-vnx or nyc-stor-vnx) on your own machine, you will need to make changes to the connection settings because we've migrated to new Qumulo storage.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:local-id="d4610b5d-8bf7-4f15-8f24-12fa81f4afd9" ac:macro-id="641c23e4-349c-4a9a-bb18-41b8acf7d8c1" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h2>
+ macOS
+</h2>
+<p>
+ If you use the
+ <strong>
+  macOS
+ </strong>
+ “Connect to Server…” menu, make sure you use the path:
+</p>
+<ac:structured-macro ac:macro-id="04407765-febe-45db-a686-915f6846bd4f" ac:name="panel" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   <code>
+    smb://schrodinger.com/shares/{ nyc | pdx }/sharename
+   </code>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<h5>
+ <strong>
+  Example
+ </strong>
+</h5>
+<ac:structured-macro ac:macro-id="2086f381-5440-4a97-a707-975e0f77f384" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[smb://schrodinger.com/shares/nyc/builds]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ In NYC, no changes are needed when
+ <a href="https://docs.google.com/document/d/175ZIQj3Dc0GljKt_Vr35LK2XZjOWL_YIS_VmZXy4oHw/edit?pli=1">
+  connecting to the DDAG
+ </a>
+ share, but changes needed when connecting in PDX.
+</p>
+<ac:structured-macro ac:macro-id="3a2f8d3f-4660-4452-9d7e-c424e482d489" ac:name="note" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   Make sure you use
+   <code>
+    smb://
+   </code>
+   , and
+   <em>
+    not
+   </em>
+   <code>
+    cifs://
+   </code>
+   when specifying the address.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h2>
+ Windows
+</h2>
+<p>
+ From
+ <strong>
+  Windows
+ </strong>
+ , make sure you use the path:
+</p>
+<ac:structured-macro ac:macro-id="715e94e5-3d26-4d14-a1b5-1c7aa798fc94" ac:name="panel" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   <code>
+    \\schrodinger.com\shares\{ nyc | pdx }\sharename
+   </code>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<h5>
+ <strong>
+  Example
+ </strong>
+</h5>
+<ac:structured-macro ac:macro-id="b110c50e-f128-4a65-a46f-338b309f2145" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[\\schrodinger.com\shares\nyc\builds
+]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ In NYC, no changes are needed when
+ <a href="https://docs.google.com/document/d/175ZIQj3Dc0GljKt_Vr35LK2XZjOWL_YIS_VmZXy4oHw/edit?pli=1">
+  connecting to the DDAG
+ </a>
+ share, but changes needed when connecting in PDX.
+</p>
+<h2>
+ Linux
+</h2>
+<p>
+ If you use SMB mount entries on
+ <strong>
+  Linux
+ </strong>
+ , switch to the path:
+</p>
+<ac:structured-macro ac:macro-id="ffe4c297-2c1f-4467-8388-3d3c7eac7cba" ac:name="panel" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   <code>
+    //{ nyc | pdx }-stor.schrodinger.com/sharename
+   </code>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<h5>
+ <strong>
+  Example
+ </strong>
+</h5>
+<ac:structured-macro ac:macro-id="51595234-e74b-44a1-afce-db54df99cb72" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[//pdx-stor.schrodinger.com/builds
+]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<h5>
+ <strong>
+  Example Mount Command
+ </strong>
+</h5>
+<ac:structured-macro ac:macro-id="3f281448-a09a-4f80-ba7d-e7558891ff10" ac:name="code" ac:schema-version="1">
+ <ac:parameter ac:name="language">
+  bash
+ </ac:parameter>
+ <ac:plain-text-body>
+  <![CDATA[mount -t cifs //nyc-stor.schrodinger.com/installers /mnt/installers -o vers=3.0,domain=schrodinger.com,username=pearson]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>

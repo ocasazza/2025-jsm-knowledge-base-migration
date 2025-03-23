@@ -1,0 +1,63 @@
+<p>
+ Did you recently update to macOS Ventura and are having troubles logging into older hosts?
+</p>
+<p>
+ Example Error: "Unable to negotiate with 172.19.17.46 port 22: no matching host key type found. Their offer: ssh-rsa"
+</p>
+<h1>
+ Root cause:
+</h1>
+<p>
+ The underlying issue is that Ventura ships with
+ <a href="https://www.openssh.com/txt/release-8.7">
+  OpenSSH_9 which disables using the RSA/SHA1 algorithm for
+  <strong>
+   host keys
+  </strong>
+ </a>
+ . The destination server being ssh-ed into, doesn’t support (or doesn't have enabled) the newer RSA/SHA256 host keys. Eventually, one assumes the ssh server software will get upgraded and use RSA/SHA256 host keys, but not every destination can be updated quickly, or sometimes at all.
+</p>
+<h1>
+ Solution:
+</h1>
+<p>
+ Add the following to the top of your ~/.ssh/config
+</p>
+<blockquote>
+ <p>
+  <sup>
+   Host *
+  </sup>
+  <br/>
+  <sup>
+   HostKeyAlgorithms +ssh-rsa
+  </sup>
+ </p>
+</blockquote>
+<p>
+ If there is an existing "Host *" stanza, just add the "HostKeyAlgorithims" line to the end.  The "+" is critical, it means add this algorithm to the default list.  If you omit the "+" it means
+ <strong>
+  only
+ </strong>
+ use ssh-rsa, and that would create other problems.
+</p>
+<p>
+ You can, of course, create a Host stanza for specific destinations.
+</p>
+<p>
+</p>
+<p>
+ This will allow use of the older RSA/SHA1 host keys for all remote servers.  Try logging in again.
+</p>
+<p>
+</p>
+<p>
+ There are other cryptographic protocols involved in a SSH connection, if there is a mismatch they will all throw similar errors.  For example, older network devices may need to have "KexAlgorithms +diffie-hellman-group14-sha1" added.
+</p>
+<p>
+ See
+ <a href="https://man.openbsd.org/ssh_config">
+  https://man.openbsd.org/ssh_config
+ </a>
+ for full information on the config file syntax and options.
+</p>

@@ -1,0 +1,874 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for pdx-mail to gcp-ira on 2021-11-19
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:page ri:content-title="Jira Server" ri:space-key="SYSMGR">
+          </ri:page>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="73ddf13e-2d10-4d11-8c50-5e9170e7a26c" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             SYSMGR-61511
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         Global processing of mail in Jira
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2021-11-19">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2021-12-10">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="712020:b178eabd-1e55-4e1b-a043-22e743e3e0aa">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    Connectivity between PDX and certain subnets within the GCP
+    <code>
+     sysmgr-sharedservices
+    </code>
+    VPC was interrupted due to asymmetric/black-holed routing between GCP and PDX after
+    <ac:link>
+     <ri:user ri:userkey="712020:b178eabd-1e55-4e1b-a043-22e743e3e0aa">
+     </ri:user>
+    </ac:link>
+    made changes to establish a direct path between PDX and GCP (to avoid routing through NYC to get to GCP from PDX).
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    PDX does not have direct connectivity to IT's environment in GCP
+    <code>
+     sysmgr-sharedservices
+    </code>
+   </p>
+   <p>
+    PDX does have direct connectivity to IT's environment in AWS
+    <code>
+     schrodinger
+    </code>
+    account (
+    <code>
+     IT-AWS )
+    </code>
+   </p>
+   <p>
+    Jira &amp; Confluence were migrated from
+    <code>
+     schrodinger
+    </code>
+    account (
+    <code>
+     IT-AWS
+    </code>
+    ) to GCP
+    <code>
+     sysmgr-sharedservices
+    </code>
+    the weekend of 10/30
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    <span style="color: rgb(23,43,77);">
+     Inbound &amp; Outbound email not working to/from Jira (which was recently migrated from AWS to GCP)
+    </span>
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    This is a high level summary of the timeline from
+    <ac:link>
+     <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+     </ri:user>
+    </ac:link>
+    (thanks!)
+   </p>
+   <ul>
+    <li>
+     <span style="color: rgb(23,43,77);">
+      11:53pm Report in IT Hotline
+     </span>
+    </li>
+    <li>
+     <span style="color: rgb(23,43,77);">
+      12:12am I started following up. Initial thought was this might be related to
+      <span>
+      </span>
+     </span>
+     <a class="issue-link" href="https://schrodinger.atlassian.net/browse/SYSMGR-61300" title="[SCH] JEMH License at https://jira.schrodinger.com is due to expire TODAY!">
+      <del>
+       SYSMGR-61300
+      </del>
+     </a>
+     <span style="color: rgb(23,43,77);">
+      <span>
+      </span>
+      (turned out later it wasn't) and pinged in SYSMGR chat. Also tried checking a few things on gcp-jira-lv01 and pdx-mail-lv02 like /var/mail, dovecot logs, but wasn't really sure how to troubleshoot
+     </span>
+    </li>
+    <li>
+     <span style="color: rgb(23,43,77);">
+      1:39am I created a PagerDuty incident and paged Simon.
+     </span>
+     <span style="color: rgb(23,43,77);">
+      Simon investigated, found it was an issue with mail communication from pdx-mail-lv02 to gcp-jira-lv01, and initial thought was a PDX or GCP firewall/routing issue. We briefly looked at the diff for pdx-vpn-f01 from the Network room and Simon thought the gateway change there might be related (though turned out later it wasn't).
+     </span>
+    </li>
+    <li>
+     <span style="color: rgb(23,43,77);">
+      2:37am Simon reassigned the incident to CJ, paging him.
+     </span>
+     CJ investigated and adjusted some GCP routing config
+    </li>
+   </ul>
+   <ul>
+    <li>
+     <span style="color: rgb(23,43,77);">
+      2:56am Issue resolved
+     </span>
+    </li>
+    <li>
+     <span style="color: rgb(23,43,77);">
+      3:07am Confirmed by seeing new tickets being created via email
+     </span>
+    </li>
+    <li>
+     <span style="color: rgb(23,43,77);">
+      3:47am Further analysis and summary by CJ
+     </span>
+    </li>
+   </ul>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    Here is the full contents of our thread in the SYSMGR chat which has my real-time analysis and thought process:
+   </p>
+   <p>
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="9d88b040-d9e5-49c3-a4f7-5a1e35f5e82c" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[Jon-Eric Eufemio - Nov 19, 12:51 AM
+Is the issue in the hotline about email to help@ not getting into Jira because our JEMH license expired? https://schrodinger.atlassian.net/browse/SYSMGR-61300 That was paid by PO, and I don't know how long that will take to get new licenses. Also, the confirmation / license keys might go to Lindsey's (on PO) or Simon's (on quote) email address. Maybe we can pay by credit card to get the new licenses sooner?
+ 
+ 
+Simon Gao - Nov 19, 1:50 AM
+According to JEMH developer, support expiration should not prevent JEMH from functioning
+ 
+I just found another email from you "If the current license expires, will JEMH stop working right away?": No, JEMH Server licenses are perpetually valid for any version released inside your maintenance window. If its expired, just don't upgrade and you're good until renewal. Br, Andy
+ 
+ 
+Jon-Eric Eufemio - Nov 19, 1:52 AM
+OK, thanks Simon. Sorry, I wasn't sure how to troubleshoot this further.
+ 
+ 
+Simon Gao - Nov 19, 2:04 AM, Edited
+It might be firewall or route issue at PDX. Right now, emails from pdx-mail-lv02 could not be delivered to gcp-jira-lv01
+ 
+All the emails for Jira are queued on pdx-mail-lv02
+ 
+Email flow from gcp-jira-lv01 to pdx-mail works fine
+ 
+ 
+Simon Gao - Nov 19, 2:12 AM
+The mail issue started around 2PM PT 11/18/21
+ 
+@Austin Nason @CJ Smith Can you help checking firewall setting at PDX and GCP?
+ 
+ 
+Simon Gao - Nov 19, 2:13 AM, Edited
+The firewall rule for Jira on GCP is smtp-private
+ 
+ 
+Jon-Eric Eufemio - Nov 19, 2:17 AM
+In the thread above this one, I think CJ was working on the PDX firewall.
+ 
+ 
+Simon Gao - Nov 19, 2:21 AM
+Thanks Jon. I've updated the sysmgr ticket.
+ 
+The queued emails will be delivered to Jira server once the routing/firewall issue gets resolved
+ 
+ 
+Jon-Eric Eufemio - Nov 19, 2:25 AM
+In the Network chat room, there is an oxidized diff for pdx-vpn-f01 from 5:34pm Eastern. I can't tell if anything in that diff would affect this: https://oxidized.schrodinger.com/node/version/diffs?node=pdx-vpn-f01.schrodinger.com&group=&oid=7e6c2ddd05f673ef82f1576439b4044120f3f8c1&date=2019-01-28+16:00:05+-+0000 If not, then I guess it's on the GCP side.
+ 
+ 
+Simon Gao - Nov 19, 2:28 AM
+On GCP side the firewall rule looks the same
+ 
+This one + set remote-gw 34.206.69.164 may have caused the issue
+ 
+ssh from PDX machine to gcp-jira-lv01 not working either
+ 
+I added my comments in SYSMGR-61300
+ 
+ 
+CJ Smith - Nov 19, 2:46 AM
+im awake and looking
+ 
+ 
+CJ Smith - Nov 19, 2:56 AM
+how's it look now?
+i can ping gcp-jira-lv01 from pdx-netutil
+ 
+ 
+Jon-Eric Eufemio - Nov 19, 3:01 AM
+In the ticket, Simon said he could not telnet to port 25 on gcp-jira-lv01 from pdx-mail-lv02, but now I can, so that looks good:[root@pdx-mail-lv02 mail]# telnet gcp-jira-lv01 25 Trying 10.20.30.70... Connected to gcp-jira-lv01. Escape character is '^]'. 220 gcp-jira-lv01.schrodinger.com ESMTP Sendmail 8.15.2/8.15.2/Debian-18; Fri, 19 Nov 2021 07:58:45 GMT; (No UCE/UBE) logging access from: mailgw.schrodinger.com(OK)-mailgw.schrodinger.com [172.19.4.135]
+ 
+ 
+Jon-Eric Eufemio - Nov 19, 3:07 AM
+https://jira.schrodinger.com/browse/SYSMGR-61339 just got generated by my email from earlier, so I think that means things are working!
+
+Thanks CJ!
+ 
+ 
+CJ Smith - Nov 19, 3:09 AM
+yep i tested telnet from mail-lv02 as well and it seems good and stable
+ 
+ 
+CJ Smith - Nov 19, 3:23 AM
+i need to dig into this more tomorrow, but something very odd happened in GCP (that i still don't fully understand) after i went afk for the night (but wasn't happening shortly after i had made my changes)
+]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    <ac:link>
+     <ri:user ri:userkey="712020:b178eabd-1e55-4e1b-a043-22e743e3e0aa">
+     </ri:user>
+    </ac:link>
+    shutdown the direct BGP adjacency between PDX and GCP
+    <code>
+     sysmgr-sharedservices
+    </code>
+    VPC to revert the path back to PDX ↔ NYC ↔ GCP
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    <br/>
+   </p>
+   <p>
+    The Code Block below has the full dump of my investigation/thoughts in real time.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    The TL;DR is above the code block. All quotes taken from
+    <a href="https://cloud.google.com/network-connectivity/docs/router/concepts/overview#software-tasks" style="letter-spacing: 0.0px;">
+     https://cloud.google.com/network-connectivity/docs/router/concepts/overview#software-tasks
+    </a>
+    <span style="letter-spacing: 0.0px;">
+    </span>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    Our GCP Cloud Router for
+    <code>
+     sysmgr-sharedservices
+    </code>
+    runs 2 Software Tasks because of the following criteria
+    <br/>
+    "
+    <span style="color: rgb(32,33,36);">
+     At least two interfaces, each connected to an HA VPN tunnel, where each tunnel is connected to different HA VPN gateway interface numbers—for example, one tunnel connected to
+     <span>
+     </span>
+    </span>
+    <code style="text-align: left;">
+     interface 0
+    </code>
+    <span style="color: rgb(32,33,36);">
+     <span>
+     </span>
+     of an HA VPN gateway and another tunnel connected to
+     <span>
+     </span>
+    </span>
+    <code style="text-align: left;">
+     interface 1
+    </code>
+    <span style="color: rgb(32,33,36);">
+     <span>
+     </span>
+     of the same gateway or a different gateway."
+    </span>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    And, because of this, the below footnote applies (silently) to our Cloud Router's behavior:
+   </p>
+   <p>
+    "
+    <strong>
+     Note:
+    </strong>
+    <span style="color: rgb(1,87,155);">
+     <span>
+     </span>
+     <a href="https://cloud.google.com/network-connectivity/docs/router/concepts/overview#as-path" style="text-decoration: underline;">
+      AS path length selection
+     </a>
+     <span>
+     </span>
+     does not work when Cloud Router is implemented by more than one software task. However, if Cloud Router is implemented by more than one software task, all prefixes advertised to Google Cloud by peer routers must use the same AS path length. This ensures that Google Cloud uses only MED to select the best routes."
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     Which is ambiguous, but if we take the worst possible case interpretation of this, what it could mean is that if you advertise the same prefix to the Cloud Router with different AS-PATH length, the Cloud router
+    </span>
+    <em style="letter-spacing: 0.0px;">
+     can't
+    </em>
+    <span style="letter-spacing: 0.0px;">
+     figure out which one to use in a deterministic fashion, even if the advertisements have different MED (Which is what GCP prefers to use for path selection).
+    </span>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     When I created a BGP adjacency between PDX and GCP
+     <code>
+      sysmgr-sharedservices
+     </code>
+     I did two things:
+     <br/>
+     AS-PATH prepends on the 172.19.0.0/16 subnet advertised to GCP from NYC (to make GCP prefer NYC LESS to get to PDX)
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     MED of 500 on the 172.19.0.0/16 subnet advertised to GCP from PDX (to make GCP prefer PDX MORE to get to PDX)
+    </span>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     Apparently, the AS-PATH attribute of the route from NYC just kinda breaks the custom &amp; opaque path selection algorithm that GCP runs instead of the standard BGP algorithm.
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     FWIW the entire rest of the world uses AS-PATH as the primary EBGP route-control/filtering mechanism, so the fact that GCP jokes when it sees a prefix with it is kinda lame.  I understand why after reading the documentation further (spoiler: it's because they're running two software processes that don't have IPC and thus cannot share information mid-execution of the algorithm), but it doesn't make it any less dumb.
+    </span>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="3826abfd-49a1-4d9a-b339-47cb64420f23" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[CJ Smith - Nov 19, 3:26 AM
+at a high level: GCP started advertising routes to PDX with a lower MED than the routes it was advertising to NYC
+
+which caused NYC to prefer those GCP routes via PDX instead of via GCP
+
+what's odd is, that still shouldn't have effected PDX to GCP connectivity, as that was still showing as symmetrically routed in both PDX and GCP when i got on tonight
+
+that should have only affected traffic between NYC and GCP, and even then, the connectivity was there, it was just asymmetric
+
+debugging this is complicated because GCP actually uses MED in the opposite manner with which it is utilized in the BGP RFC
+
+why they do this is beyond me
+
+(i.e. "correct" BGP routers prefer things with a lower MED, but GCP prefers things with a higher MED)
+
+i even took this into account when i made my changes earlier today, so i'm still not sure why this happened
+
+especially because (and i just double checked) GCP is configured to advertise its routes to both NYC and PDX with a MED of 0
+
+CJ Smith - Nov 19, 3:35 AM
+GCP adds some MED (invisibly) based on region-to-region costs in global routing mode, ie. it'll make a us-east route that it advertises to a peer in us-east look better than a us-west route that it advertises to a peer in us-west
+
+which is what i see in NYC right now:
+nyc-fw # get router info routing-table all | grep 10.20.
+B 10.20.30.0/24 [20/100] via 169.254.30.1, GCP-SYSMGR-SS, 1d15h56m
+B 10.20.31.0/24 [20/100] via 169.254.30.1, GCP-SYSMGR-SS, 1d15h56m
+B 10.20.32.0/24 [20/312] via 169.254.30.1, GCP-SYSMGR-SS, 00:00:17
+B 10.20.40.0/24 [20/370] via 169.254.30.1, GCP-SYSMGR-SS, 00:00:17
+B 10.20.41.0/24 [20/370] via 169.254.30.1, GCP-SYSMGR-SS, 00:00:17
+B 10.20.50.0/24 [20/332] via 169.254.30.1, GCP-SYSMGR-SS, 00:00:17
+B 10.20.51.0/24 [20/332] via 169.254.30.1, GCP-SYSMGR-SS, 00:00:17
+B 10.20.60.0/24 [20/588] via 169.254.30.1, GCP-SYSMGR-SS, 00:00:17
+
+CJ Smith - Nov 19, 3:36 AM, Edited
+notice the variable numbers after [20/
+
+but in PDX, they were all coming in with the same MED of 100 (which would only make sense if every GCP route was in us-west, which they sure aren't):
+pdx-vpn-f01 # get router info routing-table all | grep 10.20.
+B 10.20.30.0/24 [20/100] via 169.254.9.2, COGNT-GCP-SYSMG, 10:59:46
+B 10.20.31.0/24 [20/100] via 169.254.9.2, COGNT-GCP-SYSMG, 10:59:46
+B 10.20.32.0/24 [20/100] via 169.254.9.2, COGNT-GCP-SYSMG, 10:59:46
+B 10.20.40.0/24 [20/100] via 169.254.9.2, COGNT-GCP-SYSMG, 11:09:16
+B 10.20.41.0/24 [20/100] via 169.254.9.2, COGNT-GCP-SYSMG, 11:09:16
+B 10.20.50.0/24 [20/100] via 169.254.9.2, COGNT-GCP-SYSMG, 10:59:46
+B 10.20.51.0/24 [20/100] via 169.254.9.2, COGNT-GCP-SYSMG, 10:59:46
+B 10.20.60.0/24 [20/100] via 169.254.9.2, COGNT-GCP-SYSMG, 10:59:46
+
+notice how they're all [20/100] instead of variable MEDs in the portion after the / in [ ]
+
+CJ Smith -  Nov 19, 3:41 AM
+so PDX was routing directly to GCP but NYC was going to PDX to get to GCP for the routes other than 10.20.30 & 31:
+nyc-fw # get router info routing-table all | grep 10.20.
+B 10.20.30.0/24 [20/100] via 169.254.30.1, GCP-SYSMGR-SS, 1d15h55m
+B 10.20.31.0/24 [20/100] via 169.254.30.1, GCP-SYSMGR-SS, 1d15h55m
+B 10.20.32.0/24 [200/100] via 172.29.254.6, LUMEN-PDX-COGNT, 10:59:17
+B 10.20.40.0/24 [200/100] via 172.29.254.6, LUMEN-PDX-COGNT, 11:08:24
+B 10.20.41.0/24 [200/100] via 172.29.254.6, LUMEN-PDX-COGNT, 11:08:24
+B 10.20.50.0/24 [200/100] via 172.29.254.6, LUMEN-PDX-COGNT, 10:59:17
+B 10.20.51.0/24 [200/100] via 172.29.254.6, LUMEN-PDX-COGNT, 10:59:17
+B 10.20.60.0/24 [200/100] via 172.29.254.6, LUMEN-PDX-COGNT, 10:59:17
+
+which isn't great, but again, shouldn't have actually affected the connectivity between PDX and GCP (or GCP and PDX)
+
+because the route table in GCP had two routes for `172.19.0.0/16`, one with a MED (or Priority in GCP terms) of 0 from NYC and one with a MED of 500 from PDX (which i set via route-map in PDX earlier today)
+
+the only theory i have right now is that GCP either didn't honor the higher (500) MED/Priority value for the new additional `172.19.0.0/16` route it learned from PDX
+
+which meant it continued to route through NYC to get to PDX
+
+so there would have been asymmetric routing where flows went GCP -> NYC -> PDX
+
+whereas the opposite flow (or return traffic) went straight from PDX -> GCP
+
+again though, there's no NATing in play, so asymmetric routing is actually fine (just not ideal)
+
+which is actually indicated by the fact that Simon said he could connect from GCP to PDX, but not PDX to GCP
+
+CJ Smith - Nov 19, 3:47 AM, Edited
+his SYN went from GCP to NYC then to PDX, and the SYN-ACK went straight from PDX to GCP
+
+why a SYN from PDX to NYC didn't work, or the SYN-ACK from GCP to NYC to PDX didn't work is beyond me rn
+
+Simon Gao - Nov 19, 11:30 AM
+Thanks @CJ Smith
+
+CJ Smith - Nov 19, 12:28 PM
+i will dump all of this into a SIR
+
+but so far the only lead i have is like this absolutely insane fine print
+
+https://cloud.google.com/network-connectivity/docs/router/concepts/overview#software-tasks
+
+specifically the bit about all the cool corner case behavior when your cloud router uses more than 1 software task
+
+the verbiage in this is ambiguous, but i think we are probably in a 2 software task mode (although this is not visible anywhere in GCP via console or API query, you just have to "know")
+
+CJ Smith - Nov 19, 12:32 PM
+actually i take that back, i don't think this applies to us, i think we're in a single software task mode
+
+the only thing i thought might apply was this horrifically worded bit from the software task table
+
+At least two interfaces, each connected to an HA VPN tunnel, where each tunnel is connected to different HA VPN gateway interface numbers—for example, one tunnel connected to interface 0 of an HA VPN gateway and another tunnel connected to interface 1 of the same gateway or a different gateway.
+
+oh wait, that does apply because the tunnels to the appgate VPCs are setup that way
+
+so yeah, i think we are def in two software process land for our cloud router
+
+which means this is in play, which i can't fully make sense of:
+
+Note: AS path length selection does not work when Cloud Router is implemented by more than one software task. However, if Cloud Router is implemented by more than one software task, all prefixes advertised to Google Cloud by peer routers must use the same AS path length. This ensures that Google Cloud uses only MED to select the best routes.
+
+which basically says "we ignore as-path attribute if you have multiple software tasks, but also you can't send the as-path attribute or it breaks our MED algorithm" from what i can tell
+
+which is pretty cool /s
+
+this is the only thing i can think of being the anomalous behavior cause here
+
+because the config i pushed had the PDX -> GCP advertisements set a MED of 500 so that GCP would prefer going directly to PDX for 172.19.
+
+and the NYC -> GCP advertisement used 2x as-path prepends for the 172.19 prefix so that GCP would only go to NYC to get to PDX if the GCP - PDX BGP sessions was down
+
+and a normal, RFC compliant BGP router would have been totally fine with this and done exactly what i expected it to do
+
+because as-path length is higher than MED in the path selection algorithm's order
+
+so it shouldn't have even installed the route pointing 172.19. to NYC
+
+and if i'm reading that Note correctly, basically the cloud router just chokes and has unknown behavior if you send it routes with the as-path attribute when it's in multiple software task mode
+
+which frankly, from like a RIB/binary search trie/verilog implementation of routing is pretty insane because that's like preferring a roll-overa-able 1 ^21 integer comparison over a 15 bit comparison]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    It took ~ 9.5 hours for users to report the issue
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    Users reported the issue in the IT Hotline as well as via the listed Jira Tickets
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    Proactive monitoring of our cloud resources from multiple locations as well as canary style testing of our mail-relay services.
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    ~1.5 hours passed between reports and response (it was after working hours in the USA)
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Tickets were updated in real-time and communication occurred in the IT Hotline. Additionally, tickets from different Jira projects were correlated to make sure all users were updated of resolution.
+    <span style="color: rgb(23,43,77);">
+    </span>
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    We communicated well with users as well as internally as a tea via PD and GChat.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    SYSMGR team communication in the team channel and Pager Duty
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    <span style="color: rgb(23,43,77);">
+    </span>
+    Better global routing topology with deterministic failover and redundancy
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    Re-build all of our routing between GCP/AWS and Schrodinger's on-prem networks so that we have best-path forwarding with redundancy and deterministic failover
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:link>
+     <ri:user ri:userkey="712020:b178eabd-1e55-4e1b-a043-22e743e3e0aa">
+     </ri:user>
+    </ac:link>
+    will test a new routing design with GCP &amp; AWS on test VPCs that are of no consequence and will test deterministic failover until the proper configuration is determined given the fuzzy and seemingly non-deterministic behavior of GCP's BGP implementation.  Once this is complete a project will be launched to implement the required configuration for all GCP &amp; AWS VPCs.
+    <span style="color: rgb(23,43,77);">
+    </span>
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      <span class="placeholder-inline-tasks">
+       <ac:structured-macro ac:macro-id="4db08e6d-3049-4da7-b237-ec1bec287669" ac:name="jira" ac:schema-version="1">
+        <ac:parameter ac:name="server">
+         System JIRA
+        </ac:parameter>
+        <ac:parameter ac:name="serverId">
+         ac6def98-2140-30c3-8103-4b52b8b31135
+        </ac:parameter>
+        <ac:parameter ac:name="key">
+         SYSMGR-61746
+        </ac:parameter>
+       </ac:structured-macro>
+      </span>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

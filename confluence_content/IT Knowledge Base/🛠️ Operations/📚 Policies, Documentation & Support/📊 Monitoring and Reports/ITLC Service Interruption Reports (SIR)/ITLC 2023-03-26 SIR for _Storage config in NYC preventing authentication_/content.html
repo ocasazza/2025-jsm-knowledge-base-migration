@@ -1,0 +1,557 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for "Storage config in NYC preventing authentication" on
+      <ac:structured-macro ac:macro-id="a8b5a663-fa16-4b94-b261-89807643b89e" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-1229
+       </ac:parameter>
+      </ac:structured-macro>
+      <time datetime="2023-03-26">
+      </time>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           all nyc systems that rely on nyc-stor-q01
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         ITINFRA-1229
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         NYC
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-03-26">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-03-26">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <ac:link>
+            <ri:user ri:userkey="712020:20683bcb-b5d6-4474-a40c-2a3ae5aaee4f">
+            </ri:user>
+           </ac:link>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-04-20">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          List of people who had a part in reviewing or commenting on the report
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    After making changes to the PDX firewall (
+    <a href="https://pdx-vpn-f01:8443/">
+     pdx-vpn-f01
+    </a>
+    ) via the
+    <a href="https://github.com/schrodinger/tf-forti-pdx">
+     tf-forti-pdx
+    </a>
+    repo, nyc-* systems on vlan30 (and earlier on vlan50, handled in another commit on 03/25) weren't able to mount from nyc-stor-q01.
+   </p>
+   <p>
+    Because there are no direct routes that are needed for nyc-stor-q01 to reach nyc-ad-wv01, it seems that the issue was due to how Active Directory (AD) works on the Qumulo. Although the NYC Qumulo (nyc-stor-q01) doesn't rely on anything explicitly, the initial binding to AD might have bound to the controller in PDX at the time, and isn't dynamically updated if it can't reach it's initially bound AD controller.
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    After making changes to the PDX firewall (
+    <a href="https://pdx-vpn-f01:8443/">
+     pdx-vpn-f01
+    </a>
+    ) via the
+    <a href="https://github.com/schrodinger/tf-forti-pdx">
+     tf-forti-pdx
+    </a>
+    repo, nyc-* systems on vlan30 (such as nyc-root-lv01) weren't able to mount from nyc-stor-q01.
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    After making firewall changes to PDX (the ISP switchover on 03/24/2023), NYC desktops weren't able mount exports from nyc-stor-q01.
+   </p>
+   <p>
+    This caused LDAP account logins to halt just before logging in because the system wasn't able to mount the home directory of the user's account.
+   </p>
+   <p>
+    The issue was that there was no policy to allow routing from nyc-vlan30 to nyc-vlan60 ("nyc-nix-local-stor")
+   </p>
+   <p>
+    To correct the issue, Austin filed tf-forti-pdx/commit/
+    <a href="https://github.com/schrodinger/tf-forti-pdx/commit/6c294847fa17efdf664252329d9fb091b78c7353">
+     6c294847fa17efdf664252329d9fb091b78c7353
+    </a>
+    which added the "nyc-nix-local-stor" policy and also corrected the policy ID for "local-stor-nyc-nix".
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    03/24/2023 - The firewall changes were started on Friday (03/24) but the issue wasn't detected until early Sunday (03/26).
+   </p>
+   <p>
+    <span class="commentdate_5159062_verbose subText">
+     <span class="date user-tz" title="26/Mar/23 1:59 PM">
+      03/26/2023 1:05 PM
+     </span>
+    </span>
+    - Alex created ITINFRA-1229 and brought the issue to my attention
+   </p>
+   <p>
+    <span class="commentdate_5159062_verbose subText">
+     <span class="date user-tz" title="26/Mar/23 1:59 PM">
+      03/26/2023 1:59 PM
+     </span>
+    </span>
+    - I made my first comment in the ITINFRA-1229 stating that the "
+    <span style="color: black;">
+     /etc/sssd/sssd.conf" file was correct and that the system can reach the ldap server.
+     <br/>
+    </span>
+   </p>
+   <p>
+    <span style="color: black;">
+     <span class="commentdate_5159068_verbose subText">
+      <span class="date user-tz" title="26/Mar/23 3:41 PM">
+       03/26/2023 2:50 PM - Austin merged commit
+       <a href="https://github.com/schrodinger/tf-forti-pdx/commit/6c294847fa17efdf664252329d9fb091b78c7353">
+        6c294847fa17efdf664252329d9fb091b78c7353
+       </a>
+       <strong>
+       </strong>
+       to the
+       <a href="https://github.com/schrodinger/tf-forti-pdx">
+        tf-forti-pdx
+       </a>
+       repo
+       <br/>
+      </span>
+     </span>
+    </span>
+   </p>
+   <p>
+    <span style="color: black;">
+     <span class="commentdate_5159068_verbose subText">
+      <span class="date user-tz" title="26/Mar/23 3:41 PM">
+       03/26/2023 3:41 PM - Alex reports that this is no longer an issue.
+      </span>
+     </span>
+    </span>
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    <span style="color: black;">
+     <span class="commentdate_5159068_verbose subText">
+      <span class="date user-tz" title="26/Mar/23 3:41 PM">
+       Austin merged commit
+       <a href="https://github.com/schrodinger/tf-forti-pdx/commit/6c294847fa17efdf664252329d9fb091b78c7353">
+        6c294847fa17efdf664252329d9fb091b78c7353
+       </a>
+       to the
+       <a href="https://github.com/schrodinger/tf-forti-pdx">
+        tf-forti-pdx
+       </a>
+       repo which allowed systems to reach the nyc storage device which exports nfs shares and user home directories (nyc-stor-q01).
+       <br/>
+      </span>
+     </span>
+    </span>
+   </p>
+   <p>
+    <span style="color: black;">
+     <span class="commentdate_5159068_verbose subText">
+      <span class="date user-tz" title="26/Mar/23 3:41 PM">
+       However, the root issue seems to stem from NYC qumulo was bound to the AD in PDX. So when nyc-stor-q01 was trying to reach pdx-ad-wv01 to sync with AD, during the PDX site was offline, it wouldn't be able to do so.
+      </span>
+     </span>
+    </span>
+   </p>
+   <p>
+    <span style="color: black;">
+     <span class="commentdate_5159068_verbose subText">
+      <span class="date user-tz" title="26/Mar/23 3:41 PM">
+       But after checking with Qumulo's slack support channel, we've confirmed that nyc-stor-q01 is currently checking
+      </span>
+     </span>
+    </span>
+    <span style="color: black;">
+     nyc-ad-wv01 for all nodes.
+     <br/>
+    </span>
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe any findings (other than this report itself)
+    </ac:placeholder>
+   </p>
+   <h3>
+    Introduced Issues
+   </h3>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="1dcb527e-6cb6-45a4-a4a1-55cf9b51022f" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,priority,status,summary,created,updated,reporter,customfield_11008
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,priority,status,summary,created,updated,reporter,Sprint
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITDW-123, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    The problem was detected in about 30 hours.
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    By not being able to complete a login to a nyc-* system due to the home directory not mounting from nyc-stor-q01
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    This was part of the major firewall change and issues were expected, which is why many people from IT were on call during the weekend (03/25 - 03/26).
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    Within about an hour/ no more then 2 hours.
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Yes, this was a weekend planned event, and this issue was corrected before any users noticed.
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    n/a
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    Having people available and ready to jump in to troubleshoot was helpful in gathering details.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    Hard to practically say.
+   </p>
+   <p>
+    We understood there would be issues from the firewall change, so many people from IT were available over the weekend.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    By having all the firewall setting already in tf helps greatly!
+   </p>
+   <p>
+    But it's still a work in progress, so any movement (PRs/commits) on the firewall repos is helpful as in this case.
+   </p>
+   <p>
+    <em>
+     If the firewall policy would have been created in the tf-forti-pdx repo beforehand, the login issue wouldn't have been a thing. - hindsight
+    </em>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     After analyzing and talking about this incident what actions did the reviewers and management decide should be done to address shortfalls in detection, mitigation or avoidance. Use tasks, assignments and due dates or link to created jira tickets.
+    </ac:placeholder>
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      <span class="placeholder-inline-tasks">
+       Type your task here, using "@" to assign to a user and "//" to select a due date
+      </span>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

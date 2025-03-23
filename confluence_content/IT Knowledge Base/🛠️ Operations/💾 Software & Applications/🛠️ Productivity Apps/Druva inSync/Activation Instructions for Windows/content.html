@@ -1,0 +1,214 @@
+<ac:image ac:align="center" ac:custom-width="true" ac:layout="center" ac:original-height="30" ac:original-width="155" ac:src="https://schrodinger.atlassian.net/wiki/plugins/servlet/confluence/placeholder/macro?definition=e3RvY30&amp;locale=en_US&amp;version=2" ac:width="250">
+ <ri:url ri:value="https://schrodinger.atlassian.net/wiki/plugins/servlet/confluence/placeholder/macro?definition=e3RvY30&amp;locale=en_US&amp;version=2">
+ </ri:url>
+</ac:image>
+<table ac:local-id="2e21c307-3545-4103-a582-7a2e1801f2a0" data-layout="default" data-table-width="760">
+ <tbody>
+  <tr>
+   <td>
+    <p>
+     The steps up to the end of the activation section should take less than two minutes, as you'll just need to launch the inSync client and log into it via Okta.
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h1>
+ Confirm software is installed
+</h1>
+<p>
+ You should normally not need to install the inSync client manually on your laptop or desktop. IT will have installed the client software via our automated deployment systems.  If you do not see the software already installed, you may need to manually reboot to help the installation complete. The installation will not reboot your computer automatically.
+</p>
+<p>
+ To confirm the software is installed, you should see the following on the Desktop:
+</p>
+<p>
+ and an icon in the System Tray in the lower right:
+</p>
+<ac:image ac:align="center" ac:custom-width="true" ac:layout="center" ac:original-height="208" ac:original-width="300" ac:src="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image4.png?version=1&amp;modificationDate=1599152633344&amp;cacheVersion=1&amp;api=v2&amp;height=208" ac:width="250">
+ <ri:url ri:value="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image4.png?version=1&amp;modificationDate=1599152633344&amp;cacheVersion=1&amp;api=v2&amp;height=208">
+ </ri:url>
+</ac:image>
+<ac:image ac:align="center" ac:custom-width="true" ac:layout="center" ac:original-height="216" ac:original-width="339" ac:src="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image6.png?version=1&amp;modificationDate=1599152665953&amp;cacheVersion=1&amp;api=v2&amp;height=216" ac:width="250">
+ <ri:url ri:value="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image6.png?version=1&amp;modificationDate=1599152665953&amp;cacheVersion=1&amp;api=v2&amp;height=216">
+ </ri:url>
+</ac:image>
+<h1>
+ Before Activating
+</h1>
+<table ac:local-id="eaf72596-9c3e-4184-a217-3df744d5bd1a" data-layout="default" data-table-width="760">
+ <tbody>
+  <tr>
+   <td>
+    <p>
+     <strong>
+      Please note, any directories named 'donotbackup' will not be backed up. If there is content in your home directory on your Windows machine you do not wish to be backed up, please move it into a directory named 'donotbackup' before activating and starting your backups.
+     </strong>
+    </p>
+    <p>
+     <strong>
+      The backup and restore processes will not prevent your machine from sleeping. See the platform-specific instructions for tips on how to prevent your machine from sleeping.
+     </strong>
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h1>
+ Activation
+</h1>
+<p>
+ Once you activate the software as described below, the backups will start.  You may notice the first backup will have a more noticeable impact on your computer than subsequent ones.
+</p>
+<p>
+ Once the inSync client software is installed on your computer, it needs to be activated. In general, this involves signing into the client by entering your
+ <a href="mailto:first.last@schrodinger.com">
+  <em>
+   first.last@schrodinger.com
+  </em>
+ </a>
+ email address, and signing into Okta in your browser when prompted. Some specific instructions are included below.
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Launch the inSync client from the Druva inSync icon on your desktop. Enter your
+   <a href="mailto:first.last@schrodinger.com">
+    first.last@schrodinger.com
+   </a>
+   email address and click Continue.
+  </p>
+ </li>
+ <li>
+  <p>
+   Your default web browser will open, and you'll be prompted to sign into Okta, if you're not already signed into Okta in that browser:
+  </p>
+ </li>
+ <li>
+  <p>
+   Once you've signed into Okta, you should see a browser prompt asking if you'd like to let the
+   <a href="http://cloud.druva.com">
+    cloud.druva.com
+   </a>
+   website open the inSyncAgent.exe program on your computer.  You should Allow this.
+  </p>
+ </li>
+ <li>
+  <p>
+   The Druva inSync program will open.
+  </p>
+ </li>
+ <li>
+  <p>
+   If you do not already have another device enrolled, the backup will just start.
+  </p>
+ </li>
+ <li>
+  <p>
+   If you do already have another device enrolled, you'll be given a choice.
+   <br/>
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     If you're enrolling another device, rather than replacing an existing one, choose "Add as New Device". The backup will start:
+    </p>
+   </li>
+   <li>
+    <p>
+     If you're replacing an old device with the new one, choose
+     <strong>
+      Replace an Existing Device
+     </strong>
+     .   The backups associated with the old device will be switched over to be associated with the new device.
+     <strong>
+      Please note, if you choose to replace, backups will stop on the old device.
+     </strong>
+     You can see more instructions
+     <a href="https://docs.druva.com/005_inSync_Client/inSync_Client_6.7.0_for_inSync_Cloud/002Install_inSync_Client/020_Install_and_activate_inSync/Replace_a_device_linked_with_your_inSync_account">
+      here
+     </a>
+     .  Please contact sysmgr if you have any questions.
+     <br/>
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Go to
+   <a href="http://schrodinger.atlassian.net/wiki/spaces/SYSMGR/pages/55256488/Druva+inSync+Cloud+Overview">
+    Druva inSync Cloud Overview
+   </a>
+   for other instructions.
+  </p>
+ </li>
+</ol>
+<ac:image ac:align="center" ac:custom-width="true" ac:layout="center" ac:original-height="488" ac:original-width="796" ac:src="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image7.png?version=2&amp;modificationDate=1599152849996&amp;cacheVersion=1&amp;api=v2&amp;height=250" ac:width="250">
+ <ri:url ri:value="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image7.png?version=2&amp;modificationDate=1599152849996&amp;cacheVersion=1&amp;api=v2&amp;height=250">
+ </ri:url>
+</ac:image>
+<ac:image ac:align="center" ac:custom-width="true" ac:layout="center" ac:original-height="606" ac:original-width="954" ac:src="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image3.png?version=1&amp;modificationDate=1599152790228&amp;cacheVersion=1&amp;api=v2&amp;height=250" ac:width="250">
+ <ri:url ri:value="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image3.png?version=1&amp;modificationDate=1599152790228&amp;cacheVersion=1&amp;api=v2&amp;height=250">
+ </ri:url>
+</ac:image>
+<ac:image ac:align="center" ac:custom-width="true" ac:layout="center" ac:original-height="713" ac:original-width="1000" ac:src="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image2.png?version=1&amp;modificationDate=1599152769212&amp;cacheVersion=1&amp;api=v2&amp;height=250" ac:width="250">
+ <ri:url ri:value="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image2.png?version=1&amp;modificationDate=1599152769212&amp;cacheVersion=1&amp;api=v2&amp;height=250">
+ </ri:url>
+</ac:image>
+<ac:image ac:align="center" ac:custom-width="true" ac:layout="center" ac:original-height="488" ac:original-width="796" ac:src="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image8.png?version=1&amp;modificationDate=1599152694654&amp;cacheVersion=1&amp;api=v2&amp;height=250" ac:width="250">
+ <ri:url ri:value="https://schrodinger.atlassian.net/wiki/download/thumbnails/55264560/image8.png?version=1&amp;modificationDate=1599152694654&amp;cacheVersion=1&amp;api=v2&amp;height=250">
+ </ri:url>
+</ac:image>
+<table ac:local-id="a0882801-c589-4ea6-b810-144785cb8ef9" data-layout="default" data-table-width="760">
+ <tbody>
+  <tr>
+   <td>
+    <p>
+     If you plan on leaving your device to restore data unattended then please
+     <a href="https://support.microsoft.com/en-us/windows/how-to-adjust-power-and-sleep-settings-in-windows-26f623b5-4fcc-4194-863d-b824e5ea7679#Category=Windows_10">
+      set your computer to not fall asleep
+     </a>
+     when connected to power. Restores pause when a computer fall asleep.
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h1>
+ Uninstalling
+</h1>
+<p>
+ See
+ <a href="http://schrodinger.atlassian.net/wiki/spaces/SYSMGR/pages/55256488/Druva+inSync+Cloud+Overview#DruvainSyncCloudOverview-Uninstalling/Reinstalling">
+  Druva inSync Cloud Overview#Uninstalling/Reinstalling
+ </a>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>

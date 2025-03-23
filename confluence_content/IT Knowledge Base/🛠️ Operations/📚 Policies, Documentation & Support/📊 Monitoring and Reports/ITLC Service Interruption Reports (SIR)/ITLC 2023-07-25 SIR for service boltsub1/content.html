@@ -1,0 +1,744 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    bolt cluster, boltsub1
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for boltsub1 on 7/25/2023
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           boltsub1/bolt cluster
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="ac0f3098-ea31-4038-bf23-8245668433ee" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="columnIds">
+             issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="columns">
+             key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             ITHPC-447
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         Bolt cluster
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-07-25">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-11-14">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="557058:8aff9fa7-fab5-4a58-8371-4bbe29336cd2">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use // for date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          List of people who had a part in reviewing or commenting on the report
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    Boltsub1 hang issue started in April 2023.  This ticket was opened after the issue returned in June 2023.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     Boltsub1 experienced high load and became unresponsive and was rebooted to bring service back.  Since then, a high load would recur from time to time,  which would last about 15-30 minutes and went away eventually by itself.  Such occurrences no longer totally hung boltsub1, but it did caused slowness and shell terminal unresponsiveness for a few minutes.  There were a huge amount of "NFS server not responding" messages logged by boltsub1.
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     Sysmgr looked at all currently mounted NFS file systems.  We found the NFS shares mounted from a particular Qumulo node (node 6) tend to lock up more often than mounted from other nodes.  Reported this finding to Qumulo support and
+    </span>
+    <span style="letter-spacing: 0.0px;">
+     Qumulo support confirmed Qumulo node 6 under-performed nfs service comparing to other Qumulo nodes.  As a result Qumulo node 6 chassis was replaced as suggested by Qumulo.
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     In the process of replacing node 6, a rare software bug with Qumulo OS/firmware was triggered on node 4.  The impact was that the mounted NFS shares from Qumulo node 4 were not responsive.  Temporarily removed Qumulo node 4 from service by removing node 4's dns records to restore NFS service on boltsub1 and other nodes after manually un-mounting the shares.   Due to this bug, bolt nodes can mount an NFS share from Qumulo node 4, but Qumulo node 4 could not serve NFS requests. Sysmgr upgraded Qumulo firmware from 6.0.1.1 to 6.1.0.1 per Qumulo support recommendation.
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     Shane set up
+     <a href="https://schrodinger.atlassian.net/browse/ITHPC-311">
+      some nfsiostat monitoring
+     </a>
+     which showed evidence of high retransmissions and issues, but wasn't conclusive nor did it give more direction to find the cause of the problem.
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     To monitor NFS lock issue constantly, sysmgr deployed a cron task (
+     <span>
+      <span style="color: rgb(0,0,0);">
+       chk_nfs_mount) to
+      </span>
+     </span>
+     log NFS hangs by file systems on boltsub1.  Certain Qumulo nodes logged most of NFS hangs.  Sysmgr looked switch ports stats and identified a few loose cable connections and then replaced several network cables.  This helped reducing number of NFS hangs on boltsub1.
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     Next, sysmgrs set up a local ldap server on bolt head node. Then switched ldap server configured on Qumulo cluster from ldap2 to the bolt ldap server.
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     After all above changes, there are still many "NFS server not responding" logged on boltsub1.   Such warning messages in general corresponds to some NFS hangs.  Another observation is that the bonding interface for internal network (which has MTU size 9000) experiences small, but constant package dropping, while the bonding interface for external network (which has MTU size 1500 and both use same physical NICs) does not experience any packet drops. In a way, the packet drops can cause NFS slowness in some high I/O utilization cases. After ITHPC discussion, sysmgrs decided to change MTU from 9000 to 1500 on boltsub1's internal network interface to match that of the external interface.   The MTU size change had a huge impact on error "Server not responding" and totally eliminated the error since the change.  Later sysmgrs made the same MTU change on all bolt nodes and Qumulo nodes.
+    </span>
+   </p>
+   <p>
+    Event with error "Server not responding"  being gone,  some NFS hangs were still logged on boltsub1.
+   </p>
+   <p>
+    We also noticed a dramatic difference in performance on boltsub1 from other nodes.  Running
+   </p>
+   <pre>time $SCHRODINGER/testapp -t 30 -HOST bolt_personal</pre>
+   <p>
+    on boltsub1 took 1.5 minutes wheras on boltsub2 it would take &lt;10s to complete.
+   </p>
+   <p>
+    Given we have looked all possible aspects and verified hardware states, system settings were fine, we came to an conclusion that boltsub1 must have some hardware issue not detected/reported by BMC/OS.  The final solution to this ongoing issue is to switch its functions to boltsub2, which is already completed.
+   </p>
+   <p>
+    The takeways from this incident are:
+   </p>
+   <ol>
+    <li>
+     When the issue seems be difficult to track down and resolve, move the service away to another performing node
+    </li>
+    <li>
+     When troubleshooting this issue, do a quick sanity checking first:
+     <ol>
+      <li>
+       Check node hardware states, any hardware alerts from BMC/IPMI
+      </li>
+      <li>
+       Check node software configuration, any recent changes; any system errors; any local file system fill-up; networking setting
+      </li>
+      <li>
+       Check switch stats for this node and Qumulo nodes
+      </li>
+      <li>
+       Check which NFS file systems were locked/hung, trace back to which Qumulo node(s). Check related Qumulo nodes
+      </li>
+     </ol>
+    </li>
+    <li>
+     Collect additional data regarding NFS stats; NFS hangs to help troubleshooting
+    </li>
+    <li>
+     Reach out to Qumulo support for in-depth investigation on Qumulo cluster nodes
+    </li>
+   </ol>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    Boltsub1 is a submission node on bolt cluster that allows end users to log in and perform certain tasks.  This node is used by job server processes to upload user data, files; prepare user jobs etc.
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    Boltsub1 would experienced high load in such a way that the load would go up quickly to up to 150 within 10-15 minutes.  Most of times, the high load dropped by itself after 20 minutes or so.  At this time some NFS mounted filesystems were hung.
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    This issue started in April 2023. It occurred once and then came back in June.
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    Sysmgr did troubleshooting. Checking boltsub1 hardware, system configuration and switch configuration.  Replaced Qumulo node 6.  Upgraded Qumulo OS from 6.0.1.1 to 6.1.0.3; Set up a local LDAP server; Changed MTU size from 9000 to 1500 on all internal network interfaces of all bolt nodes; Switched boltsub1 function to boltsub2
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    See executive summary
+   </p>
+   <h3>
+    Introduced Issues
+   </h3>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="1dcb527e-6cb6-45a4-a4a1-55cf9b51022f" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,priority,status,summary,created,updated,reporter,customfield_11008
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,priority,status,summary,created,updated,reporter,Sprint
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITDW-123, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    It was detected very quickly since end users' active terminal would hang and users could not log into boltsub1
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    By end users and sysmgrs
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    NA
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    Sysmgrs immediately looked into the issue
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Yes, Sysmgrs communicated via gchat rooms and Jira ticket
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    NA
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    Temporarily set /home to static mount on an ip address not experienced any NFS hangs.  This helped user login and console terminal hung issue; Temporarily stopped using the problematic Qumulo nodes
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    While troubleshooting the issue, migrate the service to another working node until the issue with boltsub1 is resolved
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    Not sure we can avoid this issue.  A quick and reasonable even interim solution would help
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     After analyzing and talking about this incident what actions did the reviewers and management decide should be done to address shortfalls in detection, mitigation or avoidance. Use tasks, assignments and due dates or link to created jira tickets.
+    </ac:placeholder>
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      Qumulo node replacement
+      <ac:structured-macro ac:macro-id="066382e4-3375-4c19-9833-aebffdb9ae89" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-1557
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      7
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      Qumulo OS upgrade 6.0.1.1 to 6.1.0.1
+      <ac:structured-macro ac:macro-id="101043fe-da99-4d38-b790-defead063b48" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-1632
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      13
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      Network investigation and network cables replacement/re-seating
+      <ac:structured-macro ac:macro-id="3c860051-fdc8-4058-9183-7625dd3cf3d1" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-1832
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      8
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      Set up local LDAP server
+      <ac:structured-macro ac:macro-id="1938dd7b-1f9b-4a17-aad0-065cef5e6bcf" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITHPC-492
+       </ac:parameter>
+      </ac:structured-macro>
+      <ac:structured-macro ac:macro-id="39b95d6f-7516-48e5-bfbc-0b3b09d89450" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITHPC-505
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      9
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      Qumulo OS upgrade to 6.1.0.3
+      <ac:structured-macro ac:macro-id="0ae152c9-9823-4582-84f5-5c3e50fe0943" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-1941
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      10
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      Set MTU size from 9000 to 1500
+      <ac:structured-macro ac:macro-id="545f7f5e-1115-4dd3-8114-4134f01a8fb4" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITHPC-447
+       </ac:parameter>
+      </ac:structured-macro>
+      <ac:structured-macro ac:macro-id="014da529-be54-4026-80d9-7ab43bf31f53" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-2140
+       </ac:parameter>
+      </ac:structured-macro>
+      <ac:structured-macro ac:macro-id="3340d718-f77a-460d-8886-64f5fdb1609f" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITHPC-536
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      11
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      Switch boltsub1 service to boltsub2
+      <ac:structured-macro ac:macro-id="8cf815f6-a6ab-4f5c-8ee4-d8d0fca97cd4" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="columnIds">
+        issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="columns">
+        key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITHPC-556
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

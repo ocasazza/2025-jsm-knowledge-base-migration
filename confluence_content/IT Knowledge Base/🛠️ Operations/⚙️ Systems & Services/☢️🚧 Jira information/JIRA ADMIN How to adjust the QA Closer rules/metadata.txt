@@ -1,0 +1,4 @@
+id: 54825151
+title: JIRA ADMIN How to adjust the QA Closer rules
+version: 4
+space_key: ITLC

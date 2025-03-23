@@ -1,0 +1,73 @@
+<h2>
+ Problem
+</h2>
+<p>
+ After restoring files from Time Machine, they retain Unix file permissions, preventing me from editing them.
+</p>
+<h2>
+ Solution
+</h2>
+<p>
+ A helpful suggestion from
+ <a href="https://stackoverflow.com/questions/41290761/mac-osx-file-permissions-has-how-to-remove-that">
+  Stack Overflow
+ </a>
+ that proved effective was to run the
+ <code>
+  xattr
+ </code>
+ command with the
+ <code>
+  -cr
+ </code>
+ option on the folder containing the affected files:
+</p>
+<ac:structured-macro ac:macro-id="6cb3d67a-3440-4689-b39e-df2a10bdcfe8" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[sudo xattr -cr <yourfoldername>]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:macro-id="e2fae382-ad97-43a5-91e3-46ffb3144b9b" ac:name="panel" ac:schema-version="1">
+ <ac:parameter ac:name="bgColor">
+  #fff
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   <ac:placeholder>
+    You may want to use a panel to highlight important steps.
+   </ac:placeholder>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h2>
+ Related Articles
+</h2>
+<ac:structured-macro ac:local-id="f0740fa7-b5d3-4598-9c98-47ae7a84e0ae" ac:macro-id="30c03c5f-e6a8-4445-bca3-3bc179f3f75c" ac:name="contentbylabel" ac:schema-version="4" data-layout="default">
+ <ac:parameter ac:name="showLabels">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="max">
+  5
+ </ac:parameter>
+ <ac:parameter ac:name="spaces">
+  SYSMGR
+ </ac:parameter>
+ <ac:parameter ac:name="showSpace">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="sort">
+  modified
+ </ac:parameter>
+ <ac:parameter ac:name="reverse">
+  true
+ </ac:parameter>
+ <ac:parameter ac:name="type">
+  page
+ </ac:parameter>
+ <ac:parameter ac:name="cql">
+  label = "kb-troubleshooting-article" and type = "page" and space = "SYSMGR"
+ </ac:parameter>
+ <ac:parameter ac:name="labels">
+  kb-troubleshooting-article
+ </ac:parameter>
+</ac:structured-macro>

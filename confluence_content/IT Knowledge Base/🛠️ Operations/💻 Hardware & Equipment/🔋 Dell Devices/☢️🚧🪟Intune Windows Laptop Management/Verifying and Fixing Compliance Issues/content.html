@@ -1,0 +1,290 @@
+<h3>
+ Compliance Status Verification
+</h3>
+<ol start="1">
+ <li>
+  <p>
+   Open the Company Portal application
+  </p>
+ </li>
+ <li>
+  <p>
+   Navigate to the Devices section
+  </p>
+ </li>
+ <li>
+  <p>
+   Select your current device
+  </p>
+ </li>
+ <li>
+  <p>
+   Review the compliance status indicator:
+  </p>
+  <ul>
+   <li>
+    <p>
+     Green checkmark: Compliant
+    </p>
+   </li>
+   <li>
+    <p>
+     Yellow warning: Remediation required
+    </p>
+   </li>
+   <li>
+    <p>
+     Red X: Critical compliance failure
+    </p>
+   </li>
+  </ul>
+ </li>
+</ol>
+<h3>
+ Common Compliance Issues
+</h3>
+<h4>
+ Operating System Version
+</h4>
+<p>
+ <strong>
+  Detection:
+ </strong>
+</p>
+<ul>
+ <li>
+  <p>
+   Navigate to Settings &gt; System &gt; About
+  </p>
+ </li>
+ <li>
+  <p>
+   Verify that the Windows version meets minimum requirements (Windows 10 v1909+)
+  </p>
+ </li>
+</ul>
+<p>
+ <strong>
+  Remediation:
+ </strong>
+</p>
+<ul>
+ <li>
+  <p>
+   Open Settings &gt; Update &amp; Security &gt; Windows Update
+  </p>
+ </li>
+ <li>
+  <p>
+   Select "Check for updates"
+  </p>
+ </li>
+ <li>
+  <p>
+   Install all available feature updates
+  </p>
+ </li>
+ <li>
+  <p>
+   Restart your device when prompted
+  </p>
+ </li>
+ <li>
+  <p>
+   Force a compliance check with
+   <code>
+    Start-ScheduledTask -TaskName "\Microsoft\Windows\Intune\PushLaunch"
+   </code>
+   in PowerShell
+  </p>
+ </li>
+</ul>
+<h4>
+ Security Configuration
+</h4>
+<p>
+ <strong>
+  Windows Defender Status
+ </strong>
+</p>
+<ul>
+ <li>
+  <p>
+   Open Settings &gt; Update &amp; Security &gt; Windows Security
+  </p>
+ </li>
+ <li>
+  <p>
+   Verify that all protection modules show "On" status
+  </p>
+ </li>
+ <li>
+  <p>
+   Run a full system scan if AV definitions are outdated
+  </p>
+ </li>
+</ul>
+<p>
+ <strong>
+  BitLocker Encryption
+ </strong>
+</p>
+<ul>
+ <li>
+  <p>
+   Open Control Panel &gt; BitLocker Drive Encryption
+  </p>
+ </li>
+ <li>
+  <p>
+   Verify that the system drive shows "BitLocker On"
+  </p>
+ </li>
+ <li>
+  <p>
+   If not enabled:
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     Select "Turn on BitLocker"
+    </p>
+   </li>
+   <li>
+    <p>
+     Choose a backup method for the recovery key
+    </p>
+   </li>
+   <li>
+    <p>
+     Select the encryption method (XTS-AES 256 recommended)
+    </p>
+   </li>
+   <li>
+    <p>
+     Choose the "Encrypt entire drive" option
+    </p>
+   </li>
+   <li>
+    <p>
+     Wait for the encryption to complete (this is a background process)
+    </p>
+   </li>
+  </ol>
+ </li>
+</ul>
+<p>
+ <strong>
+  Windows Firewall
+ </strong>
+</p>
+<ul>
+ <li>
+  <p>
+   Open Settings &gt; Update &amp; Security &gt; Windows Security &gt; Firewall &amp; network protection
+  </p>
+ </li>
+ <li>
+  <p>
+   Verify that all network profiles show "On" status
+  </p>
+ </li>
+ <li>
+  <p>
+   If disabled, click each profile and toggle to "On"
+  </p>
+ </li>
+</ul>
+<h4>
+ Update Compliance
+</h4>
+<p>
+ <strong>
+  Windows Updates
+ </strong>
+</p>
+<ul>
+ <li>
+  <p>
+   Open Settings &gt; Update &amp; Security &gt; Windows Update
+  </p>
+ </li>
+ <li>
+  <p>
+   Install all pending updates, including optional updates
+  </p>
+ </li>
+ <li>
+  <p>
+   Verify that the last successful update is within the compliance window (typically 14 days)
+  </p>
+ </li>
+</ul>
+<p>
+ <strong>
+  Microsoft 365 Apps
+ </strong>
+</p>
+<ul>
+ <li>
+  <p>
+   Open any Office application &gt; Account &gt; Office Updates
+  </p>
+ </li>
+ <li>
+  <p>
+   Select "Update Now" if available
+  </p>
+ </li>
+ <li>
+  <p>
+   Verify that the build number meets minimum requirements
+  </p>
+ </li>
+</ul>
+<h3>
+ Post-Remediation Verification
+</h3>
+<p>
+ After addressing compliance issues:
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Open the Company Portal
+  </p>
+ </li>
+ <li>
+  <p>
+   Select Devices &gt; Current device
+  </p>
+ </li>
+ <li>
+  <p>
+   Click "Check Status"
+  </p>
+ </li>
+ <li>
+  <p>
+   Wait for the compliance scan to complete (approximately 5 minutes)
+  </p>
+ </li>
+ <li>
+  <p>
+   If compliance issues persist, execute
+   <code>
+    $env:ProgramFiles\Microsoft Intune Management Extension\AgentExecutor.exe -enforceRemediation
+   </code>
+   in an elevated PowerShell
+  </p>
+ </li>
+ <li>
+  <p>
+   For ongoing issues, contact
+   <em>
+    $IT_SUPPORT_EMAIL
+   </em>
+   with your device name and logged-in username
+  </p>
+ </li>
+</ol>

@@ -1,0 +1,601 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for nyc-dhcp-wv02 DHCP-Server on
+      <time datetime="2023-07-26">
+      </time>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           DHCP
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="39d2c128-8984-4fd4-aee3-3c519e799d23" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             ITINFRA-1791
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         NYC
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-07-26">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-07-27">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="712020:460d116b-6dd0-4201-9370-8098156f6d6f">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use // for date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          List of people who had a part in reviewing or commenting on the report
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    nyc-dhcp-wv01 stopped issuing DHCP addresses to wired clients.  DHCP MMC console provided accurate information.  Domain admin activity quickly restored functionality.
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    The nature of DHCP of the DHCP lease renewal cycle means that there was minimal impact.  Our lease time is 4 days, and clients should start requesting renewals at 2 days, and continue to use their current address for six to eight days.  We were without DHCP services for about 6 hours.
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Describe the incident in as much (or little) detail as seems appropriate leaving the chronology, corrective action and analysis for their subsequent sub-section(s)
+    </ac:placeholder>
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    Preliminary Information
+   </p>
+   <ul>
+    <li>
+     We don't have the event log entries that would show the authorization/deauthorization of the DHCP server,
+     <ac:link>
+      <ri:user ri:userkey="712020:460d116b-6dd0-4201-9370-8098156f6d6f">
+      </ri:user>
+     </ac:link>
+     believes they were rotated out before he could find them.
+    </li>
+    <li>
+     <ac:link>
+      <ri:user ri:userkey="712020:460d116b-6dd0-4201-9370-8098156f6d6f">
+      </ri:user>
+     </ac:link>
+     has been setting up a Windows laptop for Windows/AD/Domain administration, where domain admin programs would be run as bardsley_admin.  This included setting up DHCP reservations.  He thinks it possible / probable / likely that he accidentally clicked the "Unauthorize" button.  See below screenshot.
+    </li>
+   </ul>
+   <p>
+    The Event
+   </p>
+   <ul>
+    <li>
+     Suspect that nyc-dhcp-wv02 was restarted around 11:30 am EDT on 26 July
+    </li>
+    <li>
+     <span style="color: rgb(23,43,77);">
+      26 July 11:49 EDT, nyc-dhcp-wv02 event log: "The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain
+      <a href="http://schrodinger.com">
+       schrodinger.com
+      </a>
+      , has determined that it is not authorized to start. It has stopped servicing clients.
+     </span>
+    </li>
+    <li>
+     <span style="color: rgb(23,43,77);">
+      26 July 15:00 EDT, somewhere between 14:30 and 15:30
+      <ac:link>
+       <ri:user ri:userkey="712020:20683bcb-b5d6-4474-a40c-2a3ae5aaee4f">
+       </ri:user>
+      </ac:link>
+      notices that wall connected (via Ethernet) devices aren't able to receive a DHCP address from the 21st Floor NYC office.
+     </span>
+    </li>
+   </ul>
+   <p>
+    <span style="color: rgb(23,43,77);">
+     Resolution
+    </span>
+   </p>
+   <ul>
+    <li>
+     <span style="letter-spacing: 0.0px;">
+      26 July 17:53 EDT,
+     </span>
+     <ac:link>
+      <ri:user ri:userkey="712020:20683bcb-b5d6-4474-a40c-2a3ae5aaee4f">
+      </ri:user>
+     </ac:link>
+     <span style="letter-spacing: 0.0px;">
+      IT-Infra chat: "I'm checking the windows dhcp server in nyc (nyc-dhcp-wv02) i see the the ipv4 and ipv6 boxes have red arrow icons on them which indicate that they need to reauthorize with AD"
+     </span>
+    </li>
+    <li>
+     26 July 17:56 EDT,
+     <ac:link>
+      <ri:user ri:userkey="712020:460d116b-6dd0-4201-9370-8098156f6d6f">
+      </ri:user>
+     </ac:link>
+     IT-Infra chat: "no but I have all those tools running as a domain admin.... stand by..."
+    </li>
+    <li>
+     26 July 17:59 EDT,
+     <ac:link>
+      <ri:user ri:userkey="712020:460d116b-6dd0-4201-9370-8098156f6d6f">
+      </ri:user>
+     </ac:link>
+     IT-Infra chat: "i've done the authorize bit, waiting as indicated. nyc-dhcp-wv02 WAS NOT in the list of authorized servers."
+    </li>
+    <li>
+     <span style="color: rgb(23,43,77);">
+      26 July 18:06 EDT, nyc-dhcp-wv02 event log: "The DHCP/BINL service on the local machine, belonging to the Windows Administrative domain
+      <a href="http://schrodinger.com">
+       schrodinger.com
+      </a>
+      , has determined that it is authorized to start. It is servicing clients now."
+     </span>
+    </li>
+    <li>
+     <span style="color: rgb(23,43,77);">
+      26 July 18:08 EDT,
+      <ac:link>
+       <ri:user ri:userkey="712020:20683bcb-b5d6-4474-a40c-2a3ae5aaee4f">
+       </ri:user>
+      </ac:link>
+      IT-Infra chat: "yes. it's now working
+      <ac:emoticon ac:name="smile">
+      </ac:emoticon>
+      "
+     </span>
+    </li>
+   </ul>
+   <p>
+    Selecting a server and clicking "OK" is how to load a remote DHCP server into the console.  Clicking "Unauthorize" would have created this situation.
+   </p>
+   <p>
+    <span style="color: rgb(23,43,77);">
+     <ac:image ac:height="250">
+      <ri:attachment ri:filename="dhcp-mmc.jpg">
+      </ri:attachment>
+     </ac:image>
+    </span>
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    Used the DHCP MMC to authorize nyc-dhcp-wv02 as a DHCP server in the domain, restarted the DHCP-Server service.
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe any findings (other than this report itself)
+    </ac:placeholder>
+   </p>
+   <h3>
+    Introduced Issues
+   </h3>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="682a94f7-84b7-4257-b94e-c9c011231807" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITINFRA-1791, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    <ac:link>
+     <ri:user ri:userkey="712020:20683bcb-b5d6-4474-a40c-2a3ae5aaee4f">
+     </ri:user>
+    </ac:link>
+    What led you to start looking at DHCP failures?
+   </p>
+   <p style="margin-left: 40.0px;">
+    Not sure exactly when, but somewhere between 14:30 and 15:30, I first noticed the issue when trying to dock my laptop to my desk setup which has an Ethernet connection (21st floor IT area).
+   </p>
+   <p style="margin-left: 40.0px;">
+    My laptop wasn't able to get a DHCP address via Ethernet and then my Dell workstation lost it's DHCP IP address when I rebooted it.
+   </p>
+   <p style="margin-left: 40.0px;">
+    The issue was only on the Ethernet ports I was connected to under my desk, whereas, WiFi worked without any issues.
+   </p>
+   <p style="margin-left: 40.0px;">
+    By now I'm thinking it's the physical wall port, but I had the same issue when I tried to connect to any other wall port in the IT area, as well as trying to connect directly to the network switch in the 21st floor IDF.
+   </p>
+   <p style="margin-left: 40.0px;">
+    I then checked the nyc-21-dist switch to see if my desk Ethernet ports were mapped another VLAN, but it was mapped to VLAN50.
+   </p>
+   <p style="margin-left: 40.0px;">
+    I then checked the NYC DHCP server, nyc-dhcp-wv02, and noticed the red arrow icons over the IPv4 and IPv6 nodes, such as:
+   </p>
+   <p style="margin-left: 40.0px;">
+    <ac:image ac:height="250">
+     <ri:attachment ri:filename="nyc-dhcp-wv02-dhcp-not-actived-issue.png">
+     </ri:attachment>
+    </ac:image>
+   </p>
+   <p style="margin-left: 40.0px;">
+    That's when I pinged the IT-INFRA room.
+   </p>
+   <p style="text-align: left;">
+    <br/>
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    User and/or IT direct experience
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <ul>
+    <li>
+     see what monitors/checks are available in LibreNMS
+    </li>
+    <li>
+     work out an ldap query for list of authorized dhcp servers and compare it to a list stored in the montor
+    </li>
+    <li>
+     via logs and Coralogix looking for the unauthorized message/event id?  Needs to be part of just what kind of windows server logs we send to Coralogix
+    </li>
+    <li>
+     a deadman timer on seeing DHCP-Server activity, ACKS and RENEWS (probably difficult to implement)
+    </li>
+    <li>
+     Synthetically requesting a lease.  (bad idea due to lease lifetimes and tombstoning, will consume actual IP addresses)
+    </li>
+   </ul>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    Right away.
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Yes, this wasn't a directly user impacting issue, and communication within the team was immediate.
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe here any ways we can or should make our communication better.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    Yes, the long lease times minimized the impact, but that is likely outweighed by the drawbacks of long leases.
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe things we could do now, soon or eventually that would make this better if/when it happened again. Don't list things that prevent it--that's avoidance and we'll get to that.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    Update docs so people who need to admin DHCP should be made aware of the GUI and the risk it introduces for accidental clicks.
+   </p>
+   <p>
+    Consider the need for domain specific knowledge and staff (Windows/AD/Services administration).
+   </p>
+   <p>
+    Acknowledge the rarity of this kind of event and that as we build out our monitoring capabilities it will be easier to proactively alert on these kinds of things.
+   </p>
+   <p>
+    <ac:link>
+     <ri:user ri:userkey="557058:c19c6239-8657-4845-b158-eec62442daf4">
+     </ri:user>
+    </ac:link>
+    points out that our DHCP system is entirely
+    <strong>
+     not
+    </strong>
+    redundant.  Changing this would be a major project, and have operational consequences for anyone who might want to perform routine DHCP tasks like create a reservation for a persistent IP address.  Making such a change would need to be fully considered before starting.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     After analyzing and talking about this incident what actions did the reviewers and management decide should be done to address shortfalls in detection, mitigation or avoidance. Use tasks, assignments and due dates or link to created jira tickets.
+    </ac:placeholder>
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      <span class="placeholder-inline-tasks">
+       Type your task here, using "@" to assign to a user and "//" to select a due date
+      </span>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

@@ -1,0 +1,175 @@
+<p>
+</p>
+<ac:structured-macro ac:local-id="7e49b3a9-a530-4ed0-bd66-6ea363ca03ba" ac:macro-id="fed24556-f82b-4fdd-a414-34a256823472" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="atlassian-macro-output-type">
+  INLINE
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   Some users experience issues connecting to SMB (network) shares from their local machine
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h2>
+ Step-by-step guide
+</h2>
+<p>
+ See below for steps to troubleshoot on your own. Note this only applies if you had access before and are having issues or have been recently granted access to the share. If this is your first time and still have issues your account permissions might need to be updated by a member of IT:
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Make sure you have an active Appgate session. See
+   <ac:link>
+    <ri:page ri:content-title="Appgate Installation" ri:version-at-save="3">
+    </ri:page>
+    <ac:link-body>
+     Appgate Installation
+    </ac:link-body>
+   </ac:link>
+   for more details as needed.
+   <br/>
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     Sessions time out over time. Signing out/quitting the app and signing back in will refresh the session
+    </p>
+   </li>
+   <li>
+    <p>
+     One way to check is seeing if you can access or ping internal systems like boltsub1.schrodinger.com for example
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Try using a different URL that connects directly to the Qumulo:
+   <br/>
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     PDX: smb://pdx-stor.schrodinger.com/&lt;shared directory&gt; instead of smb://schrodinger.com/shares/pdx/&lt;shared directory&gt;
+    </p>
+    <ol start="1">
+     <li>
+      <p>
+       i.e. smb://pdx-stor.schrodinger.com/finance or smb://pdx-stor.schrodinger.com/builds
+      </p>
+     </li>
+    </ol>
+   </li>
+   <li>
+    <p>
+     NYC: smb://nyc-stor.schrodinger.com/ instead of smb://schrodinger.com/shares/nyc/&lt;shared directory&gt;
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Make sure you are trying to connect using the steps here:
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     macOS:
+     <a href="https://schrodinger.atlassian.net/wiki/x/lyZLAw">
+      https://schrodinger.atlassian.net/wiki/x/lyZLAw
+     </a>
+    </p>
+   </li>
+   <li>
+    <p>
+     Windows:
+     <a href="https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d">
+      Microsoft Support Document
+     </a>
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Perform a reboot of the local machine
+  </p>
+ </li>
+ <li>
+  <p>
+   If all this fails please open a ticket with
+   <a href="https://schrodinger.freshservice.com/support/home">
+    IT Help
+   </a>
+   for someone to assist further
+  </p>
+ </li>
+</ol>
+<h2>
+ Related articles
+</h2>
+<p>
+ <ac:placeholder>
+  Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+ </ac:placeholder>
+</p>
+<ac:structured-macro ac:local-id="e64a5013-d983-40ab-8ad6-8421eebdcc6b" ac:macro-id="1198c8fa-65cf-4b51-a4a8-4a10a73f6f45" ac:name="contentbylabel" ac:schema-version="4" data-layout="default">
+ <ac:parameter ac:name="showLabels">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="max">
+  5
+ </ac:parameter>
+ <ac:parameter ac:name="spaces">
+  SYSMGR
+ </ac:parameter>
+ <ac:parameter ac:name="showSpace">
+  false
+ </ac:parameter>
+ <ac:parameter ac:name="sort">
+  modified
+ </ac:parameter>
+ <ac:parameter ac:name="reverse">
+  true
+ </ac:parameter>
+ <ac:parameter ac:name="type">
+  page
+ </ac:parameter>
+ <ac:parameter ac:name="cql">
+  label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+ </ac:parameter>
+ <ac:parameter ac:name="labels">
+  kb-how-to-article
+ </ac:parameter>
+</ac:structured-macro>
+<ac:structured-macro ac:local-id="7d1f26c1-6243-4587-a36c-0ac9a0678585" ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+  </p>
+  <table ac:local-id="fcb8bf75-8e4c-437f-857b-68e45a0b2700" data-layout="default">
+   <tbody>
+    <tr>
+     <th>
+      <p>
+       <strong>
+        Related issues
+       </strong>
+      </p>
+     </th>
+     <td>
+      <p>
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+</p>

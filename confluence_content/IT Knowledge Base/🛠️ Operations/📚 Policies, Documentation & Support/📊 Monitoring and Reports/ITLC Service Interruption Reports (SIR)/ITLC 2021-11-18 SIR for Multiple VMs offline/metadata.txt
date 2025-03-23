@@ -1,0 +1,4 @@
+id: 54822982
+title: ITLC 2021-11-18 SIR for Multiple VMs offline
+version: 1
+space_key: ITLC

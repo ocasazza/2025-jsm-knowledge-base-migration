@@ -1,0 +1,47 @@
+<p>
+ For certain use cases you might need to add custom requests to your job submission. For jobs requiring large amount of memory to run, it's best to specify "-l mem_free=&lt;memory_size" to avoid overloading a node as well as receiving alert messages. These are passed to the qsub command with the -l flag. For example, to request extra memory, you would need to specify -l mem_free=5G. Multiple -l options are supported for the same command invocation. Such requests can be specified in a number of places. Pick the most appropriate one for your workflow:
+</p>
+<ul>
+ <li>
+  Use the -QARG option, e.g.:
+ </li>
+ <li>
+  $SCHRODINGER/jaguar run -HOST bolt -QARG "-l mem_free=5G" -PARALLEL 4
+  <a href="http://input.in">
+   http://input.in
+  </a>
+ </li>
+ <li>
+  $SCHRODINGER/jaguar run -HOST bolt -QARG "-l mem_free=5G -l some_other=X" -PARALLEL 4
+  <a href="http://input.in">
+   http://input.in
+  </a>
+ </li>
+ <li>
+  If you are using qsub directly, add the requests directly to your command, e.g.:
+ </li>
+ <li>
+  qsub -l mem_free=5G myscript.sh
+ </li>
+ <li>
+  If you are using qsub to submit a script, these requests can be added to #$ lines in your submission script, e.g.:
+  <code>
+   bash   #!/bin/bash     #$ -cwd     #$ -l mem\_free=5G     /path/to/mycommand
+  </code>
+ </li>
+</ul>
+<p>
+ <ac:structured-macro ac:macro-id="1234" ac:name="excerpt" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="name">
+   User Story
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p>
+    As a researcher, I need to know how to customize my job submissions with specific resource requirements so I can ensure my jobs have the resources they need to run efficiently.
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+</p>

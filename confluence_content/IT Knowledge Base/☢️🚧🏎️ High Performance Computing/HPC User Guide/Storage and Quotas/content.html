@@ -1,0 +1,160 @@
+<p>
+</p>
+<h1>
+ Storage &amp; Quotas
+</h1>
+<p>
+ We have implemented quotas on the cluster storage. This is to help protect your ability to do your work and to encourage better data management practices. There are two areas of storage, one is only for you (
+ <code>
+  /home
+ </code>
+ ), the other is shared with your group (
+ <code>
+  /nfs/working
+ </code>
+ ). If you need more space, please submit a support ticket (
+ <a href="mailto:it-help@schrodinger.com">
+  it-help@schrodinger.com
+ </a>
+ ) with the amount of storage you need on which cluster.
+</p>
+<p>
+ Note: A large job control database can consume significant disk usage and also lead to high load on the cluster submission nodes. For information on cleaning your job control database, see
+ <a href="https://schrodinger.atlassian.net/wiki/pages/viewpage.action?pageId=55279605#Schr%C3%B6dingerHPCUserGuide-cleanjobdbI%27vebeennotifiedmyjobdatabaseistoolarge.HowcanIcleanitup/purgeit?">
+  this FAQ.
+ </a>
+</p>
+<h2>
+ Checking your quota
+</h2>
+<p>
+ Email alert will be sent when a user exceeds soft and hard quota usage.
+</p>
+<h3>
+ bolt
+</h3>
+<p>
+ The quota command doesn't work on bolt but the
+ <code>
+  df
+ </code>
+ command does. To see the output in human-readable format use the
+ <code>
+  -h
+ </code>
+ parameter.
+</p>
+<p>
+ df -h
+</p>
+<p>
+ A cron task automatically cleans up files older than 38 days from
+ <code>
+  /scr
+ </code>
+ on all bolt nodes.
+ <code>
+  /scr
+ </code>
+ is not a place to store files permanently. For storing files in long-term, please use shared NFS directories.
+</p>
+<h2>
+ Home Directory
+</h2>
+<p>
+ You will have a default quota of 100GB in your
+ <code>
+  /home
+ </code>
+ directory. This is where any files that only you care about should go. This is separate from any other home directory at Schrodinger (and each cluster is separate as well), so you'll need to
+ <code>
+  scp
+ </code>
+ over any files that you need (
+ <code>
+  .profile
+ </code>
+ ,
+ <code>
+  .cshrc
+ </code>
+ , data, etc). This can be expanded by requests to sysmgr.
+</p>
+<h2>
+ Group Storage
+</h2>
+<p>
+ You are likely assigned to a group (check with your manager or run the 'id' command if you're not sure). Each group will have a certain amount of space allotted to it in
+ <code>
+  /nfs/working/group
+ </code>
+ . This is to:
+</p>
+<ul>
+ <li>
+  <p>
+   Encourage sharing of data (instead of having multiple copies of the same thing).
+  </p>
+ </li>
+ <li>
+  <p>
+   Be able to name a single person who leads the group who will justify quota increases and sort out disputes amongst group members when their space is full.
+  </p>
+ </li>
+ <li>
+  <p>
+   Avoid one group's poor storage management from negatively impacting other group's work.
+  </p>
+ </li>
+</ul>
+<h2>
+ Archive storage
+</h2>
+<p>
+ Where you store or archive older data might depend on the standard procedures for your department or group, so check with them. If you wish to move your data to your personal or your group's archive storage space on the archive servers, see
+ <a href="https://schrodinger.atlassian.net/wiki/x/v4zcAg">
+  https://schrodinger.atlassian.net/wiki/x/v4zcAg
+ </a>
+ for more information.
+</p>
+<h2>
+ Snapshots
+</h2>
+<p>
+ Periodic snapshots are taken of filesystems. You can find them in
+ <code>
+  ${filesystem}/.snapshot
+ </code>
+ . For example:
+ <code>
+  ~/.snapshot
+ </code>
+ or
+ <code>
+  /nfs/working/glide/.snapshot
+ </code>
+ .
+</p>
+<h2>
+ File transfer to bolt cluster or from bolt cluster to other machine
+</h2>
+<ul>
+ <li>
+  <p>
+   Please use boltio node for transferring files to bolt cluster, or from bolt cluster to another machine.
+  </p>
+ </li>
+</ul>
+<ac:structured-macro ac:local-id="122e1202-f40e-4375-9dd0-a0f984582f53" ac:macro-id="9326056b410520b72096d65108bef6583060e03dd89ee97bb9957cdb55244fcc" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:parameter ac:name="name">
+  Researcher Story
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   As a researcher, I need to understand the storage options and quotas on the HPC clusters so I can effectively manage my data, avoid exceeding storage limits, and know how to request additional storage when needed.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>

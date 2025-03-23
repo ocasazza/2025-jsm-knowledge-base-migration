@@ -1,0 +1,804 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for Confluence on
+      <time datetime="2022-01-07">
+      </time>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:page ri:content-title="Confluence Server" ri:space-key="SYSMGR">
+          </ri:page>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="9c15db43-28a2-4442-b8ab-07e5d74f7c9c" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             SYSMGR-62127
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          If the outage was limited to a site(s) please link to the confluence location page(s)
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2022-01-07">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2022-01-10">
+           </time>
+           -
+           <time datetime="2022-01-13">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2022-01-18">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    There were problems with accessing the Confluence service after the host VM, gcp-confluence-lv01, was updated and rebooted around 9:45pm Eastern on
+    <time datetime="2022-01-07">
+    </time>
+    . This turned out to be due to two issues:
+   </p>
+   <p>
+    a stale PID blocking the Confluence service from starting after the reboot (resolved by another reboot)
+   </p>
+   <p>
+    an IP address change for gcp-confluence-lv01.  The IP address was updated in external DNS (nsone.net) and internal DNS (pdx-ad-wv01) to resolve this.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    Our weekly updates still listed the old VM for Confluence, aws-confluence-lv01.  The current VM for Confluence is in GCP, and is gcp-confluence-lv01.  It hadn't been moved into the update rotation yet, and when I logged it, it hadn't been rebooted in 60+ days. I ran apt-get update and apt-get upgrade and rebooted, and that's when the issues started.
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <p>
+    After the reboot, I tried to access confluence.schrodinger.com directly and from my Okta dashboard.  After some time, I'd get redirected to
+    <span class="nolink">
+     https://confluence.schrodinger.com/errors.jsp
+    </span>
+    with a page of errors (a copy is posted
+    <a href="https://drive.google.com/file/d/1O-o2V7Bu9SIrE6zNSfnw4Q6ilPHR5jK2/view">
+     here
+    </a>
+    ). Trying to restart the Confluence service didn't help.  (In retrospect, another VM reboot would probably have resolved this part of the issue, due to a stale PID file.)  Since I'd done an update, my first thought was perhaps some incompatibility had been introduced by the package changes.  After looking at the errors on
+    <span class="nolink">
+     https://confluence.schrodinger.com/errors.jsp,
+    </span>
+    I incorrectly thought it might be a database connection issue.  I asked the sysmgr chat room for advice. As it was late, I notified end-users via chat and email of the issue and that it might not be resolved till the morning.
+   </p>
+   <p>
+    <ac:link>
+     <ri:user ri:userkey="640b97dd93cf25994632639f">
+     </ri:user>
+    </ac:link>
+    rebooted again, getting past the stale PID issue.  Then we ran into a new issue, which
+    <ac:link>
+     <ri:user ri:userkey="640b97dd93cf25994632639f">
+     </ri:user>
+    </ac:link>
+    found was due to a change in IP address for gcp-confluence-lv01 vs what we had in DNS. After
+    <ac:link>
+     <ri:user ri:userkey="640b97dd93cf25994632639f">
+     </ri:user>
+    </ac:link>
+    updated external DNS, then
+    <ac:link>
+     <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+     </ri:user>
+    </ac:link>
+    later updated internal DNS, the issue was fully resolved and the all-clear was sent to users via email and chat.
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    Eastern time
+   </p>
+   <p>
+    <time datetime="2022-01-07">
+    </time>
+   </p>
+   <p>
+    9:49pm
+    <ac:link>
+     <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+     </ri:user>
+    </ac:link>
+    On gcp-confluence-lv01, ran apt-get update; apt-get upgrade. Rebooted.
+   </p>
+   <p>
+    10:00pm
+    <ac:link>
+     <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+     </ri:user>
+    </ac:link>
+    Pinged in the sysmgr chat room to indicate Confluence did not seem to be working properly after the reboot and trying to restart the service.  Created
+    <ac:structured-macro ac:macro-id="fc05f9b9-7f75-4591-9ad7-0d51cfe1e89c" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+     <ac:parameter ac:name="key">
+      SYSMGR-61927
+     </ac:parameter>
+    </ac:structured-macro>
+    and notified users via the IT Hotline and an email to all domain users.
+   </p>
+   <p>
+    11:00pm
+    <ac:link>
+     <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+     </ri:user>
+    </ac:link>
+    Updated sysmgr chat that the issue seemed to be related to a database connection.  Added a comment to
+    <ac:structured-macro ac:macro-id="25dc636a-0efe-4a06-84d7-9435e71a3b25" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+     <ac:parameter ac:name="key">
+      SYSMGR-61927
+     </ac:parameter>
+    </ac:structured-macro>
+    for end users to indicate the issue might not be resolved till the next day.
+   </p>
+   <p>
+    <time datetime="2022-01-08">
+    </time>
+   </p>
+   <p>
+    8:30am
+    <ac:link>
+     <ri:user ri:userkey="640b97dd93cf25994632639f">
+     </ri:user>
+    </ac:link>
+    began investigating.  Sometime during this investigation, he rebooted gcp-confluence-lv01 again and confirmed the database connections were working. The reboot moved past the error
+    <ac:link>
+     <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+     </ri:user>
+    </ac:link>
+    saw the previous night when trying to browse
+    <a href="http://confluence.shrodinger.com">
+     confluence.shrodinger.com
+    </a>
+    . Later investigation of
+    <span style="color: rgb(32,33,36);">
+     /var/log/syslog seems to show the initial issue was due to a stale PID file:
+    </span>
+   </p>
+   <p>
+    <code>
+     <span style="color: rgb(32,33,36);">
+      Jan 8 02:49:51 gcp-confluence-lv01 confluence1[1145]: Tomcat appears to still be running with PID 1334. Start aborted
+     </span>
+     .
+    </code>
+   </p>
+   <p>
+    The new problem now seemed to be a timeout when trying to reach Confluence.
+   </p>
+   <p>
+    9:56am
+    <ac:link>
+     <ri:user ri:userkey="640b97dd93cf25994632639f">
+     </ri:user>
+    </ac:link>
+    found the DNS for confluence.schrodinger.com was incorrect. NS1 had
+    <span style="color: rgb(32,33,36);">
+     35.196.139.50, but GCP had 34.74.141.80.
+     <ac:link>
+      <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+      </ri:user>
+     </ac:link>
+     found that gcp-confluence-lv01 had nic0 set to an Ephemeral IP.  That would explain why the IP address changed.
+     <ac:link>
+      <ri:user ri:userkey="640b97dd93cf25994632639f">
+      </ri:user>
+     </ac:link>
+     updated the IP address for
+     <a href="http://schrodinger.atlassian.net">
+      confluence.schrodinger.com
+     </a>
+     in external DNS (NS1) to be 34.74.141.80. That fixed access to confluence.schrodinger.com from outside the network/not on Appgate.
+     <ac:link>
+      <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+      </ri:user>
+     </ac:link>
+     thought (mistakenly) that it wasn't yet working inside the network/on Appgate due to the 3600 TTL in external DNS.
+    </span>
+   </p>
+   <p>
+    <span style="color: rgb(32,33,36);">
+     12:48pm
+     <ac:link>
+      <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+      </ri:user>
+     </ac:link>
+     <a href="http://schrodinger.atlassian.net">
+      confluence.schrodinger.com
+     </a>
+     was not yet resolving to 34.74.141.80 in the office or on Appgate, but sent a partial all-clear to the IT hotline and an email to all domain users, explaining this caveat.
+    </span>
+   </p>
+   <p>
+    <span style="color: rgb(32,33,36);">
+     4:25pm
+     <ac:link>
+      <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+      </ri:user>
+     </ac:link>
+     belatedly realized that we needed to update the IP address for
+     <a href="http://schrodinger.atlassian.net">
+      confluence.schrodinger.com
+     </a>
+     in internal DNS. Updated it on pdx-ad-wv01.
+    </span>
+   </p>
+   <p>
+    <span style="color: rgb(32,33,36);">
+     5:03pm
+     <ac:link>
+      <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+      </ri:user>
+     </ac:link>
+     confirmed confluence.schrodinger.com was now resolving to 34.74.141.80 in the office and on Appgate. Updated the ticket, messaged the IT hotline, and sent an email to all domain users.
+    </span>
+   </p>
+   <p>
+    <time datetime="2022-01-10">
+    </time>
+   </p>
+   <p>
+    11:58am
+    <ac:link>
+     <ri:user ri:userkey="557058:8aff9fa7-fab5-4a58-8371-4bbe29336cd2">
+     </ri:user>
+    </ac:link>
+    added reserved IP addresses for gcp-confluence-lv01 (and gcp-jira-lv01).
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    Another reboot of gcp-confluence-lv01
+   </p>
+   <p>
+    Updating the IP address for confluence.schrodinger.com to 34.74.141.80 in external DNS (nsone.net)
+   </p>
+   <p>
+    Updating the IP address for confluence.schrodinger.com to 34.74.141.80 in internal DNS (pdx-ad-wv01)
+   </p>
+   <p>
+    Assigning static IP addresses for gcp-confluence-lv01 (and gcp-jira-lv01) in GCP
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe any findings (other than this report itself)
+    </ac:placeholder>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    The problem was noticed right away, after rebooting gcp-confluence-lv01.
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    <ac:link>
+     <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+     </ri:user>
+    </ac:link>
+    saw the problem after rebooting gcp-confluence-lv01.
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    <ac:placeholder>
+     If you have any ideas for ways this can be improved list or describe them here.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    Right away with initial investigation, then again the next morning.
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Initial and follow-up messages were sent to the Sysmgr and IT Support chat rooms, and emails were sent to all domain users.
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe here any ways we can or should make our communication better.
+    </ac:placeholder>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    It happened late on a Friday night.
+   </p>
+   <p>
+    <ac:link>
+     <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+     </ri:user>
+    </ac:link>
+    happened to have the Confluence service page open before the problems started, and was able to save the already-loaded copy of that page to PDF for reference after Confluence was no longer accessible.
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    During the SIR review it was pointed out that the
+    <ac:link>
+     <ri:page ri:content-title="Off-hours On-call responsibilities and hand-off" ri:space-key="SYSMGR">
+     </ri:page>
+    </ac:link>
+    does say "
+    <span style="letter-spacing: 0.0px;">
+     Notify or escalate to management or other individual team members needed to resolve the off-hours incident".
+     <ac:link>
+      <ri:user ri:userkey="557058:07ac0593-24aa-4f1a-9f61-f6ed48eb34e3">
+      </ri:user>
+     </ac:link>
+     did not escalate to another person directly (via PagerDuty, text or phone call) after he got stuck Friday evening and did not receive a reply from the Sysmgr chat room.
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     Although that Confluence page was not accessible while Confluence down, our Incident Management Google doc was:
+     <br/>
+     <br/>
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     <a href="https://docs.google.com/document/d/16d6AhL2ikCFAbGL69BaCUsgxQb_8omq3b01Q0cgMCXw/edit">
+      https://docs.google.com/document/d/16d6AhL2ikCFAbGL69BaCUsgxQb_8omq3b01Q0cgMCXw/edit
+     </a>
+    </span>
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     That document doesn't spell out escalation the way the Confluence page does, so we'll address that in
+     <ac:structured-macro ac:macro-id="126e268d-c908-4f54-afdc-4a43216e8ae9" ac:name="jira" ac:schema-version="1">
+      <ac:parameter ac:name="server">
+       System JIRA
+      </ac:parameter>
+      <ac:parameter ac:name="serverId">
+       ac6def98-2140-30c3-8103-4b52b8b31135
+      </ac:parameter>
+      <ac:parameter ac:name="key">
+       ITPRJ-3063
+      </ac:parameter>
+     </ac:structured-macro>
+     .
+    </span>
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    Several problems and follow-up actions were identified, and tickets have been filed in the Next Actions section.
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     After analyzing and talking about this incident what actions did the reviewers and management decide should be done to address shortfalls in detection, mitigation or avoidance. Use tasks, assignments and due dates or link to created jira tickets.
+    </ac:placeholder>
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="91796dc5-531e-43ee-87bc-2f3c1d358957" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        SYSMGR-62220
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      5
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="f3ce8689-408d-4042-a12f-59f0332ae15c" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        SYSMGR-62221
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      6
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="3ba5edf1-89d4-4892-a31d-a543f68c1062" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        SYSMGR-62223
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      7
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="52f52d84-2785-4765-b96a-dc4b60ee128b" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITPRJ-3057
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      9
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="aae7cfe8-b7ff-4ec2-a7b8-8d83bc8aa9cf" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITPRJ-3063
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      11
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="3cb79b22-08d5-469b-8171-3f03c138d4f4" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITPRJ-3064
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      13
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="910b7b90-b106-4698-a4e4-e65640cdc542" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITPRJ-3065
+       </ac:parameter>
+      </ac:structured-macro>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

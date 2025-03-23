@@ -1,0 +1,422 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <em>
+     <span style="letter-spacing: 0.0px;">
+      Effective from: 2021-05-07
+      <br/>
+     </span>
+    </em>
+    <em style="letter-spacing: 0.0px;">
+     Reviewed and approved by:
+    </em>
+    <em style="letter-spacing: 0.0px;">
+     <ac:link>
+      <ri:user ri:userkey="557058:3831554b-f458-4554-b5db-11a29fc6fd38">
+      </ri:user>
+     </ac:link>
+    </em>
+   </p>
+   <p>
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <hr/>
+   <p>
+    The purpose of this documentation is to provide a general overview of MHG Network Attached Storage service. Quota is applied on all shared folder, more information about the latest quota settings can be found in the table below.
+   </p>
+   <p>
+    Available Service(s):
+   </p>
+   <ul>
+    <li>
+     <span>
+      data sharing via NFS
+      <br/>
+     </span>
+     <ul>
+      <li>
+       shared resources:
+       <ul>
+        <li>
+         users' home directory
+        </li>
+        <li>
+         Schrodinger Suites (OB/NB/Releases)
+        </li>
+        <li>
+         Databases
+        </li>
+        <li>
+         Schrodinger tools and utils (sysmgr,utils)
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <hr/>
+   <h1>
+    NFS client side directory structure
+   </h1>
+   <h1>
+    <ac:structured-macro ac:macro-id="4fd1705a-8774-4b4e-baa3-511f151afc87" ac:name="lucidchart" ac:schema-version="1">
+     <ac:parameter ac:name="pageCount">
+      ()
+     </ac:parameter>
+     <ac:parameter ac:name="autoUpdate">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="align">
+      left
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      simple
+     </ac:parameter>
+     <ac:parameter ac:name="autoSize">
+      0
+     </ac:parameter>
+     <ac:parameter ac:name="macroId">
+      4fd1705a-8774-4b4e-baa3-511f151afc87
+     </ac:parameter>
+     <ac:parameter ac:name="instanceId">
+      e92fd161-7399-3be5-a65f-f9ad76f445eb
+     </ac:parameter>
+     <ac:parameter ac:name="pages">
+     </ac:parameter>
+     <ac:parameter ac:name="width">
+      798
+     </ac:parameter>
+     <ac:parameter ac:name="documentId">
+      60d52af7-3fa3-4c46-9a6b-6d2fa96741e7
+     </ac:parameter>
+     <ac:parameter ac:name="documentToken">
+      v2_12e71621daa5fdeda1862914294c19c12f4cf19a745565d8813cc717ad8a4c8f-a=103950779&amp;c=e92fd161-7399-3be5-a65f-f9ad76f445eb&amp;d=60d52af7-3fa3-4c46-9a6b-6d2fa96741e7&amp;p=55260804
+     </ac:parameter>
+     <ac:parameter ac:name="updated">
+      1709671515494
+     </ac:parameter>
+     <ac:parameter ac:name="height">
+      1055
+     </ac:parameter>
+    </ac:structured-macro>
+   </h1>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <ac:structured-macro ac:macro-id="6a41cf7c-4807-4c20-87c5-21f92667da64" ac:name="anchor" ac:schema-version="1">
+     <ac:parameter ac:name="">
+      Quotas
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <table class="wrapped relative-table" style="width: 98.4487%;">
+    <colgroup>
+     <col style="width: 22.4515%;"/>
+    </colgroup>
+    <colgroup>
+     <col style="width: 15.4126%;"/>
+    </colgroup>
+    <colgroup>
+     <col style="width: 62.1359%;"/>
+    </colgroup>
+    <tbody>
+     <tr>
+      <th>
+       NFS mount point
+      </th>
+      <th colspan="1" style="text-align: center;">
+       Quota
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+     <tr>
+      <td>
+       /home/[username]
+      </td>
+      <td colspan="1" style="text-align: center;">
+       100 GB/user
+      </td>
+      <td>
+       home folder of [username]
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /nfs/working/
+      </td>
+      <td colspan="1" style="text-align: center;">
+       -
+      </td>
+      <td>
+       root folder of projects and departments data
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /nfs/working/appsci
+      </td>
+      <td colspan="1" style="text-align: center;">
+       5TB
+      </td>
+      <td>
+       APPSci's data (shared volume)
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /nfs/working/support
+      </td>
+      <td colspan="1" style="text-align: center;">
+       1TB
+      </td>
+      <td>
+       Schrodinger Support's data (shared volume)
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /nfs/working/workshops
+      </td>
+      <td colspan="1" style="text-align: center;">
+       1TB
+      </td>
+      <td>
+       workshops' data (shared volume)
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /nfs/working/[project_X]
+       <sup>
+        *
+       </sup>
+      </td>
+      <td colspan="1" style="text-align: center;">
+       [1TB - 2TB],
+       <span style="background-color: rgb(235,236,240);">
+        (
+       </span>
+       2TB - 5TB]
+       <sup>
+        **
+       </sup>
+      </td>
+      <td>
+       <p>
+        project's data (dedicated volume)
+       </p>
+       <p>
+        <br/>
+        <em>
+         <sup>
+          *
+         </sup>
+         : project folder requested via SYSMGR ticket
+        </em>
+        <br/>
+        <em>
+         <sup>
+          **
+         </sup>
+         : manager's approval required and based on the available free space
+        </em>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td colspan="1">
+       <p>
+        /nfs/builds
+        <br/>
+        /nfs/releases
+        <br/>
+        /nfs/software
+        <br/>
+        /nfs/installers
+       </p>
+      </td>
+      <td colspan="1" style="text-align: center;">
+       <p>
+        <br/>
+       </p>
+       <p>
+        -
+       </p>
+      </td>
+      <td colspan="1">
+       local copy of Schrödinger Suites
+      </td>
+     </tr>
+     <tr>
+      <td colspan="1">
+       /nfs/dbs
+      </td>
+      <td colspan="1" style="text-align: center;">
+       -
+      </td>
+      <td colspan="1">
+       local copy of databases (Enamine, Molport, Sigma)
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <hr/>
+   <h1>
+    Operations
+   </h1>
+   <h3>
+    New Project folder request
+   </h3>
+   <p>
+    It is highly recommended that a customer service project has a dedicated volume.
+   </p>
+   <p>
+    To request a new project folder requires:
+   </p>
+   <ol>
+    <li>
+     a SYSMGR ticket in which contains:
+     <ol>
+      <li>
+       project name
+      </li>
+      <li>
+       project owner
+      </li>
+      <li>
+       list of users who are working on the project
+      </li>
+      <li>
+       volume size in GB
+       <sup>
+        *
+       </sup>
+      </li>
+     </ol>
+    </li>
+   </ol>
+   <p>
+    It might take a few days to complete this request.
+   </p>
+   <p>
+    <em>
+     <sup>
+      *
+     </sup>
+     : approval might be required (see
+     <ac:link ac:anchor="Quotas">
+      <ri:content-entity ri:content-id="196280321" ri:version-at-save="1">
+      </ri:content-entity>
+      <ac:plain-text-link-body>
+       <![CDATA[table]]>
+      </ac:plain-text-link-body>
+     </ac:link>
+     )
+    </em>
+   </p>
+   <h3>
+    Change quota setting of a shared folder
+   </h3>
+   <p>
+    This request is available for all shares mounted in
+    <em>
+     /nfs/working
+    </em>
+    folder! The Home folders' quota is predefined, reviewed regularly and it cannot be changed by a simple SYSMGR request.
+   </p>
+   <ol>
+    <li>
+     Open a SYSMGR ticket with the following subject: "CM_Request: MHG-QUOTA_&lt;PROJECT_NAME&gt;" (replace "&lt;PROJECT_NAME&gt;" with the name of the project/folder in /nfs/working)
+     <ol>
+      <li>
+       In the ticket body add: the new quota in GB
+      </li>
+      <li>
+       If manager's approval required, please add him/her to the ticket as watcher or mention him/her on the ticket.
+      </li>
+     </ol>
+    </li>
+   </ol>
+   <h3>
+    Archive a project
+   </h3>
+   <p>
+    It is possible to archive projects in MHG if there's a
+    <strong>
+     legal requirement to keep the data local
+    </strong>
+    . This process is automated if the project has its own dedicated volume and it can be initiated by creating a file called ".archive_ready" in the root of the project folder.
+    <em>
+     E.g. /nfs/working/project_1/.archive_ready
+    </em>
+   </p>
+   <p>
+    The content of .archive_ready file: the retention period given in years.
+    <em>
+     E.g. 5 years = 5y
+    </em>
+   </p>
+   <p>
+    If the project doesn't have its own dedicated volume (e.g. it is located in /nfs/working/appsci): a SYSMGR ticket has to be opened.
+   </p>
+   <h3>
+    Restore an archived project
+   </h3>
+   <p>
+    Restoring an archive project requires:
+   </p>
+   <ol>
+    <li>
+     a SYSMGR ticket in which defined:
+     <ol>
+      <li>
+       project name
+      </li>
+      <li>
+       archive date
+      </li>
+     </ol>
+    </li>
+    <li>
+     a manager approval (head of department)
+    </li>
+    <li>
+     a business case
+    </li>
+   </ol>
+   <p>
+    To restore an archived project might take one week up to a month.
+   </p>
+   <hr/>
+   <h1>
+    Resources
+   </h1>
+   <ac:link>
+    <ri:page ri:content-title="Database Distribution" ri:space-key="HIT" ri:version-at-save="122">
+    </ri:page>
+   </ac:link>
+   <br/>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

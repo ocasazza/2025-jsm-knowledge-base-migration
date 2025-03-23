@@ -1,0 +1,516 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for pdx-idf-13-switch-stack on Friday, Dec 23, 2022
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <ac:placeholder>
+            Link to Service Page for affected service
+           </ac:placeholder>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="998edbc7-1a0a-4e4b-9287-a32dc93140dd" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="columnIds">
+             issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="columns">
+             key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             ITINFRA-892
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          If the outage was limited to a site(s) please link to the confluence location page(s)
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2022-12-23">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-01-06">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="712020:460d116b-6dd0-4201-9370-8098156f6d6f">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use // for date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          List of people who had a part in reviewing or commenting on the report
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    All switches on one branch of the PDU in pdx-idf13 were off.  It was the Friday before Xmas, so while many people weren't working, some were and lost remote access to their desktops in the Portland office.  Alternate power needed to be provided, and switches re-introduced to the stack, one needed replacement.
+   </p>
+   <h2>
+    <span style="font-size: 20.0px;letter-spacing: -0.008em;">
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    The office switches in PDX are a single stack of single-power supply switches connected to one PDU, backed up by our main UPS.
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <h3>
+    <span style="letter-spacing: 0.0px;">
+     Chronology
+    </span>
+   </h3>
+   <p>
+    On-call paged for switch outage.  Initial triage done remotely.  Austin and Nate arrived at the office around noon.
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    All switches that were on one branch of the PDU were down.  Hung a power strip and plugged the down ones in.  All but one came up.
+    <br/>
+    <br/>
+    All but one of the switches needed to have one direction of the stack ring disconnected, and then brought up in order.
+    <br/>
+    <br/>
+    The last switch was replaced with a shelf spare, but it was a different model, with a different base image.  First it needed to be fully wiped, password reset via boot-loader, reset to factory default, added to the stack to sync image, then removed so we could modify the stack config for the different model but with the previous switch's port settings.  Then it sync'ed into the stack and started passing traffic.
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe any findings (other than this report itself)
+    </ac:placeholder>
+   </p>
+   <h4>
+    Introduced Issues
+   </h4>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ecc707b5-c014-4bb4-8e94-763fdf5db521" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,priority,status,summary,created,updated,reporter,customfield_11008
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,priority,status,summary,created,updated,reporter,Sprint
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITINFRA-892, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <p>
+    How quickly was the problem detected?
+   </p>
+   <p>
+    n/a
+   </p>
+   <p>
+    How was the problem detected?
+   </p>
+   <p>
+    Pager duty alert to on call, and user comments on IT Support Hotline
+   </p>
+   <p>
+    How can detection be improved?
+   </p>
+   <p>
+    n/a
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <p>
+    How quickly did we respond once detected?
+   </p>
+   <p>
+    n/a
+   </p>
+   <p>
+    Did we adequately communicate to our users?
+   </p>
+   <p>
+    n/a
+   </p>
+   <p>
+    If not, how can this be improved?
+   </p>
+   <p>
+    n/a
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <p>
+    What went well that helped minimize the impact of this problem?
+   </p>
+   <p>
+    n/a
+   </p>
+   <p>
+    What can be done to minimize the impact if a problem like this recurs?
+   </p>
+   <ul>
+    <li>
+     More staff with direct first-hand experience in working with the network hardware and resolving events like this.
+    </li>
+    <li>
+     Better documentation about network topology and in locations available to everyone.
+    </li>
+   </ul>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <p>
+    What can we do in the future to avoid a problem like this?
+   </p>
+   <ol>
+    <li>
+     <p>
+      Develop criteria for which switches and stacks should have a higher level of redundancy
+     </p>
+     <ol>
+      <li>
+       <p>
+        Include factors like end user impact
+       </p>
+      </li>
+      <li>
+       <p>
+        Establish desired return-to-service timeframe
+       </p>
+      </li>
+      <li>
+       Work out what that would mean if the outage happens at various times, including after hours at the beginning of an extended office closure.
+      </li>
+      <li>
+       Define which switches and stacks should have dual power supplies based on the above.
+      </li>
+     </ol>
+    </li>
+    <li>
+     Audit all IDFs world wide
+     <ol>
+      <li>
+       number of both 1- and 3-phase circuits, and the number of wall outlets on each circuit
+      </li>
+      <li>
+       number and capacity of all PDUs and power strips, and which circuit each is plugged into
+      </li>
+      <li>
+       what kind of UPS is supporting each circuit
+      </li>
+      <li>
+       what switches and stacks are in each IDF, and what circuit(s) are they powered from
+      </li>
+     </ol>
+    </li>
+    <li>
+     <p>
+      <span style="letter-spacing: 0.0px;">
+       Have additional circuits installed as needed per the audit to meet redundancy criteria
+      </span>
+     </p>
+    </li>
+    <li>
+     <p>
+      <span style="letter-spacing: 0.0px;">
+       Purchase and install additional PDUs on new circuits
+      </span>
+     </p>
+    </li>
+    <li>
+     <p>
+      <span style="letter-spacing: 0.0px;">
+       Identify all impacted switches and stacks
+      </span>
+     </p>
+    </li>
+    <li>
+     <p>
+      Replace all single power supply switches with dual power supply switches.  Outage required.
+     </p>
+    </li>
+    <li>
+     <p>
+      Additional hardware will need to be purchased
+     </p>
+    </li>
+    <li>
+     Arrange outage windows as needed to replace switches and reconfigure stacks due to model changes of members
+    </li>
+   </ol>
+   <h2>
+    Next Actions
+   </h2>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <ac:structured-macro ac:macro-id="0c5cc91e-cf5f-4fa3-889f-ab9375c619a4" ac:name="jira" ac:schema-version="1">
+       <ac:parameter ac:name="server">
+        System JIRA
+       </ac:parameter>
+       <ac:parameter ac:name="serverId">
+        ac6def98-2140-30c3-8103-4b52b8b31135
+       </ac:parameter>
+       <ac:parameter ac:name="key">
+        ITINFRA-909
+       </ac:parameter>
+      </ac:structured-macro>
+      <span style="color: rgb(23,43,77);">
+       Move pdx-pdu-n2 or -n3 to PDX13 telco rack
+      </span>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         <p>
+          Related issues
+         </p>
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

@@ -1,0 +1,320 @@
+<p class="auto-cursor-target">
+ <ac:structured-macro ac:macro-id="824e14fe-f06b-46fb-b069-fcd138125ad6" ac:name="include" ac:schema-version="1">
+  <ac:parameter ac:name="">
+   <ac:link>
+    <ri:page ri:content-title="ITLC Stub procedure banner">
+    </ri:page>
+   </ac:link>
+  </ac:parameter>
+ </ac:structured-macro>
+</p>
+<ac:structured-macro ac:macro-id="fed24556-f82b-4fdd-a414-34a256823472" ac:name="excerpt" ac:schema-version="1">
+ <ac:parameter ac:name="atlassian-macro-output-type">
+  INLINE
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   When you need access to a specific version of a Linux program vs. the one installed on your system
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h2>
+ Step-by-step guide
+</h2>
+<p>
+ When you need access to a specific version of a Linux program vs. the one installed on your system, it can sometimes be found in /nfs/utils.
+</p>
+<ol>
+ <li>
+  <p class="auto-cursor-target">
+   As of
+   <time datetime="2023-06-01">
+   </time>
+   , the packages in /nfs/utils are meant for CentOS 7.  To verify, use ls and check the mount point of the share. For example, the test below shows /nfs/utils is mounted from 172.18.12.120:/utils/centos7, so it is meant for CentOS 7:
+  </p>
+  <ac:structured-macro ac:macro-id="455e7134-9345-4a71-a5a5-9b0bb9469081" ac:name="code" ac:schema-version="1">
+   <ac:plain-text-body>
+    <![CDATA[Linux nyc-nx-l01.schrodinger.com$ ls /nfs/utils > /dev/null
+Linux nyc-nx-l01.schrodinger.com$ df -h |egrep utils
+172.18.12.120:/utils/centos7                                       146T   96T   50T  66% /nfs/utils]]>
+   </ac:plain-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   If you find the newer program available in /nfs/utils/bin or /nfs/utils/bin/stow, you can add the path to that program to the start of your PATH environment variable.  For example, if the git installed on your system is older than the one in /nfs/utils/bin/, and you want to give the one in /utils/bin/ preference:
+   <br/>
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="b589397c-953b-4e1a-a36b-c8b91f75495d" ac:name="code" ac:schema-version="1">
+   <ac:plain-text-body>
+    <![CDATA[Linux nyc-nx-l01.schrodinger.com$ /usr/bin/git --version
+git version 1.8.3.1
+Linux nyc-nx-l01.schrodinger.com$ /utils/bin/git --version
+git version 2.29.2
+Linux nyc-nx-l01.schrodinger.com$ export PATH=/utils/bin:$PATH
+Linux nyc-nx-l01.schrodinger.com$ which git
+/utils/bin/git
+Linux nyc-nx-l01.schrodinger.com$ git --version
+git version 2.29.2
+
+]]>
+   </ac:plain-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="0caeb792-386a-4861-9f4c-c4e9f815df55" ac:name="info" ac:schema-version="1">
+   <ac:rich-text-body>
+    <p>
+     Note, if you follow the example above and set /nfs/utils/bin at the start of your PATH, then
+     <strong>
+      all
+     </strong>
+     the programs in /nfs/utils/bin/ will have preference over the ones installed on your system. Be sure this is what you want to do
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   Or, if you need a specific version of a program that is in /nfs/utils/bin/stow vs /nfs/utils/bin/,
+  </p>
+  <ac:structured-macro ac:macro-id="a9e5ffca-c907-4f03-80ea-c7d9a47548fe" ac:name="code" ac:schema-version="1">
+   <ac:plain-text-body>
+    <![CDATA[Linux nyc-nx-l01.schrodinger.com$ ls -ld /nfs/utils/stow/git-*
+drwxr-sr-x 6 gao   sysadmin 2048 Sep 21  2017 /nfs/utils/stow/git-2.14.1
+drwxr-sr-x 6 gao   sysadmin 2048 Feb  8  2018 /nfs/utils/stow/git-2.16.1
+drwxr-sr-x 5 gao   sysadmin 1536 Jan 17  2019 /nfs/utils/stow/git-2.20.1
+drwxr-sr-x 5  9589 sysadmin 1536 Apr  5  2019 /nfs/utils/stow/git-2.21.0
+drwxr-sr-x 5 gao   sysadmin 1536 Mar  2  2020 /nfs/utils/stow/git-2.25.1
+drwxr-sr-x 5  9589 sysadmin 1536 Jun 29  2020 /nfs/utils/stow/git-2.26.2
+drwxr-sr-x 5  9589 sysadmin 1536 Sep 18  2020 /nfs/utils/stow/git-2.28.0
+drwxr-sr-x 5  9589 sysadmin 1536 Dec 10  2020 /nfs/utils/stow/git-2.29.2
+drwxr-sr-x 6 root  sysadmin 2048 Aug  6  2015 /nfs/utils/stow/git-2.5.0
+drwxr-sr-x 6 levit sysadmin 2048 Jan 25  2016 /nfs/utils/stow/git-2.7.0
+
+Linux nyc-nx-l01.schrodinger.com$ git --version
+git version 2.29.2
+Linux nyc-nx-l01.schrodinger.com$ which git
+/utils/bin/git
+Linux nyc-nx-l01.schrodinger.com$ export PATH=/nfs/utils/stow/git-2.7.0/bin:$PATH
+Linux nyc-nx-l01.schrodinger.com$ which git
+/nfs/utils/stow/git-2.7.0/bin/git
+Linux nyc-nx-l01.schrodinger.com$ git --version
+git version 2.7.0]]>
+   </ac:plain-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+   <br/>
+  </p>
+ </li>
+ <li>
+  If you need a version of a program and it's not available in /nfs/utils/bin/ or /nfs/utils/stow/, please open a ticket (
+  <ac:link>
+   <ri:page ri:content-title="How to Create and Manage Your Tickets in FreshService" ri:version-at-save="1">
+   </ri:page>
+  </ac:link>
+  ) to request it.
+ </li>
+ <li>
+  <p class="auto-cursor-target">
+   Sysmgrs can also see the
+   <ac:link>
+    <ri:page ri:content-title="/nfs/utils" ri:space-key="SYSMGR" ri:version-at-save="3">
+    </ri:page>
+    <ac:plain-text-link-body>
+     <![CDATA[/wiki/spaces/SYSMGR/pages/54337045]]>
+    </ac:plain-text-link-body>
+   </ac:link>
+   Service page.
+  </p>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+</ol>
+<p>
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="48796dde-e8cc-49cb-b2c3-972b35660c25" ac:name="info" ac:schema-version="1">
+ <ac:rich-text-body>
+  <ac:placeholder>
+   You may also want to use visual panels to communicate related information, tips or things users need to be aware of.
+  </ac:placeholder>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ <br/>
+</p>
+<h2>
+ Ops-ready checklist
+</h2>
+<ac:structured-macro ac:macro-id="122d7044-b1e7-4340-bb35-c80d8fe39b13" ac:name="expand" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <ac:structured-macro ac:macro-id="6f3b678a-ffef-4f02-9f32-4efbf60eb693" ac:name="details" ac:schema-version="1">
+   <ac:parameter ac:name="id">
+    ops-ready
+   </ac:parameter>
+   <ac:rich-text-body>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+    <table class="wrapped">
+     <colgroup>
+      <col/>
+      <col/>
+     </colgroup>
+     <tbody>
+      <tr>
+       <th colspan="1">
+        Service
+       </th>
+       <td colspan="1">
+        <ac:placeholder>
+         Link to the service page(s) that the procedure covers.
+        </ac:placeholder>
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Edited for clarity
+       </th>
+       <td>
+        <ac:placeholder>
+         Put the '@mention' of the person who edited the page to make it initially ops-ready and the '//date'
+        </ac:placeholder>
+       </td>
+      </tr>
+      <tr>
+       <th>
+        <p>
+         Training given to
+        </p>
+       </th>
+       <td>
+        <ac:placeholder>
+         Put the '@mention' of the person(s) on the ops team to receive training and the '//date'  they received it.
+        </ac:placeholder>
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Training provided by
+       </th>
+       <td>
+        <ac:placeholder>
+         Put the '@mention' of the person who provided the training
+        </ac:placeholder>
+       </td>
+      </tr>
+      <tr>
+       <th colspan="1">
+        Training video
+       </th>
+       <td colspan="1">
+        <ac:placeholder>
+         Link to a screen capture or video recording, if there is one, of the training
+        </ac:placeholder>
+       </td>
+      </tr>
+      <tr>
+       <th colspan="1">
+        Ops-ready date
+       </th>
+       <td colspan="1">
+        <ac:placeholder>
+         '//date' of when the above were completed and the procedure became 'ops-ready'. Tag the page and add the banner.
+        </ac:placeholder>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h2>
+ Related articles
+</h2>
+<p>
+ <ac:placeholder>
+  Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+ </ac:placeholder>
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="43dad98c-03d4-4d0c-bc7d-3c1f79c17ee0" ac:name="contentbylabel" ac:schema-version="4">
+  <ac:parameter ac:name="showLabels">
+   false
+  </ac:parameter>
+  <ac:parameter ac:name="max">
+   5
+  </ac:parameter>
+  <ac:parameter ac:name="spaces">
+   SYSMGR
+  </ac:parameter>
+  <ac:parameter ac:name="showSpace">
+   false
+  </ac:parameter>
+  <ac:parameter ac:name="sort">
+   modified
+  </ac:parameter>
+  <ac:parameter ac:name="reverse">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="type">
+   page
+  </ac:parameter>
+  <ac:parameter ac:name="cql">
+   label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+  </ac:parameter>
+  <ac:parameter ac:name="labels">
+   kb-how-to-article
+  </ac:parameter>
+ </ac:structured-macro>
+</p>
+<ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <table class="wrapped">
+   <tbody>
+    <tr>
+     <th>
+      Related issues
+     </th>
+     <td>
+      <br/>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p class="auto-cursor-target">
+ <br/>
+</p>

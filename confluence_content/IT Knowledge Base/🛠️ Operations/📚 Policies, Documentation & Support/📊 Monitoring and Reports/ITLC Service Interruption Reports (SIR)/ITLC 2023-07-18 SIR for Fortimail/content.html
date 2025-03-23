@@ -1,0 +1,454 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for
+      <ac:placeholder>
+       &lt;affected system or service&gt;
+      </ac:placeholder>
+      on
+      <ac:placeholder>
+       &lt;date the outage occurred&gt;
+      </ac:placeholder>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <ac:link>
+            <ri:page ri:content-title="FortiMail" ri:space-key="SYSMGR">
+            </ri:page>
+           </ac:link>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="7f08d345-d09b-4b36-aa7c-64a1226c1e85" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="columnIds">
+             issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="columns">
+             key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             INFOSEC-1382
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          If the outage was limited to a site(s) please link to the confluence location page(s)
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-06-27">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-06-27">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="557058:06e0cf88-5e2b-4a95-8f42-d4b029e0bc87">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use // for date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          List of people who had a part in reviewing or commenting on the report
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    During implementation of the crisis communications platform (AlertMedia), personal email addresses needed to be brought from UKG into Okta. This was successful but there was an unexpected side effect. Okta exposes the "secondary email address" field in the LDAP interface under the standard "mail" attribute, which caused some emails to be delivered to both a user's personal email address and work address. Issues was resolved by removing personal email addresses from that Okta field and mapping them into an entirely new field.
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    Okta apparently exposes both the "primary email address" and "secondary email address" into the LDAP "mail" array filed. This was unexpected behavior and caused Fortimail to deliver some emails to both addresses.  Due to the long TTL on the cache in Fortimail, not everyone was impacted or many mails treated this way.
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Describe the incident in as much (or little) detail as seems appropriate leaving the chronology, corrective action and analysis for their subsequent sub-section(s)
+    </ac:placeholder>
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    June 26, approx 4:30PM EDT: Joint working session with Aman Goshu and Linda Zito to bring in personal email addresses from UKG into Okta for the crisis communications project. We all decided to map the personal email into the existing "secondary email address" field in Okta, rather than create a new field.
+   </p>
+   <p>
+    June 27: 12:47pm EDT: Ticket filed with some reports of some work emails (duplicates) going to personal mailboxes.
+   </p>
+   <p>
+    June 27: ~ 5:00pm EDT: Root cause determined and issue resolved
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    The "secondary" email filed was replaced with the work email address (clearing the field is a follow up task). Then a new field was created to store the personal email address, avoiding the issue of accidental inclusion into the "mail" array field in Okta's LDAP interface.
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    <br/>
+   </p>
+   <h3>
+    Introduced Issues
+   </h3>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="1dcb527e-6cb6-45a4-a4a1-55cf9b51022f" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,priority,status,summary,created,updated,reporter,customfield_11008
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,priority,status,summary,created,updated,reporter,Sprint
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITDW-123, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    Problem was detected the following day, due to long TTL on the cache.
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    Users reported the issue.
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    I am open to suggestions, but the path forward is to investigate Fortimail / Google API integration rather than using Fortimail as the gateway.
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    Immediately began troubleshooting and the issue was resolved within 4 hours.
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    We notified all users on the ticket, and sent an email to all users advising them of the situation and asking them to delete any work emails that arrived in their personal mailbox.
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    <ac:placeholder>
+     Describe here any ways we can or should make our communication better.
+    </ac:placeholder>
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    We were able to relatively quickly identify the issue.
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    <span style="color: rgb(51,51,51);">
+     <span style="background-color: rgb(245,245,245);">
+      <em>
+       Plan is to change the way Fortimail works. We've been wanting to do something like this for a while, but now we have more options. it's been on the backburner but can now be prioritized.
+      </em>
+     </span>
+    </span>
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    Open to suggestion.
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    Document that the "secondary" email field should be blank or only contain the work address.
+   </p>
+   <p>
+    Investigate and test the Fortimail / Google API integration (no timetable yet).
+   </p>
+   <p>
+    If we continue to use Fortimail as the MTA, we should investigate populating the "secondary email address" field with the posix-name email address rather than the currently more complex LDAP lookup we are using.
+   </p>
+   <p>
+    Also investigate no. longer using the "Spam Quarantine" feature and putting all mail into Gmail. Eliminating this would mean we no longer require LDAP integration. It may mean more spam / malicious email comes through Fortimail, but most content can be adequately "scrubbed" or otherwise labelled as potentially malicious.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    Moving forward, having a "change log" or "change notification" process would help here tremendously.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <span class="placeholder-inline-tasks">
+     Type your task here, using "@" to assign to a user and "//" to select a due date
+    </span>
+   </p>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

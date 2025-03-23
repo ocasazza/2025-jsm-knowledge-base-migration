@@ -1,0 +1,298 @@
+<ac:structured-macro ac:local-id="64b9b0d8-1eb3-4bcd-a090-a429924f9418" ac:macro-id="534a77f295820892561a6232e08ea95ace1e25325025ee5a6c662c95de53efc8" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="name">
+  Summary
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   The pdxgpu cluster consists of 34 GPU cards (distributed across 9 GPU compute nodes with varying configurations), 2 non-GPU compute nodes (for master jobs), 1 interactive submission node, and 1 master node. It shares storage with bob, runs the CentOS 6.5 operating system and SGE 2011.11p1 queuing system.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h1>
+ PDX GPU Cluster Summary
+</h1>
+<table ac:local-id="515a82c7-2966-4f19-a6d9-6ff6551a96d3" data-layout="default" data-table-width="760">
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     Node Type
+    </p>
+   </th>
+   <th>
+    <p>
+     Nodes
+    </p>
+   </th>
+   <th>
+    <p>
+     CPU
+    </p>
+   </th>
+   <th>
+    <p>
+     RAM
+    </p>
+   </th>
+   <th>
+    <p>
+     GPUs
+    </p>
+   </th>
+   <th>
+    <p>
+     Scratch Space
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     GPU Compute
+    </p>
+   </td>
+   <td>
+    <p>
+     pdxgpu-0-0, 0-1, 0-2, 0-3
+    </p>
+   </td>
+   <td>
+    <p>
+     Dual 8-core Xeon E5-2650 @ 2.60GHz
+    </p>
+   </td>
+   <td>
+    <p>
+     32GB
+    </p>
+   </td>
+   <td>
+    <p>
+     2× Tesla K20 (0-0, 0-1)&lt;br&gt;2× Tesla K40 (0-2, 0-3)
+    </p>
+   </td>
+   <td>
+    <p>
+     ~223GB
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     GPU Compute
+    </p>
+   </td>
+   <td>
+    <p>
+     pdxgpu-0-4
+    </p>
+   </td>
+   <td>
+    <p>
+     Dual 16-core AMD Opteron 6272 @ 2.2GHz
+    </p>
+   </td>
+   <td>
+    <p>
+     32GB
+    </p>
+   </td>
+   <td>
+    <p>
+     2× Tesla M2090
+    </p>
+   </td>
+   <td>
+    <p>
+     ~107GB
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     GPU Compute
+    </p>
+   </td>
+   <td>
+    <p>
+     pdxgpu-0-5, 0-6
+    </p>
+   </td>
+   <td>
+    <p>
+     Dual 4-core Intel Xeon E5-2609 @ 2.40GHz
+    </p>
+   </td>
+   <td>
+    <p>
+     32GB
+    </p>
+   </td>
+   <td>
+    <p>
+     8× Nvidia GTX 680
+    </p>
+   </td>
+   <td>
+    <p>
+     ~166GB
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     GPU Compute
+    </p>
+   </td>
+   <td>
+    <p>
+     pdxgpu-0-7, 0-10
+    </p>
+   </td>
+   <td>
+    <p>
+     Dual 10-core Intel Xeon E5-2650 @ 2.30GHz
+    </p>
+   </td>
+   <td>
+    <p>
+     32GB
+    </p>
+   </td>
+   <td>
+    <p>
+     4× Nvidia Tesla K80
+    </p>
+   </td>
+   <td>
+    <p>
+     ~185GB
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Non-GPU Compute
+    </p>
+   </td>
+   <td>
+    <p>
+     pdxgpu-0-8, 0-9
+    </p>
+   </td>
+   <td>
+    <p>
+     Dual 4-core Intel Xeon E5345 @ 2.33GHz
+    </p>
+   </td>
+   <td>
+    <p>
+     8GB
+    </p>
+   </td>
+   <td>
+    <p>
+     None
+    </p>
+   </td>
+   <td>
+    <p>
+     ~60GB
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Interactive Submission
+    </p>
+   </td>
+   <td>
+    <p>
+     pdxgpusub1
+    </p>
+   </td>
+   <td>
+    <p>
+     Dual 16-core AMD Opteron 6274 @ 2.2GHz
+    </p>
+   </td>
+   <td>
+    <p>
+     64GB
+    </p>
+   </td>
+   <td>
+    <p>
+     None
+    </p>
+   </td>
+   <td>
+    <p>
+     ~897GB
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     Master
+    </p>
+   </td>
+   <td>
+    <p>
+     pdxgpu
+    </p>
+   </td>
+   <td>
+    <p>
+     Dual 4-core Intel Xeon E5345 @ 2.33GHz
+    </p>
+   </td>
+   <td>
+    <p>
+     8GB
+    </p>
+   </td>
+   <td>
+    <p>
+     None
+    </p>
+   </td>
+   <td>
+    <p>
+     Not specified
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ *No login for this node, used for qmaster activity only*
+</p>
+<h1>
+ Software
+</h1>
+<p>
+ <a href="http://www.rocksclusters.org/">
+  <u>
+   Rocks 6.1.1
+  </u>
+ </a>
+</p>
+<p>
+ <a href="http://www.centos.org/">
+  <u>
+   CentOS 6.5
+  </u>
+ </a>
+</p>
+<p>
+ SGE 2011.11p1
+</p>
+<p>
+</p>

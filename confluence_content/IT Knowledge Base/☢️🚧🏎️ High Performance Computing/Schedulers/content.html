@@ -1,0 +1,218 @@
+<ac:layout>
+ <ac:layout-section ac:breakout-mode="default" ac:type="fixed-width">
+  <ac:layout-cell>
+   <h1>
+    Scheduler Systems in High Performance Computing
+   </h1>
+   <h2>
+    What is a Scheduler?
+   </h2>
+   <p>
+    A "scheduler" (also referred to as "distributed resource scheduler" or "batch scheduler") is a software responsible for managing a set of resources (nodes, CPUs, GPUs, RAM) amongst multiple users and their programs (often referred to as "jobs") in high performance computing environments.
+   </p>
+   <h2>
+    Anatomy of a Job
+   </h2>
+   <p>
+    A "job" has two parts:
+   </p>
+   <ol start="1">
+    <li>
+     <p>
+      The set resources it needs
+     </p>
+    </li>
+    <li>
+     <p>
+      Script that will run and use those resources
+     </p>
+    </li>
+   </ol>
+   <h2>
+    How Schedulers Work
+   </h2>
+   <p>
+    The scheduler is aware of all of the resources available in the cluster and makes decisions on how to allocate those resources to the different jobs that are submitted. Once it has allocated all of the resources available, the scheduler will hold remaining jobs until the previous resources are released.
+   </p>
+   <h2>
+    Scheduling Algorithms
+   </h2>
+   <ul>
+    <li>
+     <p>
+      <strong>
+       Basic Algorithm
+      </strong>
+      : The simplest way a scheduler can be implemented is first-in-first-out queue. As jobs are submitted, the scheduler allocates them resources. If there are more jobs than resources, those jobs wait until the previous ones complete, then scheduler can continue to allocate.
+     </p>
+    </li>
+    <li>
+     <p>
+      <strong>
+       Advanced Priorities
+      </strong>
+      : Often in High Performance Computing environments your scheduler algorithm gets more complicated by giving priority to certain types of jobs. The most common is "fair-share." Fair-share means that as a user's jobs uses more and more of the cluster in recent history, the scheduler will decrease their priority to allow other user's jobs to skip ahead in line to have a chance to run.
+     </p>
+    </li>
+    <li>
+     <p>
+      <strong>
+       Reality of Scheduling
+      </strong>
+      : There are lots of other priorities that can be used, but the simple truth is: if there are more jobs than resources then something will have to wait. Your system administrators work with users and the schedulers to reduce overall wait time as best as possible.
+     </p>
+    </li>
+   </ul>
+   <h2>
+    Scheduler Software at Schrödinger
+   </h2>
+   <p>
+    There are different brands of scheduler software. Here at Schrödinger there are two main ones we use: Grid Engine and Slurm. So you may notice that different clusters are using one or the other. While their objective is the same, they still operate differently and have different commands / flags that go along with them.
+   </p>
+   <h2>
+    Slurm vs Grid Engine
+   </h2>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="two_equal">
+  <ac:layout-cell>
+   <p>
+    <strong>
+     Slurm
+    </strong>
+   </p>
+   <ul>
+    <li>
+     <p>
+      Modern, highly scalable Linux cluster scheduler
+     </p>
+    </li>
+    <li>
+     <p>
+      Simple configuration, fault-tolerant, plugin-based
+     </p>
+    </li>
+    <li>
+     <p>
+      Powers many top supercomputers
+     </p>
+    </li>
+    <li>
+     <p>
+      Commands: sbatch, srun, scancel
+     </p>
+    </li>
+    <li>
+     <p>
+      <a href="https://slurm.schedmd.com/">
+       Slurm Documentation
+      </a>
+     </p>
+    </li>
+   </ul>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p>
+    <strong>
+     Grid Engine
+    </strong>
+   </p>
+   <ul>
+    <li>
+     <p>
+      Mature batch-queuing system (formerly Sun Grid Engine)
+     </p>
+    </li>
+    <li>
+     <p>
+      Variants: Oracle, Univa, open-source Son of Grid Engine
+     </p>
+    </li>
+    <li>
+     <p>
+      Complex but highly customizable for heterogeneous environments
+     </p>
+    </li>
+    <li>
+     <p>
+      Commands: qsub, qstat, qdel
+     </p>
+    </li>
+    <li>
+     <p>
+      <a href="http://gridscheduler.sourceforge.net/">
+       Grid Engine Wiki
+      </a>
+     </p>
+    </li>
+   </ul>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="fixed-width">
+  <ac:layout-cell>
+   <p>
+    <strong>
+     Key Differences
+    </strong>
+   </p>
+   <ul>
+    <li>
+     <p>
+      Slurm: more modern, better scalability for large systems
+     </p>
+    </li>
+    <li>
+     <p>
+      Grid Engine: more complex setup but finer control
+     </p>
+    </li>
+    <li>
+     <p>
+      Slurm: growing adoption; Grid Engine: established user base
+     </p>
+    </li>
+   </ul>
+   <h3>
+    More Reading
+   </h3>
+   <ul>
+    <li>
+     <p>
+      <a href="https://publications.vtt.fi/julkaisut/muut/2015/VTT-R-01975-15.pdf">
+       Computational Resource Management Systems
+      </a>
+     </p>
+    </li>
+    <li>
+     <p>
+      <a href="https://arxiv.org/pdf/1607.06544">
+       Scheduler Technologies in Support of High Performance Data Analysis
+      </a>
+      <br/>
+     </p>
+    </li>
+   </ul>
+   <p>
+    Explore the nested pages for commands that will be used with each scheduler.
+   </p>
+   <ac:structured-macro ac:local-id="a1fbaae3-223a-4a49-a9c4-633b3a6c1620" ac:macro-id="7e046160bdc1d006da4c2ed58dd3ed79a2c2ddcdaffef116ee0394b7dca41a33" ac:name="children" ac:schema-version="2" data-layout="default">
+    <ac:parameter ac:name="all">
+     true
+    </ac:parameter>
+    <ac:parameter ac:name="depth">
+     0
+    </ac:parameter>
+    <ac:parameter ac:name="allChildren">
+     true
+    </ac:parameter>
+    <ac:parameter ac:name="style">
+    </ac:parameter>
+    <ac:parameter ac:name="sortAndReverse">
+    </ac:parameter>
+    <ac:parameter ac:name="first">
+     0
+    </ac:parameter>
+   </ac:structured-macro>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

@@ -1,0 +1,674 @@
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="dd740cd1-03c3-436b-b655-7ce015ac7568" ac:name="info" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   All hostnames are in the
+   <strong>
+    sdgr.io
+   </strong>
+   domain. If you are using this list for the purposes of firewall rules, you will need to safelist the appropriate Gateway for your application (or all Gateways).
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<h3>
+ Appgate Controllers Table
+</h3>
+<p>
+ This table is primarily of use for IT purposes and these resources should not be included in any AWS Security Groups or GCP Firewall rules.
+</p>
+<table class="fixed-table wrapped">
+ <colgroup>
+  <col style="width: 185.0px;"/>
+ </colgroup>
+ <colgroup>
+  <col style="width: 131.0px;"/>
+ </colgroup>
+ <colgroup>
+  <col style="width: 134.0px;"/>
+ </colgroup>
+ <colgroup>
+  <col style="width: 134.0px;"/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <th>
+    External Hostname
+   </th>
+   <th>
+    Location
+   </th>
+   <th>
+    Internal IP
+   </th>
+   <th>
+    External IP
+   </th>
+  </tr>
+  <tr>
+   <td>
+    gluon-1.sdgr.io
+   </td>
+   <td>
+    GCP US-East
+   </td>
+   <td>
+    10.15.1.2
+   </td>
+   <td>
+    34.85.201.102
+   </td>
+  </tr>
+  <tr>
+   <td>
+    gluon-3.sdgr.io
+   </td>
+   <td>
+    AWS IT US-East
+   </td>
+   <td>
+    172.25.18.239
+   </td>
+   <td>
+    54.221.89.173
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h3>
+ Appgate Gateways Table
+</h3>
+<p>
+ If you are going to safe-list Appgate Gateways for your service or application, first pick the region that is "closest" to your service. Then find the public IP addresses for the appropriate pair of Gateways (please prefer those in GCP or AWS!) and add those to your firewall rules or security groups. Once an entitlement is created by the Infosec team, your application will be reachable via Appgate. Please note the "External IP" is the egress IP of the gateway in question, and may not be what the DNS name resolves to.
+</p>
+<p>
+ It is recommended for AWS Security Groups or GCP Firewall rules you safelist
+ <strong>
+  all
+ </strong>
+ IP addresses listed under the
+ <strong>
+  External IP
+ </strong>
+ column for your resource. This will ensure consistent connectivity via Appgate. For easy of copy-pasting, a dynamic list of all such IP addresses can be found
+ <ac:link ac:anchor="gateway-ips">
+  <ri:content-entity ri:content-id="54823683" ri:version-at-save="1">
+  </ri:content-entity>
+  <ac:plain-text-link-body>
+   <![CDATA[below]]>
+  </ac:plain-text-link-body>
+ </ac:link>
+ .
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <ac:placeholder>
+  Note: the "Internal IP" and "External IP" column names must not be changed. Multiple IPs in a cell must be separated by a single space.
+ </ac:placeholder>
+</p>
+<ac:structured-macro ac:macro-id="cb4ed6e3-088c-45e7-8c3b-043d6818d165" ac:name="table-excerpt" ac:schema-version="1">
+ <ac:parameter ac:name="name">
+  appgate-ips
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+  <table class="wrapped fixed-table">
+   <colgroup>
+    <col style="width: 185.0px;"/>
+   </colgroup>
+   <colgroup>
+    <col style="width: 131.0px;"/>
+   </colgroup>
+   <colgroup>
+    <col style="width: 134.0px;"/>
+   </colgroup>
+   <colgroup>
+    <col style="width: 134.0px;"/>
+   </colgroup>
+   <colgroup>
+    <col style="width: 81.0px;"/>
+   </colgroup>
+   <tbody>
+    <tr>
+     <th>
+      External Hostname
+     </th>
+     <th>
+      Location
+     </th>
+     <th>
+      Internal IP
+     </th>
+     <th>
+      External IP
+     </th>
+     <th colspan="1">
+      Appgate Site
+     </th>
+    </tr>
+    <tr>
+     <td>
+      neutrino-aite-1.sdgr.io
+     </td>
+     <td>
+      AWS IT US-East
+     </td>
+     <td>
+      172.25.18.240
+     </td>
+     <td>
+      52.54.70.62
+     </td>
+     <td colspan="1">
+      AITE
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-aite-2.sdgr.io
+     </td>
+     <td>
+      AWS IT US-East
+     </td>
+     <td>
+      172.25.17.155
+     </td>
+     <td>
+      3.225.23.162
+     </td>
+     <td colspan="1">
+      AITE
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-alde-1.sdgr.io
+     </td>
+     <td>
+      AWS LD US-East
+     </td>
+     <td>
+      172.23.0.190
+     </td>
+     <td>
+      3.213.98.177
+     </td>
+     <td colspan="1">
+      ALDE
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-alde-2.sdgr.io
+     </td>
+     <td>
+      AWS LD US-East
+     </td>
+     <td>
+      172.23.10.217
+     </td>
+     <td>
+      52.7.241.111
+     </td>
+     <td colspan="1">
+      ALDE
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-nyc-1.sdgr.io
+     </td>
+     <td>
+      NYC VMWare
+     </td>
+     <td>
+      172.18.4.36
+     </td>
+     <td>
+      4.7.173.100
+      <span style="color: rgb(38,38,38);">
+       66.7.131.227
+      </span>
+     </td>
+     <td colspan="1">
+      NYC
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-nyc-2.sdgr.io
+     </td>
+     <td>
+      NYC VMWare
+     </td>
+     <td>
+      172.18.4.22
+     </td>
+     <td>
+      4.7.173.100
+      <span style="color: rgb(38,38,38);">
+       66.7.131.227
+      </span>
+     </td>
+     <td colspan="1">
+      NYC
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-pdx-1.sdgr.io
+     </td>
+     <td>
+      PDX VMware
+     </td>
+     <td>
+      172.19.4.104
+     </td>
+     <td>
+      <span class="legacy-color-text-blue1">
+       4.15.58.3
+      </span>
+     </td>
+     <td colspan="1">
+      PDX
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-amu-1.sdgr.io
+     </td>
+     <td>
+      AWS Mumbai
+     </td>
+     <td>
+      10.241.184.138
+     </td>
+     <td>
+      13.126.217.239
+     </td>
+     <td colspan="1">
+      AMU
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-guse-1.sdgr.io
+     </td>
+     <td>
+      GCP US-East
+     </td>
+     <td>
+      10.15.1.21
+     </td>
+     <td>
+      34.85.249.47
+     </td>
+     <td colspan="1">
+      GUSE
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-guse-2.sdgr.io
+     </td>
+     <td>
+      GCP US-East
+     </td>
+     <td>
+      10.15.1.22
+     </td>
+     <td>
+      34.150.141.47
+     </td>
+     <td colspan="1">
+      GUSE
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-geuw-1.sdgr.io
+     </td>
+     <td>
+      GCP EU West
+     </td>
+     <td>
+      10.15.7.4
+     </td>
+     <td>
+      34.141.115.3
+     </td>
+     <td colspan="1">
+      GEUW
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-geuw-2.sdgr.io
+     </td>
+     <td>
+      GCP EU West
+     </td>
+     <td>
+      10.15.7.5
+     </td>
+     <td>
+      34.107.20.120
+     </td>
+     <td colspan="1">
+      GEUW
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-gmum-1.sdgr.io
+     </td>
+     <td>
+      GCP Mumbai
+     </td>
+     <td>
+      10.15.4.6
+     </td>
+     <td>
+      34.93.77.136
+     </td>
+     <td colspan="1">
+      GMUM
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-gmum-2.sdgr.io
+     </td>
+     <td>
+      GCP Mumbai
+     </td>
+     <td>
+      10.15.4.5
+     </td>
+     <td>
+      34.93.72.81
+     </td>
+     <td colspan="1">
+      GMUM
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-gtyo-1.sdgr.io
+     </td>
+     <td>
+      GCP Japan
+     </td>
+     <td>
+      10.15.10.4
+     </td>
+     <td>
+      34.146.104.220
+     </td>
+     <td colspan="1">
+      GTYO
+     </td>
+    </tr>
+    <tr>
+     <td>
+      neutrino-gtyo-2.sdgr.io
+     </td>
+     <td>
+      GCP Japan
+     </td>
+     <td>
+      10.15.10.5
+     </td>
+     <td>
+      34.84.182.195
+     </td>
+     <td colspan="1">
+      GTYO
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ <ac:placeholder>
+  Note: some of the formatting below is done by adding &lt;div&gt;'s in the source
+ </ac:placeholder>
+</p>
+<div style="width: 665.0px;">
+ <p class="auto-cursor-target">
+  <ac:structured-macro ac:macro-id="16a47702-ba43-489c-85c6-47b2f50fa7aa" ac:name="anchor" ac:schema-version="1">
+   <ac:parameter ac:name="">
+    gateway-ips
+   </ac:parameter>
+  </ac:structured-macro>
+ </p>
+ <ac:structured-macro ac:macro-id="e3348f5a-60bd-4927-b9b5-226805d162e6" ac:name="panel" ac:schema-version="1">
+  <ac:parameter ac:name="title">
+   All Gateway IPs
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="efc88564-9c76-4b05-8776-6e7e4f034381" ac:name="info" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      These lists are generated automatically from the table above
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <h4 class="auto-cursor-target">
+    Internal IPs
+   </h4>
+   <div style="font-family: monospace;">
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+    <ac:structured-macro ac:macro-id="f77bcd5a-cbd7-4624-832a-c05d6551a8a5" ac:name="table-joiner" ac:schema-version="1">
+     <ac:parameter ac:name="dateFormat">
+      dd M yy
+     </ac:parameter>
+     <ac:parameter ac:name="export-word">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="export-csv">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="join-column">
+      External Hostname
+     </ac:parameter>
+     <ac:parameter ac:name="separator">
+      .
+     </ac:parameter>
+     <ac:parameter ac:name="version">
+      2
+     </ac:parameter>
+     <ac:parameter ac:name="export-print">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sql">
+      SELECT
+REPLACE(
+  REPLACE(
+	GROUP_CONCAT(T1.'Internal IP')-&gt;concat(","), ",", " "),
+  " ", "/32 "
+)
+FROM T*
+     </ac:parameter>
+     <ac:parameter ac:name="thousand-separator">
+     </ac:parameter>
+     <ac:parameter ac:name="isFirstTimeEnter">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="transposeResult">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="decimals">
+     </ac:parameter>
+     <ac:parameter ac:name="show-source">
+      all
+     </ac:parameter>
+     <ac:parameter ac:name="plainText">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="id">
+      1689717879670_1075291750
+     </ac:parameter>
+     <ac:parameter ac:name="transpose">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="worklog">
+      365|5|8|y w d h m|y w d h m
+     </ac:parameter>
+     <ac:parameter ac:name="export-pdf">
+      false
+     </ac:parameter>
+     <ac:rich-text-body>
+      <p class="auto-cursor-target">
+       <br/>
+      </p>
+      <div class="content-wrapper">
+       <p class="auto-cursor-target">
+        <ac:structured-macro ac:macro-id="a793a039-694d-4c7b-b984-2c3e86fa63dc" ac:name="table-excerpt-include" ac:schema-version="1">
+         <ac:parameter ac:name="static">
+          true
+         </ac:parameter>
+         <ac:parameter ac:name="name">
+          appgate-ips
+         </ac:parameter>
+         <ac:parameter ac:name="merge-tables">
+          true
+         </ac:parameter>
+        </ac:structured-macro>
+       </p>
+      </div>
+     </ac:rich-text-body>
+    </ac:structured-macro>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+   </div>
+   <h4 class="auto-cursor-target">
+    External IPs
+   </h4>
+   <div style="font-family: monospace;">
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+    <ac:structured-macro ac:macro-id="759fefbb-5e97-419f-bd64-0d0ab3c99b70" ac:name="table-joiner" ac:schema-version="1">
+     <ac:parameter ac:name="dateFormat">
+      dd M yy
+     </ac:parameter>
+     <ac:parameter ac:name="export-word">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="export-csv">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="join-column">
+      External Hostname
+     </ac:parameter>
+     <ac:parameter ac:name="separator">
+      .
+     </ac:parameter>
+     <ac:parameter ac:name="version">
+      2
+     </ac:parameter>
+     <ac:parameter ac:name="export-print">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sql">
+      SELECT
+REPLACE(
+  REPLACE(
+	GROUP_CONCAT(T1.'External IP')-&gt;concat(","), ",", " "),
+  " ", "/32 "
+)
+FROM T*
+     </ac:parameter>
+     <ac:parameter ac:name="thousand-separator">
+     </ac:parameter>
+     <ac:parameter ac:name="isFirstTimeEnter">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="transposeResult">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="decimals">
+     </ac:parameter>
+     <ac:parameter ac:name="show-source">
+      all
+     </ac:parameter>
+     <ac:parameter ac:name="plainText">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="id">
+      1689717436746_619680681
+     </ac:parameter>
+     <ac:parameter ac:name="transpose">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="worklog">
+      365|5|8|y w d h m|y w d h m
+     </ac:parameter>
+     <ac:parameter ac:name="export-pdf">
+      false
+     </ac:parameter>
+     <ac:rich-text-body>
+      <p class="auto-cursor-target">
+       <br/>
+      </p>
+      <div class="content-wrapper">
+       <p class="auto-cursor-target">
+        <ac:structured-macro ac:macro-id="23f6eb98-a13b-4195-80b9-a0eaa5beeef0" ac:name="table-excerpt-include" ac:schema-version="1">
+         <ac:parameter ac:name="static">
+          true
+         </ac:parameter>
+         <ac:parameter ac:name="name">
+          appgate-ips
+         </ac:parameter>
+         <ac:parameter ac:name="merge-tables">
+          true
+         </ac:parameter>
+        </ac:structured-macro>
+       </p>
+      </div>
+     </ac:rich-text-body>
+    </ac:structured-macro>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+   </div>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+ <p class="auto-cursor-target">
+  <br/>
+ </p>
+ <p class="auto-cursor-target">
+  <br/>
+ </p>
+ <p class="auto-cursor-target">
+  <br/>
+ </p>
+</div>
+<p class="auto-cursor-target">
+ <br/>
+</p>

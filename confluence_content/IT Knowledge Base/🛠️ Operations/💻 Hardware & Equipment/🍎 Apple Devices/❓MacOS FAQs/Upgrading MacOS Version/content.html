@@ -1,0 +1,305 @@
+<ac:layout>
+ <ac:layout-section ac:breakout-mode="default" ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    32-bit Applications
+   </h2>
+   <p>
+    Upgrading to macOS 11 (Big Sur) adds on to previous large scale updates to macOS. If you’re coming from 10.14 (Mojave) or below, please note that
+    <a href="https://support.apple.com/en-us/HT208436">
+     since 10.15 (Catalina) 32-bit applications will no longer work.
+    </a>
+   </p>
+   <p>
+    Most application developers will have already updated their apps, but you can double-check which apps you still use that may still be 32-bit by:
+   </p>
+   <ac:image ac:align="left" ac:layout="align-start" ac:original-height="338" ac:original-width="590" ac:width="435">
+    <ri:attachment ri:filename="Screen Shot 2021-02-18 at 3.24.52 PM.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <ol start="1">
+    <li>
+     <p>
+      Clicking the apple logo in the upper right hand menu bar and selecting:
+      <strong>
+       About This Mac
+      </strong>
+     </p>
+    </li>
+    <li>
+     <p>
+      Clicking the
+      <strong>
+       System Report...
+      </strong>
+      button
+     </p>
+    </li>
+    <li>
+     <p>
+      On the left-hand side, under the Software section, click
+      <strong>
+       Applications
+      </strong>
+     </p>
+    </li>
+   </ol>
+   <p>
+    It may take a minute as macOS is gathering all the information on all installed Applications, but it will then show you your list of apps and if there are any 32-bit.
+   </p>
+   <p>
+    If there are any apps you still use that are 32-bit, please check the developer/company website for updates as these will not work on newer versions of macOS.
+   </p>
+   <h2>
+    SentinelOne Anti-Virus
+   </h2>
+   <p>
+    At Schrödinger we use the SentinelOne anti-virus program on all Macs. Upgrading to Big Sur requires a newer version of this application. After you upgrade to macOS 11 (Big Sur), a new version of the anti-virus will be pushed to your machine by Sysmgr. Immediately after upgrading, you may see your SentinelOne icon in the menu bar with an X through it:
+   </p>
+   <ac:image ac:align="left" ac:layout="align-start" ac:original-height="902" ac:original-width="832" ac:width="224">
+    <ri:attachment ri:filename="s1kexterr.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <p>
+    This will be upgraded automatically by Sysmgr.
+   </p>
+   <p>
+   </p>
+   <h2>
+    "Your Mac is up to date" or "Update not Found"
+   </h2>
+   <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1452" ac:original-width="2374" ac:width="408">
+    <ri:attachment ri:filename="Screen Shot 2021-02-23 at 10.13.18 PM.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <ac:image ac:align="left" ac:layout="align-start" ac:original-height="651" ac:original-width="886" ac:width="340">
+    <ri:attachment ri:filename="Screen Shot 2021-02-23 at 2.41.55 PM.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+   <p>
+   </p>
+   <p>
+    A fix has been pushed to all devices to address an issue where Big Sur has not been removed from the Software Update ignore list. If you are still seeing issues like this open
+    <strong>
+     Self Service(In your Applications Folder)→ Log in (Lower Left) → Utilities → unBlock Big Sur.
+    </strong>
+    If you do not see this option available it has already been pushed to your device. If you continue to have issues please open a SYSMGR ticket.
+   </p>
+   <p>
+    <strong>
+    </strong>
+    <ac:image ac:height="250">
+     <ri:attachment ri:filename="Screen Shot 2021-02-23 at 10.30.24 PM.png" ri:version-at-save="1">
+     </ri:attachment>
+    </ac:image>
+   </p>
+   <h2>
+    Terminal Crashing
+   </h2>
+   <p>
+    After upgrading, you
+    <em>
+     may
+    </em>
+    experience your macOS native Terminal app crashing. If this happens, please fully quit Terminal and restart the application. If it continues to crash, please open a Sysmgr ticket.
+   </p>
+   <h2>
+    Schrödinger Suite Version Compatibility
+   </h2>
+   <p>
+    As of this writing, only Schrodinger Suites 21-1 and above are compatible with macOS 11 (Big Sur), which can be downloaded here:
+    <br/>
+    <a href="https://apps.apple.com/us/app/macos-big-sur/id1526878132?mt=12">
+     https://apps.apple.com/us/app/macos-big-sur/id1526878132?mt=12
+    </a>
+   </p>
+   <p>
+    If you need to run older versions of the Schrödinger Suite or you are still on 10.14 (Mojave) or below, upgrade to 10.15 (Catalina) before upgrading to Big Sur by clicking on this App Store link:
+    <a href="https://apps.apple.com/us/app/macos-catalina/id1466841314?l=en-us&amp;mt=12">
+     https://apps.apple.com/us/app/macos-catalina/id1466841314?l=en-us&amp;mt=12
+    </a>
+   </p>
+   <p>
+   </p>
+   <h2>
+    Reinstalling macOS from bootable USB Drive
+   </h2>
+   <p>
+    First format the USB drive to Mac OS Extended (Journaled).
+   </p>
+   <ul>
+    <li>
+     <p>
+      Open
+      <strong>
+       Finder
+      </strong>
+      . Then navigate to
+      <strong>
+       Applications
+      </strong>
+      &gt;
+      <strong>
+       Utilities
+      </strong>
+      , and open
+      <strong>
+       Disk Utility
+      </strong>
+      . You should see your flash drive under the
+      <strong>
+       External
+      </strong>
+      section in the left pane. After selecting it, click on the
+      <strong>
+       Erase
+      </strong>
+      button along the top.
+     </p>
+    </li>
+    <li>
+     <p>
+      Choose a friendly name (which you'll use later), and make sure to choose
+      <strong>
+       Mac OS Extended (Journaled)
+      </strong>
+      for the format. Finally, click
+      <strong>
+       Erase
+      </strong>
+      .
+     </p>
+    </li>
+   </ul>
+   <p>
+    Download the macOS Installer
+   </p>
+   <ul>
+    <li>
+     <p>
+      Download the desired version from the App Store or from
+      <a href="https://support.apple.com/en-us/HT211683">
+       https://support.apple.com/en-us/HT211683
+      </a>
+     </p>
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    Once you have a bootable usb flash drive with the desired version macOS, you can now reinstall it onto your laptop.
+   </p>
+   <p>
+    Boot your Macbook into Recovery mode (Turn off laptop, click power button once and hold (Command + R) buttons down until you see the Apple logo with the progress bar.
+   </p>
+   <p>
+    Click Disk Utilities and erase all the hard drives on that laptop and exit disk utilities. i
+   </p>
+   <p>
+    Click 'Reinstall macOS' from bootable drive.
+   </p>
+   <ul>
+    <li>
+     <p>
+      If you do not see this option
+      <em>
+       from bootable drive
+      </em>
+      , then you may install it from the terminal command line. i
+     </p>
+    </li>
+    <li>
+     <p>
+      Click Utilities → Terminal
+     </p>
+    </li>
+    <li>
+     <p>
+      Run the following command &amp; change to respective macOS version:
+     </p>
+    </li>
+    <li>
+     <p>
+      ./volumes/Install macOS &lt;version&gt;/Install macOS &lt;version&gt;.app/Contents/MacOS/InstallAssistant
+     </p>
+    </li>
+   </ul>
+   <p>
+    Agree to the terms and conditions and select which hard drive you would like to install it on.
+   </p>
+   <p>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:breakout-mode="default" ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Related articles
+   </h2>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:local-id="0008727e-54af-4461-b5e2-ad9d02b2f111" ac:macro-id="bdf04341-2339-4eca-90f5-efd71275a8fb" ac:name="contentbylabel" ac:schema-version="4" data-layout="default">
+    <ac:parameter ac:name="showLabels">
+     false
+    </ac:parameter>
+    <ac:parameter ac:name="max">
+     5
+    </ac:parameter>
+    <ac:parameter ac:name="spaces">
+     SYSMGR
+    </ac:parameter>
+    <ac:parameter ac:name="showSpace">
+     false
+    </ac:parameter>
+    <ac:parameter ac:name="sort">
+     modified
+    </ac:parameter>
+    <ac:parameter ac:name="reverse">
+     true
+    </ac:parameter>
+    <ac:parameter ac:name="type">
+     page
+    </ac:parameter>
+    <ac:parameter ac:name="cql">
+     label in ( "macos" , "kb-how-to-article" ) and type = "page" and space = "SYSMGR"
+    </ac:parameter>
+    <ac:parameter ac:name="labels">
+     macos kb-how-to-article
+    </ac:parameter>
+   </ac:structured-macro>
+   <ac:structured-macro ac:local-id="4d259c40-6fbd-42f7-9b25-1230c96530ce" ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1" data-layout="default">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+     </p>
+     <table ac:local-id="2537dc21-4262-49c6-a5ef-0444b620400c" data-layout="default">
+      <tbody>
+       <tr>
+        <th>
+         <p>
+          <strong>
+           Related issues
+          </strong>
+         </p>
+        </th>
+        <td>
+         <p>
+         </p>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

@@ -1,0 +1,400 @@
+<ac:structured-macro ac:local-id="70ad2e7b-81ab-4728-8e9d-b1f3f15d0f5f" ac:macro-id="90b1adee-ea29-4e19-b00d-59bbadc9fc90" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h1>
+ Terraform Enterprise
+</h1>
+<p>
+ We run a private/on-premise instance of Terraform Enterprise (TFE) at
+ <a href="http://terraform.schrodinger.com">
+  terraform.schrodinger.com
+ </a>
+ .  Access is via Okta, "Terraform Enterprise (TFE)".
+</p>
+<p>
+ Vendor
+ <a href="https://developer.hashicorp.com/terraform/enterprise">
+  docs are here
+ </a>
+ .
+</p>
+<p>
+ Internal IT Infra
+ <a href="https://schrodinger.atlassian.net/wiki/display/SYSMGR/Terraform+Enterprise">
+  docs are here.
+ </a>
+</p>
+<p>
+ If you or your team want to make use of TFE, please reach out to IT Infra, or open a Freshservice ticket and ask that the ticket be transferred to IT Infra.
+</p>
+<p>
+ Internal chat "
+ <strong>
+  Terraform Enterprise SOS
+ </strong>
+ " for our instance is here:
+ <a href="https://chat.google.com/room/AAAAuhGfNIU?cls=1">
+  https://chat.google.com/room/AAAAuhGfNIU?cls=1
+ </a>
+ Updates, outages, maintenance will be communicated there.  Of course, an IT-Help or Freshservice ticket is always a good path for questions or assistance too.
+</p>
+<h2>
+ TFE Organizations
+</h2>
+<p>
+ An organization is TFE lingo for a group of workspaces.  We generally use them to map to Schrödinger teams, groups, or smaller departments.  Most people will only belong to one organization, so won't have to pick one when logging in.
+</p>
+<p>
+ If you have particular access concerns, or higher authorization needs, please reach out to IT Infra.
+</p>
+<h2>
+ Terraform Cloud
+</h2>
+<p>
+ Terraform Cloud is HashiCorp's SaaS product of which TFE is the on-premise version.  TFE has had other names in the past.  Generally any references to Terraform Cloud hold true for TFE, though the TFE release may lag the SaaS platform release of the same functionality.
+</p>
+<h1>
+ Terraform Versions
+</h1>
+<p>
+ HashiCorp upgrades terraform frequently, and not all versions are fully backward- and forward-compatible. See the
+ <a href="https://github.com/hashicorp/terraform/blob/main/CHANGELOG.md">
+  CHANGELOG.md file
+ </a>
+ or the
+ <a href="https://github.com/hashicorp/terraform/releases">
+  GitHub Releases
+ </a>
+ .
+</p>
+<p>
+ tf v1.1.0 introduced the
+ <code>
+  cloud
+ </code>
+ resource allowing
+ <a href="https://developer.hashicorp.com/terraform/cli/cloud">
+  better cli integration with TFE
+ </a>
+ , called CLI-driven run workflows.  This is a significant improvement for repos/workspaces where the terraform state file is managed by our TFE.  So we very much want to require a minimum terraform version.
+</p>
+<p>
+ When Google updated their Cloud Platform Fabric to use tf v1.3.0, they used some 1.3 features in a way that are incompatible with tf v1.2. The TFE release process means that TFE is a little behind the newest tf CLI release, and we don't upgrade our TFE install immediately (see
+ <a href="https://schrodinger.atlassian.net/wiki/display/SYSMGR/Terraform#Terraform-Upgrades">
+  below
+ </a>
+ ), we need to define a max version of tf that can be supported.
+</p>
+<p>
+ terraform v1.5.0 introduced the
+ <a href="https://developer.hashicorp.com/terraform/language/import">
+  <strong>
+   import
+  </strong>
+ </a>
+ resource block, which we find very useful, and a compelling reason to move minimum desired verstion to v1.5.1.
+</p>
+<h2>
+ tfenv
+</h2>
+<p>
+ We've decided to use
+ <a href="https://github.com/tfutils/tfenv">
+  tfenv
+ </a>
+ to manage terraform versions in the IT Infra repos.  We will (start to) add a .terraform-version file to repos which will define an explicit version of terraform we use. This will generally be at least 1.2.4, but will move upward as our TFE instance is updated to support newer versions, and based how active the repo/workspace is.
+</p>
+<p>
+ <code>
+  tfenv
+ </code>
+ is a shell script named terraform that wraps the actual golang binary.  It will look for a .
+ <code>
+  terraform-version
+ </code>
+ file and use the matching version of tf, downloading it if needed.
+</p>
+<p>
+ If using
+ <code>
+  brew
+ </code>
+ , using
+ <code>
+  tfenv
+ </code>
+ is easy.
+</p>
+<blockquote>
+ <p>
+  <code>
+   $ brew uninstall terraform
+  </code>
+  <br/>
+  <code>
+   $ brew install tfenv
+  </code>
+ </p>
+</blockquote>
+<p>
+ or, if you want to keep terraform installed but not directly used,
+</p>
+<blockquote>
+ <p>
+  <code>
+   $ brew unlink terraform
+  </code>
+  <br/>
+  <code>
+   $ brew install tfenv
+  </code>
+ </p>
+</blockquote>
+<h1>
+ TFE Versions
+</h1>
+<h2>
+ Upgrades
+</h2>
+<p>
+ <a href="https://developer.hashicorp.com/terraform/enterprise/releases">
+  https://developer.hashicorp.com/terraform/enterprise/releases
+ </a>
+</p>
+<p>
+ We intend to upgrade our TFE instance once a month, to the last release of the previous month.  E.g., on the last Wednesday of June, we should be installing the latest May release.  We are intentionally lagging just a little to allow for immediate hot fixes, as happened in July, August, and September of 2022.
+</p>
+<h1>
+ User Tokens
+</h1>
+<h2>
+ Creation
+</h2>
+<p>
+ To create a new TFE User Token:
+</p>
+<blockquote>
+ <p>
+  <code>
+   $ terraform login
+  </code>
+  <a href="http://terraform.schrodinger.com">
+   terraform.schrodinger.com
+  </a>
+ </p>
+</blockquote>
+<p>
+ If you omit the server name, you will attempt to get a token from Terraform Cloud (app.terraform.io), HashiCorps' SaaS platform, where we don't have accounts.
+</p>
+<p>
+ This will open a browser tab to TFE and generate a new token, which you will need to copy and paste back into the cli session.
+</p>
+<p>
+ Your user tokens can be seen at
+ <a href="https://terraform.schrodinger.com/app/settings/tokens">
+  https://terraform.schrodinger.com/app/settings/tokens
+ </a>
+</p>
+<h2>
+ Expiration
+</h2>
+<p>
+ Every now and then you will get this error:
+</p>
+<blockquote>
+ <p>
+  <code>
+   $ terraform plan
+  </code>
+ </p>
+ <p>
+  <code>
+   |
+  </code>
+  <br/>
+  <code>
+   │ Error: Failed to read organization "root" at host
+  </code>
+  <a href="http://terraform.schrodinger.com">
+   terraform.schrodinger.com
+  </a>
+  <br/>
+  <code>
+   │
+  </code>
+  <br/>
+  <code>
+   │ The "remote" backend encountered an unexpected error while reading the organization settings: unauthorized
+  </code>
+  <br/>
+  <code>
+   |
+  </code>
+ </p>
+</blockquote>
+<p>
+ In HashiCorp's langauge, "
+ <span style="color: rgb(82,87,97);">
+  After a user reaches this timeout (currently at 14 days) since their last login, they must reauthenticate through SSO in order to use their API token again."
+ </span>
+</p>
+<p>
+ <span style="color: rgb(82,87,97);">
+  Please login to TFE via Okta, and try again.
+ </span>
+</p>
+<p>
+ <span style="color: rgb(82,87,97);">
+  If it continues to deny you, create a new User token and delete the old one from your
+ </span>
+ <a href="https://terraform.schrodinger.com/app/settings/tokens">
+  <span style="color: rgb(82,87,97);">
+   User Settings Token page
+  </span>
+ </a>
+ <span style="color: rgb(82,87,97);">
+  .
+ </span>
+</p>
+<h1>
+ Terraform at Schrödinger
+</h1>
+<h2>
+ Workflow models
+</h2>
+<p>
+ Terraform can be used in many different ways, there is not a single prescribed workflow.  Just the CLI can be used or the CLI can be used as a standalone tool, or with a shared statefile.   There are also three standard workflow models with TFE:
+</p>
+<ul>
+ <li>
+  <p>
+   <a href="https://developer.hashicorp.com/terraform/enterprise/run/ui">
+    UI/VCS-driven
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   <a href="https://developer.hashicorp.com/terraform/enterprise/run/api">
+    API-driven
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   <a href="https://developer.hashicorp.com/terraform/enterprise/run/cli">
+    CLI-driven
+   </a>
+  </p>
+ </li>
+</ul>
+<p>
+ Different teams can use the workflow model best suited to their needs.
+</p>
+<p>
+ Most of our (IT Infrastructure) work has relatively simple workflow needs, so we use the UI/VCS model with GitHub repos.  (And a small amount of CLI-driven for local testing and validation before pull request creation and merges.)
+</p>
+<p>
+ If you want to use a different workflow we will work with you to enable that.
+</p>
+<h2>
+ Imports
+</h2>
+<p>
+ <ac:emoticon ac:emoji-fallback=":warning:" ac:emoji-id="atlassian-warning" ac:emoji-shortname=":warning:" ac:name="warning">
+ </ac:emoticon>
+ Importing records into a state file should not be a routine activity.  It is also a medium advanced topic, so should be done carefully.  There are very few built-in safety nets for a messed up import.  If something goes wrong, please escalate to the repo/resource owner as soon as possible!
+</p>
+<p>
+ tf v1.5.0 added the
+ <a href="https://developer.hashicorp.com/terraform/language/import">
+  <strong>
+   import
+  </strong>
+ </a>
+ resource block, which makes imports significantly better, since
+ <code>
+  terraform plan
+ </code>
+ will now show the expected result of the import action, and integrates the statefile change into the plan/apply cycle.
+</p>
+<p>
+ Until your PR for terraform that matches the newly imported records is merged, the records are seen as
+ <strong>
+  drift
+ </strong>
+ by everyone else. If someone else is working on a PR for the same repo, they will see the result of your import immediately in the state file, and this will complicate their work.  They may see your changes as a blocker to their work; they may duplicate your work by addressing your drift within their own branch/PR; or they may not notice and apply their work,
+ <strong>
+  un-deploying/destroying
+ </strong>
+ your resources.
+</p>
+<p>
+ So if you are choosing to import records into the state file, you have to accept responsibility for the drift you are adding.  You should minimize the amount of time between your imports and the PR merge, and consider notifying others that you are doing some imports and maybe even put a lock on the TFE workspace.
+</p>
+<h1>
+ Getting Started With Terraform
+</h1>
+<p>
+ HashiCorp has
+ <em>
+  a lot
+ </em>
+ of material.  You should be able to work through the
+ <a href="https://developer.hashicorp.com/terraform/tutorials/gcp-get-started">
+  GCP tutorials
+ </a>
+ by making use of the
+ <ac:link>
+  <ri:page ri:content-title="GCP Sandboxes a.k.a. Project Milliways" ri:space-key="GCP" ri:version-at-save="8">
+  </ri:page>
+  <ac:link-body>
+   GCP Sandboxes
+  </ac:link-body>
+ </ac:link>
+ .
+</p>
+<ul>
+ <li>
+  <p>
+   <a href="https://developer.hashicorp.com/terraform/tutorials">
+    https://developer.hashicorp.com/terraform/tutorials
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   <a href="https://developer.hashicorp.com/terraform/cli">
+    https://developer.hashicorp.com/terraform/cli
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   <a href="https://developer.hashicorp.com/terraform/enterprise">
+    https://developer.hashicorp.com/terraform/enterprise
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   <a href="https://registry.terraform.io/search/providers?namespace=hashicorp">
+    https://registry.terraform.io/search/providers?namespace=hashicorp
+   </a>
+  </p>
+ </li>
+</ul>
+<h1>
+ See Also
+</h1>
+<ul>
+ <li>
+  <p>
+   <a href="https://cloud.google.com/docs/terraform/best-practices-for-terraform">
+    https://cloud.google.com/docs/terraform/best-practices-for-terraform
+   </a>
+   GCP's recommendations on using terraform with GCP.  Many of these are rather good, though not everyone will agree on all of them.
+  </p>
+ </li>
+</ul>
+<p>
+</p>

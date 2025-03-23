@@ -1,0 +1,487 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for Boston office Wifi Outage on 02/08/24
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <ac:placeholder>
+            Link to Service Page for affected service
+           </ac:placeholder>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <ac:structured-macro ac:macro-id="84315c09-95bf-4a98-87d4-a1a8a852094d" ac:name="jira" ac:schema-version="1">
+          <ac:parameter ac:name="server">
+           System JIRA
+          </ac:parameter>
+          <ac:parameter ac:name="columnIds">
+           issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+          </ac:parameter>
+          <ac:parameter ac:name="columns">
+           key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+          </ac:parameter>
+          <ac:parameter ac:name="serverId">
+           ac6def98-2140-30c3-8103-4b52b8b31135
+          </ac:parameter>
+          <ac:parameter ac:name="key">
+           ITINFRA-2631
+          </ac:parameter>
+         </ac:structured-macro>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         Cambridge Boston office Wifi was down.
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <time datetime="2024-02-08">
+         </time>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <time datetime="2024-02-08">
+         </time>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="557058:9290142c-5161-42cc-b65b-d8b8487fa532">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use // for date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          List of people who had a part in reviewing or commenting on the report
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     At approximately 07:09 AM EST, the Wireless Access Points (WAPS) within the Boston-Cambridge office experienced a loss of heartbeat and subsequently disconnected at 7:13 AM. This resulted in a complete outage of all WAPS in the Boston office, leading to the cessation of Wi-Fi services.
+    </span>
+   </p>
+   <p>
+    Upon receiving notification from an end user, Mati promptly verified the status of the WAPS through the Ruckus WebUi console. Following the confirmation of the WAPS outage, Mati informed Me, who undertook a thorough investigation of the issue. I subsequently verified the loss of Wi-Fi connectivity throughout the office.
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    The Wi-Fi connectivity at the Cambridge office location in Boston was disrupted, adversely affecting day-to-day office operations.
+   </p>
+   <p>
+    Wifi connectivity is a day to day office requirement which must remain operational.
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    Wifi Down.
+   </p>
+   Chronology
+   <p>
+    (Times are in EST)
+   </p>
+   <ul>
+    <li>
+     7:09 - WAPS lost heartbeat.
+    </li>
+    <li>
+     7:13 - WAPS Disconnected from Ruckus controller.
+    </li>
+    <li>
+     8:53 - Mati is informed by Wade Miller of the Wifi being down in the Boston office.
+    </li>
+    <li>
+     9:03 - Mati informed Nathaniel that the WAPS is down in Boston.
+    </li>
+    <li>
+     9:09 - Nathaniel Jumped on a call with Mati and confirmed Wifi was down in BOS.
+    </li>
+    <li>
+     9:12 - Mati confirms that all WIfi and Wired connections are inaccessible.
+    </li>
+    <li>
+     9:13 - Nathaniel Williams was able to reach the Boston office FW and all devices in the Boston MDF, however Wifi and wired Lan connection to desktops were down.
+    </li>
+    <li>
+     9:26 - Nathaniel Failed over to secondary ISP in BOS to see if the WAPS recover due to not finding any evidence as to why the WAPS were offline. All physical connected devices were accessible, ex Desktop, FW, Switches.
+    </li>
+    <li>
+     9:27 - Wifi Recovers immediately after failover and Wifi is restored on Lumen ISP.
+    </li>
+    <li>
+     9:43 - Sean Mcmanus and Raghavendra initiates investigation and takes a second look.
+    </li>
+    <li>
+     11:00 - Sean opens support ticket with GTT to figure out why the WAPS went down.
+    </li>
+    <li>
+     GTT finds no issues on their end and recommend we power cycle the router.
+    </li>
+    <li>
+     Nathaniel and Sean Coordinate with Sekani to head over to the Cambridge Boston office to reboot.
+    </li>
+    <li>
+     6:10PM - Sekani arrives onsite to power cycles the router but no luck. Sekani then reseated the cable at each end, GTT then was back up
+    </li>
+   </ul>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    The corrective action was to reseat the cable on both ends between the router and FW.
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <ul>
+    <li>
+     I, Nathaniel was able to reach the NYC FW via SSH and the GUI. Nathaniel also confirmed that all switches in the MDF was accessible.
+    </li>
+    <li>
+     I, Nathaniel, didn't confirm if bgp routes were still being advertised, this could have been looked into before failing over. Also validating that all tunnels were up without any potential issues.
+    </li>
+   </ul>
+   <h3>
+    Introduced Issues
+   </h3>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="1dcb527e-6cb6-45a4-a4a1-55cf9b51022f" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      Schrodinger JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,priority,status,summary,created,updated,reporter,customfield_11008
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,priority,status,summary,created,updated,reporter,Sprint
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITDW-123, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      30708cbf-faf5-3b5d-8703-8205cb365354
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    Note: We did respond immediately, when we was informed of the issue.
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    <br/>
+   </p>
+   <p>
+    End User: Wade Miller, Mati
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    Detection could have been improved.
+   </p>
+   <p>
+    Why weren't we notified that the WAPS were down in BOS. Monitoring??
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    immediately and acted with urgency to minimize office disruption.
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Yes Mati did.
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    Could have sent out Communication in IT Support.
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    Communication between teams.
+   </p>
+   <p>
+    Prompt failover to the 'Secondary' ISP to restore connectivity.
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    WAP monitoring, If we knew the AP's were down earlier we could have had more time to investigate.
+   </p>
+   <p>
+    Overall we handled this pretty well.
+   </p>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    Monitor our WAPS.
+   </p>
+   <ul style="list-style-type: square;">
+    <li>
+     Event notifications to a space to notify if x amount of WAP's are down for longer than x minutes.
+    </li>
+   </ul>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    Austin mentioned that he worked on something that can look at all the BGP advertisements and compare that to sauce. (This maybe something worth looking into.) This gives us visibility on our BGP routes. (This will scrape whats in our current routing table and compare it to sauce.)
+    <a class="css-1jng6we" href="https://schrodinger.atlassian.net/browse/ITINFRA-2711" style="text-decoration: underline;text-align: center;">
+     <span class="css-1gd7hga">
+      ITINFRA-2711
+     </span>
+    </a>
+   </p>
+   <p>
+    Document a troubleshooting Procedure for network outages. (Things to check/verify.)
+    <a class="css-1jng6we" href="https://schrodinger.atlassian.net/browse/ITINFRA-2712" style="text-decoration: underline;text-align: center;">
+     <span class="css-1gd7hga">
+      ITINFRA-2712
+     </span>
+    </a>
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      <span class="placeholder-inline-tasks">
+       Type your task here, using "@" to assign to a user and "//" to select a due date
+      </span>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

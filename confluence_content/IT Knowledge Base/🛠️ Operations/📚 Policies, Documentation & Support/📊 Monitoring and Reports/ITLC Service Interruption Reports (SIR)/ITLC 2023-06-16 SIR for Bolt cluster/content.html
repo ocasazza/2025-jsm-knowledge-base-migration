@@ -1,0 +1,680 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for Bolt cluster on
+      <time datetime="2023-06-14">
+      </time>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           Bolt cluster
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="c47b4c2d-1e5a-4425-80a5-203b363ad892" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="columnIds">
+             issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="columns">
+             key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             ITHPC-389
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         Bolt cluster nodes
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-06-14">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2023-06-16">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <ac:link>
+          <ri:user ri:userkey="557058:8aff9fa7-fab5-4a58-8371-4bbe29336cd2">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use // for date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Reviewed by
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          List of people who had a part in reviewing or commenting on the report
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    After IT replaced Qumulo storge node 5 and 6 with new chassis, a number of cluster nodes experienced nfs mounts hanging.  NFS mounts became stale after losing network connectivity to Qumulo nodes for too long. Cleaning up stale nfs mounts and restarting autofs resolved most of the NFS issues. However, Qumulo node 4 hit a rare bug during node 5 and 6 replacement and malfunctioned. It still allows NFS client to mount from its ip pool, but node 4 failed to serve NFS requests properly.  At the time, Qumulo support lost VPN access to node 4 and could not collect as much information as normally would. Therefore, some NFS mounts from Qumulo node 4 were unresponsive. Temporarily excluding NFS service form Qumulo node 4 fixed the issue quickly. Later rebooted Qumulo node 4 per Qumulo support suggestion.  Qumulo node 4 return to good state after reboot, then being added back to production.
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    Qumulo support identified some hardware issue with Qumulo node 5 and 6, which caused NFS performance issue under heavy usage. They sent replacement chassis over for replacing node 5 and 6. On 6/14/23, IT replaced the chassis for node 5 and 6.  The process took longer than normal Qumuo node update/upgrade.  This caused many bolt nodes experienced stale NFS mount issues. But we did not expect was node 4 broke.
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    Many bolt cluster nodes including head and submission nodes experienced either hanging on /home or /nfs/working mounts because the nodes were not able to recover from extended time of losing network connectivity to corresponding Qumulo nodes. Manual intervention is required to resolve the issue
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    11:35PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    ewr-stor-q01-5 goes offline for replacement
+   </p>
+   <p>
+    12:28PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    ewr-stor-q01-5 comes back online
+   </p>
+   <p>
+    12:56PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    ewr-stor-q01-6 goes offline for replacement
+   </p>
+   <p>
+    1:22PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    ewr-stor-q01-6 powered on but not online (unknown issues)
+   </p>
+   <p>
+    1:30PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    Sysmgr got paged about bolt head and submission nodes offline. Started checking these nodes.  (SNMPD walks mounted filesystems, so NFS stale mounts cause LibreNMS monitoring to fail on the SNMP poll.)
+   </p>
+   <p>
+    2:20PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    ewr-stor-q01-6 back online
+   </p>
+   <p>
+    2:23PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    Sysmgr noticed the NFS issue by checking on /nfs/working from a node
+   </p>
+   <p>
+    2:56PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    Sysmgr found autofs on bolt nodes could not be restarted
+   </p>
+   <p>
+    3:05PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    Users started noticing the issue. Sysmgr created Jira ticket. Update users both through hotline chat room and this ticket
+   </p>
+   <p>
+    3:32PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    Emailed cluster group about the NFS issue
+   </p>
+   <p>
+    3:52PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    Sysmgr cleaned up stale NFS mount on bolt head node. Able to restart autofs. df command no longer hangs
+   </p>
+   <p>
+    3:57PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    Sysmgr resolved boltsub1 nfs issue
+   </p>
+   <p>
+    4:00PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    Sysmgr resolved boltsub2, boltio, boltapp1 nfs issue
+   </p>
+   <p>
+    5:48PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    Sysmgr resolved bolt-0, bolt-1, bolt-2 nfs issue
+   </p>
+   <p>
+    6:56PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    Sysmgr resolved bolt-3, boltsub3, boltsub4 nfs issue
+   </p>
+   <p>
+    8:03PM PDT
+    <time datetime="2023-06-14">
+    </time>
+    Emailed cluster group updating user about bolt nfs status
+   </p>
+   <p>
+    4:49AM PDT
+    <time datetime="2023-06-15">
+    </time>
+    Build manager reported broken
+    <span style="letter-spacing: 0.0px;">
+     nfs mounts on boltsub3
+    </span>
+   </p>
+   <p>
+    6:14AM PDT
+    <time datetime="2023-06-15">
+    </time>
+    User reported able to access some file systems on /nfs/working, but not others
+   </p>
+   <p>
+    8:00AM PDT
+    <time datetime="2023-06-15">
+    </time>
+    Sysmgr started looking into the issue
+   </p>
+   <p>
+    8:48AM PDT
+    <time datetime="2023-06-15">
+    </time>
+    Sysmgr found NFS mounts from one ip address,  192.168.68.62, are broken on multiple bolt nodes. This lead to an possibility of one Qumulo node is not working right
+   </p>
+   <p>
+    9:02AM PDT
+    <time datetime="2023-06-15">
+    </time>
+    Sysmgr identified Qumulo node 4 was not working since two ip addresses served by this node both experienced nfs issue across several nodes.
+   </p>
+   <p>
+    9:13AM PDT
+    <time datetime="2023-06-15">
+    </time>
+    Sysmgr temporarily removed Qumulo node 4 from NFS service by commenting out their DNS/IP records.  Then cleaned up all nfs mount from node 4. After this, NFS issue is gone from all bolt nodes
+   </p>
+   <p>
+    9:34AM PDT
+    <time datetime="2023-06-15">
+    </time>
+    Sysmgr rebooted Qumulo node 4 per Qumulo support suggestion
+   </p>
+   <p>
+    9:39AM PDT
+    <time datetime="2023-06-15">
+    </time>
+    Qumulo node 4 came back online after reboot
+   </p>
+   <p>
+    9:58AM PDT
+    <time datetime="2023-06-15">
+    </time>
+    All bolt nodes checked and confirmed without any NFS mount issue
+   </p>
+   <p>
+    10:15AM PDT
+    <time datetime="2023-06-15">
+    </time>
+    Sysmgr restarted snmpd service on all bolt nodes
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     11:40AM PDT
+     <time datetime="2023-06-15">
+     </time>
+     Qumulo node 4 was returned to service after Qumulo support checked and confirmed it's in good state after reboot. Qumulo supported tracked downed node 4 issue was due to a bug
+    </span>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    Sysmgr manually unmounted the stale nfs amounts and restarted autofs on all bolt nodes; Temporarily excludes Qumulo node4 from NFS service, cleaned up NFS mounts from Qumulo node4; Rebooted Qumulo node4 and brought it back to service
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    There were multiple factors that have contributed to NFS issue
+   </p>
+   <ul>
+    <li>
+     Replacing Qumulo node 5 and 6 took longer than the time for nfs mount to recover from network connectivity loss to these nodes.
+    </li>
+    <li>
+     There were active I/O operations on many NFS amounts (user jobs, maintenance tasks such as find/set permission tasks etc), which made cleanly un-mounting the NFS mounts and restarting autofs impossible.
+    </li>
+    <li>
+     Qumulo node 4 crashed due to a software bug after node 5 and 6 were brought back online.  Node 4 continued to allow client mount NFS shares from it, but it would not serve NFS requests due to locking issue
+    </li>
+    <li>
+     Sysmgr did not expect any other Qumulo node would hit a software bug and experience service interruption
+    </li>
+   </ul>
+   <h3>
+    Introduced Issues
+   </h3>
+   <p>
+    <ac:placeholder>
+     Edit the macro below to replace the issue ID in the JQL query
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="1dcb527e-6cb6-45a4-a4a1-55cf9b51022f" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,priority,status,summary,created,updated,reporter,customfield_11008
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,priority,status,summary,created,updated,reporter,Sprint
+     </ac:parameter>
+     <ac:parameter ac:name="maximumIssues">
+      20
+     </ac:parameter>
+     <ac:parameter ac:name="jqlQuery">
+      issue in linkedIssues(ITDW-123, "introduced")
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <h2>
+    Detection
+   </h2>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    Immediately by sysmgr while checking NFS mounts on bolt nodes after replacing Qumulo node hardware for node 5 and 6
+   </p>
+   <h3>
+    How was the problem detected?
+   </h3>
+   <p>
+    Sysmgr first detected the issue. Users also reported the issue. In addition, PagerDuty sent out alert as well
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    In this case, sysmgr expected some level of NFS service interruption. So sysmgr were the first people to detect the issue.
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    After the NFS issue was detected, sysmgr immediately acted on it. Tried resolving the issue
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Yes, sysmgr notified users in IT hotline chat room and emailed cluster group. A Jira ticket was also created to track this issue
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    N/A
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <ul>
+    <li>
+     Worked out a way to clean up stale nfs mounts and restart autofs; Created a script to do it quickly
+    </li>
+    <li>
+     Resolved the issue on head node, submission nodes first
+    </li>
+    <li>
+     Resolved the issue on compute nodes next
+    </li>
+    <li>
+     Once a malfunctioning Qumulo node was found, removed it from service right away.
+    </li>
+   </ul>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    Write a procedure to follow in case similar issue occurs in the future.  By following a procedure, we can address similar issue much more quickly
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <ul>
+    <li>
+     Prepare for the scheduled outage more
+     <ul>
+      <li>
+       Make sure enough resource on board and ready, not just for the event but for delayed problems.
+      </li>
+      <li>
+       Make sure all sysmgr are aware of the incoming outage and the procedures to follow if any actions need to take
+      </li>
+     </ul>
+    </li>
+    <li>
+     Build script to quickly identify stale NFS mounts and Qumulo node if any node is broke
+    </li>
+    <li>
+     Upgrade Qumulo OS from 6.0.1 to 6.1.x
+    </li>
+    <li>
+     Engage with Qumulo support during and after any hardware replacement or OS upgrade. Get advice when issue occurs
+    </li>
+    <li>
+     Be more aggressive about scheduling bolt and/or EWR maintenance windows.
+    </li>
+   </ul>
+   <h2>
+    Next Actions
+   </h2>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      Write a procedure on how to detect NFS mount issue, how to clean up stale NFS mounts and restart autofs - Done.  The procedure for troubleshooting is
+      <a href="https://schrodinger.atlassian.net/wiki/x/c3VLAw">
+       here
+      </a>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      5
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      Document in monitoring response that NFS stale mounts will cause an alert, but the system would be up for pings and SSH.
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      6
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      Explore focused NFS monitors, rather than holistic sampling.
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      7
+     </ac:task-id>
+     <ac:task-status>
+      incomplete
+     </ac:task-status>
+     <ac:task-body>
+      <span>
+       Upgrade Qumulo OS to 6.1.x
+       <ac:structured-macro ac:macro-id="c51c0fb1-d8be-4a7c-b7ee-5543165159cf" ac:name="jira" ac:schema-version="1">
+        <ac:parameter ac:name="server">
+         System JIRA
+        </ac:parameter>
+        <ac:parameter ac:name="columnIds">
+         issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+        </ac:parameter>
+        <ac:parameter ac:name="columns">
+         key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+        </ac:parameter>
+        <ac:parameter ac:name="serverId">
+         ac6def98-2140-30c3-8103-4b52b8b31135
+        </ac:parameter>
+        <ac:parameter ac:name="key">
+         ITINFRA-1632
+        </ac:parameter>
+       </ac:structured-macro>
+      </span>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

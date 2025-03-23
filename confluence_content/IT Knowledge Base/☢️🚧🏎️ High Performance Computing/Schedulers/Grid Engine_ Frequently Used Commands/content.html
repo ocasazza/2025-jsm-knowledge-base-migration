@@ -1,0 +1,471 @@
+<p>
+ Grid Engine has gone through several evolutions so as you are Googling, you may see Univa Grid Engine (UGE) or Sun Grid Engine (SGE) or even Oracle Grid Engine.
+ <br/>
+ At Schrödinger we are using the Univa Grid Engine (UGE) iteration but since they come from the same history, most tutorials/commands you find for any of those will be compatible.
+ <br/>
+ <br/>
+</p>
+<ac:structured-macro ac:local-id="4ca104d6-367c-41e6-a6a3-bb49ebd38acf" ac:macro-id="d76b0997-e429-40e3-ab19-fd8099a3489a" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h2>
+ Submitting job
+</h2>
+<h4>
+ How do I submit a batch job to scheduler?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://gridscheduler.sourceforge.net/htmlman/htmlman1/qsub.html">
+  qsub (man page)
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ qsub takes script file name to submit to the scheduler.  It will parse the header of the script for flags to get the resources you need.
+</p>
+<p>
+ For example:
+ <code>
+  qsub my_script.sh
+ </code>
+ <br/>
+ &lt;contents of my_script.sh&gt;
+</p>
+<ac:structured-macro ac:macro-id="5eb59573-6f12-4961-a296-9c5f1031dd3f" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[#!/bin/bash
+#$ -l walltime=10:00
+#$ -q nongpu.q  
+#$ -l nongpu
+#$ -pe one_node 10
+
+env
+]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<h4>
+ How do I get an interactive session from the scheduler?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://gridscheduler.sourceforge.net/htmlman/htmlman1/qlogin.html">
+  qlogin (man page)
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ Use the
+ <code>
+  qlogin
+ </code>
+ command along with whatever relevant flags to get the resources you need.
+ <br/>
+ For example:
+ <code>
+  qlogin -l cuda,gpu=2 -pe one_node 2
+ </code>
+</p>
+<p>
+</p>
+<h4>
+ What flags do I need to use?
+</h4>
+<p>
+ Flags describe which resources you want and how much of that resource.
+</p>
+<p>
+ You can use these flags directly with qsub, or in your schrodinger.hosts file on the Qargs line, or pass to the Schrödinger software commands with the -QARG flag
+</p>
+<p>
+ You can see all of the flags and example usage by clicking on the following links:
+ <a href="https://gridscheduler.sourceforge.net/htmlman/htmlman1/qsub.html">
+  qsub
+ </a>
+</p>
+<table ac:local-id="572298a6-a590-4298-a195-abb84fb3547a" data-layout="full-width" data-table-width="1547.2115999999999">
+ <colgroup>
+  <col style="width: 108.06px;"/>
+  <col style="width: 1033.59px;"/>
+  <col style="width: 405.56px;"/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Flag
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Description
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Examples
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     -q
+    </p>
+   </td>
+   <td>
+    <p>
+     <span style="color: rgb(23,43,77);">
+      The name of the queue used for the job. A queue(also known as partition in some schedulers) is a group of nodes(servers).
+     </span>
+     <br/>
+     <span style="color: rgb(23,43,77);">
+      Priority-ordered jobs are allocated nodes within a queue.
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     -q cpu.q
+    </p>
+    <p>
+     -q cuda.q
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     -N
+    </p>
+   </td>
+   <td>
+    <p>
+     <span style="color: rgb(23,43,77);">
+      The name of the job you're submitting. You can see this in qstat once it is submitted
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     -N &lt;job_name&gt;
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     -l h_vmem
+    </p>
+   </td>
+   <td>
+    <p>
+     Hard maximum memory limit can be specified to a job using this flag.
+    </p>
+   </td>
+   <td>
+    <p>
+     -l h_vmem=&lt;float&gt;G
+    </p>
+    <p>
+     -l h_vmem=2G
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     -l h_rtv
+    </p>
+   </td>
+   <td>
+    <p>
+     <span style="color: rgb(23,43,77);">
+      Time limit on the total run time of the job allocation. If you exceed this time, the scheduler will kill your job. Jobs can
+     </span>
+     <br/>
+     <span style="color: rgb(23,43,77);">
+      always finish early. If you need more time after your job is running, contact a System Administrator as soon as possible.
+     </span>
+    </p>
+   </td>
+   <td>
+    <p>
+     -l h_rt = HH:MM:SS
+    </p>
+    <p>
+     -l h_rt = 4:0:0 #4 hours, 0 minutes, 0 seconds
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+</p>
+<h4>
+ How do I run openmpi with SGE?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://www.open-mpi.org/faq/?category=sge">
+  mpirun
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ If you are running single thread &amp; single process, then you don't need to use mpirun cause your main shell by default can scale onto your allocated resources.
+ <br/>
+ If you are running with multiple threads or multiple processes, then you will need to use mpirun.  mpirun interacts with the Grid Engine scheduler to scale your commands across whichever resources Grid Engine allocated to you (since it may not be contiguous).
+</p>
+<p>
+ It's as simple as putting mpirun in front of any command that you want to run in parallel.  Any commands you don't want to run in parallel, don't put mpirun in front of.
+ <br/>
+ For example:
+</p>
+<ac:structured-macro ac:macro-id="b0d6efa2-7f5d-44b7-af44-eb2230bf4749" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[qlogin -l cuda,gpu=2 -pe one_node 2
+mpirun my_parallel_program
+mpirun hostname]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h4>
+ How do I cancel a job?
+</h4>
+<p>
+ To cancel a pending or current job, pass the job ID to qdel.  For example: qdel 123456
+</p>
+<p>
+ If you do not know the job ID, refer the qstat section below.
+</p>
+<ac:structured-macro ac:macro-id="8b3e3096-7fa2-43a5-8cfa-c8e7b360b2d6" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[qdel <job_id>      #Kill a specific job using job id
+qdel -u <username> #Kill all your jobs ]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<h4>
+ Can I request resources that don't exist?
+</h4>
+<p>
+ Unfortunately yes with Grid Engine.  If you request resource configuration that doesn't exist (like say you ask for a quadrillion nodes) it will still accept your job and have it pend (in case a quadrillion nodes ever manifested out of nowhere).
+ <br/>
+ That's an extreme case, but you see that you may submit a request that is reasonable but still doesn't match the configuration of the Grid Engine queues without getting an immediate warning.
+</p>
+<p>
+ If you ever suspect that your job is not being scheduled and has pended for too long you can run:
+ <code>
+  qalter -w v &lt;job_id&gt;
+ </code>
+ <br/>
+ <code>
+ </code>
+ Which will give you some information about why your job is pending.  Which also unfortunately is not always the true reason...
+ <br/>
+ If it is the real reason then you can delete your job and resubmit with the corrections; or update the resource flags using
+ <code>
+  qalter -W resource=updated_value job_id
+ </code>
+</p>
+<p>
+</p>
+<h4>
+ <code>
+  Can I run multi-node jobs?
+ </code>
+</h4>
+<p>
+ Given that the landscape of Schrödinger's algorithms is single-node, many of our schedulers have been tailored to enforce single-node jobs.
+</p>
+<p>
+ If you attempt to request multi-node jobs, you may not get the behavior you expect.  If you have a use-case for multi-node jobs, reach out the HPC Team.  We would love to learn more about it and revise our scheduling policies to support this.
+</p>
+<p>
+</p>
+<h2>
+ Scheduling
+</h2>
+<h4>
+ What is the status of the my current jobs?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://gridscheduler.sourceforge.net/htmlman/htmlman1/qstat.html">
+  qstat (man page)
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ qstat command gives you the information about the jobs currently submitted. Running this with no options will give information about the whole cluster.
+</p>
+<ac:structured-macro ac:macro-id="cbef2202-160d-418a-853c-a264b63ebc37" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[qstat -j <job_id> #Detailed job status for a specific job ID
+qstat -u <username> # Job status by user
+qstat -s r #Shows running job
+qstat -s p #Shows pending jobs in the cluster]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<h4>
+ When will my pending job run?  Who's job is next in line?
+</h4>
+<p>
+ <code>
+  qstat -s p | less
+ </code>
+ will show all of the jobs in order of priority.  The priority should be the second column
+</p>
+<ac:structured-macro ac:macro-id="828ba114-68b6-4aae-b907-3e8db8f7c219" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[qstat -s p | less 
+
+job-ID     prior   name       user         state submit/start at     queue                          jclass                         slots ja-task-ID 
+------------------------------------------------------------------------------------------------------------------------------------------------
+ 150857495 1100.00000 bolt-3-0-r root         qw    12/17/2023 01:15:07                                                                  40        
+ 153439340 6.80963 fep_sol_HF therrien     qw    01/16/2024 09:16:05                                                                   4        
+ 153439347 6.72125 fep_sol_HF therrien     qw    01/16/2024 09:16:14                                                                   4        
+ 153439354 6.63514 fep_sol_HF therrien     qw    01/16/2024 09:16:24                                                                   4        
+ 153439362 6.55121 fep_sol_HF therrien     qw    01/16/2024 09:16:38                                                                   4        
+ 153439367 6.46937 fep_sol_HF therrien     qw    01/16/2024 09:16:49                                                                   4        
+ 153439371 6.38955 fep_sol_HF therrien     qw    01/16/2024 09:16:59                                                                   4        
+ 153439375 6.31168 fep_sol_HF therrien     qw    01/16/2024 09:17:09                                                                   4        
+ 153439383 6.23568 fep_sol_HF therrien     qw    01/16/2024 09:17:18                                                                   4        
+ 153439387 6.16150 fep_sol_HF therrien     qw    01/16/2024 09:17:27                                                                   4        
+ 153439395 6.08905 fep_sol_HF therrien     qw    01/16/2024 09:17:40                                                                   4        
+ 153439402 6.01830 fep_sol_HF therrien     qw    01/16/2024 09:17:51                                                                   4        
+...]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h4>
+ But why is my job not next in line?
+</h4>
+<p>
+ There are several factors that go into the priority score: number of tickets, urgency score, specified priority.  These factors are all weighted differently and together yield the overall priority score.  To see the unweighted factors that make up the priority score you can run:
+ <code>
+  qstat -pri -s p
+ </code>
+</p>
+<p>
+</p>
+<h4>
+ How do I get information about a completed job?
+</h4>
+<p>
+ In our configuration as an end-user, you can't.  The completed job history is stored only on our administrative node, bolt.schrodinger.com.  Only admins have access to this node.  If you need to query your job history, please reach out to the HPC Team so they can retrieve the information for you.
+</p>
+<p>
+ These commands are examples for admins who have access to bolt.schrodinger.com:
+</p>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://linux.die.net/man/1/qacct">
+  qacct (man page)
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ Running qacct will give you complete information about your job.
+ <a href="https://gridscheduler.sourceforge.net/htmlman/htmlman5/accounting.html">
+  This page
+ </a>
+ has descriptions of certain accounting fields.
+</p>
+<ac:structured-macro ac:macro-id="0e212543-cfba-4de7-8ea3-cbe13bd35809" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[# To get job specific information
+qacct -j <job_id> 
+
+
+
+# To get all jobs for specific user
+qacct -o $USER -j 
+
+# This may produce a lot of output so you can pipe to less
+qacct -o $USER -j | less 
+
+# Or restrict how far back to search (this example goes back 7 days)
+qacct -o $USER -j -d 7 | less ]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<h2>
+ Resources
+</h2>
+<h4>
+ What queues are available?
+</h4>
+<p style="margin-left: 30.0px;">
+ <code>
+ </code>
+ <a href="https://linux.die.net/man/1/qconf">
+  qconf -sql (man page)
+ </a>
+ <code>
+ </code>
+</p>
+<p>
+ <code>
+  qconf -sql
+ </code>
+ will list all available queues.
+ <code>
+  qconf -sq queue_name
+ </code>
+ will list detailed information about that particular queue.
+ <a href="https://gridscheduler.sourceforge.net/htmlman/htmlman5/queue_conf.html">
+  This page
+ </a>
+ has descriptions of certain queue configuration fields.
+</p>
+<p>
+ When requesting resources from a particular queue during job submission, you use the
+ <code>
+  -q
+ </code>
+ flag; however, many of our queues require you to specify a complex value via the
+ <code>
+  -l
+ </code>
+ flag to use them.
+ <br/>
+ For example, to have a job run in the cuda.q queue explicitly you would need to use both flags:
+ <code>
+  -q cuda.q -l cuda
+ </code>
+ <br/>
+ <code>
+ </code>
+ In our current configuration for the majority of the queues, the required complex value for each queue is the name of the queue without the '.q' at the end.
+ <br/>
+ For example:
+ <code>
+  -q nongpu.q -l nongpu
+ </code>
+ <br/>
+ <br/>
+ <br/>
+</p>
+<p>
+</p>

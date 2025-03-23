@@ -1,0 +1,211 @@
+<ac:structured-macro ac:local-id="f8a80168-3f74-4d6e-bb55-e77722bda74e" ac:macro-id="b105e785-d41a-4bb9-b146-84a163482d25" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<ac:structured-macro ac:local-id="b3feac7b-de2f-4206-99cf-4fffbf7a18d2" ac:macro-id="ce45f50e-8e5c-475b-b8a5-417ea321a9b4" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="atlassian-macro-output-type">
+  INLINE
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   Guidelines for traveling abroad to certain locations.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ Travel to countries classified as "High Risk" requires that we take additional precautions to ensure not only connectivity, but also limit the potential effects of surveillance and prevent a data breach. These guidelines are intended to not only reduce the risk while traveling, but also contain any potential contamination or systems breach upon return. This policy applies to travel for
+ <strong>
+  business purposes only.
+ </strong>
+ Please see below for
+ <ac:link ac:anchor="PersonalTravel">
+  <ac:link-body>
+   Personal Travel
+  </ac:link-body>
+ </ac:link>
+ .
+</p>
+<h3>
+ Countries classified as "High Risk"
+</h3>
+<p>
+ Countries identified here are locations in which Schrödinger may have significant financial interest, but also have highly developed electronic surveillance capabilities. The countries listed also may have a somewhat adversarial relationship with the United States, increasing the likelihood that electronic surveillance would be attempted.
+</p>
+<ul>
+ <li>
+  <p>
+   China
+  </p>
+ </li>
+ <li>
+  <p>
+   Russia
+  </p>
+  <ul>
+   <li>
+    <p>
+     <em>
+      <strong>
+       <span style="color: rgb(255,0,0);">
+        Due to the war in Ukraine, business and work from Russia is suspended
+       </span>
+      </strong>
+     </em>
+    </p>
+   </li>
+  </ul>
+ </li>
+</ul>
+<h3>
+ Preparation
+</h3>
+<p>
+ These tasks should be taken care of ahead of time in coordination with the IT Operations team.  Please file a ticket in the
+ <a href="https://freshservice.schrodinger.com/">
+  IT Help
+ </a>
+ portal and reference this page.
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Request a loaner laptop for the duration of your visit. Please do not bring your standard work laptop for travel.
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     Due to the relatively lower risk, a Macintosh laptop is provided.
+    </p>
+   </li>
+   <li>
+    <p>
+     Laptop must be encrypted prior to travel.
+    </p>
+   </li>
+   <li>
+    <p>
+     Screensaver lock must be enabled for 1 minute inactivity lock.
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Request an ExpressVPN license. This will help not only secure your communications but also allow you access to resources that may not otherwise be available.
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     Please note that ExpressVPN doesn't guarantee access to Gmail while in China. It does, however, improve your chances of reaching the service.
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Request a computer privacy screen.
+  </p>
+ </li>
+ <li>
+  <p>
+   Request a hardware security token for 2-factor authentication.
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     Ensure that the token you have obtained is configured for use with Google and Okta.
+    </p>
+   </li>
+  </ol>
+ </li>
+</ol>
+<h3>
+ During Travel
+</h3>
+<ol start="1">
+ <li>
+  <p>
+   Power off all devices when not directly in your possession or in use; for instance, while going through customs.
+  </p>
+ </li>
+ <li>
+  <p>
+   Please leave your cell phone at home. If this is not possible, then please observe the follow precautions:
+  </p>
+  <ul>
+   <li>
+    <p>
+     Ensure the phone is not "rooted" or "jailbroken."
+    </p>
+   </li>
+   <li>
+    <p>
+     Ensure the phone is locked with a passcode and encrypted.
+    </p>
+   </li>
+   <li>
+    <p>
+     Leave the phone powered off and stored safely while not in your posession.
+    </p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   Keep the ExpressVPN connection active at all times.
+  </p>
+ </li>
+</ol>
+<h3>
+ Upon Return
+</h3>
+<ol start="1">
+ <li>
+  <p>
+   Change your Okta password. This will also change your LDAP and AD passwords.
+  </p>
+ </li>
+ <li>
+  <p>
+   Generate a new SSH private key, deleting your private and public keys.
+  </p>
+ </li>
+ <li>
+  <p>
+   File an IT ticket requesting that the Information Security team run a scan on your loaner laptop for malware.
+  </p>
+ </li>
+ <li>
+  <p>
+   After the malware scan, you may transfer needed files to your primary laptop (or upload to Google Drive, etc).
+  </p>
+ </li>
+ <li>
+  <p>
+   Return laptop to IT.
+  </p>
+ </li>
+</ol>
+<h3>
+ Personal Travel
+</h3>
+<p>
+ When traveling on personal business or vacation, please take the following precautions.
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Travel with your mobile phone is permitted, but please remove Schrodinger accounts.
+  </p>
+  <ol start="1">
+   <li>
+    <p>
+     These can be re-enabled upon return.
+    </p>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <p>
+   Do not travel with your work laptop. If you need to be in communication for work reasons, please follow the general guidelines listed above.
+  </p>
+ </li>
+</ol>

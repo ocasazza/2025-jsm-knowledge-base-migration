@@ -1,0 +1,541 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <ac:placeholder>
+     Add labels to this report to make it easy to find outages that relate to the service or the sites that were affected. That will help us find and report on relevant related issues.
+    </ac:placeholder>
+   </p>
+   <ac:structured-macro ac:macro-id="6041cfab-a8b7-40c8-aa32-0229b207b0df" ac:name="excerpt" ac:schema-version="1">
+    <ac:parameter ac:name="atlassian-macro-output-type">
+     INLINE
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      SIR for pdx-idf14-r01 outage on
+      <time datetime="2021-08-30">
+      </time>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="b2a57857-7f56-44d2-a0d4-91b3d7ebfcbf" ac:name="toc-zone" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:structured-macro ac:macro-id="58b18781-a929-4005-a5e0-2ef23adca3fe" ac:name="toc" ac:schema-version="1">
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="0db3d9b8-3a8d-4ad4-ae26-0a4ea4bc95c2" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="id">
+     SIR-metadata
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped" style="letter-spacing: 0.0px;">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         System/Service
+        </th>
+        <td colspan="1">
+         <a href="https://device42.schrodinger.com/admin/rackraj/device_cluster/9217/">
+          pdx-idf14-r01
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Ticket(s)
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:structured-macro ac:macro-id="d21d94d9-adcd-43ec-8351-25c60edb183c" ac:name="jira" ac:schema-version="1">
+            <ac:parameter ac:name="server">
+             System JIRA
+            </ac:parameter>
+            <ac:parameter ac:name="columnIds">
+             issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="columns">
+             key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+            </ac:parameter>
+            <ac:parameter ac:name="serverId">
+             ac6def98-2140-30c3-8103-4b52b8b31135
+            </ac:parameter>
+            <ac:parameter ac:name="key">
+             SYSMGR-59534
+            </ac:parameter>
+           </ac:structured-macro>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Outage scope
+        </th>
+        <td colspan="1">
+         PDX, 14th Floor
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Outage date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2021-08-30">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Report date
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <time datetime="2021-08-31">
+           </time>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report filed by
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <ac:link>
+            <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+            </ri:user>
+           </ac:link>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Report reviewed date
+        </th>
+        <td colspan="1">
+         <ac:placeholder>
+          Use date macro for the date the report was reviewed with the team or relevant stakeholders
+         </ac:placeholder>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <h2>
+    Executive summary
+   </h2>
+   <hr/>
+   <p>
+    At 2:55 pm PST, a loss of power to the switch in the 14th floor IDF caused a loss of connection to all resources on that floor. Service was restored at 3:49 pm PST.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    <span>
+     Background
+    </span>
+   </h2>
+   <hr/>
+   <p>
+    Networking on the 14th floor is serviced entirely by a stacked switch located in a locked and key-carded IDF on that floor.
+    <br/>
+    The switch is powered by an APC UPS, connected to a network-capable PDU.
+    <br/>
+    The switch is uplinked by a redundant connection to the MDF (pdx-core) on the 13th floor.
+   </p>
+   <h2>
+    Incident Description
+   </h2>
+   <hr/>
+   <p>
+    A disconnected power cord caused the UPS to drain completely and ultimately the loss of power to the switch on 14.
+   </p>
+   <h3>
+    Chronology
+   </h3>
+   <p>
+    11:35am pdx-ups-idf14-a01 loses power.
+   </p>
+   <p>
+    <span style="letter-spacing: 0.0px;">
+     2:54pm LibreNMS detects the downed connection on pdx-idf13-r01,
+    </span>
+    <ac:link>
+     <ri:user ri:userkey="557058:8aff9fa7-fab5-4a58-8371-4bbe29336cd2">
+     </ri:user>
+    </ac:link>
+    <span style="letter-spacing: 0.0px;">
+     notes in the SYSMGR chat that he's lost access to multiple machines, and Herc Silverstein notes in the IT Hotline that he's just lost his connection to his desktop.
+    </span>
+   </p>
+   <p>
+    3:01pm
+    <ac:link>
+     <ri:user ri:userkey="712020:b178eabd-1e55-4e1b-a043-22e743e3e0aa">
+     </ri:user>
+    </ac:link>
+    notes that the connection between 13 and 14 is gone and
+    <ac:link>
+     <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+     </ri:user>
+    </ac:link>
+    agrees to go in to remediate.
+   </p>
+   <p>
+    3:40pm
+    <ac:link>
+     <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+     </ri:user>
+    </ac:link>
+    arrives to find that the switch and PDU are off, and the UPS is off and has no charge. After a few minutes, it's easily determined that the locking power cord to the UPS is loose from the back of the UPS. Plugging it in restores power to the UPS, and switching the UPS on restores power to the PDU and switch.
+   </p>
+   <p>
+    3:49pm Service is restored
+   </p>
+   <h3>
+    Corrective Action
+   </h3>
+   <p>
+    Re-connecting the power cord to the UPS and switching it on resolved the issue.
+   </p>
+   <h3>
+    Analysis
+   </h3>
+   <p>
+    Because of a variety of issues, noted below, it is impossible to determine whether the UPS was incorrectly installed, accidentally disconnected, or otherwise.
+   </p>
+   <p>
+    The first issue is that although the UPS's plug physically locks into the back of it, somehow it was loose. Without more information, we cannot be sure that it was installed correctly in the first place, or whether the plug was accidentally or intentionally unplugged. Oddly, the disconnected UPS would have been beeping loudly but no one seems to have said or done anything about it. I saw in the logs that Ryne Johnston was in the office on Aug 30, so I asked if he'd noticed anyone coming or going from the MDF and he said that he saw the cleaning crew in there around 2pm.
+   </p>
+   <p>
+    The second issue is that, for some reason, the IDF on 14 was propped open and the door latch was taped to prevent it locking, presumably since Aug 26. I know that this door was locked and the tape removed as of Aug 17, because that's when the Brivo system was installed and I remember verifying it working and removing the tape. According to the Brivo logs, the last person to open that door is "Janitor- 3 PDX" on 26-08-2021 at 6:55am. There's no legitimate reason that any janitor or construction staff would need access to that room, since all it contains is the network switching and our security system. It has since been locked, janitorial access has been revoked, and as of this writing has not been accessed.
+   </p>
+   <p>
+    The third issue is that neither the PDU nor the UPS are connected to the network. Both have Ethernet cables connected to their network ports, and drawn to the switch, but neither has been plugged in. Once they're physically connected, they'll need to be configured to notify for alarms, and monitoring will need to be set up for both of them. This should have been done as part of the installation.
+   </p>
+   <p>
+    The fourth issue is that we have no video cameras monitoring the 14th floor. Based on the load on the UPS (~7-9%), the power lasts for ~2h45m (logs show it was disconnected at 11:35am Aug 30). The door must have been propped open since Aug 26, but have no verifiable way of knowing who went in there at that time. These cameras have been offline for months:
+    <ac:structured-macro ac:macro-id="352a802d-7174-4bf3-968e-a39a7252e297" ac:name="jira" ac:schema-version="1">
+     <ac:parameter ac:name="server">
+      System JIRA
+     </ac:parameter>
+     <ac:parameter ac:name="columnIds">
+      issuekey,summary,issuetype,created,updated,duedate,assignee,reporter,priority,status,resolution
+     </ac:parameter>
+     <ac:parameter ac:name="columns">
+      key,summary,type,created,updated,due,assignee,reporter,priority,status,resolution
+     </ac:parameter>
+     <ac:parameter ac:name="serverId">
+      ac6def98-2140-30c3-8103-4b52b8b31135
+     </ac:parameter>
+     <ac:parameter ac:name="key">
+      SYSMGR-56205
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h3>
+    How quickly was the problem detected?
+   </h3>
+   <p>
+    The problem was not detected for an unknown number of hours, until it caused a service disruption.
+   </p>
+   <p>
+    <span style="font-size: 16.0px;font-weight: bold;letter-spacing: -0.006em;">
+     How was the problem detected?
+    </span>
+   </p>
+   <p>
+    The problem was detected by physically inspecting the hardware.
+   </p>
+   <h3>
+    How can detection be improved?
+   </h3>
+   <p>
+    Neither the UPS nor the PDU are physically connected to the network, and presumably not configured for notifications or monitoring.
+    <br/>
+    Getting both of them connected to the network and correctly configuring monitoring could have given us advance warning that a power loss had occurred and an explanation for the loss of connectivity.
+   </p>
+   <h2>
+    Response
+   </h2>
+   <hr/>
+   <h3>
+    How quickly did we respond once detected?
+   </h3>
+   <p>
+    Our response was immediate once service had been interrupted.
+   </p>
+   <h3>
+    Did we adequately communicate to our users?
+   </h3>
+   <p>
+    Seemingly the only user who noticed the outage got an immediate response that we were aware of the issue in the IT Hotline, and a follow up once service had been restored.
+   </p>
+   <h3>
+    If not, how can this be improved?
+   </h3>
+   <p>
+    End-user communication was appropriate for this incident.
+   </p>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Mitigation
+   </h2>
+   <hr/>
+   <h3>
+    What went well that helped minimize the impact of this problem?
+   </h3>
+   <p>
+    Both
+    <ac:link>
+     <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+     </ri:user>
+    </ac:link>
+    and
+    <ac:link>
+     <ri:user ri:userkey="557058:8aff9fa7-fab5-4a58-8371-4bbe29336cd2">
+     </ri:user>
+    </ac:link>
+    were immediately available to go into the office to fix the issue quickly.
+   </p>
+   <h3>
+    What can be done to minimize the impact if a problem like this recurs?
+   </h3>
+   <p>
+    There's not much to be done to minimize the impact of an unplugged UPS.
+   </p>
+   <h2>
+    Avoidance
+   </h2>
+   <hr/>
+   <h3>
+    What can we do in the future to avoid a problem like this?
+   </h3>
+   <p>
+    The badges assigned to the janitorial staff have been removed from access to the IDF, so that will help prevent them cleaning that room or propping the door open for any reason.
+   </p>
+   <p>
+    Completing the installation of the UPS and PDU by connecting them to the network and setting up monitoring will help us get advance notice that a power loss has occurred and possibly give us sufficient time to get to the office before the UPS is completely drained, causing an outage.
+   </p>
+   <p>
+    Completing the installation of the security cameras will give us greater transparency into the comings and goings of our office and will give us the ability to definitively answer "who" and "when", should similar circumstances recur.
+   </p>
+   <h2>
+    Next Actions
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     After analyzing and talking about this incident what actions did the reviewers and management decide should be done to address shortfalls in detection, mitigation or avoidance. Use tasks, assignments and due dates or link to created jira tickets.
+    </ac:placeholder>
+   </p>
+   <ac:task-list>
+    <ac:task>
+     <ac:task-id>
+      1
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <span class="placeholder-inline-tasks">
+       <ac:link>
+        <ri:user ri:userkey="557058:c19c6239-8657-4845-b158-eec62442daf4">
+        </ri:user>
+       </ac:link>
+       is currently assigned
+       <ac:structured-macro ac:macro-id="e15c6aff-a739-4ad2-9469-fda45a3730b4" ac:name="jira" ac:schema-version="1">
+        <ac:parameter ac:name="server">
+         System JIRA
+        </ac:parameter>
+        <ac:parameter ac:name="serverId">
+         ac6def98-2140-30c3-8103-4b52b8b31135
+        </ac:parameter>
+        <ac:parameter ac:name="key">
+         SYSMGR-56205
+        </ac:parameter>
+       </ac:structured-macro>
+       <br/>
+      </span>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      3
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <span class="placeholder-inline-tasks">
+       <ac:link>
+        <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+        </ri:user>
+       </ac:link>
+       handled the UPS and PDU in
+       <ac:structured-macro ac:macro-id="7fdb2684-7b65-47fd-965a-8ef928e6e3f5" ac:name="jira" ac:schema-version="1">
+        <ac:parameter ac:name="server">
+         System JIRA
+        </ac:parameter>
+        <ac:parameter ac:name="serverId">
+         ac6def98-2140-30c3-8103-4b52b8b31135
+        </ac:parameter>
+        <ac:parameter ac:name="key">
+         ITPRJ-2809
+        </ac:parameter>
+       </ac:structured-macro>
+      </span>
+     </ac:task-body>
+    </ac:task>
+    <ac:task>
+     <ac:task-id>
+      5
+     </ac:task-id>
+     <ac:task-status>
+      complete
+     </ac:task-status>
+     <ac:task-body>
+      <span class="placeholder-inline-tasks">
+       Refer issue to
+       <ac:link>
+        <ri:user ri:userkey="557058:06e0cf88-5e2b-4a95-8f42-d4b029e0bc87">
+        </ri:user>
+       </ac:link>
+       for review of physical security implications
+      </span>
+     </ac:task-body>
+    </ac:task>
+   </ac:task-list>
+   <p>
+    <br/>
+   </p>
+   <h2>
+    Related articles
+   </h2>
+   <hr/>
+   <p>
+    <ac:placeholder>
+     Related articles appear here based on the labels you select. Click to edit the macro and add or change labels.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="ffeb327a-3070-4405-823e-4605184c1568" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="max">
+      5
+     </ac:parameter>
+     <ac:parameter ac:name="spaces">
+      SYSMGR
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      modified
+     </ac:parameter>
+     <ac:parameter ac:name="reverse">
+      true
+     </ac:parameter>
+     <ac:parameter ac:name="type">
+      page
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and type = "page" and space = "SYSMGR"
+     </ac:parameter>
+     <ac:parameter ac:name="labels">
+      kb-how-to-article
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <ac:structured-macro ac:macro-id="b77901a8-fc07-43f9-b345-36673b35c2e9" ac:name="details" ac:schema-version="1">
+    <ac:parameter ac:name="hidden">
+     true
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th>
+         Related issues
+        </th>
+        <td>
+         <br/>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

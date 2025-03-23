@@ -1,0 +1,115 @@
+<p>
+</p>
+<p>
+ There are a couple ways to do this.
+</p>
+<ol>
+ <li>
+  <p>
+   If you just have one job that you want to run next, you can put your other jobs on hold until that job you want to run is started
+  </p>
+ </li>
+ <li>
+  <p>
+   First, hold all your jobs:
+  </p>
+ </li>
+ <li>
+  qhold -u $USER
+ </li>
+ <li>
+  Then release the job you want to run next:
+  <ul>
+   <li>
+    you can repeat this for all your higher priority jobs
+   </li>
+  </ul>
+ </li>
+ <li>
+  qrls   (where jobid is the batchid like 737400)
+ </li>
+ <li>
+  Then wait until the jobs you want are running, then release all your held jobs:
+  <ul>
+   <li>
+    /nfs/working/sysmgr/sysmgr-repo/scripts/sge_wait_until.sh
+   </li>
+  </ul>
+ </li>
+ <li>
+  qrls -u $USER
+ </li>
+ <li>
+  <p>
+   Alternatively, use a sysmgr written script to automatically wait for a job to be started and release the rest of your jobs. Pass it the jobid you want to wait on. If you have a series of jobs, give it the last one listed by qstat -s p -u  that you want to run.
+  </p>
+ </li>
+ <li>
+  <p>
+   If you have multiple jobs you want to run before others, you can lower the priority of the jobs that have lower priority, thereby allowing your important job to bubble up. Run the following command for each of your lower priority jobs.
+  </p>
+ </li>
+ <li>
+  <p>
+   qalter -p -1000
+  </p>
+ </li>
+ <li>
+  <p>
+   After your higher priority jobs have completed, you can ask sysmgr to reset the priority to normal for the other jobs:
+  </p>
+  <ul>
+   <li>
+    subject: "Please reset my job priorities"
+   </li>
+   <li>
+    body: "Can you please reset the priorities of my jobs on  to the default? (run qalter -p 0 -u )"
+   </li>
+   <li>
+    If you only want certain jobs' priorities reset, please list those job id's.
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p>
+   A suggestion from @Jared Sampson: "FWIW, I had to do this again yesterday so I wrote a bash function to release the held jobs after all my other more urgent jobs were running:"
+  </p>
+ </li>
+</ol>
+<p>
+ <code>
+  bash
+   # check how many jobs I have waiting
+   alias qw='qstat | grep "$USER \*qw" | wc -l'
+   # Sleep until all the remaining "qw" jobs are running,
+   # then release all jobs belonging to the current user.
+   function hold\_release() {
+   holdlog="hold-and-release.log"
+   date &gt; $holdlog
+   while [ "$(qw)" -gt 0 ]; do
+   sleep 300
+   date &gt;&gt; $holdlog
+   done \
+   &amp;&amp; printf "All qw jobs are now running\n\n" &gt;&gt; $holdlog
+   [ "$(qw)" -eq 0 ] &amp;&amp; qrls -u $USER &gt;&gt; $holdlog \
+   &amp;&amp; printf "\nReleased jobs" &gt;&gt; $holdlog
+   }
+ </code>
+</p>
+<p>
+ <ac:structured-macro ac:macro-id="1234" ac:name="excerpt" ac:schema-version="1">
+  <ac:parameter ac:name="hidden">
+   true
+  </ac:parameter>
+  <ac:parameter ac:name="name">
+   User Story
+  </ac:parameter>
+  <ac:rich-text-body>
+   <p>
+    As a researcher, I need to know how to prioritize a newly submitted job over my existing queued jobs so I can get urgent results more quickly.
+   </p>
+  </ac:rich-text-body>
+ </ac:structured-macro>
+</p>
+<p>
+</p>

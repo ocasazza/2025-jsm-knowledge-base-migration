@@ -1,0 +1,170 @@
+<ac:structured-macro ac:local-id="7d95327b-1614-4a24-bcef-19edeeb81de3" ac:macro-id="dbee1564d1df88f4b93ad15b107e9f33ee7887c819933551deefb0905db89d88" ac:name="include" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="">
+  <ac:link>
+   <ri:page ri:content-title="Banner passwordless ssh deprecated" ri:version-at-save="1">
+   </ri:page>
+  </ac:link>
+ </ac:parameter>
+</ac:structured-macro>
+<p>
+ On Windows, passwordless SSH is handled using
+ <code>
+  plink.exe
+ </code>
+ , which is provided in the Schrödinger software distribution. To set up passwordless SSH, you can use the Remote Login Configuration tool to guide you through the process, which involves generating and saving keys, then configuring your remote hosts. This application is available from the Start menu, under Schrodinger-2019-4.
+</p>
+<p>
+ Before you start, you should ensure that your hosts file,
+ <code>
+  schrodinger.hosts
+ </code>
+ , contains settings for all the hosts that you want to use. This file is used in the second stage of the setup. The
+ <code>
+  schrodinger.hosts
+ </code>
+ file used is the first one found in the following locations:
+</p>
+<ul>
+ <li>
+  <p>
+   The startup directory of the configuration tool.
+  </p>
+ </li>
+ <li>
+  <p>
+   <code>
+    %USERPROFILE%\Schrodinger
+   </code>
+   .
+  </p>
+ </li>
+ <li>
+  <p>
+   The installation (
+   <code>
+    %SCHRODINGER%
+   </code>
+   ).
+  </p>
+ </li>
+</ul>
+<p>
+ If you want to use a
+ <code>
+  schrodinger.hosts
+ </code>
+ file from a particular directory, right-click on the shortcut for the configuration tool, and change the Start in directory.
+</p>
+<p>
+ The first panel is labeled Remote Access Setup. A summary of the steps is given in the panel; these steps are given in detail below.
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Click
+   <strong>
+    Generate Keys
+   </strong>
+   <br/>
+   The default key generation is for SSH-2 RSA protocol and 1024 bit encryption. You should not need to change these choices, but if you do need to change them, click Options. The keys are written to
+   <code>
+    %USERPROFILE%
+   </code>
+   . The private key is stored as
+   <em>
+    user
+   </em>
+   <code>
+    .ppk
+   </code>
+   and the public key is stored as
+   <code>
+    publickey.txt
+   </code>
+   .
+   <br/>
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p>
+   Click
+   <strong>
+    Initialize Host Access.
+   </strong>
+   <br/>
+   A second panel opens. In this panel, the available hosts are listed in two tables. In the first, you can edit the table cells to enter a host name and a user name. The second table contains a list of all hosts in the hosts file in the installation,
+   <code>
+    schrodinger.hosts
+   </code>
+   <br/>
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p>
+   Select a host from the second list.
+   <br/>
+   A host does not need to be initialized if (a) it has a home drive that is shared with the host on which you are running the configuration tool, or (b) it has already been initialized.
+   <br/>
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p>
+   Click
+   <strong>
+    Initialize
+   </strong>
+   .
+   <br/>
+   You will be prompted to enter your password for the host (unless it is already initialized). A connection is opened to this host, and the public key is appended to the authorized keys file on the host. Progress and results of the connection are displayed in the Status area.
+   <br/>
+   A dialog box opens, asking if you want to add this host to the list of known hosts.
+   <br/>
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p>
+   Click
+   <strong>
+    Yes
+   </strong>
+   .
+   <br/>
+   <br/>
+  </p>
+ </li>
+ <li>
+  <p>
+   Repeat Step 3 and Step 5
+   <a href="https://www.schrodinger.com/sites/default/files/s3/mkt/Documentation/current/docs/install_guide/job_setup_remote_windows.htm?tocpath=Installation%20and%20Jobs%7CInstallation%20Guide%7CPreparing%20for%20Remote%20Job%20Submission%7CSetting%20Up%20Access%20to%20Remote%20Hosts%20Manually%7C_____2#job_setup_525780828_757321">
+   </a>
+   for each host that you want to initialize access to.
+   <br/>
+   You can only initialize access to one host at a time, so you must select each host and initialize access to it. If several hosts share a common home file system, you only need to initialize access to one of those hosts, but you should test all of them. Likewise, you only need to initialize access to a queue host for one of the hosts file entries for the queues on that host.
+   <br/>
+   <br/>
+   To test access to a host, select a host in either table and click Test.
+  </p>
+  <p>
+   Results are shown in the
+   <strong>
+    Status
+   </strong>
+   area.
+  </p>
+ </li>
+</ol>
+<p>
+ If you want to initialize access to a host that is not in the hosts file (for example, before adding it to the hosts file) you can add it to the
+ <strong>
+  User Specified
+ </strong>
+ hosts table, select it and click
+ <strong>
+  Initialize
+ </strong>
+ .
+</p>

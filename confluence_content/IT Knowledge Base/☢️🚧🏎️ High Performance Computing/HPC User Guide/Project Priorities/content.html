@@ -1,0 +1,259 @@
+<h1>
+ <ac:structured-macro ac:local-id="cc990c4a-ae56-4269-94c2-3db01ef9ee4b" ac:macro-id="1f7d3302-3900-4734-a578-6071abde12ea" ac:name="anchor" ac:schema-version="1">
+  <ac:parameter ac:name="">
+   project-priorities
+  </ac:parameter>
+ </ac:structured-macro>
+ Project Priorities
+</h1>
+<p>
+ The bolt cluster uses project-based scheduling. Different projects have different priorities. The queuing system will balance the usage of the cluster between the projects depending on the project's priority. Generally, this means that more of a higher priority project's jobs will start running sooner.
+</p>
+<p>
+ To assign a project priority to your job, you will need to add the following arguments to your submission commands:
+</p>
+<p>
+ -QARG "-P secret_sauce_project_x"
+</p>
+<p>
+ Where
+ <code>
+  secret_sauce_project_x
+ </code>
+ is the name of the project you're working on. Please contact your group leader (Lidia, Leah, Vicki, Robert, Ramy) for your specific project name and any special priority requests or changes.
+</p>
+<p>
+ If you are not associated with a project, you may submit jobs normally without the extra
+ <code>
+  -QARG
+ </code>
+ . Please note that the key to high priority is the association with a project.
+</p>
+<p>
+ <strong>
+  As of 6/23/2019, the changes have been made to project configuration. Please switch to new Project Queue Name from now on.
+ </strong>
+</p>
+<table ac:local-id="bde16ba6-e92f-4a79-92a4-22891a16f9f8" data-layout="default" data-table-width="760">
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     <strong>
+      Project Queue Type
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Job Type
+     </strong>
+    </p>
+   </th>
+   <th>
+    <p>
+     <strong>
+      Project Queue Name
+     </strong>
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     ddag_fep_large
+    </p>
+   </td>
+   <td>
+    <p>
+     CPU
+    </p>
+   </td>
+   <td>
+    <p>
+     ddag_large_CPU
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     ddag_fep_large
+    </p>
+   </td>
+   <td>
+    <p>
+     GPU
+    </p>
+   </td>
+   <td>
+    <p>
+     ddag_large_GPU
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     ddag_fep_small
+    </p>
+   </td>
+   <td>
+    <p>
+     CPU
+    </p>
+   </td>
+   <td>
+    <p>
+     ddag_small_CPU
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     ddag_fep_small
+    </p>
+   </td>
+   <td>
+    <p>
+     GPU
+    </p>
+   </td>
+   <td>
+    <p>
+     ddag_small_GPU
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     appsci
+    </p>
+   </td>
+   <td>
+    <p>
+     CPU
+    </p>
+   </td>
+   <td>
+    <p>
+     appsci_CPU
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     appsci
+    </p>
+   </td>
+   <td>
+    <p>
+     GPU
+    </p>
+   </td>
+   <td>
+    <p>
+     appsci_GPU
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     dev_fep, dev_ml
+    </p>
+   </td>
+   <td>
+    <p>
+     CPU
+    </p>
+   </td>
+   <td>
+    <p>
+     dev_CPU
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     dev_fep, dev_ml
+    </p>
+   </td>
+   <td>
+    <p>
+     GPU
+    </p>
+   </td>
+   <td>
+    <p>
+     dev_GPU
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     qa_fep, ml_backtest, dev_build
+    </p>
+   </td>
+   <td>
+    <p>
+     CPU
+    </p>
+   </td>
+   <td>
+    <p>
+     qa_CPU
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     qa_fep, ml_backtest, dev_build
+    </p>
+   </td>
+   <td>
+    <p>
+     GPU
+    </p>
+   </td>
+   <td>
+    <p>
+     qa_GPU
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ <strong>
+  Note:
+ </strong>
+ If you are running a mixed CPU/GPU workflow, please always use the appropriate
+ <code>
+  *_GPU
+ </code>
+ project queue.
+</p>
+<p>
+ If you encounter difficulty with throughput or inadequate priority on the cluster, please reach out to Robert Abel with your information and he can make priority adjustments.
+</p>
+<ac:structured-macro ac:local-id="5d02e732-31ac-4857-800b-00f310f503b0" ac:macro-id="9326056b410520b72096d65108bef6583060e03dd89ee97bb9957cdb55244fcc" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:parameter ac:name="name">
+  Researcher Story
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   As a researcher, I need to understand how project priorities work on the HPC clusters so I can ensure my jobs have the appropriate priority and run efficiently within the scheduling system.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>

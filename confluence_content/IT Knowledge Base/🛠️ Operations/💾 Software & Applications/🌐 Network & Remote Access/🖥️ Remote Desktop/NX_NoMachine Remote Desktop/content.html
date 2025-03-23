@@ -1,0 +1,1060 @@
+<p class="auto-cursor-target">
+ <ac:structured-macro ac:macro-id="cd348967-c5e3-4323-93c9-bf2445e4cf35" ac:name="toc" ac:schema-version="1">
+ </ac:structured-macro>
+</p>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<ac:structured-macro ac:macro-id="92a1e6c0-8183-4d00-a22b-3340302c2d0c" ac:name="info" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   This document was originally all copied/pasted from the old Schrodinger twiki (link has been removed).
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ <br/>
+</p>
+<p>
+ NX gives you access to a graphical desktop on a Linux machine from a remote computer. The Linux machine to which you are connecting can be either your own Linux desktop machine in the office, or one of certain shared-use NX gateway Linux machines specifically set up for NX access.
+</p>
+<table class="wrapped">
+ <colgroup>
+  <col/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <th>
+    <h1>
+     <span class="legacy-color-text-red2">
+      <strong>
+       IMPORTANT REMINDER
+      </strong>
+     </span>
+    </h1>
+    <p>
+     <span class="legacy-color-text-red2">
+      <strong>
+       YOU MUST use the exact NoMachine 5.3.12 clients attached to the bottom of this page. DO NOT USE newer versions downloaded directly from the NoMachine website, they will not work.
+      </strong>
+     </span>
+    </p>
+   </th>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ User Guide
+</h2>
+<p>
+ If you've already setup and configured your client, you can find additional information in our
+ <a href="https://schrodinger.atlassian.net/wiki/x/3T1LAw">
+  User Guide
+ </a>
+ .
+</p>
+<h2>
+ NX client program setup
+</h2>
+<p>
+ You will need to install an NX client program in order to connect to the Linux machine via NX. You will also need to create configuration entries ("sessions") for each Linux machine to which you wish to connect.
+</p>
+<p>
+ Use the following table to help you determine how to configure your NX client software:
+</p>
+<p>
+ <br/>
+</p>
+<table class="wrapped">
+ <colgroup>
+  <col/>
+  <col/>
+  <col/>
+  <col/>
+  <col/>
+  <col/>
+ </colgroup>
+ <tbody>
+  <tr>
+   <th>
+    Mode
+   </th>
+   <th>
+    Connecting to
+   </th>
+   <th>
+    Connecting from a machine
+   </th>
+   <th>
+    “Host” setting in NX client
+   </th>
+   <th>
+    "Protocol", and/or “Port” setting in NX client
+   </th>
+   <th>
+    NX key to use in client
+   </th>
+  </tr>
+  <tr>
+   <td>
+    A
+   </td>
+   <td>
+    your Linux desktop
+   </td>
+   <td>
+    on the office wired network
+   </td>
+   <td>
+    hostname of your Linux desktop
+   </td>
+   <td>
+    SSH, 22
+   </td>
+   <td>
+    <code>
+     /etc/nxserver/client.id_dsa.key
+    </code>
+    or
+    <code>
+     /usr/local/src/nxclient/
+     <em>
+      hostname of your Linux desktop
+     </em>
+     .client.id_dsa.key
+    </code>
+    from your Linux desktop
+   </td>
+  </tr>
+  <tr>
+   <td>
+    B
+   </td>
+   <td>
+    your Linux desktop
+   </td>
+   <td>
+    on the VPN (outside the office, or on the office wireless)
+   </td>
+   <td>
+    hostname of your Linux desktop
+   </td>
+   <td>
+    SSH, 22
+   </td>
+   <td>
+    <code>
+     /etc/nxserver/client.id_dsa.key
+    </code>
+    or
+    <code>
+     /usr/local/src/nxclient/
+     <em>
+      hostname of your Linux desktop
+     </em>
+     .client.id_dsa.key
+    </code>
+    from your Linux desktop
+   </td>
+  </tr>
+  <tr>
+   <td>
+    C
+   </td>
+   <td>
+    your Linux desktop
+   </td>
+   <td>
+    using an ssh tunnel (outside the office, or on the office wireless)
+   </td>
+   <td>
+    localhost
+   </td>
+   <td>
+    SSH, local forwarded port
+   </td>
+   <td>
+    <code>
+     /etc/nxserver/client.id_dsa.key
+    </code>
+    or
+    <code>
+     /usr/local/src/nxclient/
+     <em>
+      hostname of your Linux desktop
+     </em>
+     .client.id_dsa.key
+    </code>
+    from your Linux desktop
+   </td>
+  </tr>
+  <tr>
+   <td>
+    D
+   </td>
+   <td>
+    an NX gateway (nyc-nxgate or pdx-nxgate)
+   </td>
+   <td>
+    anywhere
+   </td>
+   <td>
+    hostname of the NX gateway
+   </td>
+   <td>
+    SSH, 22
+   </td>
+   <td>
+    The key file in
+    <code>
+     /home/share/nx/
+    </code>
+    which corresponds to the NX gateway machine to which you wish to connect.
+    <strong>
+     Note:
+    </strong>
+    You will not be able to ssh into the NX gateway machine to retrieve the key file. You'll need to ssh into one of the ssh gateways (ny-gate or pdx-gate) or an office Linux machine other than the NX gateway in order to retrieve the key file from
+    <code>
+     /home/share/nx/
+    </code>
+    .
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p class="auto-cursor-target">
+ <br/>
+</p>
+<h3>
+ Retrieving key files
+</h3>
+<p>
+ You'll need to use scp or sftp, from the command-line or via a graphical client (like
+ <span class="twikiNewLink">
+  <a href="https://winscp.net/">
+   WinSCP
+  </a>
+ </span>
+ on Windows, or
+ <span class="twikiNewLink">
+  <a href="https://cyberduck.io/">
+   CyberDuck
+  </a>
+ </span>
+ on the Mac) to retrieve the key files mentioned in the table above. For example, using Terminal on a Mac to copy the key file for your Linux desktop to your Mac:
+</p>
+<p>
+ <code>
+  sftp _hostname of your Linux desktop_
+ </code>
+ <br/>
+ <code>
+  get /usr/local/src/nxclient/
+  <em>
+   hostname of your Linux desktop
+  </em>
+  .client.id_dsa.key
+ </code>
+</p>
+<p>
+ <br/>
+</p>
+<h3>
+ Windows &amp; Linux
+</h3>
+<ul>
+ <li>
+  Download (see bottom of page) and
+  <strong>
+   install the 5.x NoMachine Client if not installed
+  </strong>
+  <ul>
+   <li>
+    <span class="legacy-color-text-red2">
+     <strong>
+      YOU MUST use the exact NoMachine 5.3.12 clients attached to the bottom of this page. DO NOT USE newer versions downloaded directly from the NoMachine website, they will not work.
+     </strong>
+    </span>
+   </li>
+   <li>
+    <span class="legacy-color-text-gray2">
+     <em>
+      DEPRECATED NX Client 3.x can be downloaded from the following links:
+     </em>
+    </span>
+    <ul>
+     <li>
+      <span class="legacy-color-text-gray2">
+       <em>
+        For Linux: Use 'yum install nxclient'
+       </em>
+      </span>
+     </li>
+     <li>
+      <span class="legacy-color-text-gray2">
+       <em>
+        For Windows
+       </em>
+      </span>
+     </li>
+     <li>
+      <span class="legacy-color-text-gray2">
+       <em>
+        For MacOSX. After downloading, rename the file from .zipped to .zip, unzip file, and if necessary remove .zip extension from resulting unpacked directory so that it ends in .pkg.
+       </em>
+      </span>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p>
+ <br/>
+</p>
+<ul>
+ <li>
+  Set up a session as follows:
+  <ul>
+   <li>
+    NoMachine
+    <strong>
+     5.3.12
+    </strong>
+    :
+    <ul>
+     <li>
+      Click on "New" icon (next to search window).
+     </li>
+     <li>
+      Select "SSH" for "Select the protocol used to connect." For example:
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p style="margin-left: 120.0px;">
+ <ac:image ac:height="250">
+  <ri:attachment ri:filename="image2020-6-22_11-21-53.png" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:image>
+</p>
+<ul>
+ <li style="list-style-type: none;">
+  <ul>
+   <li style="list-style-type: none;">
+    <ul>
+     <li>
+      Type in the NX server FQDN in "Host" window space; Leave "Port" 22 unchanged. For example:
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p style="margin-left: 120.0px;">
+ <ac:image ac:height="250">
+  <ri:attachment ri:filename="image2020-6-22_11-22-53.png" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:image>
+</p>
+<ul>
+ <li style="list-style-type: none;">
+  <ul>
+   <li style="list-style-type: none;">
+    <ul>
+     <li>
+      Select "Use the NoMachine login"
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p style="margin-left: 120.0px;">
+ <ac:image ac:height="250">
+  <ri:attachment ri:filename="image2020-6-22_11-23-33.png" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:image>
+</p>
+<ul>
+ <li style="list-style-type: none;">
+  <ul>
+   <li style="list-style-type: none;">
+    <ul>
+     <li>
+      Check "Use an alternate server key". Browse to the location where the server NX key file is saved on local machine. For which key file to use, see the table above.  For example:
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p style="margin-left: 120.0px;">
+ <ac:image ac:height="250">
+  <ri:attachment ri:filename="image2020-6-22_11-24-32.png" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:image>
+</p>
+<ul>
+ <li style="list-style-type: none;">
+  <ul>
+   <li style="list-style-type: none;">
+    <ul>
+     <li>
+      Accept default setting "Don't use a proxy" for Use a HTTP proxy for the network connection".
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p style="margin-left: 120.0px;">
+ <ac:image ac:height="250">
+  <ri:attachment ri:filename="image2020-6-22_11-25-2.png" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:image>
+</p>
+<ul>
+ <li style="list-style-type: none;">
+  <ul>
+   <li style="list-style-type: none;">
+    <ul>
+     <li>
+      Type a descriptive session name in the "Name" window. Normally use the host name of the NX server. Click on "Done" to complete configuration process. For example:
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p style="margin-left: 120.0px;">
+ <ac:image ac:height="250">
+  <ri:attachment ri:filename="image2020-6-22_11-26-2.png" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:image>
+</p>
+<ul>
+ <li style="list-style-type: none;">
+  <ul>
+   <li style="list-style-type: none;">
+    <ul>
+     <li>
+      Click on "Connect" to start the session.
+     </li>
+     <li>
+      Type in your Linux user name and password for "Username" and "Password". Click "Ok" to make connection.
+     </li>
+     <li>
+      After successfully authenticating, click  "Create a new KDE virtual desktop" for KDE. Click "Continue".
+      <strong>
+       Note: GNOME may not work on CentOS 6, and very likely will not work on CentOS 7 (black screen), so KDE is recommended.
+      </strong>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <em>
+     NX Client 3.x:
+    </em>
+    <ul>
+     <li>
+      <em>
+       On Windows, start the NX Connection Wizard. On Linux, run nxclient --wizard.
+      </em>
+     </li>
+     <li>
+      <em>
+       Session: anything you like
+      </em>
+     </li>
+     <li>
+      <em>
+       Host and Port: See the table above.
+      </em>
+     </li>
+     <li>
+      <em>
+       Click "Next"
+      </em>
+     </li>
+     <li>
+      <em>
+       Select the session type you want (KDE, Gnome, etc.)
+      </em>
+      <br/>
+      <em>
+       Note: If you do not need a full desktop and only want to run individual programs, select "Custom", click "Settings…", select "Run the following command" and enter your favorite terminal emulator (xterm, konsole, etc.)
+      </em>
+     </li>
+     <li>
+      <em>
+       Make sure that SSL encryption is enabled
+      </em>
+     </li>
+     <li>
+      <em>
+       Click "Next"
+      </em>
+     </li>
+     <li>
+      <em>
+       Check "Show the Advanced Configuration dialog"
+      </em>
+     </li>
+     <li>
+      <em>
+       Click "Finish"
+      </em>
+     </li>
+     <li>
+      <em>
+       Click "Key…", then "Import", and select the key file (see the table above).
+      </em>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<h3>
+ OSX
+</h3>
+<ul>
+ <li>
+  <span class="legacy-color-text-red2">
+   <strong>
+    YOU MUST use the exact NoMachine 5.3.12 clients attached to the bottom of this page. DO NOT USE newer versions downloaded directly from the NoMachine website, they will not work.
+   </strong>
+  </span>
+ </li>
+ <li>
+  For NoMachine
+  <strong>
+   5.3.12
+  </strong>
+  <ul>
+   <li>
+    See
+    <a href="https://schrodinger.atlassian.net/wiki/display/SYSMGR/Connecting+via+NX#ConnectingviaNX-Windows&amp;Linux">
+     the steps for Windows and Linux above
+    </a>
+    .
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul>
+ <li>
+  <em>
+   DEPRECATED NX Client 3.x:
+  </em>
+ </li>
+</ul>
+<ol>
+ <li>
+  <em>
+   Open NoMachine and add a computer (it's the icon of a computer display with a + in the upper right corner)
+  </em>
+ </li>
+ <li>
+  <em>
+   For the
+   <strong>
+    Name:
+   </strong>
+   and
+   <strong>
+    Host:
+   </strong>
+   fields, see the table above.
+  </em>
+ </li>
+ <li>
+  <em>
+   Click the
+   <strong>
+    Advanced
+   </strong>
+   button and select Use the NoMachine Login
+  </em>
+ </li>
+ <li>
+  <em>
+   Select Use an Alternate Server Key, and browse to the key (see the table above).
+  </em>
+ </li>
+ <li>
+  <em>
+   Continue through until you're prompted for your credentials.
+  </em>
+ </li>
+ <li>
+  <em>
+   Enter your credentials and opt to save them if you wish.
+  </em>
+ </li>
+ <li>
+  <em>
+   Once you're logged in, you should have the option &lt;New virtual desktop or custom session&gt;, where you can choose which Desktop Manager you'd like to use.
+  </em>
+  <ol>
+   <li>
+    <em>
+     See above for more information about those options.
+    </em>
+   </li>
+  </ol>
+ </li>
+ <li>
+  <em>
+   When you're finished, disconnect or terminate your session by hovering in the top-right corner and clicking the peel-down. There's a power button in the lower right where you can end your session. Disconnect if you'd like to resume later, Terminate if you're finished.
+  </em>
+ </li>
+</ol>
+<h2>
+ Remote NX via ssh tunnel (VPN is not required)
+</h2>
+<p>
+ In the examples below, 8822 is the local forwarded port as mentioned in the table above. You don't need to use 8822 as your local forwded port as in the examples below, but that is a port unlikely to already be in use on your client machine. If 8822 is already in use on your client machine, you can choose some other unused port.
+</p>
+<ul>
+ <li>
+  Linux
+  <ul>
+   <li>
+    <code>
+     <strong>
+      ssh -NfL 8822:&lt;ip address or host name of remote NX server&gt;:22 &lt;username&gt;@[ny-gate|pdx-gate].
+      <a href="http://schrodinger.com">
+       schrodinger.com
+      </a>
+     </strong>
+    </code>
+   </li>
+  </ul>
+ </li>
+ <li>
+  Windows
+  <ul>
+   <li>
+    Install
+    <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">
+     PuTTY
+    </a>
+    for Windows
+   </li>
+   <li>
+    Create a script file, start_ssh_tunnel.bat, with following line, and save to desktop:
+    <ul>
+     <li>
+      For 32-bit windows:
+      <ul>
+       <li>
+        <pre>"C:\Program Files\PuTTY\plink.exe" -L 8822:&amp;lt;ip address or host name of remote NX server&amp;gt;:22  &amp;lt;username&amp;gt;@[ny-gate|pdx-gate].schrodinger.com</pre>
+       </li>
+      </ul>
+     </li>
+     <li>
+      For 64-bit windows:
+      <ul>
+       <li>
+        <pre>"C:\Program Files (x86)\PuTTY\plink.exe" -L 8822:&amp;lt;ip address or host name of remote NX server&amp;gt;:22  &amp;lt;username&amp;gt;@[ny-gate|pdx-gate].schrodinger.com</pre>
+       </li>
+       <li>
+        For NX servers on NYC network use ny-gate; NX servers on PDX network, use pdx-gate
+       </li>
+       <li>
+        The ip address of an NX server can be found on the NX server with:
+        <ul>
+         <li>
+          <pre> /sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'</pre>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li>
+    Double click on start_ssh_tunnel.bat to create a ssh tunnel. Log in with your Linux account and leave the window open.
+   </li>
+   <li>
+    Create a new session
+    <ul>
+     <li>
+      Configure the session following the steps listed above for All Platforms except following:
+      <ul>
+       <li>
+        Host: 127.0.0.1
+       </li>
+       <li>
+        Port: 8822
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<h2>
+ Use
+ <span class="twikiNewLink">
+  VirtualGL
+ </span>
+</h2>
+<ul>
+ <li>
+  <span class="twikiNewLink">
+   VirtualGL
+  </span>
+  is installed and enabled on all
+  <span class="twikiNewLink">
+   CentOS
+  </span>
+  7 desktop machines with NVIDIA graphics card in MHG, NYC, PDX offices
+ </li>
+ <li>
+  To use
+  <span class="twikiNewLink">
+   VirtualGL
+  </span>
+  , run command as follow:
+ </li>
+</ul>
+<pre>$ vglrun $SCHRODINGER/maestro
+</pre>
+<h2>
+ Troubleshooting
+</h2>
+<ol>
+ <li>
+  <time datetime="2023-03-02">
+  </time>
+  As mentioned in
+  <ac:link ac:anchor="vglrun">
+   <ri:page ri:content-title="Maestro Tech Support Biweekly Meeting" ri:space-key="SUP" ri:version-at-save="260">
+   </ri:page>
+  </ac:link>
+  , when running Maestro from Suite 22-3 and newer, you
+  <strong>
+   must
+  </strong>
+  use vglrun. See
+  <ac:link ac:anchor="UseVirtualGL">
+   <ri:content-entity ri:content-id="54822595" ri:version-at-save="1">
+   </ri:content-entity>
+  </ac:link>
+  in this page and the separate page,
+  <ac:link>
+   <ri:page ri:content-title="002. Accessing newest version of Materials Science Suite from Desktop Computer" ri:space-key="MS" ri:version-at-save="21">
+   </ri:page>
+  </ac:link>
+ </li>
+ <li>
+  See more recent tips in our
+  <a href="https://schrodinger.atlassian.net/wiki/x/3T1LAw">
+   NX User Guide
+  </a>
+  and
+  <a href="https://docs.google.com/spreadsheets/d/1MyBhSAcXZqD6WmdPhuvBYVwxt854TaIKTegx5mHql-I/edit#gid=0">
+   CentOS 7 Known Issues
+  </a>
+  .
+ </li>
+ <li>
+  If you're using the NoMachine 4.x client on Windows, are able to successfully pass the login portion of the connection to the NX server, but then get 'Error is 108: Connection reset by peer' when trying to start an actual GNOME, KDE, etc. session, trying deleting or moving aside your ~/.nx directory on the NX server.
+ </li>
+ <li>
+  Test if you are able to ssh into the remote server from some other machine in that same office. If you are not able to ssh in by using the remote server's hostname, or are able to ssh in but get a message saying that your home directory could not be found, it could be the remote server is booted into the wrong VLAN or has gotten a DHCP address. It's also possible the sssd daemon has crashed or gotten into a bad state and needs to be restarted. Sysmgr will need to look into it further in any of these cases.
+ </li>
+ <li>
+  You can test the NX key of the remote server by copying it to your local machine and running:
+  <blockquote>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <span class="legacy-color-text-default">
+     ssh -i the client.id_dsa.key file -o PasswordAuthentication=no nx@the remote machine Or, on the remote server you can run:
+    </span>
+   </p>
+   <p>
+    <span class="legacy-color-text-default">
+     ssh -i /var/lib/nxserver/home/.ssh/client.id_dsa.key nx@localhost
+    </span>
+   </p>
+   <p>
+    <span class="legacy-color-text-default">
+     If the key is working you should get something like this: HELLO NXSERVER - Version 3.2.0-74-SVN OS (GPL, using backend: not detected)NX&gt; 105 If it isn't working, you can ask a sysmgr to re-generate the NX key on the remote server (instructions below are for non-salted, CentOS 5 or 6 desktops):
+    </span>
+   </p>
+   <ac:structured-macro ac:macro-id="a60823aa-4b08-446b-ac59-892ad745bff5" ac:name="code" ac:schema-version="1">
+    <ac:plain-text-body>
+     <![CDATA[cd /tmp
+nxsetup --install --clean --purge --override
+cd /var/lib/nxserver/home/.ssh
+ln -s authorizedkeys2 authorizedkeys
+cp client.iddsa.key /usr/local/src/nxclient/$(hostname -s).client.iddsa.key
+cp client.iddsa.key /etc/nxserver/
+cp server.iddsa.pub.key /etc/nxserver/]]>
+    </ac:plain-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <span class="legacy-color-text-default">
+     You'll then need to update the NX client connection config on your local machine to use the new NX key.
+    </span>
+   </p>
+   <p>
+    <br/>
+   </p>
+  </blockquote>
+ </li>
+ <li>
+  <h3 class="auto-cursor-target">
+   Sessions cleanup
+  </h3>
+  <ac:structured-macro ac:macro-id="36e767ba-ccb8-421e-b082-fe10323cdf8e" ac:name="info" ac:schema-version="1">
+   <ac:rich-text-body>
+    <h4>
+     End user
+    </h4>
+    <p>
+     If connecting to an NX gateway, note the actual server in the NX pool mentioned in the Detail output. For instance, if you're trying to NX into pdx-nxgate, the Detail output will mention if your failed connection was actually to pdx-nx-l01 or pdx-nx-l02. ssh to that NX server (pdx-nx-l01 or pdx-nx-l02, for example) in the NX pool, or to whichever machine to which you're trying to NX (your Linux desktop, for example) and
+     <strong>
+      kill any nxagent and nxnode processes owned by you
+     </strong>
+     <span>
+      . Also,
+     </span>
+     <strong>
+      delete any X* files owned by you in /tmp/.X11-unix/
+     </strong>
+     <span>
+      on the NX server.  Finally, you can optionally move aside your /home/&lt;user&gt;/.nx directory on the NX server if the previous didn't help, and repeat the previous steps.
+     </span>
+    </p>
+    <p>
+     <span>
+      You may need to repeat the above process one or more times, because each time you NX into one of the gateway machines, you'll likely be sent to a different actual machine in the pool, each with it's own set of processes and session files.
+     </span>
+    </p>
+    <p>
+     <span>
+      You can create a shell script that runs the some of the steps above for you:
+     </span>
+    </p>
+    <ac:structured-macro ac:macro-id="0fd7707b-7fa2-42dc-a245-ba9eedb63f88" ac:name="code" ac:schema-version="1">
+     <ac:plain-text-body>
+      <![CDATA[#!/bin/sh
+# NX session cleanup
+set -x
+pkill -u ${USER} -9 nxagent
+pkill -u ${USER} -9 nxnode
+find /tmp/.X11-unix/X[0-9]* -user ${USER} -type s -exec rm -rvf {} \;]]>
+     </ac:plain-text-body>
+    </ac:structured-macro>
+    <p>
+     <br/>
+    </p>
+    <h4>
+     <span>
+      System administrators
+     </span>
+    </h4>
+    <p>
+     <span>
+      System administrators may need to add or delete
+     </span>
+     <strong>
+      <code>
+       /tmp/.nXnumber-lock
+      </code>
+     </strong>
+     <span>
+      files depending on if there is a mismatch between nyc-nxgate and the pool machines, like nyc-nx-l01. For example:
+     </span>
+    </p>
+    <ac:structured-macro ac:macro-id="913041a2-75cb-4b5b-a1f1-209bf8f8ea12" ac:name="code" ac:schema-version="1">
+     <ac:plain-text-body>
+      <![CDATA[[root@nyc-nxgate-lv01 tmp]# ls -al /tmp/.nX9074-lock
+-rw------- 1 nx nx 0 Oct 22 20:05 /tmp/.nX9074-lock]]>
+     </ac:plain-text-body>
+    </ac:structured-macro>
+    <p>
+     <span>
+      Or, clear all sessions with:
+     </span>
+    </p>
+    <ac:structured-macro ac:macro-id="f207ab7e-db66-47f6-a18f-5b4372d8794b" ac:name="code" ac:schema-version="1">
+     <ac:plain-text-body>
+      <![CDATA[/usr/libexec/nx/nxserver --cleanup]]>
+     </ac:plain-text-body>
+    </ac:structured-macro>
+    <p class="auto-cursor-target">
+     <br/>
+    </p>
+   </ac:rich-text-body>
+  </ac:structured-macro>
+  <p class="auto-cursor-target">
+   <br/>
+  </p>
+ </li>
+ <li>
+  To turn off mouseover effects (they slow down refreshing of the system menu), click "Settings", then "Configure the Panel". In the "Layout" section, click on the "Appearance" tab, uncheck "Enable icon mouseover effects". Click "Apply".
+ </li>
+ <li>
+  If using NX Client, click Detail in the failure dialog and look at the output to see if there's anything obvious mentioned.
+ </li>
+ <li>
+  Kill any nxagent and nxnode processes owned by you on the machine to which you're try to connect. Also, delete any X* files owned by you in /tmp/.X11-unix/ on that remote machine. Finally, move aside your /home//.nx directory on that remote machine. Then try to NX in to that remote machine again.
+ </li>
+ <li>
+  If you're able to connect, but see a black screen instead of a desktop session, try to see if the issue is KDE- or Gnome-specific. That is, if you configure your NX client to launch KDE or GNOME on the remote server, does one work but the other not? Daemons associated with one of these desktops may need to be restarted (might be simpler to reboot the remove machine, if possible).
+ </li>
+ <li>
+  If your NX session to a linux server fails to connect, check your shell config files on the linux machine (
+  <code>
+   .bashrc
+  </code>
+  or
+  <code>
+   .cshrc
+  </code>
+  ). If you are setting
+  <code>
+   $LD_LIBRARY_PATH
+  </code>
+  manually you need to comment that out as it causes NX on the remote end to fail in some cases.
+ </li>
+ <li>
+  If you are having issues with Gnome applets failing to start, try removing some temporary files:
+  <code>
+   rm -rf /tmp/{orbit,virtual,ksocket,mapping,gconfd}-${USER}*
+  </code>
+ </li>
+ <li>
+  If you're having NX issues, try checking the box for 'Disable
+  <span class="twikiNewLink">
+   DirectDraw
+  </span>
+  for screen rendering' under the 'Advanced' tab of NX client options. Some discussion
+  <a href="http://osdir.com/ml/freenx-knx/2009-11/msg00015.html">
+   here
+  </a>
+  . This issue appears to only affect machines with either Windows Vista or Windows 7.
+ </li>
+ <li>
+  <span class="twikiNewLink">
+   <a href="https://wiki.schrodinger.com/bin/edit/Sysmgr/DanS?topicparent=Sysmgr.HowtoNX;nowysiwyg=0" rel="nofollow">
+    DanS
+   </a>
+  </span>
+  - On Linux, if you are having bad performance that is otherwise unexplainable, check out the server machine. Multiple "nxagent"'s running caused my performance to be bad. Occurred twice, not sure how. I killed all except the most recent "nxagent", and the performance greatly improved.
+ </li>
+ <li>
+  If seen "Error is 22: Invalid argument", try making connections a few times. This issue is only seen with NoMachine 4.0.x. Try installing latest 4.x release.
+ </li>
+ <li>
+  User can't start NX session on pdx-nx-l01. Errors report out of space, but there is plenty disk space. The cause is running out inode. Some user's Gnome programs create lots of ORBit socket files and leave them behind. These socket files end up using most of available inodes. Fix: set tmpwatch to clean up old ORBit socket files in /tmp. Details in
+  <a href="https://schrodinger.atlassian.net/browse/SYSMGR-28716">
+   SYSMGR-28716
+  </a>
+ </li>
+ <li>
+  If you are receiving error 108 on a Windows machine and a previous version of NoMachine was installed on the system, it may help to delete the cache-* folders from %USERPROFILE%\.nx
+ </li>
+</ol>
+<h1>
+ Installers and files
+</h1>
+<p>
+ <ac:link>
+  <ri:attachment ri:filename="NX_Player_setup.mov" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:link>
+ -
+ <span class="legacy-color-text-default">
+  NX Player setup example video
+ </span>
+</p>
+<p>
+ <ac:link>
+  <ri:attachment ri:filename="nomachine_5.3.12_10.dmg" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:link>
+ <ac:link>
+  <ri:attachment ri:filename="NoMachine_v5.3.12.exe" ri:version-at-save="1">
+  </ri:attachment>
+  <ac:link-body>
+   <span style="color: rgb(0,0,0);">
+    Nomachine 5.3.12 for Mac
+   </span>
+  </ac:link-body>
+ </ac:link>
+</p>
+<p>
+ <ac:link>
+  <ri:attachment ri:filename="NoMachine_v5.3.12.exe" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:link>
+ <ac:link>
+  <ri:attachment ri:filename="nxclient-3.5.0-9.exe" ri:version-at-save="1">
+  </ri:attachment>
+  <ac:link-body>
+   -
+   <span style="color: rgb(0,0,0);">
+    Nomachine 5.3.12 for Windows
+   </span>
+  </ac:link-body>
+ </ac:link>
+</p>
+<h2>
+ Deprecated
+</h2>
+<p>
+ <ac:link>
+  <ri:attachment ri:filename="nxclient-3.5.0-7.pkg.zipped" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:link>
+ <ac:link>
+  <ri:attachment ri:filename="nxclient-3.5.0-9.exe" ri:version-at-save="1">
+  </ri:attachment>
+  <ac:link-body>
+   -
+   <span style="color: rgb(0,0,0);">
+    NX Client 3.5.0.7 Mac OSX zipped .pkg folder
+   </span>
+  </ac:link-body>
+ </ac:link>
+</p>
+<p>
+ <ac:link>
+  <ri:attachment ri:filename="nxclient-3.5.0-9.exe" ri:version-at-save="1">
+  </ri:attachment>
+ </ac:link>
+ -
+ <span class="legacy-color-text-default">
+  NX Client 3.5.0.9 installer for Windows
+ </span>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>
+<p>
+ <br/>
+</p>

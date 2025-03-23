@@ -1,0 +1,202 @@
+<p>
+</p>
+<ac:structured-macro ac:local-id="6ba0662e-8091-4306-bcae-06b288f14941" ac:macro-id="c79f66c7-ba2a-4226-82d1-22ee6ef94541" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="atlassian-macro-output-type">
+  INLINE
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   In addition to the Okta Verify mobile app, you can use the built-in fingerprint reader on your devices or hardware security keys as a second factor.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+</p>
+<ac:structured-macro ac:macro-id="f8a79eb6-6843-4b1c-b107-bcd95c441859" ac:name="info" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   It is
+   <strong>
+    strongly recommended
+   </strong>
+   to configure a factor as described here in addition to the Okta Verify app. Otherwise, if you lose access to your current phone you will not be able to complete the Okta login process.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<p>
+ Configuring multiple additional factors is supported.
+</p>
+<ac:structured-macro ac:local-id="473df03d-4503-4ca2-8abc-46f0e2715ffc" ac:macro-id="7ab72c67-dc5a-45c0-a179-b9767cf9664b" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h1>
+ <strong>
+  Prerequisites
+ </strong>
+</h1>
+<ul>
+ <li>
+  <p>
+   Using biometrics is supported on Chrome on macOS and Windows and Firefox on Windows
+  </p>
+ </li>
+ <li>
+  <p>
+   To use the built-in fingerprint sensor on device with Okta,
+   <strong>
+    first make sure your fingerprint is enrolled with Touch ID / Windows Hello
+   </strong>
+   , then follow the steps below to add the device to Okta
+  </p>
+  <ul>
+   <li>
+    <p>
+     If you have not yet added your fingerprint on macOS, go to
+     <strong>
+      System Preferences
+     </strong>
+     :
+     <strong>
+      Touch ID
+     </strong>
+     and add a fingerprint there.
+    </p>
+   </li>
+  </ul>
+ </li>
+</ul>
+<h1>
+ <strong>
+  Adding a new authenticator to Okta
+ </strong>
+</h1>
+<ol start="1">
+ <li>
+  <p>
+   On the device where you wish to use your fingerprint, visit your Okta settings page:
+   <a href="https://schrodinger.okta.com/user/settings/account">
+    https://schrodinger.okta.com/user/settings/account
+   </a>
+  </p>
+ </li>
+ <li>
+  <p>
+   If you see an "
+   <strong>
+    Edit Profile
+   </strong>
+   " button in the top right corner, click it
+   <br/>
+  </p>
+  <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1010" ac:original-width="2272" ac:width="496">
+   <ri:attachment ri:filename="image2022-4-14_16-48-13.png" ri:version-at-save="1">
+   </ri:attachment>
+  </ac:image>
+ </li>
+ <li>
+  <p>
+   Scroll down to the "
+   <strong>
+    Extra Verification
+   </strong>
+   " section
+  </p>
+ </li>
+ <li>
+  <p>
+   Click "
+   <strong>
+    Set Up
+   </strong>
+   " (or "
+   <strong>
+    Set up another
+   </strong>
+   " if you have already enrolled a device)
+   <br/>
+  </p>
+  <ac:image ac:align="left" ac:layout="align-start" ac:original-height="518" ac:original-width="1072" ac:width="496">
+   <ri:attachment ri:filename="image2022-4-14_15-56-58.png" ri:version-at-save="1">
+   </ri:attachment>
+  </ac:image>
+ </li>
+ <li>
+  <p>
+   Under "Additional optional factors" click "
+   <strong>
+    Set up
+   </strong>
+   " (or "
+   <strong>
+    Set up another
+   </strong>
+   ")
+   <br/>
+  </p>
+  <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1640" ac:original-width="854" ac:width="299">
+   <ri:attachment ri:filename="image2022-4-14_15-59-29.png" ri:version-at-save="1">
+   </ri:attachment>
+  </ac:image>
+ </li>
+ <li>
+  <p>
+   On the following page, click "
+   <strong>
+    Enroll
+   </strong>
+   "
+   <br/>
+  </p>
+  <ac:image ac:align="left" ac:layout="align-start" ac:original-height="1050" ac:original-width="848" ac:width="299">
+   <ri:attachment ri:filename="image2022-4-14_16-0-48.png" ri:version-at-save="1">
+   </ri:attachment>
+  </ac:image>
+ </li>
+ <li>
+  <p>
+   Choose "
+   <strong>
+    This device
+   </strong>
+   " to enable Touch ID/Fingerprint Authentication.
+   <br/>
+   Or choose "USB security key" to set up a U2F Key
+   <br/>
+   <ac:image ac:width="300">
+    <ri:attachment ri:filename="image2022-4-14_16-3-54.png" ri:version-at-save="1">
+    </ri:attachment>
+   </ac:image>
+  </p>
+ </li>
+ <li>
+  <p>
+   The following pop-up will show if you are on a Mac,
+   <strong>
+    now tap your fingerprint sensor
+   </strong>
+   on your laptop. (You have to have your fingerprint enrolled in Touch ID prior to this step).
+   <br/>
+  </p>
+  <ac:image ac:align="left" ac:layout="align-start" ac:original-height="630" ac:original-width="552" ac:width="299">
+   <ri:attachment ri:filename="image2022-4-14_16-17-31.png" ri:version-at-save="1">
+   </ri:attachment>
+  </ac:image>
+ </li>
+</ol>
+<p>
+ <strong>
+  These pop ups might be slightly different depending on your browser versions.
+ </strong>
+</p>
+<p>
+ <strong>
+  If you have any issues enrolling your fingerprint or another U2F Security key please start a new thread in the
+ </strong>
+ <a href="https://mail.google.com/chat/u/0/#chat/space/AAAAsYj9xdk">
+  <strong>
+   IT Support Hotline
+  </strong>
+ </a>
+ <strong>
+  or create a ticket in IT Help/Freshservice.
+ </strong>
+</p>

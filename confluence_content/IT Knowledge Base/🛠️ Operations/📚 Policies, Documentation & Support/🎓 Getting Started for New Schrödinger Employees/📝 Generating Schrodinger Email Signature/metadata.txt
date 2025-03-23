@@ -1,0 +1,4 @@
+id: 54822609
+title: 📝 Generating Schrodinger Email Signature
+version: 4
+space_key: ITLC

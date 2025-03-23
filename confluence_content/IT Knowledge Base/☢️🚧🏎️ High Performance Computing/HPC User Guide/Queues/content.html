@@ -1,0 +1,218 @@
+<h1>
+ <ac:structured-macro ac:local-id="4d6e0b18-3c5d-4676-bb04-a8d36a32eb39" ac:macro-id="f6e4692b-e665-40af-8993-ee209acf2589" ac:name="anchor" ac:schema-version="1">
+  <ac:parameter ac:name="">
+   queues
+  </ac:parameter>
+ </ac:structured-macro>
+ Queues
+</h1>
+<p>
+ There are also various CPU-only queues.
+</p>
+<p>
+ Queues in order of priority (note: Job priority is now calculated based on project):
+</p>
+<table ac:local-id="a7cbb191-3a9e-4dd5-8909-9fe06e0a17c3" data-layout="default" data-table-width="760">
+ <tbody>
+  <tr>
+   <th>
+    <p>
+     Name
+    </p>
+   </th>
+   <th>
+    <p>
+     Description
+    </p>
+   </th>
+   <th>
+    <p>
+     Runtime
+    </p>
+   </th>
+   <th>
+    <p>
+     Slots/user*
+    </p>
+   </th>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     nongpu.q
+    </p>
+   </td>
+   <td>
+    <p>
+     For general FEP job master process
+    </p>
+   </td>
+   <td>
+    <p>
+     Unlimited
+    </p>
+   </td>
+   <td>
+    <p>
+     32
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     short.q
+    </p>
+   </td>
+   <td>
+    <p>
+     For short FEP job completes within 30 minutes
+    </p>
+   </td>
+   <td>
+    <p>
+     30 minutes
+    </p>
+   </td>
+   <td>
+    <p>
+     Unlimited
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     cpu_short.q
+    </p>
+   </td>
+   <td>
+    <p>
+     For short CPU job completes within 30 minutes
+    </p>
+   </td>
+   <td>
+    <p>
+     30 minutes
+    </p>
+   </td>
+   <td>
+    <p>
+     Unlimited
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     cuda.q
+    </p>
+   </td>
+   <td>
+    <p>
+     For general FEP jobs
+    </p>
+   </td>
+   <td>
+    <p>
+     504 hours
+    </p>
+   </td>
+   <td>
+    <p>
+     250
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     stu.q/stu_p.q
+    </p>
+   </td>
+   <td>
+    <p>
+     For STU test jobs
+    </p>
+   </td>
+   <td>
+    <p>
+     5 hours
+    </p>
+   </td>
+   <td>
+    <p>
+     Unlimited
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     personal.q
+    </p>
+   </td>
+   <td>
+    <p>
+     For CPU jobs with high priority work. These cores are ideally always available and accessible to you.
+    </p>
+   </td>
+   <td>
+    <p>
+     9999 hours
+    </p>
+   </td>
+   <td>
+    <p>
+     12
+    </p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     cpu.q
+    </p>
+   </td>
+   <td>
+    <p>
+     For general CPU jobs
+    </p>
+   </td>
+   <td>
+    <p>
+     2 weeks
+    </p>
+   </td>
+   <td>
+    <p>
+     800
+    </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p>
+ <strong>
+  *slots allowed per user may change at any time with little or no notice.Use the command
+ </strong>
+ <code>
+  qconf -srqs
+ </code>
+ <strong>
+  to see current restrictions.
+ </strong>
+</p>
+<ac:structured-macro ac:local-id="fd78f2d2-e2a5-4a9f-b5c0-9f5b72182b24" ac:macro-id="9326056b410520b72096d65108bef6583060e03dd89ee97bb9957cdb55244fcc" ac:name="excerpt" ac:schema-version="1" data-layout="default">
+ <ac:parameter ac:name="hidden">
+  true
+ </ac:parameter>
+ <ac:parameter ac:name="name">
+  Researcher Story
+ </ac:parameter>
+ <ac:rich-text-body>
+  <p>
+   As a researcher, I need to understand the different queue types available on the HPC clusters so I can select the appropriate queue for my jobs based on their resource requirements and runtime expectations.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>

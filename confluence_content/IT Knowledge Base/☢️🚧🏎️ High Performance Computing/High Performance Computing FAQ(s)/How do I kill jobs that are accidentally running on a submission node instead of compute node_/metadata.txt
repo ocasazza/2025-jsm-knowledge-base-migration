@@ -1,0 +1,4 @@
+id: 210960714
+title: How do I kill jobs that are accidentally running on a submission node instead of compute node?
+version: 2
+space_key: ITLC

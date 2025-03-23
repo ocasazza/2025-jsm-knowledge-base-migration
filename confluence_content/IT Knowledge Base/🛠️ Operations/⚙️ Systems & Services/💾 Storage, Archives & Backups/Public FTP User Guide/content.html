@@ -1,0 +1,135 @@
+<ac:structured-macro ac:macro-id="b7a65561-1d5d-4fee-8c28-158ab0596969" ac:name="warning" ac:schema-version="1">
+ <ac:rich-text-body>
+  <p>
+   Our anonymous ftp server, ftp.schrodinger.com, was decommissioned in 2021.  The information below is kept for future reference. The files and filesystems exist as of
+   <time datetime="2023-08-16">
+   </time>
+   , but may be decommissioned in the future as well.
+  </p>
+ </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:local-id="d39972a8-8cb2-4a67-a969-5c348241fc84" ac:macro-id="4a24b7a8-2477-4ce2-8964-de50f76a9bc1" ac:name="toc" ac:schema-version="1" data-layout="default">
+</ac:structured-macro>
+<h2>
+ Posting a file for an external user to download
+</h2>
+<hr/>
+<p>
+ If you have a file that is too large to send via email, you can place it on the ftp site to allow an external user to download it. In NYC, place the file in:
+</p>
+<ac:structured-macro ac:macro-id="71c9ed51-3e52-4610-a866-32d0cd59afbe" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[/nfs/ftp/ftp/support/hidden/<somedirectory>/]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ where
+ <em>
+  &lt;somedirectory&gt;
+ </em>
+ should be a descriptive name (the institution of the person that will be downloading, for example).
+</p>
+<p>
+ You can access /nfs/ftp from any NYC Linux machine; some example machines are listed on the
+ <a href="#">
+  IT User Orientation
+ </a>
+ page.
+</p>
+<p>
+ Give world execute permissions on
+ <em>
+  &lt;somedirectory&gt;
+ </em>
+ , but remove world read permissions (we do this to prevent people from listing/browsing the contents of the directory). You must give world read permissions on the file itself, however.
+</p>
+<p>
+ You'll then need to send the user the full URL path including the filename. They will not be able to list or browse the directory contents via command-line ftp or their GUI ftp client/web browser.
+</p>
+<p>
+ So, for:
+</p>
+<ac:structured-macro ac:macro-id="5c9f4b89-3710-425f-b8f4-793b4531ce9a" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[/nfs/ftp/ftp/support/hidden/CompanyA/bigfile.zip]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ you'd send the user this URL:
+</p>
+<ac:structured-macro ac:macro-id="6d2335e4-66b2-471f-8ad1-c4177bf54804" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[ftp://ftp.schrodinger.com/support/hidden/CompanyA/bigfile.zip]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ Or, if the user will be using command-line ftp:
+</p>
+<ac:structured-macro ac:macro-id="742c3ec9-c2fd-47b1-8ac1-9b254cf0b0b4" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[ftp ftp.schrodinger.com]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ (when prompted, they should use
+ <code>
+  anonymous
+ </code>
+ as the username and their email address as the password)
+</p>
+<ac:structured-macro ac:macro-id="9e7a7aa8-f3a0-4044-b058-6830f81ed30b" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[cd support/hidden/CompanyA binary get bigfile.zip]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<h2>
+ Allowing an external user to upload files to us
+</h2>
+<hr/>
+<p>
+</p>
+<p>
+ If someone needs to send us a file that is too large to send via email, they can upload the file to our ftp site. The user should upload the file to the incoming directory of
+ <a href="http://ftp.schrodinger.com">
+  ftp.schrodinger.com
+ </a>
+ .
+</p>
+<p>
+ From the command-line:
+</p>
+<ac:structured-macro ac:macro-id="fcbcf62a-efb1-47e7-aa6a-2d5bc95b9664" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[ftp ftp.schrodinger.com]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ (when prompted, they should use
+ <code>
+  anonymous
+ </code>
+ as the username and their email address as the password)
+</p>
+<ac:structured-macro ac:macro-id="ab533448-0530-4701-af76-25bbb0e2afa1" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[cd incoming binary put <their file>]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ Or, they can use whatever GUI ftp client they have to do the same thing. They will not be able to see the file they've uploaded (this way external users can't see files that other users have uploaded). They will need to send you the exact name of the file they've uploaded.
+</p>
+<p>
+ Once the file is uploaded, you may need to wait up to 10 minutes for a cron job that adjusts the permissions so that you can access the uploaded file. The file will be in NYC:
+</p>
+<ac:structured-macro ac:macro-id="d82a5f96-2c90-47fe-8d2e-aee7ee4b52a4" ac:name="code" ac:schema-version="1">
+ <ac:plain-text-body>
+  <![CDATA[/nfs/ftp/ftp/incoming/<their file>]]>
+ </ac:plain-text-body>
+</ac:structured-macro>
+<p>
+ <code>
+ </code>
+ <br/>
+ <code>
+ </code>
+</p>

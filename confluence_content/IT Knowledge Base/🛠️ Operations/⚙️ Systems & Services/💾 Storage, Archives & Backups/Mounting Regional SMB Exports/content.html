@@ -1,0 +1,676 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    Each region has a storage server which server SMB exports.
+   </p>
+   <p>
+    This article details available regional exports and how one may mount an export on their regional workstations
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="two_equal">
+  <ac:layout-cell>
+   <hr/>
+   <p>
+    <ac:structured-macro ac:macro-id="e9096c68-591d-499e-a31d-67425a601524" ac:name="toc" ac:schema-version="1">
+    </ac:structured-macro>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p style="text-align: center;">
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+  </ac:layout-cell>
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="a6eda81a-56db-409d-9320-7283a90e7ad5" ac:name="details" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <table class="wrapped">
+      <colgroup>
+       <col/>
+       <col/>
+      </colgroup>
+      <tbody>
+       <tr>
+        <th colspan="1">
+         Description
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p class="auto-cursor-target">
+           <br/>
+          </p>
+          <ac:structured-macro ac:macro-id="c2caffbb-e4a0-4968-968c-5ae5d67d0d55" ac:name="excerpt" ac:schema-version="1">
+           <ac:parameter ac:name="atlassian-macro-output-type">
+            INLINE
+           </ac:parameter>
+           <ac:rich-text-body>
+            <p>
+             Details how users may mount regional SMB exports
+            </p>
+           </ac:rich-text-body>
+          </ac:structured-macro>
+          <p class="auto-cursor-target">
+           <br/>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Architect
+        </th>
+        <td>
+         <div class="content-wrapper">
+          <p>
+           <ac:link>
+            <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+            </ri:user>
+           </ac:link>
+           <ac:link>
+            <ri:user ri:userkey="712020:20683bcb-b5d6-4474-a40c-2a3ae5aaee4f">
+            </ri:user>
+           </ac:link>
+          </p>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Technical contact
+        </th>
+        <td>
+         <ac:link>
+          <ri:user ri:userkey="712020:20683bcb-b5d6-4474-a40c-2a3ae5aaee4f">
+          </ri:user>
+         </ac:link>
+        </td>
+       </tr>
+       <tr>
+        <th colspan="1">
+         Business owner
+        </th>
+        <td colspan="1">
+         <div class="content-wrapper">
+          <p>
+           <ac:link>
+            <ri:user ri:userkey="557058:effc737d-8d3c-474e-b2cc-806826c91787">
+            </ri:user>
+           </ac:link>
+           <ac:link>
+            <ri:user ri:userkey="640b97dd93cf25994632639f">
+            </ri:user>
+           </ac:link>
+           <ac:link>
+            <ri:user ri:userkey="557058:037cebc0-7a1a-4a12-af72-7583a24ff5d6">
+            </ri:user>
+           </ac:link>
+          </p>
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="707ce354-6ba9-4da0-8bfc-f17cc7769f15" ac:name="info" ac:schema-version="1">
+    <ac:parameter ac:name="title">
+     WARNING
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      Please don't try to mount an export from a region that you're not in
+     </p>
+     <p style="margin-left: 40.0px;">
+      For example:
+     </p>
+     <ul>
+      <li style="list-style-type: none;">
+       <ul>
+        <li>
+         if you're in NYC, don't try to mount anything from PDX.
+        </li>
+        <li>
+         if you're in PDX, don't try to mount anything from NYC.
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <hr/>
+   <h1>
+    How to Mount SMB exports on Windows?
+   </h1>
+   <ac:structured-macro ac:macro-id="a5421f21-cdd5-44ed-b292-d4dcc2c1a69c" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      Please follow these steps to mount a regional SMB export on a regional Windows system.
+     </p>
+     <p style="margin-left: 40.0px;">
+      1. Open windows explorer and right click on "This PC" on the left on the window manager):
+     </p>
+     <p style="margin-left: 40.0px;">
+      <ac:image ac:height="250">
+       <ri:attachment ri:filename="Screenshot_2023-11-17_12-46-33_01.jpg" ri:version-at-save="1">
+       </ri:attachment>
+      </ac:image>
+     </p>
+     <p style="margin-left: 40.0px;">
+      2. Select "Map network drive...":
+     </p>
+     <p style="margin-left: 40.0px;">
+      <ac:image ac:height="250">
+       <ri:attachment ri:filename="Screenshot_2023-11-17_12-48-37_01.jpg" ri:version-at-save="1">
+       </ri:attachment>
+      </ac:image>
+     </p>
+     <p style="margin-left: 40.0px;">
+      3. Set the "Drive" to the highest letter available, and set the "Folder", which is the path of the SMB export (in the form "\\server\share-name")
+     </p>
+     <p style="margin-left: 40.0px;">
+      <ac:image ac:height="250">
+       <ri:attachment ri:filename="Screenshot_2023-11-17_12-57-21_empty.jpg" ri:version-at-save="1">
+       </ri:attachment>
+      </ac:image>
+     </p>
+     <p style="margin-left: 40.0px;">
+      4. Ensure "Reconnect at sign-in" is checked and then click finish and the export should open in a new explorer window
+     </p>
+     <p style="margin-left: 40.0px;">
+      <ac:image ac:height="250">
+       <ri:attachment ri:filename="Screenshot_2023-11-17_12-57-21_empty_01.jpg" ri:version-at-save="1">
+       </ri:attachment>
+      </ac:image>
+     </p>
+     <p style="margin-left: 40.0px;">
+      6. If you want to disconnect the mount, right click on the drive letter, "Z:" in this case, and select "Disconnect"
+     </p>
+     <p style="margin-left: 40.0px;">
+      <ac:image ac:height="250">
+       <ri:attachment ri:filename="Screenshot_2023-11-17_12-58-11_01.jpg" ri:version-at-save="1">
+       </ri:attachment>
+      </ac:image>
+      <ac:image ac:height="250">
+       <ri:attachment ri:filename="Screenshot_2023-11-17_13-50-44_01.jpg" ri:version-at-save="1">
+       </ri:attachment>
+      </ac:image>
+     </p>
+     <p style="margin-left: 40.0px;">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    How to Mount SMB exports on Linux?
+   </h1>
+   <ac:structured-macro ac:macro-id="36e330a6-5106-4e49-8e64-ef31da231d3d" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <strong>
+       WIP-START
+      </strong>
+     </p>
+     <p>
+      There are typically two ways of mounting a SMB export on Linux, from the terminal using the "mount" command, or via the desktop GUI, typically under "connections" if using Gnome.
+     </p>
+     <ul>
+      <li>
+       To mount a SMB share using the terminal:
+       <ol>
+        <li>
+         <pre>sudo mount -t cifs //&lt;SMB_SERVER_HOSTNAME&gt;/&lt;EXPORT_NAME&gt; /&lt;LOCAL_PATH&gt; -o username=&lt;AD_USERNAME&gt;,domain=<a href="http://schrodinger.com">schrodinger.com</a>,iocharset=utf8,file_mode=0777,dir_mode=0777</pre>
+         <ol>
+          <li>
+           &lt;SMB_SERVER_HOSTNAME&gt; is the regional storage hostname, such as nyc-stor, or ham-stor.
+          </li>
+          <li>
+           &lt;EXPORT_NAME&gt; is the name of the export (check each office region to see what exports are available)
+          </li>
+          <li>
+           &lt;AD_USERNAME&gt; is the username of the exports owner
+          </li>
+          <li>
+           you will also be prompted for your Okta password after entering the command
+          </li>
+         </ol>
+        </li>
+       </ol>
+      </li>
+      <li>
+       To mount a SMB share using the desktop's GUI:
+       <ol>
+        <li>
+         TODO ... &lt;gather screenshots&gt;
+        </li>
+       </ol>
+      </li>
+     </ul>
+     <p>
+      <strong>
+       WIP-END
+      </strong>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h2>
+    Which SMB exports are available in the Framingham (FMA) office?
+   </h2>
+   <ac:structured-macro ac:macro-id="ca1f5013-e7f9-4b06-827a-91ad4e25be5c" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      The following aliases may be used in place of
+      <strong>
+       ham-stor
+      </strong>
+      :
+     </p>
+     <ul>
+      <li>
+       <strong>
+        ham-stor-f01
+       </strong>
+      </li>
+      <li>
+       <strong>
+        ham-stor.schrodinger.com
+       </strong>
+      </li>
+      <li>
+       <strong>
+        ham-stor-f01.schrodinger.com
+       </strong>
+      </li>
+      <li>
+       <strong>
+        fma-stor
+       </strong>
+      </li>
+      <li>
+       <strong>
+        fma-stor.schrodinger.com
+       </strong>
+      </li>
+     </ul>
+     <p>
+      The following SMB exports are available in the FMA (HAM) office:
+     </p>
+     <ul>
+      <li>
+       <strong>
+        \\ham-stor\shared
+       </strong>
+       <ul>
+        <li>
+         may be mounted on any FMA system
+        </li>
+        <li>
+         is used to share data between users and systems
+        </li>
+        <li>
+         own by:
+         <ul>
+          <li>
+           "SCHRODINGER\stg-sbsg" (group)
+          </li>
+          <li>
+           "SCHRODINGER\fma-service-acc" (service account user)
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <strong>
+        \\ham-stor\LabData
+       </strong>
+       <ul>
+        <li>
+         may be mounted on any FMA system
+        </li>
+        <li>
+         contains the "Lab Data" data from the Natick office
+        </li>
+        <li>
+         own by:
+         <ul>
+          <li>
+           "SCHRODINGER\stg-sbsg" (group)
+          </li>
+          <li>
+           "SCHRODINGER\fma-service-acc" (service account user)
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <strong>
+        \\ham-stor\RockImager
+       </strong>
+       <ul>
+        <li>
+         may be mounted on any FMA system
+        </li>
+        <li>
+         mounted on ___
+        </li>
+        <li>
+         used to storage RI54 image files (old data from the Natick office)
+        </li>
+        <li>
+         own by:
+         <ul>
+          <li>
+           "SCHRODINGER\stg-sbsg" (group)
+          </li>
+          <li>
+           "SCHRODINGER\fma-service-acc" (service account user)
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <strong>
+        \\ham-stor\RockImager2
+       </strong>
+       <ul>
+        <li>
+         may be mounted on any FMA system
+        </li>
+        <li>
+         mounted on ___
+        </li>
+        <li>
+         used to storage RI54 image files (old data from the Natick office)
+        </li>
+        <li>
+         own by:
+         <ul>
+          <li>
+           "SCHRODINGER\stg-sbsg" (group)
+          </li>
+          <li>
+           "SCHRODINGER\fma-service-acc" (service account user)
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <strong>
+        \\ham-stor\RockImager360
+       </strong>
+       <ul>
+        <li>
+         may be mounted on any FMA system
+        </li>
+        <li>
+         mounted on fma-rockpc-w02 (TBA)
+        </li>
+        <li>
+         used to storage RI360 image files (TBA)
+        </li>
+        <li>
+         own by:
+         <ul>
+          <li>
+           "SCHRODINGER\stg-sbsg" (group)
+          </li>
+          <li>
+           "SCHRODINGER\fma-service-acc" (service account user)
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <strong>
+        \\ham-stor\RockImager1000
+       </strong>
+       <ul>
+        <li>
+         may be mounted on any FMA system
+        </li>
+        <li>
+         mounted on fma-rockpc-w01
+        </li>
+        <li>
+         used to storage RI1000 image files
+        </li>
+        <li>
+         own by:
+         <ul>
+          <li>
+           "SCHRODINGER\stg-sbsg" (group)
+          </li>
+          <li>
+           "SCHRODINGER\fma-service-acc" (service account user)
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <br/>
+   <hr/>
+   <h2>
+    Which SMB exports are available in the New York City (NYC) office?
+   </h2>
+   <ac:structured-macro ac:macro-id="9872b433-1520-4093-961e-331f3fd6102b" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      The following SMB exports are available in the NYC office:
+     </p>
+     <ul>
+      <li>
+       <strong>
+        \\nyc-stor\___ (TODO)
+        <br/>
+       </strong>
+       <ul>
+        <li>
+         may be mounted on any NYC system
+        </li>
+        <li>
+         is used to share data between users and system
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <p>
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <hr/>
+   <h1>
+    Operations
+   </h1>
+   <p>
+    <ac:structured-macro ac:macro-id="acd7f847-fa0e-4945-9460-9b3456525389" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      title
+     </ac:parameter>
+     <ac:parameter ac:name="excerptType">
+      simple
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-how-to-article" and ancestor = currentContent ( )
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="f7d96f68-09cb-4001-9cfe-4ea7e3e2d717" ac:name="create-from-template" ac:schema-version="1">
+     <ac:parameter ac:name="blueprintModuleCompleteKey">
+      com.atlassian.confluence.plugins.confluence-knowledge-base:kb-how-to-article-blueprint
+     </ac:parameter>
+     <ac:parameter ac:name="contentBlueprintId">
+      f53b904c-ce6a-4526-8933-ecd6299f7e88
+     </ac:parameter>
+     <ac:parameter ac:name="templateName">
+      f53b904c-ce6a-4526-8933-ecd6299f7e88
+     </ac:parameter>
+     <ac:parameter ac:name="buttonLabel">
+      Create new procedure
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    Purchases / Renewals
+   </h1>
+   <ac:structured-macro ac:macro-id="fd77a20a-96c9-44ec-b4e4-dfb2330731c4" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:placeholder>
+       Add any information/tickets relating to our purchase history or upcoming renewals here.
+      </ac:placeholder>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <h1>
+    Troubleshooting and end-user instructions
+   </h1>
+   <p>
+    <ac:structured-macro ac:macro-id="0ba69954-bb57-4f29-9d41-c03f0b8ca70a" ac:name="contentbylabel" ac:schema-version="4">
+     <ac:parameter ac:name="showLabels">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="showSpace">
+      false
+     </ac:parameter>
+     <ac:parameter ac:name="sort">
+      title
+     </ac:parameter>
+     <ac:parameter ac:name="excerptType">
+      simple
+     </ac:parameter>
+     <ac:parameter ac:name="cql">
+      label = "kb-troubleshooting-article" and ancestor = currentContent ( )
+     </ac:parameter>
+    </ac:structured-macro>
+    <ac:placeholder>
+     Edit this query to use the label you'd like to associate with this service. Otherwise you'll get nothing.
+    </ac:placeholder>
+   </p>
+   <p>
+    <ac:structured-macro ac:macro-id="88bf85ea-76fa-48f7-8f42-3de5023ad7eb" ac:name="create-from-template" ac:schema-version="1">
+     <ac:parameter ac:name="blueprintModuleCompleteKey">
+      com.atlassian.confluence.plugins.confluence-knowledge-base:kb-troubleshooting-article-blueprint
+     </ac:parameter>
+     <ac:parameter ac:name="contentBlueprintId">
+      5cfc26f3-a2fe-44b5-b6da-32e941dd9b0a
+     </ac:parameter>
+     <ac:parameter ac:name="templateName">
+      5cfc26f3-a2fe-44b5-b6da-32e941dd9b0a
+     </ac:parameter>
+     <ac:parameter ac:name="buttonLabel">
+      Create new troubleshooting advice
+     </ac:parameter>
+    </ac:structured-macro>
+   </p>
+   <hr/>
+   <h1>
+    Documentation development
+   </h1>
+   <ac:structured-macro ac:macro-id="2089d381-4ecc-471f-b456-2810e10e5f0f" ac:name="tip" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      The following documents could use some work and attention and have been flagged as stubs:
+     </p>
+     <p>
+      <ac:structured-macro ac:macro-id="83297415-700c-4a1f-bdc3-0f7867e4cf21" ac:name="contentbylabel" ac:schema-version="4">
+       <ac:parameter ac:name="showLabels">
+        false
+       </ac:parameter>
+       <ac:parameter ac:name="sort">
+        creation
+       </ac:parameter>
+       <ac:parameter ac:name="reverse">
+        true
+       </ac:parameter>
+       <ac:parameter ac:name="title">
+        Articles that need work
+       </ac:parameter>
+       <ac:parameter ac:name="excerptType">
+        simple
+       </ac:parameter>
+       <ac:parameter ac:name="cql">
+        label = "stub" and ancestor = currentContent ( )
+       </ac:parameter>
+      </ac:structured-macro>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <h1>
+    Resources
+   </h1>
+   <ac:structured-macro ac:macro-id="3c75ba6a-55c0-4b77-a09e-cf744d874c93" ac:name="expand" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      <ac:placeholder>
+       Places to find more information about the service or get support
+      </ac:placeholder>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>

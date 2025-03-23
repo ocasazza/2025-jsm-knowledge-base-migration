@@ -1,0 +1,123 @@
+<h3>
+ Prerequisites
+</h3>
+<ul>
+ <li>
+  <p>
+   Active directory credentials
+  </p>
+ </li>
+ <li>
+  <p>
+   Windows device (minimum Windows 10 v1909)
+  </p>
+ </li>
+ <li>
+  <p>
+   Internet connection with outbound HTTPS (port 443)
+  </p>
+ </li>
+</ul>
+<h3>
+ Enrollment Process
+</h3>
+<ol start="1">
+ <li>
+  <p>
+   Navigate to
+   <em>
+    $ENROLLMENT_PORTAL_URL
+   </em>
+   (typically
+   <a data-card-appearance="inline" href="https://aka.ms/intuneportal">
+    https://aka.ms/intuneportal
+   </a>
+   )
+  </p>
+ </li>
+ <li>
+  <p>
+   Authenticate using your domain credentials (
+   <em>
+    username@$COMPANY_DOMAIN
+   </em>
+   )
+  </p>
+ </li>
+ <li>
+  <p>
+   Complete MFA verification if it is configured
+  </p>
+ </li>
+ <li>
+  <p>
+   Select "Devices" &gt; "Enroll device"
+  </p>
+ </li>
+ <li>
+  <p>
+   Download and execute the Intune enrollment application
+  </p>
+ </li>
+ <li>
+  <p>
+   Choose "Set up for work or school" when prompted
+  </p>
+ </li>
+ <li>
+  <p>
+   Enter your corporate email address
+  </p>
+ </li>
+ <li>
+  <p>
+   Complete authentication and follow the system prompts
+  </p>
+ </li>
+ <li>
+  <p>
+   Verify enrollment status in Settings &gt; Accounts &gt; Access work or school
+  </p>
+ </li>
+</ol>
+<h3>
+ Enrollment Troubleshooting
+</h3>
+<ul>
+ <li>
+  <p>
+   <strong>
+    Authentication failure
+   </strong>
+   : Verify your credentials and network connectivity. If the issue persists, see [Self-Service Password Reset|#password-reset].
+  </p>
+ </li>
+ <li>
+  <p>
+   <strong>
+    Error 80180018
+   </strong>
+   : Device is already enrolled. Contact
+   <em>
+    $IT_SUPPORT_EMAIL
+   </em>
+   for assistance.
+  </p>
+ </li>
+ <li>
+  <p>
+   <strong>
+    Timeout during enrollment
+   </strong>
+   : Ensure outbound connectivity to *.microsoft.com endpoints.
+  </p>
+ </li>
+ <li>
+  <p>
+   <strong>
+    Error 80004003
+   </strong>
+   : Restart your device and retry the enrollment process.
+  </p>
+ </li>
+</ul>

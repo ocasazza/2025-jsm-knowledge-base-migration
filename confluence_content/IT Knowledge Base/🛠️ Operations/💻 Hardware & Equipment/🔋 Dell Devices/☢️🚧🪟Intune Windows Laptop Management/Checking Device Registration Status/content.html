@@ -1,0 +1,118 @@
+<h3>
+ Verification Methods
+</h3>
+<p>
+ <strong>
+  Method 1: Settings Interface
+ </strong>
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Press
+   <em>
+    Win+I
+   </em>
+   to open Settings
+  </p>
+ </li>
+ <li>
+  <p>
+   Navigate to Accounts &gt; Access work or school
+  </p>
+ </li>
+ <li>
+  <p>
+   Verify the presence of a connected workplace account
+  </p>
+ </li>
+ <li>
+  <p>
+   A connection state of "Connected to $COMPANY_DOMAIN's Azure AD" indicates successful registration
+  </p>
+ </li>
+</ol>
+<p>
+ <strong>
+  Method 2: Command Line Verification
+ </strong>
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Launch an elevated Command Prompt (Run as administrator)
+  </p>
+ </li>
+ <li>
+  <p>
+   Execute
+   <code>
+    dsregcmd /status
+   </code>
+  </p>
+ </li>
+ <li>
+  <p>
+   Verify the following parameters:
+  </p>
+  <ul>
+   <li>
+    <p>
+     AzureAdJoined: YES
+    </p>
+   </li>
+   <li>
+    <p>
+     DomainJoined: YES/NO (depending on hybrid configuration)
+    </p>
+   </li>
+   <li>
+    <p>
+     DeviceId: [populated GUID]
+    </p>
+   </li>
+   <li>
+    <p>
+     TenantId: [populated GUID]
+    </p>
+   </li>
+   <li>
+    <p>
+     WamDefaultSet: YES
+    </p>
+   </li>
+  </ul>
+ </li>
+</ol>
+<h3>
+ Registration Remediation
+</h3>
+<p>
+ If your device shows an unregistered status:
+</p>
+<ol start="1">
+ <li>
+  <p>
+   Remove any existing partial connections in Settings &gt; Accounts &gt; Access work or school
+  </p>
+ </li>
+ <li>
+  <p>
+   Restart your device
+  </p>
+ </li>
+ <li>
+  <p>
+   Follow the steps in the [Remote User Enrollment|#remote-user-enrollment] section
+  </p>
+ </li>
+ <li>
+  <p>
+   If registration fails after multiple attempts, execute
+   <code>
+    netcfg -d
+   </code>
+   in an elevated Command Prompt, restart, and retry
+  </p>
+ </li>
+</ol>

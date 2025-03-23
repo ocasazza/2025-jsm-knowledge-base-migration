@@ -1,0 +1,439 @@
+<ac:layout>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="957de7a2-9324-45ef-9142-1c4d7e1c23a2" ac:name="info" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+     <ac:structured-macro ac:macro-id="e116385b-761c-4b10-a5a3-2a4130d78485" ac:name="excerpt" ac:schema-version="1">
+      <ac:parameter ac:name="atlassian-macro-output-type">
+       INLINE
+      </ac:parameter>
+      <ac:rich-text-body>
+       Appgate is our new replacement VPN solution.
+       <span style="letter-spacing: 0.0px;">
+        These instructions will get you started installing the agent and getting it configured.
+       </span>
+      </ac:rich-text-body>
+     </ac:structured-macro>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="d321fb7c-2e51-4899-aba5-5bade9b399e5" ac:name="note" ac:schema-version="1">
+    <ac:parameter ac:name="title">
+     How to get Support
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      <em>
+       <strong>
+        Please check out our
+        <ac:link>
+         <ri:page ri:content-title="Appgate FAQ" ri:space-key="SYSMGR" ri:version-at-save="23">
+         </ri:page>
+        </ac:link>
+        first. Your questions may have been asked before!
+       </strong>
+      </em>
+     </p>
+     <p>
+      For support, please
+      <ac:structured-macro ac:macro-id="d04d2696-fbd4-447e-bd17-305b96f3dbc6" ac:name="createjiraissue" ac:schema-version="1">
+       <ac:parameter ac:name="Description">
+        Please include the details of your issue here, including which operating system (Mac, Windows, Linux, etc.), the hostname of your device, and the resources you were trying to access.
+       </ac:parameter>
+       <ac:parameter ac:name="IssueType">
+        3
+       </ac:parameter>
+       <ac:parameter ac:name="Summary">
+        Appgate help
+       </ac:parameter>
+       <ac:parameter ac:name="Pid">
+        16400
+       </ac:parameter>
+       <ac:parameter ac:name="Security">
+        10500 - Normal
+       </ac:parameter>
+       <ac:parameter ac:name="LinkText">
+        click here
+       </ac:parameter>
+      </ac:structured-macro>
+      to create an Infosec ticket, or send an email to
+      <a href="mailto:infosec@schrodinger.com.">
+       infosec@schrodinger.com.
+      </a>
+     </p>
+     <p>
+      If you are having serious issues using this new solution, please let us know, but you may revert back to using the existing VPN at any time.
+     </p>
+     <p>
+      <strong>
+       Do not connect to the legacy VPN while you are signed into Appgate, or vice versa. You should only be connected to one at a time.
+      </strong>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="59f6822e-98a2-44bd-bac8-742ea8670b5b" ac:name="warning" ac:schema-version="1">
+    <ac:parameter ac:name="title">
+     Be aware of our policies
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      Please be aware that our corporate policies do not permit using personal computers to be used for VPN or Appgate. Our policy is here for your reference:
+      <ac:link>
+       <ri:page ri:content-title="User Device Access Policy" ri:space-key="SCP" ri:version-at-save="1">
+       </ri:page>
+       <ac:plain-text-link-body>
+        <![CDATA[/wiki/spaces/SCP/pages/111411313]]>
+       </ac:plain-text-link-body>
+      </ac:link>
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p>
+    <span style="font-size: 16.0px;font-weight: bold;letter-spacing: -0.006em;">
+     Step 1: Download and Install the Client
+    </span>
+   </p>
+   <p>
+    <em>
+     <strong>
+      Disconnect from the existing VPN to start this process.
+     </strong>
+    </em>
+   </p>
+   <p>
+    Choose the installer appropriate for your system and follow the prompts during installation. No serial numbers or activation codes are necessary.
+    <br/>
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="a86b8226-b7b3-40aa-a0e4-0173e534358d" ac:name="note" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      If you encounter difficulties installing on Linux due to missing dependencies, first try to update your Linux OS (
+      <code>
+       sudo yum update
+      </code>
+      on CentOS/RHEL/Fedora/AlmaLinux), reboot, and try again.
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p>
+    <br/>
+   </p>
+   <ul>
+    <li>
+     <a href="https://bin.appgate-sdp.com/6.1/client/Appgate-SDP-6.1.2-Installer.dmg">
+      Mac
+     </a>
+    </li>
+    <li>
+     <a href="https://bin.appgate-sdp.com/6.1/client/Appgate-SDP-6.1.2-Installer.exe">
+      Windows
+     </a>
+    </li>
+    <li>
+     <a href="https://bin.appgate-sdp.com/6.1/client/appgate-sdp_6.1.2_amd64.deb">
+      Ubuntu
+     </a>
+    </li>
+    <li>
+     <a href="https://bin.appgate-sdp.com/5.3/client/appgate-sdp-5.3.3-el7.x86_64.rpm">
+      CentOS/RHEL 7
+     </a>
+    </li>
+    <li>
+     <a href="https://bin.appgate-sdp.com/6.0/client/appgate-sdp-6.0.3-fc35.x86_64.rpm">
+      Fedora
+     </a>
+    </li>
+    <li>
+     <a href="https://bin.appgate-sdp.com/6.1/client/appgate-sdp-6.1.2-el8.x86_64.rpm">
+      RHEL 8 / AlmaLinux 8 / Rocky Linux 8
+     </a>
+     <a href="https://bin.appgate-sdp.com/5.5/client/appgate-sdp-5.5.0-el7.x86_64.rpm">
+      <br/>
+     </a>
+    </li>
+   </ul>
+   <p>
+    In case this page is out of date, please consult the official Appgate website for the latest version of the installer
+    <a href="https://www.appgate.com/support/software-defined-perimeter-support">
+     https://www.appgate.com/support/software-defined-perimeter-support
+    </a>
+   </p>
+   <hr/>
+   <p>
+    <span style="font-size: 16.0px;font-weight: bold;letter-spacing: -0.006em;">
+     Step 2: Click the appropriate profile link below to activate the client
+    </span>
+   </p>
+   <ol>
+    <li>
+     Please
+     <strong>
+      c
+     </strong>
+     <span style="letter-spacing: 0.0px;">
+      <span style="letter-spacing: 0.0px;">
+       <strong>
+        lick
+       </strong>
+       the appropriate link below to launch and activate the client.
+       <br/>
+      </span>
+     </span>
+     <ul>
+      <li>
+       <strong>
+        <a>
+         SD
+        </a>
+        <a>
+         GR
+        </a>
+        <a>
+         <strong>
+          Profile Link
+         </strong>
+        </a>
+       </strong>
+       (Most devices use this)  Please make sure your client later shows you are using the
+       <strong>
+        SDGR
+       </strong>
+       Profile,
+       <strong>
+        not
+       </strong>
+       the older USA or other profile (screenshots on this page which may show the USA profile are outdated). If above link does not copy please manually copy this link and paste into Appgate.
+       <a>
+        appgate://gluon.sdgr.io/eyJwcm9maWxlTmFtZSI6IlNER1IiLCJzcGEiOnsibW9kZSI6IlVEUC1UQ1AiLCJuYW1lIjoiZW1wbG95ZWUiLCJrZXkiOiIyNmNmNzllOGQxZDI3MThhNzRjOWVmYmU2ZDM5Zjk0NjA3MWMxYjcyMDU1YTNhMmQyOTQ5Y2QzNzY4YmFkYmQ5In0sImNhRmluZ2VycHJpbnQiOiI0ZDg5YmJlZmI1NGVlMTIzMDJmYmMyZjc3YjFmMzkxM2I4MTQzOTc2YmFlZDJmZWRiNjhkZjZhOGZlMjAzYWM5IiwiaWRlbnRpdHlQcm92aWRlck5hbWUiOiJPa3RhIFNTTyJ9
+       </a>
+      </li>
+      <li>
+       <strong>
+        <a>
+         CentOS 7 Only Profile Link
+        </a>
+       </strong>
+       (use this if you are on CentOS 7; it's expected to see the
+       <strong>
+        USA
+       </strong>
+       profile here)If above link does not copy please manually copy this link and paste into Appgate for CentOS 7
+       <a>
+        appgate://gluon.sdgr.io/eyJwcm9maWxlTmFtZSI6IlVTQSIsInNwYSI6eyJtb2RlIjoiVURQLVRDUCIsIm5hbWUiOiJlbXBsb3llZSIsImtleSI6IjI2Y2Y3OWU4ZDFkMjcxOGE3NGM5ZWZiZTZkMzlmOTQ2MDcxYzFiNzIwNTVhM2EyZDI5NDljZDM3NjhiYWRiZDkifSwiY2FGaW5nZXJwcmludCI6IjRkODliYmVmYjU0ZWUxMjMwMmZiYzJmNzdiMWYzOTEzYjgxNDM5NzZiYWVkMmZlZGI2OGRmNmE4ZmUyMDNhYzkiLCJpZGVudGl0eVByb3ZpZGVyTmFtZSI6Ik9rdGEgVVNBIn0=
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     Click
+     <span style="letter-spacing: 0.0px;">
+      the
+     </span>
+     <span style="letter-spacing: 0.0px;">
+      <strong>
+       SUBMIT
+      </strong>
+      button to activate
+     </span>
+     <span style="letter-spacing: 0.0px;">
+      the new profile.
+     </span>
+    </li>
+    <li>
+     Change the name from
+     <strong>
+      My Identity
+     </strong>
+     to your own name. This step is purely cosmetic.
+    </li>
+    <li>
+     Click
+     <strong>
+      CONNECT TO APPGATE SDP
+     </strong>
+     .
+    </li>
+    <li>
+     Afterwards you should see a window similar to the rightmost image, with a
+     <strong>
+      SIGN IN WITH PROVIDER
+     </strong>
+     button.
+    </li>
+   </ol>
+   <p style="margin-left: 30.0px;">
+    <br/>
+   </p>
+   <p>
+    <ac:image ac:height="400">
+     <ri:attachment ri:filename="Screen Shot 2021-08-12 at 12.57.13 PM.png" ri:version-at-save="1">
+     </ri:attachment>
+    </ac:image>
+    <ac:image ac:height="400">
+     <ri:attachment ri:filename="Screen Shot 2021-08-12 at 12.57.28 PM.png" ri:version-at-save="1">
+     </ri:attachment>
+    </ac:image>
+    <ac:image ac:height="400">
+     <ri:attachment ri:filename="Screen Shot 2021-08-12 at 12.57.40 PM.png" ri:version-at-save="1">
+     </ri:attachment>
+    </ac:image>
+   </p>
+   <hr/>
+   <h3>
+    Step 3: Connect
+   </h3>
+   <ac:structured-macro ac:macro-id="0fdc330c-a84e-4818-8065-35a817da04bc" ac:name="tip" ac:schema-version="1">
+    <ac:rich-text-body>
+     <p>
+      If you use Konqueror as your default browser on Linux, please see
+      <ac:link ac:anchor="konqueror">
+       <ri:page ri:content-title="Appgate FAQ" ri:space-key="SYSMGR" ri:version-at-save="23">
+       </ri:page>
+      </ac:link>
+      before proceeding below.
+     </p>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <ol>
+    <li>
+     <p class="auto-cursor-target">
+      <span style="letter-spacing: 0.0px;">
+       Click the
+      </span>
+      <strong style="letter-spacing: 0.0px;">
+       SIGN IN WITH PROVIDER
+      </strong>
+      <span style="letter-spacing: 0.0px;">
+       button at bottom of the window. This will open a browser window and automatically sign you in if your Okta session is valid.
+      </span>
+     </p>
+     <ac:structured-macro ac:macro-id="1c88d701-7a4d-4c0b-a931-322cd120d03f" ac:name="tip" ac:schema-version="1">
+      <ac:rich-text-body>
+       <p>
+        <em>
+         If you are not already signed in to Okta in that browser, please sign in to Okta per usual. You do not need to keep this browser window open after a successful sign-in.
+        </em>
+       </p>
+      </ac:rich-text-body>
+     </ac:structured-macro>
+     <p class="auto-cursor-target">
+      <br/>
+     </p>
+    </li>
+    <li>
+     Your Okta browser window and Appgate application window should appear similar to the ones below.
+     <em>
+      Note that the
+      <strong>
+       App Shortcuts
+      </strong>
+      and
+      <strong>
+       Actions Inbox
+      </strong>
+      are intentionally left empty at this time.
+      <br/>
+      <br/>
+     </em>
+     <ac:image ac:height="400" ac:queryparams="effects=border-simple,blur-border" ac:width="490">
+      <ri:attachment ri:filename="Screen Shot 2021-08-12 at 12.57.58 PM.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+     <ac:image ac:height="400">
+      <ri:attachment ri:filename="Screen Shot 2021-08-12 at 12.58.05 PM.png" ri:version-at-save="1">
+      </ri:attachment>
+     </ac:image>
+    </li>
+    <li>
+     <strong>
+      Windows users, see
+      <a href="https://schrodinger.atlassian.net/wiki/display/SYSMGR/Appgate+FAQ#AppgateFAQ-windows_passwordQ:IsignedintoAppgatewhileloggedintoWindows.IloggedoutofWindows,andnowIcan%27tlogbackintoWindows.WhichusernameandpasswordshouldIuse?">
+       this FAQ about your Windows password.
+      </a>
+     </strong>
+    </li>
+   </ol>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <p>
+    <br/>
+   </p>
+   <hr/>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+ <ac:layout-section ac:type="single">
+  <ac:layout-cell>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+   <ac:structured-macro ac:macro-id="ea9038b4-1c8c-47dd-b292-7e3390317c71" ac:name="tip" ac:schema-version="1">
+    <ac:parameter ac:name="title">
+     Optional: Adjust settings for Auto-Login
+    </ac:parameter>
+    <ac:rich-text-body>
+     <p>
+      The Appgate client will have a very long login session. However, you may want the client to automatically sign you in when the session expires. If you would like to turn this on, follow these steps:
+     </p>
+     <ol>
+      <li>
+       Click the kebab menu (three vertical dots) in the upper left (Windows) or right (Mac) of the Appgate window and choose
+       <strong>
+        Settings
+       </strong>
+      </li>
+      <li>
+       Scroll down, expand
+       <strong>
+        Advanced
+       </strong>
+       .
+      </li>
+      <li>
+       Find the
+       <strong>
+        SAML/Certificate auto-sign in
+       </strong>
+       toggle and switch it on
+      </li>
+     </ol>
+    </ac:rich-text-body>
+   </ac:structured-macro>
+   <p class="auto-cursor-target">
+    <br/>
+   </p>
+  </ac:layout-cell>
+ </ac:layout-section>
+</ac:layout>
