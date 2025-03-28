@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confluence Documentation Completion Status</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .chart-container {
+            width: 48%;
+            margin-bottom: 30px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .summary, .epic-info, .priority-section, .timeline, .insights {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .epic-info {
+            background-color: #e6f7ff;
+            border-left: 4px solid #1890ff;
+        }
+        .priority-section {
+            background-color: #fff7e6;
+            border-left: 4px solid #fa8c16;
+        }
+        .insights {
+            background-color: #f6ffed;
+            border-left: 4px solid #52c41a;
+        }
+        .timeline {
+            background-color: #f9f0ff;
+            border-left: 4px solid #722ed1;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        .badge-high {
+            background-color: #ff4d4f;
+            color: white;
+        }
+        .badge-medium {
+            background-color: #faad14;
+            color: white;
+        }
+        .badge-low {
+            background-color: #52c41a;
+            color: white;
+        }
+        .badge-active {
+            background-color: #1890ff;
+            color: white;
+        }
+        .progress-container {
+            width: 100%;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+        .progress-bar {
+            height: 20px;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+        .jira-link {
+            color: #0052cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .jira-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Confluence Documentation Completion Status</h1>
+    
+    <div class="epic-info">
+        <h2>Missing Pages & Responsible Teams</h2>
+        <p>This report identifies incomplete pages in the Confluence documentation and the teams responsible for completing them.</p>
+    </div>
+    
+    <div class="summary">
+        <h2>Summary</h2>
+        <p>Total Pages: <strong>369</strong></p>
+        <p>Complete Pages: <strong>326</strong> (88.3%)</p>
+        <p>Incomplete Pages: <strong>43</strong> (11.7%)</p>
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 88.3%">88.3% Complete</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="chart-container">
+            <h2>Completion Status</h2>
+            <canvas id="completionChart"></canvas>
+        </div>
+        
+        <div class="chart-container">
+            <h2>Incomplete Pages by Category</h2>
+            <canvas id="categoryChart"></canvas>
+        </div>
+    </div>
+    
+    <h2>Completion Status Details</h2>
+    <table>
+        <tr>
+            <th>Status</th>
+            <th>Count</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td>Complete</td>
+            <td>326</td>
+            <td>88.3%</td>
+        </tr>
+        <tr>
+            <td>Incomplete</td>
+            <td>43</td>
+            <td>11.7%</td>
+        </tr>
+        <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>369</strong></td>
+            <td><strong>100%</strong></td>
+        </tr>
+    </table>
+    
+    <h2>Incomplete Pages by Category & Responsible Team</h2>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Incomplete Pages</th>
+            <th>Responsible Team/Person</th>
+            <th>JIRA Issue</th>
+        </tr>
+        <tr>
+            <td>High Performance Computing</td>
+            <td>25</td>
+            <td>HPC Team (Unassigned)</td>
+            <td><a href="https://schrodinger.atlassian.net/browse/ITOPS-794" class="jira-link">ITOPS-794</a></td>
+        </tr>
+        <tr>
+            <td>Hardware & Equipment</td>
+            <td>10</td>
+            <td>Nathaniel Williams Jr</td>
+            <td><a href="https://schrodinger.atlassian.net/browse/ITOPS-567" class="jira-link">ITOPS-567</a></td>
+        </tr>
+        <tr>
+            <td>Security & Authentication</td>
+            <td>5</td>
+            <td>Nathaniel Williams Jr</td>
+            <td><a href="https://schrodinger.atlassian.net/browse/ITOPS-795" class="jira-link">ITOPS-795</a></td>
+        </tr>
+        <tr>
+            <td>Jira Information</td>
+            <td>3</td>
+            <td>Olive Casazza</td>
+            <td><a href="https://schrodinger.atlassian.net/browse/ITOPS-643" class="jira-link">ITOPS-643</a></td>
+        </tr>
+    </table>
+    
+    <h2>Specific Missing Pages by Category</h2>
+    
+    <div class="priority-section">
+        <h3>High Performance Computing (25 pages)</h3>
+        <p><strong>Responsible:</strong> HPC Team (Unassigned) | <a href="https://schrodinger.atlassian.net/browse/ITOPS-794" class="jira-link">ITOPS-794</a></p>
+        <ul>
+            <li>HPC User Guide sections (8 pages)</li>
+            <li>About the Clusters and Architecture (2 pages)</li>
+            <li>Bolt Architecture</li>
+            <li>PDX GPU Architecture</li>
+            <li>High Performance Computing FAQ(s) (13 pages)</li>
+        </ul>
+    </div>
+    
+    <div class="priority-section">
+        <h3>Hardware & Equipment (10 pages)</h3>
+        <p><strong>Responsible:</strong> Nathaniel Williams Jr | <a href="https://schrodinger.atlassian.net/browse/ITOPS-567" class="jira-link">ITOPS-567</a></p>
+        <ul>
+            <li>Hardware Policies</li>
+            <li>Looking Glass Contact and Inventory</li>
+            <li>Intune Windows Laptop Management (6 pages)</li>
+            <li>Workspace ONE Windows Device Management (2 pages)</li>
+        </ul>
+    </div>
+    
+    <div class="priority-section">
+        <h3>Security & Authentication (5 pages)</h3>
+        <p><strong>Responsible:</strong> Nathaniel Williams Jr | <a href="https://schrodinger.atlassian.net/browse/ITOPS-795" class="jira-link">ITOPS-795</a></p>
+        <ul>
+            <li>Information Security</li>
+            <li>MDM</li>
+            <li>FleetDM</li>
+            <li>Sentinel One</li>
+            <li>Tag-Based Entitlements</li>
+        </ul>
+    </div>
+    
+    <div class="priority-section">
+        <h3>Jira Information (3 pages)</h3>
+        <p><strong>Responsible:</strong> Olive Casazza | <a href="https://schrodinger.atlassian.net/browse/ITOPS-643" class="jira-link">ITOPS-643</a></p>
+        <ul>
+            <li>Jira information</li>
+            <li>Jira Command Line Interface</li>
+            <li>Tips for Advanced Searching in Jira</li>
+        </ul>
+    </div>
+    
+    <script>
+        // Completion Status Chart
+        const completionCtx = document.getElementById('completionChart').getContext('2d');
+        const completionChart = new Chart(completionCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Complete', 'Incomplete'],
+                datasets: [{
+                    data: [326, 43],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(255, 99, 132, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.raw || 0;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = Math.round((value / total) * 100);
+                                return `${label}: ${value} (${percentage}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Category Chart
+        const categoryCtx = document.getElementById('categoryChart').getContext('2d');
+        const categoryChart = new Chart(categoryCtx, {
+            type: 'bar',
+            data: {
+                labels: ['High Performance Computing', 'Hardware & Equipment', 'Security & Authentication', 'Jira Information'],
+                datasets: [{
+                    label: 'Incomplete Pages',
+                    data: [25, 10, 5, 3],
+                    backgroundColor: 'rgba(255, 99, 132, 0.7)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Pages'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Category'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

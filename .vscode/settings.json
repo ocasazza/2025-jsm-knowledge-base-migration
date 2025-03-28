@@ -4,5 +4,7 @@
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.defaultProfile.osx": "bash",
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
-    "workbench.colorTheme": "Functional Contrast"
+    "workbench.colorTheme": "Functional Contrast",
+    "editor.trimAutoWhitespace": false,
+
 }
